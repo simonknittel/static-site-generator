@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# RANDOMIZE-ME
+
+CACHE:
+index.html
+assets/js/scripts.js
+assets/css/styles.css
+
+NETWORK:
+*

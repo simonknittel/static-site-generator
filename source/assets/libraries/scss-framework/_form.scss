@@ -1,0 +1,17 @@
+//
+// Form
+//
+
+select,
+textarea,
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="text"] {
+  display: block;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}

@@ -1,0 +1,19 @@
+//
+// Hide
+//
+
+.hide {
+  display: none;
+}
+
+.hide--medium {
+  @media only screen and (min-width: $bp--medium) {
+    display: none;
+  }
+}
+
+.hide--large {
+  @media only screen and (min-width: $bp--large) {
+    display: none;
+  }
+}

@@ -1,0 +1,4 @@
+# http://humanstxt.org/
+
+# Project template
+    Simon Knittel <webdevelopment@simonknittel.de>

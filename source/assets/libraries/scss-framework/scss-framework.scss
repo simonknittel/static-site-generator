@@ -1,0 +1,32 @@
+//
+// SCSS-Framework
+//
+// Get the current version from https://bitbucket.org/simonknittel/scss-framework
+//
+// Author: Simon Knittel <webdevelopment@simonknittel.de>
+//
+
+//
+// Partials
+//
+
+@import 'variables';
+@import 'grid';
+@import 'hide';
+@import 'form';
+@import 'text';
+@import 'images';
+@import 'basics';
+
+
+//
+// Other
+//
+
+%clearfix { // http://blog.teamtreehouse.com/a-better-clearfix-with-sass
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
