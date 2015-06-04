@@ -6,20 +6,20 @@ The goal of this template is to have a template with everything already prepared
 
 Most important features
 ---
-* Extensive build workflow with [Gulp](http://gulpjs.com/)
-    + JavaScript precompilation and minimization with [JSPM](http://jspm.io/)
-    + [Handlebars](http://handlebarsjs.com/) precompilation and HTML minimization
-    + [SCSS](http://sass-lang.com/) precompilation and minimization
-    + Image optimizing
-        - optional [Kraken.io](https://kraken.io/) minimization (requires PRO account)
-    + SFTP-Upload
-* [Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) already integrated
 * Fast layout with precompiled [Handlebars templates](http://handlebarsjs.com/)
 * Project structure based on the [atomic design concept](http://patternlab.io/)
 * [SCSS-Preprocessor](http://sass-lang.com/)
 * [BEM naming syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 * JavaScript package managament with [JSPM](http://jspm.io/)
     + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/)
+* Extensive build workflow with [Gulp](http://gulpjs.com/)
+    + JavaScript precompilation and minimization with [JSPM](http://jspm.io/)
+    + [Handlebars](http://handlebarsjs.com/) precompilation and HTML minimization
+    + [SCSS](http://sass-lang.com/) precompilation and minimization
+    + Image optimizing
+        - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
+    + SFTP-Upload
+* [Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) already integrated
 * Built with the current best practices and newest standards
 
 I want to use AngularJS, React, ember or Meteor
