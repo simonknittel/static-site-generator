@@ -19,7 +19,7 @@ Most important features
 * [SCSS-Preprocessor](http://sass-lang.com/)
 * [BEM naming syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 * JavaScript package managament with [JSPM](http://jspm.io/)
-    + Includes precompiling and ES6 translation
+    + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/)
 * Built with the current best practices and newest standards
 
 I want to use AngularJS, React, ember or Meteor
