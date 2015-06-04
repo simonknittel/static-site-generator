@@ -31,7 +31,8 @@ Planned features
 * [Web workers](http://www.html5rocks.com/en/tutorials/workers/basics/)
 * Extended SVG handling with Gulp
 * Upload of the compiled CSS and JavaScript files to the CDN of Amazon or Microsoft with Gulp
-* Generation of seperate compiled JavaScript files for each page
+* Generation of seperated compiled JavaScript files for each page
+* Generation of seperated compiled CSS files for each page
 
 ---
 
