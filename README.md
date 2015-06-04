@@ -7,7 +7,7 @@ The goal of this template is to have a template with everything already prepared
 Most important features
 ---
 * Fast layout with precompiled [Handlebars templates](http://handlebarsjs.com/)
-* Project structure based on the [atomic design concept](http://patternlab.io/)
+* Project structure based on the [atomic design concept](http://patternlab.io/about.html)
 * [SCSS](http://sass-lang.com/) as CSS preprocessor
 * [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) as naming syntax for CSS classes
 * JavaScript package managament with [JSPM](http://jspm.io/)
