@@ -22,9 +22,9 @@ Most important features
 * [Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) already integrated
 * Built with the current best practices and newest standards
 
-I want to use AngularJS, React, ember or Meteor
+I want to use [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), [Ember](http://emberjs.com/) or [Meteor](https://www.meteor.com/)
 ---
-You can easily add AngularJS or React to this template. Read below to see how to add AngularJS or React to this template. Ember is highly recommend to be used with [Ember CLI](http://www.ember-cli.com/). The template is currently not tested and optimized for the use with Meteor.
+You can easily add [AngularJS](https://angularjs.org/) or [React](https://facebook.github.io/react/) to this template. Read below to see how to add [AngularJS](https://angularjs.org/) or [React](https://facebook.github.io/react/) to this template. [Ember](http://emberjs.com/) is highly recommend to be used with [Ember CLI](http://www.ember-cli.com/). The template is currently not tested and optimized for the use with [Meteor](https://www.meteor.com/).
 
 Planned features
 ---
@@ -50,7 +50,7 @@ Manual start
 1. Run `npm install`
 1. Run `jspm install`
 
-### Add React
+### Add [React](https://facebook.github.io/react/)
 1. Run `jspm install react`
 1. Run `jspm install jsx`
 
