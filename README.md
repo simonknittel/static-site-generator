@@ -42,6 +42,7 @@ Fast start (recommend)
 The initialization script asks you for the project name and a short description of your project. Then it will ask you if you want to add AngularJS or React to your project. After that it will install all dependencies and your project is ready to go.
 
 1. Run `node init.js`
+1. Run `gulp watch`
 
 Manual start
 ---
@@ -49,6 +50,7 @@ Manual start
 ### Install dependencies
 1. Run `npm install`
 1. Run `jspm install`
+1. Run `gulp watch`
 
 ### Add [React](https://facebook.github.io/react/)
 1. Run `jspm install react`
