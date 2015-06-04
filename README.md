@@ -8,8 +8,8 @@ Most important features
 ---
 * Fast layout with precompiled [Handlebars templates](http://handlebarsjs.com/)
 * Project structure based on the [atomic design concept](http://patternlab.io/)
-* [SCSS-Preprocessor](http://sass-lang.com/)
-* [BEM naming syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* [SCSS](http://sass-lang.com/) as CSS preprocessor
+* [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) as naming syntax for CSS classes
 * JavaScript package managament with [JSPM](http://jspm.io/)
     + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/)
 * Extensive build workflow with [Gulp](http://gulpjs.com/)
