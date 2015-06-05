@@ -87,7 +87,7 @@ gulp.task('prod-scripts', function(callback) {
 
 // Styles
 gulp.task('styles', function() {
-    return gulp.src(source_styles + '/main.scss')
+    return gulp.src(source_styles + '/*.scss')
         .pipe(sourcemaps.init())
             .pipe(sass({}))
             .on('error', notify.onError({
@@ -99,7 +99,6 @@ gulp.task('styles', function() {
                 console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber);
             })
             .pipe(autoprefixer())
-            .pipe(rename('styles.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(build_styles))
         .pipe(browserSync.reload({stream: true}));
@@ -108,7 +107,7 @@ gulp.task('styles', function() {
 
 // Styles - Production
 gulp.task('prod-styles', function() {
-    return gulp.src(source_styles + '/main.scss')
+    return gulp.src(source_styles + '/*.scss')
         .pipe(sass({
             outputStyle: 'compressed',
         }))
@@ -122,7 +121,6 @@ gulp.task('prod-styles', function() {
         })
         .pipe(autoprefixer())
         .pipe(csso())
-        .pipe(rename('styles.css'))
         .pipe(gulp.dest(build_styles));
 });
 
