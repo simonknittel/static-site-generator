@@ -32,7 +32,6 @@ Planned features
 * Extended SVG handling with Gulp
 * Upload of the compiled CSS and JavaScript files to the CDN of Amazon or Microsoft with Gulp
 * Generation of seperated compiled JavaScript files for each page
-* Generation of seperated compiled CSS files for each page
 * Sitemap generation with Gulp
 
 ---

@@ -4,6 +4,7 @@ var browserSync = require('browser-sync');
 var changed = require('gulp-changed');
 var csso = require('gulp-csso');
 // var del = require('del');
+var fs = require('fs');
 var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
 var imagemin = require('gulp-imagemin');
@@ -12,10 +13,10 @@ var jspm = require('jspm');
 var minifyHTML = require('gulp-minify-html');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
+var path = require('path');
 var replace = require('gulp-replace');
 var sass = require('gulp-sass');
 var sftp = require('gulp-sftp');
-var shell = require('gulp-shell');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 // var webp = require('gulp-webp');
@@ -50,11 +51,6 @@ jspm.setPackagePath('.');
 
 // Scripts
 gulp.task('scripts', function(callback) {
-    // return gulp.src(source_scripts + '/main.js', {read: false})
-    //     .pipe(shell([
-    //         'jspm bundle-sfx source/assets/scripts/main build/assets/js/scripts.js'
-    //     ]));
-
     jspm.bundleSFX(source_scripts + '/main', build_scripts + '/scripts.js', {
     // jspm.bundleSFX(source_scripts + '/main', build_scripts + '/scripts.js', {
         minify: false,
@@ -69,11 +65,6 @@ gulp.task('scripts', function(callback) {
 
 // Scripts - Production
 gulp.task('prod-scripts', function(callback) {
-    // return gulp.src(source_scripts + '/main.js', {read: false})
-    //     .pipe(shell([
-    //         'jspm bundle-sfx source/assets/scripts/main build/assets/js/scripts.js'
-    //     ]));
-
     jspm.bundleSFX(source_scripts + '/main', build_scripts + '/scripts.js', {
         minify: true,
         sourceMaps: false,
