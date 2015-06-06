@@ -4,7 +4,7 @@ CACHE MANIFEST
 CACHE:
 index.html
 assets/js/scripts.js
-assets/css/styles.css
+assets/css/styles--index.css
 
 NETWORK:
 *
