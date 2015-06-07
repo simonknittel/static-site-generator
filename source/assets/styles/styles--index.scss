@@ -4,6 +4,8 @@
 
 // Base
 @import '_base/variables';
+@import '_base/mixins';
+@import '_base/global-classes';
 @import '_base/html';
 
 // Atoms
@@ -11,6 +13,7 @@
 @import '_atoms/headings';
 @import '_atoms/form';
 @import '_atoms/lists';
+@import '_atoms/paragraphs';
 
 // Modules
 @import '_modules/new-version';

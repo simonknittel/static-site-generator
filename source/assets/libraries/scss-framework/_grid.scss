@@ -17,9 +17,20 @@
     }
 
     [class*="grid__cell--"] {
+        display: block;
         margin-top: $space--half;
         padding-left: $space--half;
         padding-right: $space--half;
+    }
+}
+
+.grid__row--equal {
+    display: table;
+
+    [class*="grid__cell--"] {
+        display: table-cell;
+        vertical-align: top;
+        float: none;
     }
 }
 
@@ -65,126 +76,135 @@
 }
 .grid__cell--12 {
     width: 100%;
+
+    @media (max-width: $bp--medium) {
+        display: block !important;
+    }
 }
 
 .grid__cell--medium-1 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 8.33%;
     }
 }
 .grid__cell--medium-2 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 16.66%;
     }
 }
 .grid__cell--medium-3 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 25%;
     }
 }
 .grid__cell--medium-4 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 33.33%;
     }
 }
 .grid__cell--medium-5 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 41.66%;
     }
 }
 .grid__cell--medium-6 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 50%;
     }
 }
 .grid__cell--medium-7 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 58.33%;
     }
 }
 .grid__cell--medium-8 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 66.66%;
     }
 }
 .grid__cell--medium-9 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 75%;
     }
 }
 .grid__cell--medium-10 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 83.33%;
     }
 }
 .grid__cell--medium-11 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 91.66%;
     }
 }
 .grid__cell--medium-12 {
-    @media only screen and (min-width: $bp--medium) {
+    @media (min-width: $bp--medium) {
         width: 100%;
+    }
+
+    @media (min-width: $bp--medium) and (max-width: $bp--large) {
+        display: block !important;
     }
 }
 
 .grid__cell--large-1 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 8.33%;
     }
 }
 .grid__cell--large-2 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 16.66%;
     }
 }
 .grid__cell--large-3 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 25%;
     }
 }
 .grid__cell--large-4 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 33.33%;
     }
 }
 .grid__cell--large-5 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 41.66%;
     }
 }
 .grid__cell--large-6 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 50%;
     }
 }
 .grid__cell--large-7 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 58.33%;
     }
 }
 .grid__cell--large-8 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 66.66%;
     }
 }
 .grid__cell--large-9 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 75%;
     }
 }
 .grid__cell--large-10 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 83.33%;
     }
 }
 .grid__cell--large-11 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
         width: 91.66%;
     }
 }
 .grid__cell--large-12 {
-    @media only screen and (min-width: $bp--large) {
+    @media (min-width: $bp--large) {
+        display: block !important;
         width: 100%;
     }
 }
