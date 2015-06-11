@@ -10,7 +10,7 @@
 }
 
 .grid__row--spacing {
-    margin-top: $space--half;
+    margin-top: $space--first;
 
     &:first-of-type {
         margin-top: 0;
@@ -18,9 +18,9 @@
 
     [class*="grid__cell--"] {
         display: block;
-        margin-top: $space--half;
-        padding-left: $space--half;
-        padding-right: $space--half;
+        margin-top: $space--first;
+        padding-left: $space--first;
+        padding-right: $space--first;
     }
 }
 
@@ -37,7 +37,6 @@
 [class*="grid__cell--"] {
     display: block;
     float: left;
-    box-sizing: border-box;
     width: 100%;
 }
 

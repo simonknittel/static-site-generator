@@ -7,13 +7,16 @@
 @import '_base/mixins';
 @import '_base/global-classes';
 @import '_base/html';
+@import '_base/grid';
 
 // Atoms
 @import '_atoms/links';
 @import '_atoms/headings';
 @import '_atoms/form';
 @import '_atoms/lists';
-@import '_atoms/paragraphs';
+@import '_atoms/paragraph';
+@import '_atoms/table';
+@import '_atoms/image';
 
 // Modules
 @import '_modules/new-version';
