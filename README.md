@@ -75,3 +75,7 @@ Production dependencies
 Development dependencies
 ---
 *
+
+Want to contribute?
+---
+Checkout [CONTRIBUTE.md](./CONTRIBUTE.md)
