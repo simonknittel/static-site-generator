@@ -1,14 +1,51 @@
 function finishInitialization() {
     // Delete script itself
+    // Delete init directory itself
 
     console.log('\x1b[32m', 'We successfully finished initializing your project without any problems.', '\x1b[0m');
     process.exit();
-};
+}
+
+function addAngularJS() {
+    if (process.argv.indexOf('--skip-angularjs') > 0) {
+        console.log('Skipped adding AngularJS to your project.')
+        finishInitialization();
+        return;
+    }
+
+    console.log('\x1b[36m', 'Do you want to add AngularJS to your project? [No]', '\x1b[0m');
+    process.stdin.once('data', function(data) {
+        data = data.toString().trim(); // Entfernt überflüssige Lerrezeichen am Anfang und Ende des eingegebenen Strings
+        data = data.toLowerCase();
+
+        if (data === 'yes' || data === 'y') {
+            console.log('\x1b[36m', 'Adding AngularJS to your project ...', '\x1b[0m');
+            exec('jspm install angular', function(error, stdout, stderr) {
+                if (error) {
+                    console.log(stdout);
+                }
+
+                var source = fs.createReadStream('./init/_angular-app');
+                var destination = fs.createWriteStream('./source/assets/scripts/_angular-app');
+                source.pipe(destination);
+                source.on('end', function() {
+                    // Modify files
+
+                    console.log('\x1b[32m', 'Added AngularJS to your project.', '\x1b[0m');
+                    finishInitialization();
+                });
+            });
+        } else {
+            console.log('Skipped adding AngularJS to your project.')
+            finishInitialization();
+        }
+    });
+}
 
 function addReact() {
     if (process.argv.indexOf('--skip-react') > 0) {
         console.log('Skipped adding React to your project.')
-        finishInitialization();
+        addAngularJS();
         return;
     }
 
@@ -30,7 +67,7 @@ function addReact() {
                     }
 
                     console.log('\x1b[32m', 'Added React to your project.', '\x1b[0m');
-                    finishInitialization();
+                    addAngularJS();
                 });
             });
             // Create `source/assets/scripts/_components`
@@ -53,7 +90,7 @@ function addReact() {
             // );
         } else {
             console.log('Skipped adding React to your project.')
-            finishInitialization();
+            addAngularJS();
         }
     });
 }
@@ -98,7 +135,7 @@ function installNPMDependencies() {
         console.log('\x1b[32m', 'npm dependencies installed.', '\x1b[0m');
         installJSPMDependencies();
     });
-};
+}
 
 function _replaceDescription(file, data, isLast) {
     fs.readFile(file, 'utf8', function(error, oldContent) {
@@ -137,7 +174,7 @@ function setDescription() {
             }
         }
     });
-};
+}
 
 function _replaceProjectName(file, data, isLast) {
     fs.readFile(file, 'utf8', function(error, oldContent) {
@@ -186,6 +223,7 @@ if (process.argv.indexOf('--help') > 0) {
     console.log('--skip-npm for skipping to install the NPM dependencies');
     console.log('--skip-jspm for skipping to install the JSPM dependencies');
     console.log('--skip-react for skipping to add React to your project');
+    console.log('--skip-angularjs for skipping to add AngularJS to your project');
 
     process.exit();
 } else {

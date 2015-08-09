@@ -33,9 +33,6 @@ var build_scripts = build_base + '/assets/js';
 var source_styles = source_base + '/assets/styles';
 var build_styles = build_base + '/assets/css';
 
-var source_data = source_base + '/assets/data';
-var build_data = build_base + '/assets/data';
-
 
 // Configuration
 jspm.setPackagePath('.');
@@ -247,7 +244,6 @@ gulp.task('deploy', ['production'], function() {
     return gulp.src(build_base + '/**/*')
         .pipe(sftp({
             host: 'ssh.strato.de',
-            auth: 'keyMain',
             remotePath: '/',
         }))
         .pipe(notify({
