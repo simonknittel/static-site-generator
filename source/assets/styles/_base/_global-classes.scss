@@ -18,6 +18,13 @@
   }
 }
 
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $max-width;
+}
+
 
 //
 // Text
