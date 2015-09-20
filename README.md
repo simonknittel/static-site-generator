@@ -58,6 +58,36 @@ Manual start
 1. Run `jspm install react`
 1. Run `jspm install jsx`
 
+### Add AngularJS
+1. Run `jspm install angular`
+1. Copy the `./init/_angular-app` directory to `./source/assets/scripts`
+1. Add the following to the `<html>` tag in the `./source/_partials/_head.hbs`
+
+        ng-app="app"
+
+1. Add the following to the `./source/assets/scripts/main.js`
+
+        import * as app from './_angular-app/app.module';
+
+1. Add the following to the `./source/index.hbs`
+
+        <ng-include src="'assets/js/_angular-app/modules/app/index/index.html'"></ng-include>
+
+1. Add the following to the `gulpfile.js`
+
+        var source_angular_app = source_scripts + '/_angular-app';
+        var build_angular_app = build_scripts + '/_angular-app';
+
+        gulp.task('copy:angular-app', function() {
+            return gulp.src(source_angular_app + '/**/*.html')
+                .pipe(changed(build_angular_app))
+                .pipe(gulp.dest(build_angular_app));
+        });
+
+1. Add the new gulp task to the copy and watch tasks
+
+1. Add ui router
+
 ---
 
 SET-PROJECT-NAME
