@@ -164,7 +164,7 @@ function setDescription() {
         var files = [ // Dateien, in denen der String eingesetzt werden soll
             './package.json',
             './README.md',
-            './source/_partials/_head.hbs'
+            './source/index.hbs'
         ];
         for (var i = 0; i < files.length; i++) {
             if (i === (files.length - 1)) {
@@ -204,7 +204,6 @@ function setProjectName() {
             './package.json',
             './README.md',
             './source/index.hbs',
-            './source/_partials/_head.hbs'
         ];
         for (var i = 0; i < files.length; i++) {
             if (i === (files.length - 1)) {
