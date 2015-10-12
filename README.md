@@ -19,6 +19,7 @@ Most important features
     + Image optimizing
         - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload
+    + Compiling of seperate bundled scripts and styles files for seperate pages
 * Application Cache already integrated
 * Built with the current best practices and newest standards
 
@@ -31,8 +32,8 @@ Planned features
 * [Web workers](http://www.html5rocks.com/en/tutorials/workers/basics/)
 * Extended SVG handling with Gulp
 * Upload of the compiled CSS and JavaScript files to the CDN of Amazon or Microsoft with Gulp
-* Generation of seperated compiled JavaScript files for each page
 * Sitemap generation with Gulp
+* Let the developer through the init.js decide whether he wants the application cache added or not
 
 ---
 

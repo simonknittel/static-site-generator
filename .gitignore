@@ -1,7 +1,8 @@
 .DS_Store
 desktop.ini
-*.sublime-project
 *.sublime-workspace
+.sublime-gulp.cache
+.sublime-gulp-tmp.js
 node_modules/
 build/
 npm-debug.log
