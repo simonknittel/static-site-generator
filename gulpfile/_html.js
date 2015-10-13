@@ -15,8 +15,10 @@ export function dev() {
     var templateData = {};
 
     return gulp.src([
-        source_base + '/*.hbs',
-        source_base + '/*.handlebars',
+        source_base + '/**/*.hbs',
+        source_base + '/**/*.handlebars',
+        '!' + source_base + '/_partials/**/*',
+        '!' + source_base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
             batch : ['./source'],
@@ -41,8 +43,10 @@ export function prod() {
     var templateData = {};
 
     return gulp.src([
-        source_base + '/*.hbs',
-        source_base + '/*.handlebars',
+        source_base + '/**/*.hbs',
+        source_base + '/**/*.handlebars',
+        '!' + source_base + '/_partials/**/*',
+        '!' + source_base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
             batch : ['./source'],

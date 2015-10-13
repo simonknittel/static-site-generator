@@ -100,6 +100,8 @@ gulp.task('watch', ['default'], function() {
     gulp.watch([
         source_base + '/**/*.hbs',
         source_base + '/**/*.handlebars',
+        '!' + source_base + '/_partials/**/*',
+        '!' + source_base + '/assets/**/*',
     ], ['html', 'copy:cache-manifest', browserSync.reload]);
 
     gulp.watch([
