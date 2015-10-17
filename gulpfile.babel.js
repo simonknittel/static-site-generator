@@ -28,46 +28,46 @@ var build_styles = build_base + '/assets/css';
 
 // Scripts
 import * as scripts from './gulpfile/_scripts';
-gulp.task('scripts', scripts.dev);
 gulp.task('scripts-prod', scripts.prod);
+gulp.task('scripts', scripts.dev);
 
 
 // Styles
 import * as styles from './gulpfile/_styles';
-gulp.task('styles', styles.dev);
 gulp.task('styles-prod', styles.prod);
+gulp.task('styles', styles.dev);
 
 
 // HTML
 import * as html from './gulpfile/_html';
-gulp.task('html', html.dev);
 gulp.task('html-prod', html.prod);
+gulp.task('html', html.dev);
 
 
 // Images
 import * as images from './gulpfile/_images';
-gulp.task('images', ['images:default']);
 gulp.task('images:default', images.normal);
 // gulp.task('images:webP', images.webP);
+gulp.task('images', gulp.parallel('images:default'));
 
 
 // Copy
 import * as copy from './gulpfile/_copy';
-gulp.task('copy', ['copy:base', 'copy:cache-manifest', 'copy:libraries'], function() {});
 gulp.task('copy:base', copy.base);
 gulp.task('copy:cache-manifest', copy.cacheManifest);
 gulp.task('copy:libraries', copy.libraries);
+gulp.task('copy', gulp.parallel('copy:base', 'copy:cache-manifest', 'copy:libraries'));
 
 
 // Default
-gulp.task('default', ['images', 'scripts', 'styles', 'html', 'copy']);
+gulp.task('default', gulp.parallel('images', 'scripts', 'styles', 'html', 'copy'));
 
 // Production
-gulp.task('production', ['images', 'prod-scripts', 'prod-styles', 'prod-html', 'copy']);
+gulp.task('production', gulp.parallel('images', 'scripts-prod', 'styles-prod', 'html-prod', 'copy'));
 
 
-// Deploy
-gulp.task('deploy', ['production'], function() {
+// // Deploy
+gulp.task('deploy', gulp.series('production', function() {
     return gulp.src(build_base + '/**/*')
         .pipe(sftp({
             host: 'ssh.strato.de',
@@ -79,46 +79,40 @@ gulp.task('deploy', ['production'], function() {
             sound: true,
             onLast: true,
         }));
-});
+}));
 
 
 // Watch
-gulp.task('watch', ['default'], function() {
+gulp.task('watch', gulp.series('default', function() {
     gulp.watch([
-        source_images + '/**/*.jpg',
-        source_images + '/**/*.ico',
-        source_images + '/**/*.jpeg',
-        source_images + '/**/*.png',
-        source_images + '/**/*.gif',
-        source_images + '/**/*.svg',
-    ], ['images', browserSync.reload]);
+        source_images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
+    ], gulp.series('images', browserSync.reload));
 
-    gulp.watch(source_scripts + '/**/*', ['scripts', 'html', 'copy:cache-manifest', browserSync.reload]);
+    gulp.watch(source_scripts + '/**/*', gulp.series('scripts', 'html', 'copy:cache-manifest', browserSync.reload));
 
-    gulp.watch(source_styles + '/**/*', ['styles', 'html', 'copy:cache-manifest']);
+    gulp.watch(source_styles + '/**/*', gulp.series(gulp.parallel('styles', 'html', 'copy:cache-manifest'), browserSync.reload));
 
     gulp.watch([
         source_base + '/**/*.hbs',
         source_base + '/**/*.handlebars',
         '!' + source_base + '/_partials/**/*',
         '!' + source_base + '/assets/**/*',
-    ], ['html', 'copy:cache-manifest', browserSync.reload]);
+    ], gulp.series('html', 'copy:cache-manifest', browserSync.reload));
 
     gulp.watch([
         source_base + '/robots.txt',
         source_base + '/sitemap.xml',
         source_base + '/.htaccess',
         source_base + '/humans.txt',
-        source_base + '/cache.appcache',
-    ], ['copy:base', browserSync.reload]);
+    ], gulp.series('copy:base', browserSync.reload));
 
-    gulp.watch([
-        source_base + '/assets/libraries/**/*',
-    ], ['copy:libraries', browserSync.reload]);
+    gulp.watch(source_base + '/cache.appcache', gulp.series('copy:cache-manifest', browserSync.reload));
+
+    gulp.watch(source_base + '/assets/libraries/**/*', gulp.series('copy:libraries', browserSync.reload));
 
     browserSync({
         server: {
             baseDir: build_base,
         },
     });
-});
+}));

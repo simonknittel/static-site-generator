@@ -7,8 +7,6 @@ var replace = require('gulp-replace');
 var source_base = 'source';
 var build_base = 'build';
 
-gulp.task('copy', ['copy:base', 'copy:cache-manifest', 'copy:libraries'], function() {});
-
 export function base() {
     return gulp.src([
         source_base + '/robots.txt',
@@ -21,9 +19,9 @@ export function base() {
 }
 
 export function cacheManifest() {
-    return gulp.src(source_base + '/cache.appcache')
-        .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
-        .pipe(gulp.dest(build_base));
+    // return gulp.src(source_base + '/cache.appcache')
+    //     .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
+    //     .pipe(gulp.dest(build_base));
 }
 
 export function libraries() {

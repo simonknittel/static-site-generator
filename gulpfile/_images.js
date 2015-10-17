@@ -1,7 +1,7 @@
 // Dependencies
 var changed = require('gulp-changed');
 var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
+// var imagemin = require('gulp-imagemin');
 // var kraken = require('gulp-kraken'); // Needs API access
 // var webp = require('gulp-webp');
 
@@ -15,16 +15,9 @@ var build_images = build_base + '/assets/img';
 
 
 export function normal() {
-    return gulp.src([
-        source_images + '/**/*.jpg',
-        source_images + '/**/*.ico', // Not supported - getting passed through
-        source_images + '/**/*.jpeg',
-        source_images + '/**/*.png',
-        source_images + '/**/*.gif',
-        source_images + '/**/*.svg',
-    ])
+    return gulp.src(source_images + '/**/*.{jpg,jpeg,ico,png,gif,svg}')
         .pipe(changed(build_images))
-        .pipe(imagemin())
+        // .pipe(imagemin()) // Somehow broken
         // .pipe(kraken({
         //     key: '',
         //     secret: '',
