@@ -23,7 +23,7 @@ function bundle(parameters) {
     for (var i = 0; i < files.length; i++) {
         if (files[i].indexOf('.js', files[i].length - '.js'.length) !== -1) {
             var file = files[i].slice(0, -3);
-            execSync('jspm bundle-sfx ' + source_scripts + '/' + file + '.js ' + build_scripts + '/' + file + '.js ' + parameters);
+            execSync('jspm bundle-sfx ' + source_scripts + '/' + file + ' ' + build_scripts + '/' + file + '.js ' + parameters);
         }
     }
 

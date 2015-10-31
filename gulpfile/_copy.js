@@ -18,11 +18,11 @@ export function base() {
         .pipe(gulp.dest(build_base));
 }
 
-export function cacheManifest() {
-    // return gulp.src(source_base + '/cache.appcache')
-    //     .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
-    //     .pipe(gulp.dest(build_base));
-}
+// export function cacheManifest() {
+//     return gulp.src(source_base + '/cache.appcache')
+//         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
+//         .pipe(gulp.dest(build_base));
+// }
 
 export function libraries() {
     return gulp.src(source_base + '/assets/libraries/**/*')

@@ -54,9 +54,9 @@ gulp.task('images', gulp.parallel('images:default'));
 // Copy
 import * as copy from './gulpfile/_copy';
 gulp.task('copy:base', copy.base);
-gulp.task('copy:cache-manifest', copy.cacheManifest);
+// gulp.task('copy:cache-manifest', copy.cacheManifest);
 gulp.task('copy:libraries', copy.libraries);
-gulp.task('copy', gulp.parallel('copy:base', 'copy:cache-manifest', 'copy:libraries'));
+gulp.task('copy', gulp.parallel('copy:base',/** 'copy:cache-manifest',**/ 'copy:libraries'));
 
 
 // Default
@@ -88,7 +88,7 @@ gulp.task('watch', gulp.series('default', function() {
         source_images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
     ], gulp.series('images', browserSync.reload));
 
-    gulp.watch(source_scripts + '/**/*', gulp.series('scripts', 'html', 'copy:cache-manifest', browserSync.reload));
+    gulp.watch(source_scripts + '/**/*', gulp.series(gulp.parallel('scripts', 'html', 'copy:cache-manifest'), browserSync.reload));
 
     gulp.watch(source_styles + '/**/*', gulp.series(gulp.parallel('styles', 'html', 'copy:cache-manifest'), browserSync.reload));
 
