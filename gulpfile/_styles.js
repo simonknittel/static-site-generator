@@ -1,11 +1,11 @@
 // Dependencies
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync');
-var csso = require('gulp-csso');
-var gulp = require('gulp');
-var notify = require('gulp-notify');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+import autoprefixer from 'gulp-autoprefixer';
+import browserSync from 'browser-sync';
+import cssp from 'gulp-csso';
+import gulp from 'gulp';
+import notify from 'gulp-notify';
+import sass from 'gulp-sass';
+import sourcemaps from 'gulp-sourcemaps';
 
 
 // Variables

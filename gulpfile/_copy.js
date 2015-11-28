@@ -1,7 +1,7 @@
 // Dependencies
-var changed = require('gulp-changed');
-var gulp = require('gulp');
-var replace = require('gulp-replace');
+import changed from 'gulp-changed';
+import gulp from 'gulp';
+import replace from 'gulp-replace';
 
 // Variables
 var source_base = 'source';

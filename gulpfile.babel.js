@@ -1,9 +1,9 @@
 // Dependencies
-var browserSync = require('browser-sync');
-// var del = require('del');
-var gulp = require('gulp');
-var notify = require('gulp-notify');
-var sftp = require('gulp-sftp');
+import browserSync from 'browser-sync';
+// import del from 'del';
+import gulp from 'gulp';
+import notify from 'gulp-notify';
+import sftp from 'gulp-sftp';
 
 
 // Variables
@@ -84,18 +84,15 @@ gulp.task('deploy', gulp.series('production', function() {
 
 // Watch
 gulp.task('watch', gulp.series('default', function() {
-    gulp.watch([
-        source_images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
-    ], gulp.series('images', browserSync.reload));
+    gulp.watch(source_images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', browserSync.reload));
 
-    gulp.watch(source_scripts + '/**/*', gulp.series(gulp.parallel('scripts', 'html'/**, 'copy:cache-manifest'*/), browserSync.reload));
+    gulp.watch(source_scripts + '/**/*.js', gulp.series(gulp.parallel('scripts', 'html'/**, 'copy:cache-manifest'*/), browserSync.reload));
 
-    gulp.watch(source_styles + '/**/*', gulp.series(gulp.parallel('styles', 'html'/**, 'copy:cache-manifest'*/), browserSync.reload));
+    gulp.watch(source_styles + '/**/*.scss', gulp.series(gulp.parallel('styles', 'html'/**, 'copy:cache-manifest'*/), browserSync.reload));
 
     gulp.watch([
         source_base + '/**/*.hbs',
         source_base + '/**/*.handlebars',
-        '!' + source_base + '/_partials/**/*',
         '!' + source_base + '/assets/**/*',
     ], gulp.series('html'/**, 'copy:cache-manifest'*/, browserSync.reload));
 

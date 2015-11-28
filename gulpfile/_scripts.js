@@ -1,9 +1,9 @@
 // Dependencies
-var execSync = require('child_process').execSync;
-var fs = require('fs');
-var gulp = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
+import {execSync} from 'child_process';
+import fs from 'fs';
+import gulp from 'gulp';
+import sourcemaps from 'gulp-sourcemaps';
+import uglify from 'gulp-uglify';
 
 
 // Variables

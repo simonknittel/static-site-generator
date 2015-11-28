@@ -1,6 +1,5 @@
 .DS_Store
 desktop.ini
-*.sublime-workspace
 .sublime-gulp.cache
 .sublime-gulp-tmp.js
 node_modules/

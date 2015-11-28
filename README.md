@@ -60,6 +60,9 @@ Manual start
 1. Run `jspm install jsx`
 
 ### Add AngularJS
+look at https://bitbucket.org/simonknittel/scrum
+
+
 1. Run `jspm install angular`
 1. Copy the `./init/_angular-app` directory to `./source/assets/scripts`
 1. Add the following to the `<html>` tag in the `./source/_partials/_head.hbs`

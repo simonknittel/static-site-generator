@@ -1,7 +1,6 @@
 @import 'colors';
 
 $transition-time--first: .25s;
-$max-width: 1280px;
 
 // Spacing
 $space--first: .5rem;
@@ -16,6 +15,9 @@ $font-size--normal: 1.25rem;
 $font-size--small: .875rem;
 $font-size--smallest: .6rem;
 
+// $font-family--first: ;
+
 // Breakpoints
-$bp--large: 64rem;
-$bp--medium: 32rem;
+$bp--large: 80rem;
+$bp--medium: 64rem;
+$bp--small: 32rem;

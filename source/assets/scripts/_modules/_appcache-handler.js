@@ -1,14 +1,8 @@
 var reinitializePage;
 var defaultOptions = {
-    interval: 300000
-}
+    interval: 300000,
+};
 var options = defaultOptions;
-
-function showNewVersionNotice() {
-    window.applicationCache.swapCache();
-    document.querySelector('.new-version__cta').addEventListener('click', refreshPage);
-    document.querySelector('.new-version').classList.add('new-version--show');
-}
 
 /**
  * Reloads the site
@@ -20,6 +14,12 @@ function refreshPage(e) {
     window.location.reload(true);
 }
 
+function showNewVersionNotice() {
+    window.applicationCache.swapCache();
+    document.querySelector('.new-version__cta').addEventListener('click', refreshPage);
+    document.querySelector('.new-version').classList.add('new-version--show');
+}
+
 /**
  * Updates the application cache
  * @return {[type]} [description]
@@ -27,17 +27,6 @@ function refreshPage(e) {
 function init() {
     window.applicationCache.update();
     window.applicationCache.addEventListener('updateready', showNewVersionNotice);
-}
-
-/**
- * Turns the site into offline mode
- * @return {[type]} [description]
- */
-function pageGoesOffline() {
-    window.removeEventListener('offline', pageGoesOffline);
-    window.addEventListener('online', pageGoesOnline);
-
-    clearInterval(reinitializePage);
 }
 
 /**
@@ -53,6 +42,17 @@ function pageGoesOnline() {
     reinitializePage = setInterval(function() {
         init();
     }, options.interval);
+}
+
+/**
+ * Turns the site into offline mode
+ * @return {[type]} [description]
+ */
+function pageGoesOffline() {
+    window.removeEventListener('offline', pageGoesOffline);
+    window.addEventListener('online', pageGoesOnline);
+
+    clearInterval(reinitializePage);
 }
 
 export function init(userOptions) {

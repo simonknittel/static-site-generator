@@ -1,9 +1,9 @@
 // Dependencies
-var changed = require('gulp-changed');
-var gulp = require('gulp');
-// var imagemin = require('gulp-imagemin');
-// var kraken = require('gulp-kraken'); // Needs API access
-// var webp = require('gulp-webp');
+import changed from 'gulp-changed';
+import gulp from 'gulp';
+// import imagemin from 'gulp-imagemin';
+// import kraken from 'gulp-kraken'; // Needs API access
+// import webp from 'gulp-webp';
 
 
 // Variables

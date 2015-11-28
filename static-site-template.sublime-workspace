@@ -1,0 +1,1164 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"scri",
+				"scriptsDone"
+			],
+			[
+				"scr",
+				"scriptsDone"
+			],
+			[
+				"typo3_s",
+				"typo3_src-7"
+			],
+			[
+				"app",
+				"application"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"text-tr",
+				"text-transform"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"aniamtion-",
+				"animation-direction"
+			],
+			[
+				"animat",
+				"animation-iteration-count"
+			],
+			[
+				"aniamtion",
+				"animation-duration"
+			],
+			[
+				"anim",
+				"animation-name"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"im",
+				"img/"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"anima",
+				"animation-timing-function"
+			],
+			[
+				"animationm",
+				"animation-name"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"animatio",
+				"animation-iteration-count"
+			],
+			[
+				"backgro",
+				"background-image"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"border-w",
+				"border-width"
+			],
+			[
+				"border-b",
+				"border-bottom-color"
+			],
+			[
+				"bacg",
+				"background-color"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"border-s",
+				"border-bottom-style"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"textr",
+				"text-decoration"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"border-lef",
+				"border-left-style"
+			],
+			[
+				"border-",
+				"border-top-style"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"ow",
+				"_owl.carousel.scss"
+			],
+			[
+				"sour",
+				"source_base"
+			],
+			[
+				"no",
+				"_normalize.scss"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"date",
+				"dateString"
+			],
+			[
+				"par",
+				"partial_2"
+			],
+			[
+				"parti",
+				"partial_1"
+			],
+			[
+				"border-top",
+				"border-top-style"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"build",
+				"build_data"
+			],
+			[
+				"bui",
+				"build_base"
+			],
+			[
+				"a",
+				"annyang"
+			],
+			[
+				"any",
+				"annyangModule"
+			],
+			[
+				"an",
+				"annyangModule"
+			],
+			[
+				"fu",
+				"fullPost"
+			],
+			[
+				"pro",
+				"props	React: this.props."
+			],
+			[
+				"on",
+				"onShowContent"
+			],
+			[
+				"pr",
+				"props	React: this.props."
+			],
+			[
+				"read",
+				"readdirSync"
+			],
+			[
+				"source",
+				"source_path"
+			],
+			[
+				"temp",
+				"temp_path"
+			],
+			[
+				"tem",
+				"temp_path"
+			],
+			[
+				"cp",
+				"components/"
+			],
+			[
+				"sor",
+				"source_path"
+			],
+			[
+				"Post",
+				"PostList"
+			],
+			[
+				"P",
+				"PostHeading"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"mr",
+				"margin-right"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"poss",
+				"postsUrl"
+			],
+			[
+				"comme",
+				"comments"
+			],
+			[
+				"get",
+				"getDOMNode"
+			],
+			[
+				"Comme",
+				"Comment"
+			],
+			[
+				"border-le",
+				"border-left-style"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"b",
+				"bower_components/"
+			],
+			[
+				"list-s",
+				"list-style"
+			],
+			[
+				"pe",
+				"property"
+			],
+			[
+				"fo",
+				"forEach"
+			],
+			[
+				"current",
+				"currentTarget"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"head",
+				"header	Tag"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"au",
+				"author"
+			],
+			[
+				"item",
+				"items"
+			],
+			[
+				"ite",
+				"items"
+			],
+			[
+				"for",
+				"for"
+			],
+			[
+				"mous",
+				"mouseXPosStart"
+			],
+			[
+				"c",
+				"currentScale"
+			],
+			[
+				"pi",
+				"pinboard"
+			],
+			[
+				"ce",
+				"createItems"
+			],
+			[
+				"cre",
+				"createItems"
+			],
+			[
+				"mouse",
+				"mouseXPosDiff"
+			],
+			[
+				"mou",
+				"mouseXPosEnd"
+			],
+			[
+				"page",
+				"pageX"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"ima",
+				"imageContainer"
+			],
+			[
+				"crea",
+				"createDOMElement"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"ra",
+				"randDeg"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"backgrp",
+				"background-repeat"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"border-bottom",
+				"border-bottom-style"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"libra",
+				"library_container"
+			],
+			[
+				"ml",
+				"ml-a	margin-left: auto;"
+			],
+			[
+				"main",
+				"main.js"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 310.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"gulp",
+				"Gulp"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"local",
+				"Local History: Open"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"auto",
+				"Autoprefix CSS"
+			],
+			[
+				"enc",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"jsx",
+				"Set Syntax: JavaScript (JSX)"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"termina",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"css",
+				"Set Syntax: CSS3"
+			],
+			[
+				"ter",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal Settings – User"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"jslin",
+				"JSLint"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"comp",
+				"Snippet: React: component skeleton"
+			],
+			[
+				"com",
+				"Snippet: React: component skeleton"
+			],
+			[
+				"react",
+				"Snippet: React: component skeleton"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"jsc",
+				"Set Syntax: JavaScript (JSX)"
+			],
+			[
+				"compon",
+				"Snippet: React: component skeleton"
+			],
+			[
+				"INS",
+				"Package Control: Install Package"
+			],
+			[
+				"remvo",
+				"Package Control: Remove Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"hand",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Create Package File"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Package Control: Enable Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ENAB",
+				"Package Control: Enable Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"instaL",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 450.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/L/xampp/htdocs/repos/libraries/static-site-template",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets"
+	],
+	"file_history":
+	[
+		"/L/xampp/htdocs/repos/libraries/static-site-template/init/_angular-app/app.module.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/.eslintignore",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile.babel.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/init.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/.eslintrc",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/scripts/scripts--index.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/scripts/_modules/_appcache-handler.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/_partials/_head.hbs",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/_base/_variables.scss",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/.gitignore",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/_base/_global-classes.scss",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_copy.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/README.md",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_styles.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_scripts.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_images.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_html.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/.babelrc",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/config.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/package.json",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/.sublime-gulp.cache",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/styles.scss",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/styles--index.scss",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/_partials/_foot.hbs",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/index.hbs",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/scripts/scripts.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/build/cache.appcache",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/scripts/scripts--foo.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/_base/_html.scss",
+		"/L/portables/Sublime Text 3/Data/Packages/User/Gulp.sublime-settings",
+		"/L/portables/Sublime Text 3/Data/Packages/Gulp/Gulp.sublime-settings",
+		"/L/xampp/htdocs/repos/projects/simoknittelde-v4/simonknittelde-v4.sublime-project",
+		"/L/xampp/htdocs/repos/libraries/project-template/README.md",
+		"/C/Users/sknit/OneDrive/AutoIt/oneclickftp/source/application/config.ini",
+		"/C/Users/sknit/OneDrive/AutoIt/oneclickftp/source/config/config.ini",
+		"/C/Users/sknit/OneDrive/AutoIt/ftpupload/source/application/config.ini",
+		"/C/Users/sknit/OneDrive/AutoIt/ftpupload/source/config/config.ini",
+		"/C/Users/sknit/OneDrive/AutoIt/ftp-upload/source/config/config.ini",
+		"/C/Users/sknit/OneDrive/Dokumente/Bogensport-Delmenhorst/Social Media Kampangen/Wusstest du bereits - Filme.md",
+		"/C/Users/sknit/OneDrive/Dokumente/Bogensport-Delmenhorst/Social Media Kampangen/Die Tribute von Panem.md",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/application/htdocs/foo.txt",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/vagrant-files/application.conf",
+		"/D/Downloads/typo3_src-7.4.0/typo3_src-7.4.0/INSTALL.md",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/application/FIRST_INSTALL",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/vagrant-files/setup.sh",
+		"/L/xampp/php/php.ini",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/application/INSTALL.md",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/application/typo3_src-7.3.1/INSTALL.md",
+		"/L/xampp/htdocs/repos/libraries/web-development/templates/backend/mongodb-express/source/config.js",
+		"/L/xampp/htdocs/repos/libraries/web-development/workflows.md",
+		"/L/xampp/htdocs/repos/libraries/web-development/workflos.md",
+		"/L/xampp/htdocs/repos/libraries/express-mongodb/source/index.js",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/application/htdocs/INSTALL.md",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/htdocs/INSTALL.md",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/phpinfo.php",
+		"/L/xampp/apache/conf/httpd.conf",
+		"/C/Users/sknit/.sublime/history/L/xampp/htdocs/repos/projects/typo3-test-1/2015-08-02_18.49.27.Vagrantfile",
+		"/C/Users/sknit/.sublime/history/L/xampp/htdocs/repos/projects/typo3-test-1/2015-08-02_18.52.42.Vagrantfile",
+		"/L/xampp/htdocs/repos/libraries/static-files/.gitattributes",
+		"/D/Downloads/puphpet/sZoJlR/Vagrantfile",
+		"/L/xampp/htdocs/repos/libraries/project-template/.git/config",
+		"/L/xampp/htdocs/repos/libraries/project-template/.gitmodules",
+		"/L/xampp/htdocs/repos/libraries/project-template/.gitignore",
+		"/L/xampp/htdocs/repos/libraries/project-template/application/prototype/.gitkeep",
+		"/L/xampp/htdocs/repos/libraries/project-template/documents/.gitkeep",
+		"/L/xampp/htdocs/repos/libraries/project-template/design/.gitkeep",
+		"/L/xampp/htdocs/repos/projects/typo3-test-1/FIRST_INSTALL",
+		"/D/repos/libraries/static-site-template/source/assets/scripts/main.js",
+		"/D/repos/libraries/static-site-template/source/_partials/_head.hbs",
+		"/D/portables/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/portables/Sublime Text 3/Data/Packages/User/Package Control.sublime-settings",
+		"/D/portables/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/C/$Windows.~WS/Sources/Panther/setuperr.log",
+		"/C/$Windows.~BT/Sources/Panther/setuperr.log",
+		"/J/Berufsschule/Streicher/banner/banner-2.css",
+		"/J/Berufsschule/Streicher/banner/banner-2.html",
+		"/J/Berufsschule/Streicher/banner/index.html",
+		"/J/Berufsschule/Streicher/banner/banner--1.css",
+		"/J/Berufsschule/Streicher/banner.html",
+		"/G/Downloads/ScreenLoad/settings.conf",
+		"/G/Downloads/webfontkit-20150607-063515/stylesheet.css",
+		"/I/Windows 8.1 (multiple editions) (x64) - DVD (German)/key.txt",
+		"/G/ProgrammeWin8/Steam/SteamApps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec.cfg",
+		"/C/Users/Simon/Desktop/autoexec.cfg",
+		"/C/Users/Simon/AppData/Local/Temp/dump.sql.txt",
+		"/C/Users/Simon/AppData/Roaming/Adobe/InDesign/Version 9.0/de_DE/Scripts/Scripts Panel/DisplayScale.scpt",
+		"/I/repos/libraries/web-development/templates/frontend/vanilla-jspm/package.json",
+		"/C/Users/Simon/.sublime/history/I/repos/libraries/web-development/templates/frontend/vanilla-jspm/2015-04-24_18.53.50.package.json",
+		"/I/repos/libraries/web-development/templates/frontend/vanilla-jspm/README.md",
+		"/I/repos/libraries/web-development/templates/frontend/vanilla-jspm/gulpfile.js",
+		"/I/repos/projects/berufsschule/website-18032015/source/assets/styles/_base/_colors.scss",
+		"/I/repos/archiv/react-battlefield/tutorial/public/scripts.js",
+		"/I/repos/projects/digital-desk/source/assets/scripts/main.js",
+		"/I/repos/projects/airing-kalender/source/index.hbs",
+		"/I/repos/projects/airing-kalender/source/assets/scripts/main.js",
+		"/I/repos/projects/airing-kalender/package.json",
+		"/I/repos/libraries/web-development/package.json",
+		"/I/repos/libraries/web-development/templates/frontend/vanilla/source/_partials/_head.hbs",
+		"/I/repos/airing-kalender/package.json",
+		"/I/repos/web-development/templates/frontend/vanilla/source/.htaccess",
+		"/I/repos/web-development/templates/frontend/vanilla/gulpfile.js",
+		"/I/repos/web-development/templates/frontend/vanilla/source/assets/styles/main.scss",
+		"/I/repos/web-development/templates/frontend/vanilla/source/assets/libraries/.gitkeep",
+		"/I/repos/web-development/templates/frontend/vanilla/source/assets/styles/_libraries/scss-framework/_basics.scss",
+		"/I/repos/web-development/templates/frontend/vanilla/source/assets/styles/_atoms/_headings.scss",
+		"/I/repos/web-development/templates/frontend/vanilla/package.json",
+		"/I/repos/web-development/templates/frontend/vanilla/.jshintrc",
+		"/I/repos/scrum-board/app/templates/product/index.hbs",
+		"/I/repos/scrum-board/app/templates/products/index.hbs",
+		"/I/repos/scrum-board/app/templates/index.hbs",
+		"/I/repos/scrum-board/app/styles/_base/_html.scss",
+		"/I/repos/scrum-board/app/templates/project/team/index.hbs",
+		"/I/repos/scrum-board/app/routes/project/team/index.js",
+		"/I/repos/scrum-board/app/templates/project/index.hbs",
+		"/I/repos/scrum-board/app/router.js",
+		"/I/repos/scrum-board/app/styles/_base/_colors.scss",
+		"/I/repos/scrum-board/app/templates/projects/new.hbs",
+		"/I/repos/scrum-board/app/templates/projects/index.hbs",
+		"/I/repos/scrum-board/app/templates/projects.hbs",
+		"/I/repos/scrum-board/app/templates/project/team.hbs",
+		"/I/repos/scrum-board/app/styles/_modules/_team.scss",
+		"/I/repos/scrum-board/app/app.js",
+		"/I/repos/scrum-board/app/styles/_base/_variables.scss",
+		"/I/repos/scrum-board/app/styles/app.scss",
+		"/I/repos/scrum-board/app/index.html",
+		"/I/repos/scrum-board/app/styles/_atoms/_headings.scss",
+		"/I/repos/scrum-board/app/templates/application.hbs"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"source_images",
+			"replace",
+			"rename",
+			"notify",
+			"styles",
+			"rename",
+			"changed",
+			"browserSync",
+			"changed",
+			"notify",
+			"rename",
+			"replace",
+			"styles",
+			"replace",
+			"changed",
+			"styles",
+			"sourcemaps",
+			"sass",
+			"replace",
+			"rename",
+			"notify",
+			"sourcemaps",
+			"replace",
+			"rename",
+			"scripts",
+			"sourceMaps",
+			"SourceMaps",
+			"sourceMaps",
+			"sourcemaps",
+			"replace",
+			"rename",
+			"notify",
+			"htdocs/",
+			"/var/www/application/",
+			"htdocs/",
+			"/var/www/application/",
+			"mysql -u root -p root",
+			"www",
+			"g",
+			"; ",
+			";",
+			"wwww",
+			"gd",
+			"error_reporting",
+			"post_max_size",
+			"upload_max_filesize",
+			"appcache",
+			"\">\n",
+			"html",
+			"\n<",
+			"\">\n",
+			"<span>",
+			".1",
+			"none",
+			"eyes",
+			"-50%,",
+			".1",
+			"translateX(-50%)",
+			"\": \"^",
+			"\": \"",
+			"<li>",
+			"td",
+			"        </section>",
+			"        <section>",
+			"project",
+			"</li>",
+			"backlog",
+			"<div class=\"team__member__avatar__cloak\"></div>",
+			"envelope-o",
+			"<div class=\"team__member__avatar__actions\">",
+			"<i></i>",
+			"family",
+			"text",
+			"uploads/avatars/simon-knittel",
+			"5rem",
+			"<img src",
+			"1rem",
+			"upload",
+			"autoprefixer",
+			"1rem",
+			"5rem",
+			"6",
+			" class={{compare currentPage",
+			"Third",
+			"third",
+			"Third",
+			"</a>",
+			"class=\"",
+			"\"",
+			"#compare",
+			"return ",
+			"index",
+			"                        <h1>\n                            Lorem<br>\n                            ipsum dolor.\n                        </h1>",
+			" rem",
+			"primary",
+			"1rem",
+			"asstes",
+			"border--secondary",
+			"color-scheme--border-top",
+			"color-scheme--border-left",
+			"color-scheme",
+			"div",
+			"section",
+			"left",
+			"#111",
+			"tile-board__tile--secondary",
+			"tile-board__tile--primary",
+			"primary",
+			"article>",
+			"div",
+			" style=\"background-image: url('http://lorempixel.com/1920/1080/');\"",
+			"image",
+			"teaser",
+			"</div>",
+			"iv>",
+			"1",
+			"primary",
+			"12",
+			"_templates",
+			"Projects name",
+			"_partials",
+			"partials",
+			"gulp",
+			"changed",
+			"webp",
+			"changed",
+			"REPLACE-ME",
+			" # "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.gulp_output":
+	{
+		"height": 197.0
+	},
+	"output.markdown":
+	{
+		"height": 88.0
+	},
+	"pinned_build_system": "",
+	"project": "static-site-template.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app",
+				"init\\_angular-app\\app.module.js"
+			],
+			[
+				"ignore",
+				".eslintignore"
+			],
+			[
+				"index",
+				"source\\assets\\scripts\\scripts--index.js"
+			],
+			[
+				"eslint",
+				".eslintrc"
+			],
+			[
+				"head",
+				"source\\_partials\\_head.hbs"
+			],
+			[
+				"vara",
+				"source\\assets\\styles\\_base\\_variables.scss"
+			],
+			[
+				"gitign",
+				".gitignore"
+			],
+			[
+				"global",
+				"source\\assets\\styles\\_base\\_global-classes.scss"
+			],
+			[
+				"var",
+				"source\\assets\\styles\\_base\\_variables.scss"
+			],
+			[
+				"copy",
+				"gulpfile\\_copy.js"
+			],
+			[
+				"gulp",
+				"gulpfile.babel.js"
+			],
+			[
+				"html",
+				"source\\assets\\styles\\_base\\_html.scss"
+			],
+			[
+				"glob",
+				"source\\assets\\styles\\_base\\_global-classes.scss"
+			],
+			[
+				"main",
+				"source\\assets\\scripts\\main.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 750.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"L:\\xampp\\htdocs\\repos\\projects\\simoknittelde-v4\\simonknittelde-v4.sublime-project"
+			]
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 230.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

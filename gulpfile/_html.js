@@ -1,9 +1,9 @@
 // Dependencies
-var gulp = require('gulp');
-var handlebars = require('gulp-compile-handlebars');
-var minifyHTML = require('gulp-minify-html');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
+import gulp from 'gulp';
+import handlebars from 'gulp-compile-handlebars';
+import minifyHTML from 'gulp-minify-html';
+import rename from 'gulp-rename';
+import replace from 'gulp-replace';
 
 
 // Variables
