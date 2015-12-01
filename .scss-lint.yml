@@ -105,7 +105,10 @@ linters:
         enabled: true
         order:
             - display
+            - visibility
+            - opacity
             -
+            - z-index
             - position
             - left
             - right
@@ -114,7 +117,9 @@ linters:
             - transform
             -
             - width
+            - max-width
             - height
+            - max-height
             -
             - margin
             - padding
