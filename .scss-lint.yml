@@ -137,7 +137,7 @@ linters:
 
     SelectorFormat:
         enabled: true
-        convention: strict_BEM
+        convention: hyphenated_BEM
 
     SingleLinePerProperty:
         enabled: true
