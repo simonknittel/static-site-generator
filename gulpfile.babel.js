@@ -7,17 +7,17 @@ import sftp from 'gulp-sftp';
 
 
 // Variables
-var source_base = 'source';
-var build_base = 'build';
+const source_base = 'source';
+const build_base = 'build';
 
-var source_images = source_base + '/assets/images';
-var build_images = build_base + '/assets/img';
+const source_images = source_base + '/assets/images';
+const build_images = build_base + '/assets/img';
 
-var source_scripts = source_base + '/assets/scripts';
-var build_scripts = build_base + '/assets/js';
+const source_scripts = source_base + '/assets/scripts';
+const build_scripts = build_base + '/assets/js';
 
-var source_styles = source_base + '/assets/styles';
-var build_styles = build_base + '/assets/css';
+const source_styles = source_base + '/assets/styles';
+const build_styles = build_base + '/assets/css';
 
 
 // Clean
