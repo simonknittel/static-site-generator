@@ -102,11 +102,16 @@ linters:
         enabled: tue
 
     PropertySortOrder:
-        enabled: false
+        enabled: true
         order:
             - display
             -
             - position
+            - left
+            - right
+            - top
+            - bottom
+            - transform
             -
             - width
             - height
