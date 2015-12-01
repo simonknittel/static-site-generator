@@ -115,6 +115,7 @@ linters:
             - top
             - bottom
             - transform
+            - float
             -
             - width
             - max-width
