@@ -120,7 +120,7 @@ linters:
 
     PropertyUnits:
         enabled: true
-        global: ['em', 'rem', '%', 'vw', 'vh']
+        global: ['em', 'rem', '%', 'vw', 'vh', 's']
 
     PseudoElement:
         enabled: true
