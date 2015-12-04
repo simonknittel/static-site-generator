@@ -1,7 +1,7 @@
 // Dependencies
 import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
-import cssp from 'gulp-csso';
+import csso from 'gulp-csso';
 import gulp from 'gulp';
 import notify from 'gulp-notify';
 import sass from 'gulp-sass';
