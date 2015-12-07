@@ -7,16 +7,19 @@ import gulp from 'gulp';
 
 
 // Variables
-var source_base = 'source';
-var build_base = 'build';
+let source = {};
+let build = {};
 
-var source_images = source_base + '/assets/images';
-var build_images = build_base + '/assets/img';
+source.base = 'source';
+build.base = 'build';
+
+source.images = source.base + '/assets/images';
+build.images = build.base + '/assets/img';
 
 
 export function normal() {
-    return gulp.src(source_images + '/**/*.{jpg,jpeg,ico,png,gif,svg}')
-        .pipe(changed(build_images))
+    return gulp.src(source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}')
+        .pipe(changed(build.images))
         // .pipe(imagemin()) // Somehow broken
         // .pipe(kraken({
         //     key: '',
@@ -24,18 +27,18 @@ export function normal() {
         //     lossy: true,
         //     webp: true,
         // }))
-        .pipe(gulp.dest(build_images));
+        .pipe(gulp.dest(build.images));
 }
 
 // export function webP() {
 //     return gulp.src([
-//         source_images + '/**/*.jpg',
-//         source_images + '/**/*.jpeg',
-//         source_images + '/**/*.png',
+//         source.images + '/**/*.jpg',
+//         source.images + '/**/*.jpeg',
+//         source.images + '/**/*.png',
 //     ])
-//         .pipe(changed(build_images))
+//         .pipe(changed(build.images))
 //         .pipe(webp({
 //             lossless: true,
 //         }))
-//         .pipe(gulp.dest(build_images));
+//         .pipe(gulp.dest(build.images));
 // }

@@ -102,14 +102,25 @@ linters:
         enabled: tue
 
     PropertySortOrder:
-        enabled: false
+        enabled: true
         order:
             - display
+            - visibility
+            - opacity
             -
+            - z-index
             - position
+            - left
+            - right
+            - top
+            - bottom
+            - transform
+            - float
             -
             - width
+            - max-width
             - height
+            - max-height
             -
             - margin
             - padding
@@ -120,7 +131,7 @@ linters:
 
     PropertyUnits:
         enabled: true
-        global: ['em', 'rem', '%', 'vw', 'vh']
+        global: ['em', 'rem', '%', 'vw', 'vh', 's']
 
     PseudoElement:
         enabled: true
@@ -137,7 +148,7 @@ linters:
 
     SelectorFormat:
         enabled: true
-        convention: strict_BEM
+        convention: hyphenated_BEM
 
     SingleLinePerProperty:
         enabled: true

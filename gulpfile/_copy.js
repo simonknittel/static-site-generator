@@ -4,28 +4,31 @@ import gulp from 'gulp';
 import replace from 'gulp-replace';
 
 // Variables
-var source_base = 'source';
-var build_base = 'build';
+let source = {};
+let build = {};
+
+source.base = 'source';
+build.base = 'build';
 
 export function base() {
     return gulp.src([
-        source_base + '/robots.txt',
-        source_base + '/sitemap.xml',
-        source_base + '/.htaccess',
-        source_base + '/humans.txt',
+        source.base + '/robots.txt',
+        source.base + '/sitemap.xml',
+        source.base + '/.htaccess',
+        source.base + '/humans.txt',
     ])
-        .pipe(changed(build_base))
-        .pipe(gulp.dest(build_base));
+        .pipe(changed(build.base))
+        .pipe(gulp.dest(build.base));
 }
 
 // export function cacheManifest() {
-//     return gulp.src(source_base + '/cache.appcache')
+//     return gulp.src(source.base + '/cache.appcache')
 //         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
-//         .pipe(gulp.dest(build_base));
+//         .pipe(gulp.dest(build.base));
 // }
 
 export function libraries() {
-    return gulp.src(source_base + '/assets/libraries/**/*')
-        .pipe(changed(build_base + '/assets/libs'))
-        .pipe(gulp.dest(build_base + '/assets/libs'));
+    return gulp.src(source.base + '/assets/libraries/**/*')
+        .pipe(changed(build.base + '/assets/libs'))
+        .pipe(gulp.dest(build.base + '/assets/libs'));
 }

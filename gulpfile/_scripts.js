@@ -7,23 +7,26 @@ import uglify from 'gulp-uglify';
 
 
 // Variables
-var source_base = 'source';
-var build_base = 'build';
+let source = {};
+let build = {};
 
-var source_scripts = source_base + '/assets/scripts';
-var build_scripts = build_base + '/assets/js';
+source.base = 'source';
+build.base = 'build';
+
+source.scripts = source.base + '/assets/scripts';
+build.scripts = build.base + '/assets/js';
 
 function bundle(parameters) {
     if (!parameters) {
         var parameters = '';
     }
 
-    var files = fs.readdirSync(source_scripts);
+    var files = fs.readdirSync(source.scripts);
 
     for (var i = 0; i < files.length; i++) {
         if (files[i].indexOf('.js', files[i].length - '.js'.length) !== -1) {
             var file = files[i].slice(0, -3);
-            execSync('jspm bundle-sfx ' + source_scripts + '/' + file + ' ' + build_scripts + '/' + file + '.js ' + parameters);
+            execSync('jspm bundle-sfx ' + source.scripts + '/' + file + ' ' + build.scripts + '/' + file + '.js ' + parameters);
         }
     }
 

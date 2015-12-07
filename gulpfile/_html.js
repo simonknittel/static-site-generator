@@ -7,18 +7,21 @@ import replace from 'gulp-replace';
 
 
 // Variables
-var source_base = 'source';
-var build_base = 'build';
+let source = {};
+let build = {};
+
+source.base = 'source';
+build.base = 'build';
 
 
 export function dev() {
-    var templateData = {};
+    const templateData = {};
 
     return gulp.src([
-        source_base + '/**/*.hbs',
-        source_base + '/**/*.handlebars',
-        '!' + source_base + '/_partials/**/*',
-        '!' + source_base + '/assets/**/*',
+        source.base + '/**/*.hbs',
+        source.base + '/**/*.handlebars',
+        '!' + source.base + '/_partials/**/*',
+        '!' + source.base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
             batch : ['./source'],
@@ -36,17 +39,17 @@ export function dev() {
         .pipe(rename(function(path) {
             path.extname = '.html';
         }))
-        .pipe(gulp.dest(build_base));
+        .pipe(gulp.dest(build.base));
 }
 
 export function prod() {
-    var templateData = {};
+    const templateData = {};
 
     return gulp.src([
-        source_base + '/**/*.hbs',
-        source_base + '/**/*.handlebars',
-        '!' + source_base + '/_partials/**/*',
-        '!' + source_base + '/assets/**/*',
+        source.base + '/**/*.hbs',
+        source.base + '/**/*.handlebars',
+        '!' + source.base + '/_partials/**/*',
+        '!' + source.base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
             batch : ['./source'],
@@ -65,5 +68,5 @@ export function prod() {
         .pipe(rename(function(path) {
             path.extname = '.html';
         }))
-        .pipe(gulp.dest(build_base));
+        .pipe(gulp.dest(build.base));
 }
