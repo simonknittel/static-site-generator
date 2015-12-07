@@ -9,15 +9,18 @@ import sourcemaps from 'gulp-sourcemaps';
 
 
 // Variables
-var source_base = 'source';
-var build_base = 'build';
+let source = {};
+let build = {};
 
-var source_styles = source_base + '/assets/styles';
-var build_styles = build_base + '/assets/css';
+source.base = 'source';
+build.base = 'build';
+
+source.styles = source.base + '/assets/styles';
+build.styles = build.base + '/assets/css';
 
 
 export function dev() {
-    return gulp.src(source_styles + '/*.scss')
+    return gulp.src(source.styles + '/*.scss')
         .pipe(sourcemaps.init())
             .pipe(sass({}))
             .on('error', notify.onError({
@@ -30,12 +33,12 @@ export function dev() {
             })
             .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(build_styles))
+        .pipe(gulp.dest(build.styles))
         .pipe(browserSync.reload({stream: true}));
 }
 
 export function prod() {
-    return gulp.src(source_styles + '/*.scss')
+    return gulp.src(source.styles + '/*.scss')
         .pipe(sass({
             outputStyle: 'compressed',
         }))
@@ -49,5 +52,5 @@ export function prod() {
         })
         .pipe(autoprefixer())
         .pipe(csso())
-        .pipe(gulp.dest(build_styles));
+        .pipe(gulp.dest(build.styles));
 }
