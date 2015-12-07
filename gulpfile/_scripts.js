@@ -16,6 +16,7 @@ build.base = 'build';
 source.scripts = source.base + '/assets/scripts';
 build.scripts = build.base + '/assets/js';
 
+
 function bundle(parameters = '') {
     const files = fs.readdirSync(source.scripts);
 
