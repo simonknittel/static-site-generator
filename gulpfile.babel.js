@@ -31,20 +31,20 @@ build.styles = build.base + '/assets/css';
 
 // Scripts
 import * as scripts from './gulpfile/_scripts';
-gulp.task('scripts-prod', scripts.prod);
-gulp.task('scripts', scripts.dev);
+gulp.task('scripts:prod', scripts.prod);
+gulp.task('scripts:dev', scripts.dev);
 
 
 // Styles
 import * as styles from './gulpfile/_styles';
-gulp.task('styles-prod', styles.prod);
-gulp.task('styles', styles.dev);
+gulp.task('styles:prod', styles.prod);
+gulp.task('styles:dev', styles.dev);
 
 
 // HTML
 import * as html from './gulpfile/_html';
-gulp.task('html-prod', html.prod);
-gulp.task('html', html.dev);
+gulp.task('html:prod', html.prod);
+gulp.task('html:dev', html.dev);
 
 
 // Images
@@ -63,10 +63,10 @@ gulp.task('copy', gulp.parallel('copy:base'/**, 'copy:cache-manifest'*/, 'copy:l
 
 
 // Default
-gulp.task('default', gulp.parallel('images', 'scripts', 'styles', 'html', 'copy'));
+gulp.task('default', gulp.parallel('images', 'scripts:dev', 'styles:dev', 'html:dev', 'copy'));
 
 // Production
-gulp.task('production', gulp.parallel('images', 'scripts-prod', 'styles-prod', 'html-prod', 'copy'));
+gulp.task('production', gulp.parallel('images', 'scripts:prod', 'styles:prod', 'html:prod', 'copy'));
 
 
 // // Deploy
@@ -89,15 +89,15 @@ gulp.task('deploy', gulp.series('production', function() {
 gulp.task('watch', gulp.series('default', function() {
     gulp.watch(source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', browserSync.reload));
 
-    gulp.watch(source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts', 'html'/**, 'copy:cache-manifest'*/), browserSync.reload));
+    gulp.watch(source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'/**, 'copy:cache-manifest'*/), browserSync.reload));
 
-    gulp.watch(source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles', 'html'/**, 'copy:cache-manifest'*/), browserSync.reload));
+    gulp.watch(source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'/**, 'copy:cache-manifest'*/), browserSync.reload));
 
     gulp.watch([
         source.base + '/**/*.hbs',
         source.base + '/**/*.handlebars',
         '!' + source.base + '/assets/**/*',
-    ], gulp.series('html'/**, 'copy:cache-manifest'*/, browserSync.reload));
+    ], gulp.series('html:dev'/**, 'copy:cache-manifest'*/, browserSync.reload));
 
     gulp.watch([
         source.base + '/robots.txt',
