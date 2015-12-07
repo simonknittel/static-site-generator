@@ -10,9 +10,7 @@
 		}
 	],
     "Gulp": {
-        "gulpfile_paths": [
-            "./"
-        ]
+        "gulpfile_paths": []
     },
     "color_variables_files": [
         "source/assets/styles/_base/_variables.scss"
