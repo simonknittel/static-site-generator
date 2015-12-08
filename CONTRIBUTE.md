@@ -14,7 +14,7 @@ The styles are written in SCSS which is getting compiled to browser understandab
 
 Directory structure
 ---
-You will find the source files under [source/assets/styles](./source/assets/styles). The directory is seperated in three main directories. In `_atoms` you will place all basic styling of the HTML tags like `<table>` or `<ul>`. In `_base` you will place all variables, mixins, global classes and so on. In `_modules` you will place your modules of your site like the header or a footer. The files are getting compiled to `build/assets/css`. Files and directories beginning with an `_` are only getting included in other files.
+You will find the source files under [source/assets/styles](./source/assets/styles). The directory is seperated in three main directories. In [_atoms](./source/assets/styles/_atoms) you will place all basic styling of the HTML tags like `<table>` or `<ul>`. In [_base](./source/assets/styles/_base) you will place all variables, mixins, global classes and so on. In [_modules](./source/assets/styles/_modules) you will place your modules of your site like the header or a footer. The files are getting compiled to `build/assets/css`. Files and directories beginning with an `_` are only getting included in other files.
 
 Naming convention
 ---
