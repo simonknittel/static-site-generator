@@ -92,24 +92,7 @@ look at https://bitbucket.org/simonknittel/scrum
 
 1. Add ui router
 
----
-
-SET-PROJECT-NAME
-===
-SET-DESCRIPTION
-
-Notes
----
-*
-
-Production dependencies
----
-*
-
-Development dependencies
----
-*
-
 Want to contribute?
----
+===
+
 Checkout [CONTRIBUTE.md](./CONTRIBUTE.md)
