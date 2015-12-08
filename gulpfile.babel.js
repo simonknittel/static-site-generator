@@ -29,16 +29,27 @@ build.styles = build.base + '/assets/css';
 // });
 
 
+// Fixing
+gulp.task('fix:scripts', scripts.fix);
+gulp.task('fix', gulp.parallel('fix:scripts'));
+
+
 // Scripts
 import * as scripts from './gulpfile/_scripts';
-gulp.task('scripts:prod', scripts.prod);
-gulp.task('scripts:dev', scripts.dev);
+gulp.task('scripts:prod', gulp.series('fix:scripts', scripts.prod));
+gulp.task('scripts:dev', gulp.series('fix:scripts', scripts.dev));
 
 
 // Styles
 import * as styles from './gulpfile/_styles';
 gulp.task('styles:prod', styles.prod);
 gulp.task('styles:dev', styles.dev);
+
+
+// Linting
+gulp.task('lint:scripts', gulp.series('fix:scripts', scripts.lint));
+gulp.task('lint:styles', styles.lint);
+gulp.task('lint', gulp.parallel('lint:scripts', 'lint:styles'));
 
 
 // HTML

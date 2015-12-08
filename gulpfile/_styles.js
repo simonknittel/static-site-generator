@@ -6,6 +6,7 @@ import gulp from 'gulp';
 import notify from 'gulp-notify';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
+import scssLint from 'gulp-scss-lint';
 
 
 // Variables
@@ -53,4 +54,9 @@ export function prod() {
         .pipe(autoprefixer())
         .pipe(csso())
         .pipe(gulp.dest(build.styles));
+}
+
+export function lint() {
+    return gulp.src(source.styles + '/**/*.scss')
+        .pipe(scssLint());
 }

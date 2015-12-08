@@ -2,6 +2,8 @@
 import {execSync} from 'child_process';
 import fs from 'fs';
 import gulp from 'gulp';
+import eslint from 'gulp-eslint';
+import gulpIf from 'gulp-if'
 
 
 // Variables
@@ -28,6 +30,11 @@ function bundle(parameters = '') {
     return;
 }
 
+function isFixed(file) {
+    // Has ESLint fixed the file contents?
+    return file.eslint != null && file.eslint.fixed;
+}
+
 export function dev(callback) {
     bundle();
     return callback();
@@ -36,4 +43,19 @@ export function dev(callback) {
 export function prod(callback) {
     bundle(' --minify --skip-source-maps');
     return callback();
+}
+
+// https://github.com/adametry/gulp-eslint/blob/master/example/fix.js
+export function fix() {
+    return gulp.src(source.scripts + '/**/*.js')
+        .pipe(eslint({
+            fix: true,
+        }))
+        .pipe(gulpIf(isFixed, gulp.dest(source.scripts)));
+}
+
+export function lint() {
+    return gulp.src(source.scripts + '/**/*.js')
+        .pipe(eslint())
+        .pipe(eslint.format());
 }

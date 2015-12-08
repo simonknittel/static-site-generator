@@ -476,10 +476,10 @@
 	"buffers":
 	[
 		{
-			"file": "package.json",
+			"file": "gulpfile.babel.js",
 			"settings":
 			{
-				"buffer_size": 1090,
+				"buffer_size": 3317,
 				"line_ending": "Unix"
 			}
 		}
@@ -491,10 +491,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 185.0,
-		"last_filter": "",
+		"height": 375.0,
+		"last_filter": "terma",
 		"selected_items":
 		[
+			[
+				"terma",
+				"Terminal: Open in project folder"
+			],
+			[
+				"termina",
+				"Terminal: Open in project folder"
+			],
 			[
 				"terminal",
 				"Terminal: Open in project folder"
@@ -554,10 +562,6 @@
 			[
 				"key",
 				"Preferences: Key Bindings - User"
-			],
-			[
-				"termina",
-				"Preferences: Terminal Key Bindings – Default"
 			],
 			[
 				"css",
@@ -724,10 +728,10 @@
 	],
 	"file_history":
 	[
+		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile.babel.js",
+		"/L/xampp/htdocs/repos/libraries/static-site-template/package.json",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_scripts.js",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_styles.js",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/package.json",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile.babel.js",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/source/_partials/_head.hbs",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/source/_partials/_foot.hbs",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/scripts/_modules/_appcache-handler.js",
@@ -869,6 +873,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'html'",
+			"'html-prod'",
+			"'styles'",
+			"'styles-prod'",
+			"'scripts'",
+			"scripts-prod",
 			"source_images",
 			"replace",
 			"rename",
@@ -990,13 +1000,7 @@
 			"_templates",
 			"Projects name",
 			"_partials",
-			"partials",
-			"gulp",
-			"changed",
-			"webp",
-			"changed",
-			"REPLACE-ME",
-			" # "
+			"partials"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1019,11 +1023,11 @@
 			[
 				{
 					"buffer": 0,
-					"file": "package.json",
+					"file": "gulpfile.babel.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1090,
+						"buffer_size": 3317,
 						"regions":
 						{
 						},
@@ -1095,7 +1099,7 @@
 								"bh_tag_close",
 								"bh_tag_content"
 							],
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage"
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1168,6 +1172,10 @@
 		"selected_items":
 		[
 			[
+				"gulp",
+				"gulpfile.babel.js"
+			],
+			[
 				"packa",
 				"package.json"
 			],
@@ -1182,10 +1190,6 @@
 			[
 				"package",
 				"package.json"
-			],
-			[
-				"gulp",
-				"gulpfile.babel.js"
 			],
 			[
 				"head",
