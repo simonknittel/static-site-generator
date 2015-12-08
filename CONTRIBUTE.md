@@ -10,7 +10,7 @@ Stylesheets
 
 Workflow
 ---
-The styles are written in SCSS which is getting compiled to browser understandable CSS. The compiling is done with a Gulp task. This task can also watch for changes so that the SCSS is getting recompiled when the source files changed. The SCSS will also getting concatenated. You will get a `styles.css` which should contain all SCSS which will be used on the whole site. This file will get included on every page (look at [_head.hbs](./source/_partials/_head.hbs). You can also create seperate SCSS files like the `styles--index.scss` which contains modules only used on this page. You can individually include them on the corresponding pages (look at [index.hbs](./source/index.hbs) row 1).
+The styles are written in SCSS which is getting compiled to browser understandable CSS. The compiling is done with a Gulp task. This task can also watch for changes so that the SCSS is getting recompiled when the source files changed. The SCSS will also getting concatenated. You will get a `styles.css` which should contain all SCSS which will be used on the whole site. This file will get included on every page (look at [_head.hbs](./source/_partials/_head.hbs#L41)). You can also create seperate SCSS files like the `styles--index.scss` which contains modules only used on this page. You can individually include them on the corresponding pages (look at [index.hbs](./source/index.hbs#L1) and [_head.hbs](./source/_partials/_head.hbs#L42)).
 
 Directory structure
 ---
