@@ -1,4 +1,6 @@
 // Dependencies
+import config from './config';
+
 import gulp from 'gulp';
 import handlebars from 'gulp-compile-handlebars';
 import minifyHTML from 'gulp-minify-html';
@@ -6,22 +8,14 @@ import rename from 'gulp-rename';
 import replace from 'gulp-replace';
 
 
-// Variables
-let source = {};
-let build = {};
-
-source.base = 'source';
-build.base = 'build';
-
-
 export function dev() {
     const templateData = {};
 
     return gulp.src([
-        source.base + '/**/*.hbs',
-        source.base + '/**/*.handlebars',
-        '!' + source.base + '/_partials/**/*',
-        '!' + source.base + '/assets/**/*',
+        config.paths.source.base + '/**/*.hbs',
+        config.paths.source.base + '/**/*.handlebars',
+        '!' + config.paths.source.base + '/_partials/**/*',
+        '!' + config.paths.source.base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
             batch : ['./source'],
@@ -39,17 +33,17 @@ export function dev() {
         .pipe(rename(function(path) {
             path.extname = '.html';
         }))
-        .pipe(gulp.dest(build.base));
+        .pipe(gulp.dest(config.paths.build.base));
 }
 
 export function prod() {
     const templateData = {};
 
     return gulp.src([
-        source.base + '/**/*.hbs',
-        source.base + '/**/*.handlebars',
-        '!' + source.base + '/_partials/**/*',
-        '!' + source.base + '/assets/**/*',
+        config.paths.source.base + '/**/*.hbs',
+        config.paths.source.base + '/**/*.handlebars',
+        '!' + config.paths.source.base + '/_partials/**/*',
+        '!' + config.paths.source.base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
             batch : ['./source'],
@@ -68,5 +62,5 @@ export function prod() {
         .pipe(rename(function(path) {
             path.extname = '.html';
         }))
-        .pipe(gulp.dest(build.base));
+        .pipe(gulp.dest(config.paths.build.base));
 }
