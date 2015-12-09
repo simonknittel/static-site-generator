@@ -18,7 +18,7 @@ export function dev() {
         '!' + config.paths.source.base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
-            batch : ['./source'],
+            batch: ['./source'],
             helpers: {
                 compare: function(a, b) {
                     if (a === b) {
@@ -46,7 +46,7 @@ export function prod() {
         '!' + config.paths.source.base + '/assets/**/*',
     ])
         .pipe(handlebars(templateData, {
-            batch : ['./source'],
+            batch: ['./source'],
             helpers: {
                 compare: function(a, b) {
                     if (a === b) {

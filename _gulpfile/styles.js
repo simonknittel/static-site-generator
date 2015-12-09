@@ -20,7 +20,7 @@ export function dev() {
                 message: 'View console for more details.',
                 sound: true,
             }))
-            .on('error', function (err) {
+            .on('error', function(err) {
                 console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber);
             })
             .pipe(autoprefixer())
@@ -39,7 +39,7 @@ export function prod() {
             message: 'View console for more details.',
             sound: true,
         }))
-        .on('error', function (err) {
+        .on('error', function(err) {
             console.error('ERROR TASK: prod-styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber);
         })
         .pipe(autoprefixer())
