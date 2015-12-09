@@ -25,7 +25,7 @@ Most important features
 
 I want to use [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), [Ember](http://emberjs.com/) or [Meteor](https://www.meteor.com/)
 ---
-You can easily add AngularJS or React to this template. Read below to see how to add AngularJS or React to this template. Ember is highly recommend to be used with [Ember CLI](http://www.ember-cli.com/). The template is currently not tested and optimized for the use with Meteor.
+You can easily add AngularJS to this template. Read [here](#add-angularjs) to see how to add AngularJS to this template. Ember is highly recommend to be used with [Ember CLI](http://www.ember-cli.com/). The template is currently not tested and optimized for the use with Meteor or React.
 
 Planned features
 ---
@@ -40,12 +40,13 @@ Planned features
 How to set up a new project
 ===
 
-Fast start (recommend)
+Quick start (recommend)
 ---
-The initialization script asks you for the project name and a short description of your project. Then it will ask you if you want to add AngularJS or React to your project. After that it will install all dependencies and your project is ready to go.
+The initialization script asks you for the project name and a short description of your project. Then it will ask you if you want to add AngularJS to your project. After that it will install all dependencies and your project is ready to go.
 
 1. Run `node init.js`
-1. Run `gulp watch`
+2. Follow the instructions
+3. Run `gulp watch`
 
 Manual start
 ---
@@ -54,10 +55,6 @@ Manual start
 1. Run `npm install`
 1. Run `jspm install`
 1. Run `gulp watch`
-
-### Add React
-1. Run `jspm install react`
-1. Run `jspm install jsx`
 
 ### Add AngularJS
 look at https://bitbucket.org/simonknittel/scrum
