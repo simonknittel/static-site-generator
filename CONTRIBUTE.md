@@ -1,6 +1,6 @@
 Contribute
 ---
-1. Install all npm and JSPM dependencies with `(npm install && jspm install)`
+1. Install all dependencies with `(npm install && jspm install)`
 1. Build/compile the project and open it automatically in your browser with `gulp watch`
 
 Stylesheets
