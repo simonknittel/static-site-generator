@@ -13,7 +13,7 @@ You will find the source files under [source/assets/styles](./source/assets/styl
 
 Coding standards/style and linting
 ---
-We included [SCSS-Lint](https://github.com/brigade/scss-lint) as linter for the styles source files. You will find the rules in [.scss-lint.yml](./.scss-lint.yml). You should configure your editor/IDE to lint your code on the fly (i.e Sublime Text 3: [Sublime​Linter-contrib-scss-lint](https://packagecontrol.io/packages/Sublime​Linter-contrib-scss-lint)). You can also lint the files with the Gulp task `lint:styles`.
+We included [SCSS-Lint](https://github.com/brigade/scss-lint) as linter for the styles source files. You will find the rules in [.scss-lint.yml](./.scss-lint.yml). You should configure your editor/IDE to lint your code on the fly (i.e Sublime Text 3: [Sublime​Linter-contrib-scss-lint](https://packagecontrol.io/packages/Sublime​Linter-contrib-scss-lint)). You can also lint the files with the Gulp task [lint:styles](./gulpfile.babel.js#L51).
 
 JavaScript
 ===
@@ -25,7 +25,7 @@ You will find the source files under [source/assets/scripts](./source/assets/scr
 
 Coding standards/style and linting
 ---
-We included [ESLint](http://eslint.org/) as linter for the JavaScript source files. You will find the rules in [.eslintrc](./.eslintrc). You should configure your editor/IDE to lint your code on the fly (i.e Sublime Text 3: [SublimeLinter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint)). You can also lint the files with the Gulp task `lint:scripts`. This task will also fix some errors automatically.
+We included [ESLint](http://eslint.org/) as linter for the JavaScript source files. You will find the rules in [.eslintrc](./.eslintrc). You should configure your editor/IDE to lint your code on the fly (i.e Sublime Text 3: [SublimeLinter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint)). You can also lint the files with the Gulp task [lint:scripts](./gulpfile.babel.js#L50). This task will also fix some errors automatically.
 
 Images
 ===
