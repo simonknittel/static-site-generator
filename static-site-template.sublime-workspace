@@ -476,10 +476,10 @@
 	"buffers":
 	[
 		{
-			"file": "gulpfile.babel.js",
+			"file": "CONTRIBUTE.md",
 			"settings":
 			{
-				"buffer_size": 3317,
+				"buffer_size": 2482,
 				"line_ending": "Unix"
 			}
 		}
@@ -491,10 +491,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
-		"last_filter": "terma",
+		"height": 137.0,
+		"last_filter": "preview",
 		"selected_items":
 		[
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
 			[
 				"terma",
 				"Terminal: Open in project folder"
@@ -581,10 +585,6 @@
 			],
 			[
 				"prev",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"preview",
 				"Markdown Preview: Preview in Browser"
 			],
 			[
@@ -696,7 +696,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 514.0
+		"width": 579.0
 	},
 	"console":
 	{
@@ -718,16 +718,12 @@
 	},
 	"expanded_folders":
 	[
-		"/L/xampp/htdocs/repos/libraries/static-site-template",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/source",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/_atoms",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/_base",
-		"/L/xampp/htdocs/repos/libraries/static-site-template/source/assets/styles/_modules"
+		"/Users/simon.knittel/Desktop/Projekte/static-site-template"
 	],
 	"file_history":
 	[
+		"/Users/simon.knittel/Desktop/Projekte/static-site-template/source/_partials/_head.hbs",
+		"/Users/simon.knittel/Desktop/Projekte/static-site-template/gulpfile.babel.js",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile.babel.js",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/package.json",
 		"/L/xampp/htdocs/repos/libraries/static-site-template/gulpfile/_scripts.js",
@@ -853,9 +849,7 @@
 		"/I/repos/scrum-board/app/templates/projects/index.hbs",
 		"/I/repos/scrum-board/app/templates/projects.hbs",
 		"/I/repos/scrum-board/app/templates/project/team.hbs",
-		"/I/repos/scrum-board/app/styles/_modules/_team.scss",
-		"/I/repos/scrum-board/app/app.js",
-		"/I/repos/scrum-board/app/styles/_base/_variables.scss"
+		"/I/repos/scrum-board/app/styles/_modules/_team.scss"
 	],
 	"find":
 	{
@@ -1023,83 +1017,87 @@
 			[
 				{
 					"buffer": 0,
-					"file": "gulpfile.babel.js",
+					"file": "CONTRIBUTE.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3317,
+						"buffer_size": 2482,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1869,
+								1869
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
 							],
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"parser": "markdown",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"target": "disk"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1172,6 +1170,14 @@
 		"selected_items":
 		[
 			[
+				"head",
+				"source/_partials/_head.hbs"
+			],
+			[
+				"contri",
+				"CONTRIBUTE.md"
+			],
+			[
 				"gulp",
 				"gulpfile.babel.js"
 			],
@@ -1190,10 +1196,6 @@
 			[
 				"package",
 				"package.json"
-			],
-			[
-				"head",
-				"source\\_partials\\_head.hbs"
 			],
 			[
 				"foot",
@@ -1270,7 +1272,7 @@
 		[
 			[
 				"",
-				"L:\\xampp\\htdocs\\repos\\libraries\\scroll.js\\scroll.sublime-workspace"
+				"~/Desktop/Projekte/_javalounge_tv_app/old-java-lounge.sublime-project"
 			],
 			[
 				"scroll",
