@@ -6,6 +6,7 @@ import browserSync from 'browser-sync';
 import gulp from 'gulp';
 import notify from 'gulp-notify';
 import sftp from 'gulp-sftp';
+import cached from 'gulp-cached';
 
 
 // Clean
@@ -68,6 +69,7 @@ gulp.task('production', gulp.parallel('images', 'scripts:prod', 'styles:prod', '
 // // Deploy
 gulp.task('deploy', gulp.series('production', function() {
     return gulp.src(config.paths.build.base + '/**/*')
+        .pipe(cached('deploy'))
         .pipe(sftp({
             host: 'ssh.strato.de',
             remotePath: '/',

@@ -2,7 +2,7 @@
 import config from './config';
 
 import gulp from 'gulp';
-import changed from 'gulp-changed';
+import cached from 'gulp-cached';
 // import imagemin from 'gulp-imagemin';
 // import kraken from 'gulp-kraken'; // Needs API access
 // import webp from 'gulp-webp';
@@ -10,7 +10,7 @@ import changed from 'gulp-changed';
 
 export function normal() {
     return gulp.src(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}')
-        .pipe(changed(config.paths.build.images))
+        .pipe(cached('images:default'))
         // .pipe(imagemin()) // Somehow broken
         // .pipe(kraken({
         //     key: '',
@@ -27,7 +27,7 @@ export function normal() {
 //         config.paths.source.images + '/**/*.jpeg',
 //         config.paths.source.images + '/**/*.png',
 //     ])
-//         .pipe(changed(config.paths.build.images))
+//         .pipe(cached('images:webP'))
 //         .pipe(webp({
 //             lossless: true,
 //         }))

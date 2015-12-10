@@ -13,7 +13,7 @@ function bundle(parameters = '') {
 
     for (var i = 0; i < files.length; i++) {
         if (files[i].indexOf('.js', files[i].length - '.js'.length) !== -1) {
-            var file = files[i].slice(0, -3);
+            const file = files[i].slice(0, -3);
             execSync('jspm bundle-sfx ' + config.paths.source.scripts + '/' + file + ' ' + config.paths.build.scripts + '/' + file + '.js' + parameters);
         }
     }

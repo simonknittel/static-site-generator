@@ -2,7 +2,7 @@
 import config from './config';
 
 import gulp from 'gulp';
-import changed from 'gulp-changed';
+import cached from 'gulp-cached';
 // import replace from 'gulp-replace';
 
 
@@ -13,7 +13,7 @@ export function base() {
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
     ])
-        .pipe(changed(config.paths.build.base))
+        .pipe(cached('copy:base'))
         .pipe(gulp.dest(config.paths.build.base));
 }
 
@@ -25,6 +25,6 @@ export function base() {
 
 export function libraries() {
     return gulp.src(config.paths.source.base + '/assets/libraries/**/*')
-        .pipe(changed(config.paths.build.base + '/assets/libs'))
+        .pipe(cached('copy:libraries'))
         .pipe(gulp.dest(config.paths.build.base + '/assets/libs'));
 }
