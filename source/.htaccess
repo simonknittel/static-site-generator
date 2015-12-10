@@ -45,3 +45,11 @@ AddType text/cache-manifest .appcache
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^([^\.]+)$ $1.html [NC,L]
 </IfModule>
+
+#
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+</IfModule>
+
+#
+ServerSignature Off

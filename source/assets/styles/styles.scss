@@ -1,5 +1,7 @@
 // Libraries
-@import '../libraries/normalize';
+// @import '../libraries/normalize-scss/sass/normalize';
+// @import '../libraries/normalize-scss/sass/normalize/import-now';
+@import 'normalize/import-now';
 
 // Base
 @import '_base/variables';

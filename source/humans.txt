@@ -1,4 +1,4 @@
 # http://humanstxt.org/
 
 # Project template
-    Simon Knittel <webdevelopment@simonknittel.de>
+    Simon Knittel <hallo@simonknittel.de>

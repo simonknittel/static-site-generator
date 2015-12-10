@@ -33,7 +33,9 @@
     "gulp-sourcemaps": "^1.6.0",
     "jspm": "^0.16.13"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize-scss": "^4.0.3"
+  },
   "jspm": {
     "dependencies": {
       "fastclick": "npm:fastclick@^1.0.6"
