@@ -1,6 +1,4 @@
 import angular from 'angular';
-import '../../shared/dirDisqus';
-import '../../shared/angular-gist';
 
 // Modules
 
