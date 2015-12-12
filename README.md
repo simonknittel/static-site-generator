@@ -2,12 +2,12 @@
     1. [Features](#features)
     1. [I want to use AngularJS, React, Ember or Meteor](#i-want-to-use-angularjs-react-ember-or-meteor)
     1. [Planned features](#planned-features)
+1. [Start into an existing project](#want-to-contribute)
 1. [How to set up a new project](#how-to-set-up-a-new-project)
     1. [Quick start (recommend)](#quick-start-recommend)
     1. [Manual start](#manual-start)
         1. [Install dependencies](#install-dependencies)
         1. [Add AngularJS](#add-angularjs)
-1. [Want to contribute?](#want-to-contribute)
 
 Static Site Template
 ===
@@ -24,14 +24,14 @@ Features
 * JavaScript package managament with [JSPM](http://jspm.io/)
     + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/)
 * Extensive build workflow with Gulp
-    + JavaScript precompilation and minimization with [JSPM](http://jspm.io/)
+    + JavaScript linting, precompilation and minimization with [JSPM](http://jspm.io/)
     + Handlebars precompilation and HTML minimization
-    + SCSS precompilation and minimization
+    + SCSS linting, precompilation and minimization
     + Image optimizing
         - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload
     + Compiling of seperate bundled scripts and styles files for seperate pages
-* Application Cache already integrated
+* Ready to use [Application Cache](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache) (the use of the Application Cache is deprecated)
 * Built with the current best practices and newest standards
 
 I want to use [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), [Ember](http://emberjs.com/) or [Meteor](https://www.meteor.com/)
@@ -44,9 +44,14 @@ Planned features
 * Extended SVG handling with Gulp
 * Upload of the compiled CSS and JavaScript files to the CDN of Amazon or Microsoft with Gulp
 * Sitemap generation with Gulp
-* Let the developer through the init.js decide whether he wants the application cache added or not
+* Let the developer through the init.js decide whether he wants the Application Cache added or not
 
 ---
+
+Start into an existing project
+===
+
+Checkout [CONTRIBUTE.md](./CONTRIBUTE.md)
 
 How to set up a new project
 ===
@@ -68,7 +73,8 @@ Manual start
 1. Run `gulp watch`
 
 ### Add AngularJS
-look at https://bitbucket.org/simonknittel/scrum
+
+**Has to be reworked** (look at https://bitbucket.org/simonknittel/scrum)
 
 
 1. Run `jspm install angular`
@@ -99,8 +105,3 @@ look at https://bitbucket.org/simonknittel/scrum
 1. Add the new gulp task to the copy and watch tasks
 
 1. Add ui router
-
-Want to contribute?
-===
-
-Checkout [CONTRIBUTE.md](./CONTRIBUTE.md)
