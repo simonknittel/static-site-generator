@@ -1,14 +1,27 @@
 import angular from 'angular';
-import * as appRoutes from './app.routes';
+import 'angular-ui-router';
 
 // Modules
+import './modules/index/index.module';
 
 // Main module
-angular.module('app', []);
+angular.module('app', ['ui.router', 'index']);
 
 // Services
 
 // Controllers
-import IndexController from './modules/app/index/IndexController';
-angular.module('app').controller('IndexController', IndexController);
 
+// Filters
+import trustFilter from './shared/trust.filter';
+angular.module('app').filter('trust', trustFilter);
+
+angular.module('app').config(($stateProvider, $urlRouterProvider, $locationProvider) => {
+    $urlRouterProvider.otherwise('/');
+    $locationProvider.html5Mode(true);
+
+    $stateProvider
+        .state('index', {
+            url: '/',
+            templateUrl: 'assets/js/_angular-app/modules/index/index.template.html',
+        });
+});

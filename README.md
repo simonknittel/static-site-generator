@@ -68,40 +68,51 @@ Manual start
 ---
 
 ### Install dependencies
-1. Run `npm install`
-1. Run `jspm install`
+1. Run `(npm install && jspm install)`
 1. Run `gulp watch`
 
 ### Add AngularJS
 
-**Has to be reworked** (look at https://bitbucket.org/simonknittel/scrum)
+1. Run `jspm install angular angular-ui-router`
+1. Copy the [init/_angular-app](./init/_angular-app) directory to [source/assets/scripts](./source/assets/scripts)
+1. Add the following to the `<html>` tag in the [head.hbs](./source/_partials/head.hbs#L4)
 
+```html
+ng-app="app"
+```
 
-1. Run `jspm install angular`
-1. Copy the `./init/_angular-app` directory to `./source/assets/scripts`
-1. Add the following to the `<html>` tag in the `./source/_partials/_head.hbs`
+1. Add the following to the `./source/assets/scripts/scripts--index.js`
 
-        ng-app="app"
-
-1. Add the following to the `./source/assets/scripts/main.js`
-
-        import * as app from './_angular-app/app.module';
+```javascript
+import './_angular-app/app.module';
+```
 
 1. Add the following to the `./source/index.hbs`
 
-        <ng-include src="'assets/js/_angular-app/modules/app/index/index.html'"></ng-include>
+```html
+<ui-view></ui-view>
+```
 
-1. Add the following to the `gulpfile.js`
+1. Add the following to the `gulpfile.babel.js`
 
-        var source_angular_app = source_scripts + '/_angular-app';
-        var build_angular_app = build_scripts + '/_angular-app';
+```javascript
+var config.paths.source.angular_app = config.paths.source.scripts + '/_angular-app';
+var config.paths.build.angular_app = config.paths.build.scripts + '/_angular-app';
 
-        gulp.task('copy:angular-app', function() {
-            return gulp.src(source_angular_app + '/**/*.html')
-                .pipe(changed(build_angular_app))
-                .pipe(gulp.dest(build_angular_app));
-        });
+...
 
-1. Add the new gulp task to the copy and watch tasks
+gulp.task('copy:angular-app', copy.angularApp);
+gulp.task('copy', gulp.parallel('copy:base'/**, 'copy:cache-manifest'*/, 'copy:libraries', 'copy:angular-app'));
 
-1. Add ui router
+...
+
+gulp.watch(config.paths.source.angular_app + '/**/*.html', gulp.series('copy:angular-app', browserSync.reload));
+
+...
+
+export function angularApp() {
+    return gulp.src(config.paths.source.angular_app + '/**/*.html')
+        .pipe(cached('copy:angular-app'))
+        .pipe(gulp.dest(build_angular_app));
+}
+```
