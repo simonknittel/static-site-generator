@@ -20,9 +20,7 @@ export function dev() {
                 message: 'View console for more details.',
                 sound: true,
             }))
-            .on('error', function(err) {
-                console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber);
-            })
+            .on('error', err => console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
             .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.paths.build.styles))
@@ -39,9 +37,7 @@ export function prod() {
             message: 'View console for more details.',
             sound: true,
         }))
-        .on('error', function(err) {
-            console.error('ERROR TASK: prod-styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber);
-        })
+        .on('error', err => console.error('ERROR TASK: prod-styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
         .pipe(autoprefixer())
         .pipe(csso())
         .pipe(gulp.dest(config.paths.build.styles));

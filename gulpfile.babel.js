@@ -67,7 +67,7 @@ gulp.task('production', gulp.parallel('images', 'scripts:prod', 'styles:prod', '
 
 
 // // Deploy
-gulp.task('deploy', gulp.series('production', function() {
+gulp.task('deploy', gulp.series('production', () => {
     return gulp.src(config.paths.build.base + '/**/*')
         .pipe(cached('deploy'))
         .pipe(sftp({
@@ -84,7 +84,7 @@ gulp.task('deploy', gulp.series('production', function() {
 
 
 // Watch
-gulp.task('watch', gulp.series('default', function() {
+gulp.task('watch', gulp.series('default', () => {
     gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', browserSync.reload));
 
     gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'/**, 'copy:cache-manifest'*/), browserSync.reload));

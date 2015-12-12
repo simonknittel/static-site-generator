@@ -39,9 +39,7 @@ function pageGoesOnline() {
 
     init();
 
-    reinitializePage = setInterval(function() {
-        init();
-    }, options.interval);
+    reinitializePage = setInterval(() => init(), options.interval);
 }
 
 /**

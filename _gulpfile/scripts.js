@@ -11,9 +11,10 @@ import gulpIf from 'gulp-if';
 function bundle(parameters = '') {
     const files = fs.readdirSync(config.paths.source.scripts);
 
-    for (var i = 0; i < files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
         if (files[i].indexOf('.js', files[i].length - '.js'.length) !== -1) {
             const file = files[i].slice(0, -3);
+
             execSync('jspm bundle-sfx ' + config.paths.source.scripts + '/' + file + ' ' + config.paths.build.scripts + '/' + file + '.js' + parameters);
         }
     }

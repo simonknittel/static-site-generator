@@ -20,19 +20,11 @@ export function dev() {
         .pipe(handlebars(templateData, {
             batch: ['./source/_partials'],
             helpers: {
-                compare: function(a, b) {
-                    if (a === b) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                },
+                compare: (a, b) => a === b,
             },
         }))
         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
-        .pipe(rename(function(path) {
-            path.extname = '.html';
-        }))
+        .pipe(rename(path => path.extname = '.html'))
         .pipe(gulp.dest(config.paths.build.base));
 }
 
@@ -48,19 +40,11 @@ export function prod() {
         .pipe(handlebars(templateData, {
             batch: ['./source/_partials'],
             helpers: {
-                compare: function(a, b) {
-                    if (a === b) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                },
+                compare: (a, b) => a === b,
             },
         }))
         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
         .pipe(minifyHTML({}))
-        .pipe(rename(function(path) {
-            path.extname = '.html';
-        }))
+        .pipe(rename(path => path.extname = '.html'))
         .pipe(gulp.dest(config.paths.build.base));
 }
