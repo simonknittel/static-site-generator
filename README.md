@@ -1,10 +1,21 @@
+1. [Introduction](#static-site-template)
+    1. [Features](#features)
+    1. [I want to use AngularJS, React, Ember or Meteor](#i-want-to-use-angularjs-react-ember-or-meteor)
+    1. [Planned features](#planned-features)
+1. [How to set up a new project](#how-to-set-up-a-new-project)
+    1. [Quick start (recommend)](#quick-start-recommend)
+    1. [Manual start](#manual-start)
+        1. [Install dependencies](#install-dependencies)
+        1. [Add AngularJS](#add-angularjs)
+1. [Want to contribute?](#want-to-contribute)
+
 Static Site Template
 ===
 This template is great to start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within a few seconds. The most important files and build tasks are already there and filled with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
 
 The goal of this template is to have a template with everything already prepared to start very fast with a new project without being restricted by any limits. With that you are able to add new features or remove already implemented features like the [Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) if you don't want to use them.
 
-Most important features
+Features
 ---
 * Fast layout with precompiled [Handlebars templates](http://handlebarsjs.com/)
 * Project structure based on the [atomic design concept](http://patternlab.io/about.html)
