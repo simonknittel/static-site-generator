@@ -81,6 +81,12 @@ Manual start (recommend)
 ng-app="app"
 ```
 
+1. Add the following to the `<head>` in the [head.hbs](./source/_partials/head.hbs)
+
+```html
+<base href="/">
+```
+
 1. Add the following to the `./source/assets/scripts/scripts--index.js`
 
 ```javascript
@@ -96,8 +102,11 @@ import './_angular-app/app.module';
 1. Add the following to the `gulpfile.babel.js`
 
 ```javascript
-var config.paths.source.angular_app = config.paths.source.scripts + '/_angular-app';
-var config.paths.build.angular_app = config.paths.build.scripts + '/_angular-app';
+config.paths.source.angularApp = config.paths.source.scripts + '/_angular-app';
+
+...
+
+config.paths.build.angularApp = config.paths.build.scripts + '/_angular-app';
 
 ...
 
@@ -106,13 +115,13 @@ gulp.task('copy', gulp.parallel('copy:base'/**, 'copy:cache-manifest'*/, 'copy:l
 
 ...
 
-gulp.watch(config.paths.source.angular_app + '/**/*.html', gulp.series('copy:angular-app', browserSync.reload));
+gulp.watch(config.paths.source.angularApp + '/**/*.html', gulp.series('copy:angular-app', browserSync.reload));
 
 ...
 
 export function angularApp() {
-    return gulp.src(config.paths.source.angular_app + '/**/*.html')
+    return gulp.src(config.paths.source.angularApp + '/**/*.html')
         .pipe(cached('copy:angular-app'))
-        .pipe(gulp.dest(build_angular_app));
+        .pipe(gulp.dest(config.paths.build.angularApp));
 }
 ```
