@@ -5,6 +5,8 @@
 
         <!-- Concatenated scripts -->
         <script type="text/javascript" src="assets/js/scripts.js?RANDOMIZE-ME"></script>
-        <script type="text/javascript" src="assets/js/{{scripts}}.js?RANDOMIZE-ME"></script>
+        {{# scripts}}
+            <script type="text/javascript" src="assets/js/{{.}}.js?RANDOMIZE-ME"></script>
+        {{/ scripts}}
     </body>
 </html>
