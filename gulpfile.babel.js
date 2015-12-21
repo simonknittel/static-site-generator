@@ -16,12 +16,12 @@ import cached from 'gulp-cached';
 
 
 // Fixing
+import * as scripts from './_gulpfile/scripts';
 gulp.task('fix:scripts', scripts.fix);
 gulp.task('fix', gulp.parallel('fix:scripts'));
 
 
 // Scripts
-import * as scripts from './_gulpfile/scripts';
 gulp.task('scripts:prod', gulp.series('fix:scripts', scripts.prod));
 gulp.task('scripts:dev', gulp.series('fix:scripts', scripts.dev));
 
@@ -66,7 +66,7 @@ gulp.task('default', gulp.parallel('images', 'scripts:dev', 'styles:dev', 'html:
 gulp.task('production', gulp.parallel('images', 'scripts:prod', 'styles:prod', 'html:prod', 'copy'));
 
 
-// // Deploy
+// Deploy
 gulp.task('deploy', gulp.series('production', () => {
     return gulp.src(config.paths.build.base + '/**/*')
         .pipe(cached('deploy'))

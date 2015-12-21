@@ -1,12 +1,24 @@
-        <!-- Optimized Google Analytics -->
-        <!-- <script>(function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')</script> -->
+        <!-- Other Stylesheets -->
+        <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+        <!-- Concatenated stylesheet -->
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css?RANDOMIZE-ME">
+        {{# styles}}
+            <link rel="stylesheet" type="text/css" href="assets/css/{{.}}.css?RANDOMIZE-ME">
+        {{/ styles}}
+
+        <!-- Initial Data -->
+        <script></script>
 
         <!-- Other Scripts -->
 
         <!-- Concatenated scripts -->
-        <script type="text/javascript" src="assets/js/scripts.js?RANDOMIZE-ME"></script>
+        <script type="text/javascript" src="assets/js/scripts.js?RANDOMIZE-ME" async defer></script>
         {{# scripts}}
-            <script type="text/javascript" src="assets/js/{{.}}.js?RANDOMIZE-ME"></script>
+            <script type="text/javascript" src="assets/js/{{.}}.js?RANDOMIZE-ME" async defer></script>
         {{/ scripts}}
+
+        <!-- Optimized Google Analytics -->
+        <!-- <script>(function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')</script> -->
     </body>
 </html>
