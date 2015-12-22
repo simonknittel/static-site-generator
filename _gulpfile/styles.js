@@ -3,7 +3,6 @@ import config from './config';
 
 import gulp from 'gulp';
 import autoprefixer from 'gulp-autoprefixer';
-import browserSync from 'browser-sync';
 import csso from 'gulp-csso';
 import notify from 'gulp-notify';
 import sass from 'gulp-sass';
@@ -23,8 +22,7 @@ export function dev() {
             .on('error', err => console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
             .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(config.paths.build.styles))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(gulp.dest(config.paths.build.styles));
 }
 
 export function prod() {

@@ -2,7 +2,7 @@
 import config from './_gulpfile/config';
 
 import browserSync from 'browser-sync';
-// import del from 'del';
+import del from 'del';
 import gulp from 'gulp';
 import notify from 'gulp-notify';
 import sftp from 'gulp-sftp';
@@ -10,9 +10,9 @@ import cached from 'gulp-cached';
 
 
 // Clean
-// gulp.task('clean', function() {
-//     del(config.paths.build.base);
-// });
+gulp.task('clean', callback => {
+    del(config.paths.build.base).then(() => callback());
+});
 
 
 // Fixing
@@ -60,10 +60,10 @@ gulp.task('copy', gulp.parallel('copy:base'/**, 'copy:cache-manifest'*/, 'copy:l
 
 
 // Default
-gulp.task('default', gulp.parallel('images', 'scripts:dev', 'styles:dev', 'html:dev', 'copy'));
+gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', 'styles:dev', 'html:dev', 'copy')));
 
 // Production
-gulp.task('production', gulp.parallel('images', 'scripts:prod', 'styles:prod', 'html:prod', 'copy'));
+gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:prod', 'styles:prod', 'html:prod', 'copy')));
 
 
 // Deploy
