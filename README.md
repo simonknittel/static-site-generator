@@ -68,7 +68,8 @@ Manual start (recommend)
 ---
 
 ### Install dependencies
-1. Run `(npm install && jspm install)`
+1. Run `npm install`
+1. Run `jspm install`
 1. Run `gulp watch`
 
 ### Add AngularJS
