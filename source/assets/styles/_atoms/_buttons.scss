@@ -4,4 +4,6 @@ input[type="reset"],
 .button {
     &.hover,
     &:hover {}
+
+    &:disabled {}
 }
