@@ -1,6 +1,6 @@
 Contribute
 ---
-1. Install all dependencies with `(npm install && jspm install)` (they are defnied in the [package.json](./package.json))
+1. Install all dependencies with `npm install` and `jspm install` (they are defnied in the [package.json](./package.json))
 1. Compile the project and open it automatically in your browser with `gulp watch`
 
 
