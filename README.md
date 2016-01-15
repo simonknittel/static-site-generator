@@ -82,25 +82,25 @@ Manual start (recommend)
 ng-app="app"
 ```
 
-1. Add the following to the `<head>` in the [head.hbs](./source/_partials/head.hbs)
+1. Add the following to the [<head>](./source/_partials/head.hbs#L15) in the [head.hbs](./source/_partials/head.hbs)
 
 ```html
 <base href="/">
 ```
 
-1. Add the following to the `./source/assets/scripts/scripts--index.js`
+1. Add the following to the [scripts.js](./source/assets/scripts/scripts.js)
 
 ```javascript
 import './_angular-app/app.module';
 ```
 
-1. Add the following to the `./source/index.hbs`
+1. Add the following to the [index.hbs](./source/index.hbs#L5)
 
 ```html
 <ui-view></ui-view>
 ```
 
-1. Add the following to the `gulpfile.babel.js`
+1. Add the following to the [gulpfile.babel.js](./gulpfile.babel.js)
 
 ```javascript
 config.paths.source.angularApp = config.paths.source.scripts + '/_angular-app';
