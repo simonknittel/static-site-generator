@@ -53,3 +53,8 @@ AddType text/cache-manifest .appcache
 
 #
 ServerSignature Off
+
+#
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
