@@ -1,5 +1,5 @@
 build/
-gulpfile/
+_gulpfile/
 init/
 assets/libraries/
 **/config.js
