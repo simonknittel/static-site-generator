@@ -12,7 +12,7 @@ export function normal() {
     return gulp.src(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}')
         .pipe(cached('images:default'))
         // .pipe(imagemin()) // Somehow broken
-        // .pipe(kraken({
+        // .pipe(kraken({ // PRO account needed
         //     key: '',
         //     secret: '',
         //     lossy: true,
