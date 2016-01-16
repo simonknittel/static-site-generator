@@ -1,7 +1,7 @@
 {
   "name": "SET-PROJECT-NAME",
   "description": "SET-DESCRIPTION",
-  "author": "Simon Knittel <hallo@simonknittel.de>",
+  "author": "Simon Knittel <hallo@simonknittel.de> (http://simonknittel.de/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/simonknittel/static-site-template"

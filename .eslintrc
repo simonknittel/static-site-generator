@@ -79,7 +79,6 @@
         "linebreak-style": [2, "unix"],
         "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
         "new-cap": 2,
-        "newline-after-var": [2, "always"],
         "no-array-constructor": 2,
         "no-bitwise": 2,
         "computed-property-spacing": [2, "never"]
