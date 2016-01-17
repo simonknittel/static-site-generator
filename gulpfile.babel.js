@@ -8,6 +8,8 @@ import notify from 'gulp-notify';
 import sftp from 'gulp-sftp';
 import cached from 'gulp-cached';
 
+import modRewrite from 'connect-modrewrite';
+
 
 // Clean
 gulp.task('clean', callback => {
@@ -111,6 +113,12 @@ gulp.task('watch', gulp.series('default', () => {
     browserSync({
         server: {
             baseDir: config.paths.build.base,
+            middleware: [
+                modRewrite([
+                    // '^([^\.]+)$ $1.html [NC,L]', // Original from the .htaccess
+                    '^.([^\\.]+)$ /$1.html [L]',
+                ]),
+            ],
         },
     });
 }));
