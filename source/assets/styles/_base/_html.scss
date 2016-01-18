@@ -3,9 +3,9 @@
 }
 
 html {
-    @extend .background-color--three;
-    @extend .text-color--two;
-    @extend .font-family--one;
+    @extend %background-color--three;
+    @extend %text-color--two;
+    @extend %font-family--one;
     
     overflow-y: scroll;
     -webkit-font-smoothing: antialiased;
