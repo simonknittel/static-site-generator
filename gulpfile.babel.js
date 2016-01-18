@@ -93,10 +93,14 @@ gulp.task('watch', gulp.series('default', () => {
 
     gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'/**, 'copy:cache-manifest'*/), browserSync.reload));
 
+    // gulp.watch([
+    //     config.paths.source.base + '/**/*.hbs',
+    //     config.paths.source.base + '/**/*.handlebars',
+    //     '!' + config.paths.source.base + '/assets/**/*',
+    // ], gulp.series('html:dev'/**, 'copy:cache-manifest'*/, browserSync.reload));
+
     gulp.watch([
-        config.paths.source.base + '/**/*.hbs',
-        config.paths.source.base + '/**/*.handlebars',
-        '!' + config.paths.source.base + '/assets/**/*',
+        config.paths.source.base + '/**/*.jade',
     ], gulp.series('html:dev'/**, 'copy:cache-manifest'*/, browserSync.reload));
 
     gulp.watch([
