@@ -66,3 +66,46 @@
     text-align: center;
   }
 }
+
+
+//
+// Text colors
+//
+
+.text-color--one {
+    color: $color--one;
+}
+
+.text-color--two {
+    color: $color--two;
+}
+
+.text-color--three {
+    color: $color--three;
+}
+
+
+//
+// Background colors
+//
+
+.background-color--one {
+    background-color: $color--one;
+}
+
+.background-color--two {
+    background-color: $color--two;
+}
+
+.background-color--three {
+    background-color: $color--three;
+}
+
+
+//
+// Font family
+//
+
+.font-family--one {
+    font-family: $font-family--one;
+}
