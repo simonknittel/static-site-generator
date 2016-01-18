@@ -40,11 +40,7 @@ You can easily add AngularJS to this template. Read [here](#add-angularjs) to se
 
 Planned features
 ---
-* [Web workers](http://www.html5rocks.com/en/tutorials/workers/basics/)
-* Extended SVG handling with Gulp
-* Upload of the compiled CSS and JavaScript files to the CDN of Amazon or Microsoft with Gulp
-* Sitemap generation with Gulp
-* Let the developer through the init.js decide whether he wants the Application Cache added or not
+Checkout the [issues page](https://github.com/simonknittel/static-site-template/labels/enhancement)
 
 ---
 
