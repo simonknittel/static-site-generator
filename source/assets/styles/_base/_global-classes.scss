@@ -19,10 +19,13 @@
 }
 
 .centered {
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    
     width: 100%;
     max-width: $bp--large;
+    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -39,31 +42,31 @@
 // Text alignment
 //
 
-.text-right {
-  text-align: right;
+%text-center {
+  text-align: center;
 }
-.text-right--medium {
+%text-center--medium {
   @media only screen and (min-width: $bp--medium) {
-    text-align: right;
+    text-align: center;
   }
 }
-.text-right--large {
+%text-center--large {
   @media only screen and (min-width: $bp--large) {
-    text-align: right;
+    text-align: center;
   }
 }
 
-.text-center {
-  text-align: center;
+%text-right {
+  text-align: right;
 }
-.text-center--medium {
+%text-right--medium {
   @media only screen and (min-width: $bp--medium) {
-    text-align: center;
+    text-align: right;
   }
 }
-.text-center--large {
+%text-right--large {
   @media only screen and (min-width: $bp--large) {
-    text-align: center;
+    text-align: right;
   }
 }
 
