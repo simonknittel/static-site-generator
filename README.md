@@ -26,7 +26,7 @@ Features
     + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/)
 * Extensive build workflow with Gulp
     + JavaScript linting, precompilation and minimization with [JSPM](http://jspm.io/)
-    <!-- + Handlebars precompilation and HTML minimization -->
+<!-- + Handlebars precompilation and HTML minimization -->
     + Jade precompilation and HTML minimization
     + SCSS linting, precompilation and minimization
     + Image optimizing
