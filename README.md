@@ -17,7 +17,8 @@ The goal of this template is to have a template with everything already prepared
 
 Features
 ---
-* Fast layout with precompiled [Handlebars templates](http://handlebarsjs.com/)
+<!-- * Fast layout with precompiled [Handlebars templates](http://handlebarsjs.com/) -->
+* Fast layout with precompiled [Jade templates](http://jade-lang.com/)
 * Project structure based on the [atomic design concept](http://patternlab.io/about.html)
 * [SCSS](http://sass-lang.com/) as CSS preprocessor
 * [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) as naming syntax for CSS classes
@@ -25,7 +26,8 @@ Features
     + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/)
 * Extensive build workflow with Gulp
     + JavaScript linting, precompilation and minimization with [JSPM](http://jspm.io/)
-    + Handlebars precompilation and HTML minimization
+    <!-- + Handlebars precompilation and HTML minimization -->
+    + Jade precompilation and HTML minimization
     + SCSS linting, precompilation and minimization
     + Image optimizing
         - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))

@@ -4,13 +4,21 @@ Contribute
 1. Compile the project and open it automatically in your browser with `gulp watch`
 
 
-HTML
+<!-- HTML
 ===
 The HTML is written in [Handlebars](http://handlebarsjs.com/) which is getting compiled to browser understandable HTML. The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the source files are getting recompiled when changed.
 
 Directory structure
 ---
-The source files are directly placed under the [source](./source) directory like the [index.hbs](./source/index.hbs). You can also nest them in sub directories which will be reflected in the URL (**Note**: You can access the build HTML files without the suffix .html because of the [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) in the [.htaccess](./source/.htaccess#L40)). Because of Handlebars you can seperate your code in seperate files and include them. For these files I created the sub directory [_partials](./source/_partials). Files in this directory like the [head.hbs](./source/_partials/head.hbs) will not get compiled to HTML, they should only be included in other files like the [index.hbs](./source/index.hbs#L1).
+The source files are directly placed under the [source](./source) directory like the [index.hbs](./source/index.hbs). You can also nest them in sub directories which will be reflected in the URL (**Note**: You can access the build HTML files without the suffix .html because of the [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) in the [.htaccess](./source/.htaccess#L40)). Because of Handlebars you can seperate your code in seperate files and include them. For these files I created the sub directory [_partials](./source/_partials). Files in this directory like the [head.hbs](./source/_partials/head.hbs) will not get compiled to HTML, they should only be included in other files like the [index.hbs](./source/index.hbs#L1). -->
+
+HTML
+===
+The HTML is written in [Jade](http://jade-lang.com/) which is getting compiled to browser understandable HTML. The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the source files are getting recompiled when changed.
+
+Directory structure
+---
+The source files are directly placed under the [source](./source) directory like the [index.jade](./source/index.jade). You can also nest them in sub directories which will be reflected in the URL (**Note**: You can access the build HTML files without the suffix .html because of the [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) in the [.htaccess](./source/.htaccess#L40)). Because of Jade you can seperate your code in seperate files and include them. For these files I created the sub directory [_partials](./source/_partials). Files in this directory like the [base.jade](./source/_partials/base.jade) will not get compiled to HTML, they should only be included in other files like the [index.jade](./source/index.jade#L8).
 
 
 Stylesheets
