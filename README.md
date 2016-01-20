@@ -13,11 +13,10 @@ Static Site Template
 ===
 This template is great to start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within a few seconds. The most important files and build tasks are already there and filled with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
 
-The goal of this template is to have a template with everything already prepared to start very fast with a new project without being restricted by any limits. With that you are able to add new features or remove already implemented features like the [Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) if you don't want to use them.
+The goal of this template is to have a template with everything already prepared to start very fast with a new project without being restricted by any limits. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
 
 Features
 ---
-<!-- * Fast layout with precompiled [Handlebars templates](http://handlebarsjs.com/) -->
 * Fast layout with precompiled [Jade templates](http://jade-lang.com/)
 * Project structure based on the [atomic design concept](http://patternlab.io/about.html)
 * [SCSS](http://sass-lang.com/) as CSS preprocessor
@@ -32,7 +31,6 @@ Features
         - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload
     + Compiling of seperate bundled scripts and styles files for seperate pages
-* Ready to use [Application Cache](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache) (the use of the Application Cache is deprecated)
 * Built with the current best practices and newest standards
 
 I want to use [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), [Ember](http://emberjs.com/) or [Meteor](https://www.meteor.com/)

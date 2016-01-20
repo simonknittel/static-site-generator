@@ -56,9 +56,8 @@ gulp.task('images', gulp.parallel('images:default'));
 // Copy
 import * as copy from './_gulpfile/copy';
 gulp.task('copy:base', copy.base);
-// gulp.task('copy:cache-manifest', copy.cacheManifest);
 gulp.task('copy:libraries', copy.libraries);
-gulp.task('copy', gulp.parallel('copy:base'/**, 'copy:cache-manifest'*/, 'copy:libraries'));
+gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries'));
 
 
 // Default
@@ -89,19 +88,13 @@ gulp.task('deploy', gulp.series('production', () => {
 gulp.task('watch', gulp.series('default', () => {
     gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', browserSync.reload));
 
-    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'/**, 'copy:cache-manifest'*/), browserSync.reload));
+    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'), browserSync.reload));
 
-    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'/**, 'copy:cache-manifest'*/), browserSync.reload));
-
-    // gulp.watch([
-    //     config.paths.source.base + '/**/*.hbs',
-    //     config.paths.source.base + '/**/*.handlebars',
-    //     '!' + config.paths.source.base + '/assets/**/*',
-    // ], gulp.series('html:dev'/**, 'copy:cache-manifest'*/, browserSync.reload));
+    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'), browserSync.reload));
 
     gulp.watch([
         config.paths.source.base + '/**/*.jade',
-    ], gulp.series('html:dev'/**, 'copy:cache-manifest'*/, browserSync.reload));
+    ], gulp.series('html:dev', browserSync.reload));
 
     gulp.watch([
         config.paths.source.base + '/robots.txt',
@@ -109,8 +102,6 @@ gulp.task('watch', gulp.series('default', () => {
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
     ], gulp.series('copy:base', browserSync.reload));
-
-    // gulp.watch(config.paths.source.base + '/cache.appcache', gulp.series('copy:cache-manifest', browserSync.reload));
 
     gulp.watch(config.paths.source.base + '/assets/libraries/**/*', gulp.series('copy:libraries', browserSync.reload));
 

@@ -4,14 +4,6 @@ Contribute
 1. Compile the project and open it automatically in your browser with `gulp watch`
 
 
-<!-- HTML
-===
-The HTML is written in [Handlebars](http://handlebarsjs.com/) which is getting compiled to browser understandable HTML. The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the source files are getting recompiled when changed.
-
-Directory structure
----
-The source files are directly placed under the [source](./source) directory like the [index.hbs](./source/index.hbs). You can also nest them in sub directories which will be reflected in the URL (**Note**: You can access the build HTML files without the suffix .html because of the [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) in the [.htaccess](./source/.htaccess#L40)). Because of Handlebars you can seperate your code in seperate files and include them. For these files I created the sub directory [_partials](./source/_partials). Files in this directory like the [head.hbs](./source/_partials/head.hbs) will not get compiled to HTML, they should only be included in other files like the [index.hbs](./source/index.hbs#L1). -->
-
 HTML
 ===
 The HTML is written in [Jade](http://jade-lang.com/) which is getting compiled to browser understandable HTML. The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the source files are getting recompiled when changed.
@@ -23,7 +15,7 @@ The source files are directly placed under the [source](./source) directory like
 
 Stylesheets
 ===
-The styles are written in [SCSS](http://sass-lang.com/) which is getting compiled to browser understandable CSS. The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the Stylesheets are getting recompiled when changed. The SCSS will also getting concatenated. You will get a `styles.css` which should contain all SCSS which will be used on every page. This file will get included on every page (look at [head.hbs](./source/_partials/head.hbs#L41)). You can also create seperate SCSS files like the [styles--index.scss](./source/assets/styles/styles--index.scss) which contains SCSS only used on this page. You can individually include them on the corresponding pages (look at [index.hbs](./source/index.hbs#L1) and [head.hbs](./source/_partials/head.hbs#L42)).
+The styles are written in [SCSS](http://sass-lang.com/) which is getting compiled to browser understandable CSS. The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the Stylesheets are getting recompiled when changed. The SCSS will also getting concatenated. You will get a `styles.css` which should contain all SCSS which will be used on every page. This file will get included on every page (look at [base.jade](./source/_partials/base.jade#L53)). You can also create seperate SCSS files like the [styles--index.scss](./source/assets/styles/styles--index.scss) which contains SCSS only used on this page. You can individually include them on the corresponding pages (look at [base.jade](./source/_partials/base.jade#L52)).
 
 Directory structure
 ---
@@ -36,7 +28,7 @@ We included [SCSS-Lint](https://github.com/brigade/scss-lint) as linter for the 
 
 JavaScript
 ===
-The JavaScript is written in [ES6/ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/index.html) which is getting compiled to browser understandable [ES5](http://www.ecma-international.org/ecma-262/5.1/). The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the JavaScript is getting recompiled when changed. The JavaScript will also getting concatenated. You will get a `scripts.js` which should contain all JavaScript which will be used on every page. This file will get included on every page (look at [foot.hbs](./source/_partials/foot.hbs#L7)). You can also create seperate JavaScripts files like the [scripts--index.js](./source/assets/scripts/scripts--index.js) which contains JavScript only used on this page. You can individually include them on the corresponding pages (look at [index.hbs](./source/index.hbs#L9) and [foot.hbs](./source/_partials/foot.hbs#L8)).
+The JavaScript is written in [ES6/ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/index.html) which is getting compiled to browser understandable [ES5](http://www.ecma-international.org/ecma-262/5.1/). The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the JavaScript is getting recompiled when changed. The JavaScript will also getting concatenated. You will get a `scripts.js` which should contain all JavaScript which will be used on every page. This file will get included on every page (look at [foot.hbs](./source/_partials/base.jade#L63)). You can also create seperate JavaScripts files like the [scripts--index.js](./source/assets/scripts/scripts--index.js) which contains JavScript only used on this page. You can individually include them on the corresponding pages (look at [base.jade](./source/_partials/base.jade#L62)).
 
 Directory structure
 ---

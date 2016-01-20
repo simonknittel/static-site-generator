@@ -3,7 +3,6 @@ import config from './config';
 
 import gulp from 'gulp';
 import cached from 'gulp-cached';
-// import replace from 'gulp-replace';
 
 
 export function base() {
@@ -16,12 +15,6 @@ export function base() {
         .pipe(cached('copy:base'))
         .pipe(gulp.dest(config.paths.build.base));
 }
-
-// export function cacheManifest() {
-//     return gulp.src(config.paths.source.base + '/cache.appcache')
-//         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
-//         .pipe(gulp.dest(config.paths.build.base));
-// }
 
 export function libraries() {
     return gulp.src(config.paths.source.base + '/assets/libraries/**/*')
