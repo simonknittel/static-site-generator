@@ -3,11 +3,11 @@ import config from './config';
 
 import gulp from 'gulp';
 import autoprefixer from 'gulp-autoprefixer';
-import csso from 'gulp-csso';
 import notify from 'gulp-notify';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import scssLint from 'gulp-scss-lint';
+import moreCSS from 'gulp-more-css';
 
 
 export function dev() {
@@ -27,9 +27,7 @@ export function dev() {
 
 export function prod() {
     return gulp.src(config.paths.source.styles + '/*.scss')
-        .pipe(sass({
-            outputStyle: 'compressed',
-        }))
+        .pipe(sass({}))
         .on('error', notify.onError({
             title: 'prod-styles - failed',
             message: 'View console for more details.',
@@ -37,7 +35,7 @@ export function prod() {
         }))
         .on('error', err => console.error('ERROR TASK: prod-styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
         .pipe(autoprefixer())
-        .pipe(csso())
+        .pipe(moreCSS())
         .pipe(gulp.dest(config.paths.build.styles));
 }
 
