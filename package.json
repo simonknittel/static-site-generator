@@ -32,7 +32,8 @@
     "gulp-scss-lint": "^0.3.8",
     "gulp-sftp": "^0.1.5",
     "gulp-sourcemaps": "^1.6.0",
-    "jspm": "^0.16.19"
+    "jspm": "^0.16.19",
+    "jstransformer-marked": "^1.0.1"
   },
   "jspm": {
     "devDependencies": {
