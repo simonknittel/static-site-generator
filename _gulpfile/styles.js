@@ -13,7 +13,11 @@ import moreCSS from 'gulp-more-css';
 export function dev() {
     return gulp.src(config.paths.source.styles + '/*.scss')
         .pipe(sourcemaps.init())
-            .pipe(sass({}))
+            .pipe(sass({
+                includePaths: [
+                    './node_modules',
+                ],
+            }))
             .on('error', notify.onError({
                 title: 'styles - failed',
                 message: 'View console for more details.',
@@ -27,7 +31,11 @@ export function dev() {
 
 export function prod() {
     return gulp.src(config.paths.source.styles + '/*.scss')
-        .pipe(sass({}))
+        .pipe(sass({
+            includePaths: [
+                './node_modules',
+            ],
+        }))
         .on('error', notify.onError({
             title: 'prod-styles - failed',
             message: 'View console for more details.',

@@ -49,8 +49,8 @@ gulp.task('html:dev', html.dev);
 // Images
 import * as images from './_gulpfile/images';
 gulp.task('images:default', images.normal);
-// gulp.task('images:webP', images.webP);
-gulp.task('images', gulp.parallel('images:default'));
+gulp.task('images:icons', images.icons);
+gulp.task('images', gulp.parallel('images:default', 'images:icons'));
 
 
 // Copy

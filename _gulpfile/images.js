@@ -5,11 +5,26 @@ import gulp from 'gulp';
 import cached from 'gulp-cached';
 // import imagemin from 'gulp-imagemin';
 // import kraken from 'gulp-kraken'; // Needs API access
-// import webp from 'gulp-webp';
+import svgSprite from 'gulp-svg-sprite'
 
+
+export function icons() {
+    return gulp.src(config.paths.source.images + '/icons/**/*.svg')
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: 'icons',
+                },
+            },
+        }))
+        pipe(gulp.dest(config.paths.build.images));
+}
 
 export function normal() {
-    return gulp.src(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}')
+    return gulp.src([
+        config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
+        '!' + config.paths.source.images + '/icons/**/*',
+    ])
         .pipe(cached('images:default'))
         // .pipe(imagemin()) // Somehow broken
         // .pipe(kraken({ // PRO account needed
@@ -20,16 +35,3 @@ export function normal() {
         // }))
         .pipe(gulp.dest(config.paths.build.images));
 }
-
-// export function webP() {
-//     return gulp.src([
-//         config.paths.source.images + '/**/*.jpg',
-//         config.paths.source.images + '/**/*.jpeg',
-//         config.paths.source.images + '/**/*.png',
-//     ])
-//         .pipe(cached('images:webP'))
-//         .pipe(webp({
-//             lossless: true,
-//         }))
-//         .pipe(gulp.dest(config.paths.build.images));
-// }
