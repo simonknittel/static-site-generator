@@ -108,6 +108,7 @@ linters:
             - visibility
             - opacity
             -
+            - float
             - z-index
             - position
             - left
@@ -115,7 +116,6 @@ linters:
             - top
             - bottom
             - transform
-            - float
             -
             - width
             - max-width
