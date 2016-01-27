@@ -3,27 +3,27 @@
 //
 
 .hide {
-  display: none;
+    display: none;
 }
 
 .hide--medium {
-  @media only screen and (min-width: $bp--medium) {
-    display: none;
-  }
+    @media only screen and (min-width: $bp--medium) {
+        display: none;
+    }
 }
 
 .hide--large {
-  @media only screen and (min-width: $bp--large) {
-    display: none;
-  }
+    @media only screen and (min-width: $bp--large) {
+        display: none;
+    }
 }
 
 .centered {
     position: relative;
-    
+
     width: 100%;
     max-width: $bp--large;
-    
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -34,7 +34,7 @@
 //
 
 .nobr {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 
@@ -43,31 +43,35 @@
 //
 
 %text-center {
-  text-align: center;
+    text-align: center;
 }
+
 %text-center--medium {
-  @media only screen and (min-width: $bp--medium) {
-    text-align: center;
-  }
+    @media only screen and (min-width: $bp--medium) {
+        text-align: center;
+    }
 }
+
 %text-center--large {
-  @media only screen and (min-width: $bp--large) {
-    text-align: center;
-  }
+    @media only screen and (min-width: $bp--large) {
+        text-align: center;
+    }
 }
 
 %text-right {
-  text-align: right;
+    text-align: right;
 }
+
 %text-right--medium {
-  @media only screen and (min-width: $bp--medium) {
-    text-align: right;
-  }
+    @media only screen and (min-width: $bp--medium) {
+        text-align: right;
+    }
 }
+
 %text-right--large {
-  @media only screen and (min-width: $bp--large) {
-    text-align: right;
-  }
+    @media only screen and (min-width: $bp--large) {
+        text-align: right;
+    }
 }
 
 

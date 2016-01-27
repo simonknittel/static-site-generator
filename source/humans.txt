@@ -1,4 +1,4 @@
 # http://humanstxt.org/
 
-# Project template
+# Static Site Generator
     Simon Knittel <hallo@simonknittel.de>

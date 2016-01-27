@@ -1,4 +1,4 @@
-1. [Introduction](#static-site-template)
+1. [Introduction](#static-site-generator)
     1. [Features](#features)
     1. [I want to use AngularJS, React, Ember or Meteor](#i-want-to-use-angularjs-react-ember-or-meteor)
     1. [Planned features](#planned-features)
@@ -9,11 +9,11 @@
         1. [Install dependencies](#install-dependencies)
         1. [Add AngularJS](#add-angularjs)
 
-Static Site Template
+Static Site Generator
 ===
-This template is great to start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within a few seconds. The most important files and build tasks are already there and filled with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
+This generator is great to start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within a few seconds. The most important files and build tasks are already there and filled with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
 
-The goal of this template is to have a template with everything already prepared to start very fast with a new project without being restricted by any limits. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
+The goal of this generator is to have a generator with everything already prepared to start very fast with a new project without being restricted by any limits. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
 
 Features
 ---
@@ -36,11 +36,11 @@ Features
 
 I want to use [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), [Ember](http://emberjs.com/) or [Meteor](https://www.meteor.com/)
 ---
-You can easily add AngularJS to this template. Read [here](#add-angularjs) to see how to add AngularJS to this template. Ember is highly recommend to be used with [Ember CLI](http://www.ember-cli.com/). The template is currently not tested and optimized for the use with Meteor or React.
+You can easily add AngularJS to this generator. Read [here](#add-angularjs) to see how to add AngularJS to this generator. Ember is highly recommend to be used with [Ember CLI](http://www.ember-cli.com/). The generator is currently not tested and optimized for the use with Meteor or React.
 
 Planned features
 ---
-Checkout the [issues page](https://github.com/simonknittel/static-site-template/labels/enhancement)
+Checkout the [issues page](https://github.com/simonknittel/static-site-generator/labels/enhancement)
 
 ---
 

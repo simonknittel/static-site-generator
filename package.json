@@ -4,10 +4,10 @@
   "author": "Simon Knittel <hallo@simonknittel.de> (http://simonknittel.de/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/simonknittel/static-site-template"
+    "url": "https://github.com/simonknittel/static-site-generator"
   },
   "bugs": {
-    "url": "https://github.com/simonknittel/static-site-template/issues"
+    "url": "https://github.com/simonknittel/static-site-generator/issues"
   },
   "devDependencies": {
     "babel-core": "^6.3.21",
