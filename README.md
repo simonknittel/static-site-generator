@@ -31,6 +31,7 @@ Features
         - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload
     + Compiling of seperate bundled scripts and styles files for seperate pages
+    + Bundling SVG icons to a single SVG stack
 * Built with the current best practices and newest standards
 
 I want to use [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), [Ember](http://emberjs.com/) or [Meteor](https://www.meteor.com/)
