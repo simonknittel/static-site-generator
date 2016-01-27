@@ -2,7 +2,7 @@
     1. [Features](#features)
     1. [I want to use AngularJS, React, Ember or Meteor](#i-want-to-use-angularjs-react-ember-or-meteor)
     1. [Planned features](#planned-features)
-1. [Start into an existing project](#want-to-contribute)
+1. [Start into an existing project](#start-into-an-existing-project)
 1. [Set up a new project](#set-up-a-new-project)
     1. [Quick start (still in development)](#quick-start-still-in-development)
     1. [Manual start (recommend)](#manual-start-recommend)
