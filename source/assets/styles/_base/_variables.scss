@@ -3,12 +3,20 @@
 // Grid
 $grid-gutter: .5rem;
 
-// Font
-$font-family--one: Arial, sans-serif;
+// Fonts
+// Checkout _fonts.scss
 
-// Breakpoints
-$bp--large: 80rem;
-$bp--medium: 64rem;
-$bp--small: 32rem;
+// Breakpoints (http://mydevice.io/devices/)
+$bp--four: 80rem; // 1280px at 16px font-size
+$bp--three: 60rem; // 960px at 16px font-size
+$bp--two: 40rem; // 640px at 16px font-size
+$bp--one: 20rem; // 320px at 16px font-size
+
+// Special breakpoints
+$bp--desktop: 80rem; // 1280px at 16px font size (desktop)
+$bp--pro: 64rem; // 1024px at 16px font size (huge tablets like the Surface Pro 3 or iPad Pro covered)
+$bp--ipad: 48rem; // 768px at 16px font size (iPad)
+$bp--tablets: 32rem; // 512px at 16px font-size (all common smartphones covered)
+$bp--smartphones: 20rem; // 320px at 16px font-size (minimal supported width)
 
 // Other

@@ -7,13 +7,13 @@
 }
 
 .hide--medium {
-    @media only screen and (min-width: $bp--medium) {
+    @media only screen and (min-width: $bp--two) {
         display: none;
     }
 }
 
 .hide--large {
-    @media only screen and (min-width: $bp--large) {
+    @media only screen and (min-width: $bp--three) {
         display: none;
     }
 }
@@ -22,7 +22,7 @@
     position: relative;
 
     width: 100%;
-    max-width: $bp--large;
+    max-width: $bp--three;
 
     margin-left: auto;
     margin-right: auto;
@@ -47,13 +47,13 @@
 }
 
 %text-center--medium {
-    @media only screen and (min-width: $bp--medium) {
+    @media only screen and (min-width: $bp--two) {
         text-align: center;
     }
 }
 
 %text-center--large {
-    @media only screen and (min-width: $bp--large) {
+    @media only screen and (min-width: $bp--three) {
         text-align: center;
     }
 }
@@ -63,13 +63,13 @@
 }
 
 %text-right--medium {
-    @media only screen and (min-width: $bp--medium) {
+    @media only screen and (min-width: $bp--two) {
         text-align: right;
     }
 }
 
 %text-right--large {
-    @media only screen and (min-width: $bp--large) {
+    @media only screen and (min-width: $bp--three) {
         text-align: right;
     }
 }
@@ -110,9 +110,13 @@
 
 
 //
-// Font family
+// Clearfix
 //
 
-%font-family--one {
-    font-family: $font-family--one;
+%clearfix {
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
 }

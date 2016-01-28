@@ -40,7 +40,7 @@ linters:
 
     ElsePlacement:
         enabled: true
-        style: new_line
+        style: same_line
 
     EmptyLineBetweenBlocks:
         enabled: true
