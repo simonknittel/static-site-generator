@@ -4,8 +4,7 @@
     1. [Planned features](#planned-features)
 1. [Start into an existing project](#start-into-an-existing-project)
 1. [Set up a new project](#set-up-a-new-project)
-    1. [Quick start (still in development)](#quick-start-still-in-development)
-    1. [Manual start (recommend)](#manual-start-recommend)
+    1. [Manual start](#manual-start)
         1. [Install dependencies](#install-dependencies)
         1. [Add AngularJS](#add-angularjs)
 
@@ -52,15 +51,7 @@ Checkout [CONTRIBUTE.md](./CONTRIBUTE.md)
 Set up a new project
 ===
 
-Quick start (still in development)
----
-The initialization script asks you for the project name and a short description of your project. Then it will ask you if you want to add AngularJS to your project. After that it will install all dependencies and your project is ready to go.
-
-1. Run `node init.js`
-2. Follow the instructions
-3. Run `gulp watch`
-
-Manual start (recommend)
+Manual start
 ---
 
 ### Install dependencies
