@@ -24,7 +24,7 @@ Features
 * [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) as naming syntax for CSS classes
 * JavaScript package managament with [JSPM](http://jspm.io/)
     + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/
-* Extensive build workflow with Gulp
+* Extensive build workflow with Gulp 4
     + JavaScript linting, precompilation and minimization with [JSPM](http://jspm.io/)
     + Jade precompilation and HTML minimization
     + SCSS linting, precompilation and minimization

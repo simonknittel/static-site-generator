@@ -13,11 +13,12 @@ export function icons() {
         .pipe(svgSprite({
             mode: {
                 stack: {
+                    dest: '',
                     sprite: 'icons',
                 },
             },
         }))
-        pipe(gulp.dest(config.paths.build.images)); // Outputting nothing???
+        .pipe(gulp.dest(config.paths.build.images));
 }
 
 export function normal() {
