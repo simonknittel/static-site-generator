@@ -5,7 +5,7 @@ import gulp from 'gulp';
 import cached from 'gulp-cached';
 import imagemin from 'gulp-imagemin';
 // import kraken from 'gulp-kraken'; // Needs API access
-import svgSprite from 'gulp-svg-sprite'
+import svgSprite from 'gulp-svg-sprite';
 
 
 export function icons() {

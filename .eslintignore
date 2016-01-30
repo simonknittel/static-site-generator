@@ -1,9 +1,6 @@
 build/
-_gulpfile/
 init/
 node_modules/
 jspm_packages/
 assets/libraries/
 **/config.js
-**/gulpfile.babel.js
-**/init.js
