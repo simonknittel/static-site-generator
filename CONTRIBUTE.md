@@ -45,3 +45,4 @@ We included [ESLint](http://eslint.org/) as linter for the JavaScript source fil
 
 Images
 ===
+_to be filled_

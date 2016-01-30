@@ -3,7 +3,7 @@ import config from './config';
 
 import gulp from 'gulp';
 import cached from 'gulp-cached';
-// import imagemin from 'gulp-imagemin';
+import imagemin from 'gulp-imagemin';
 // import kraken from 'gulp-kraken'; // Needs API access
 import svgSprite from 'gulp-svg-sprite'
 
@@ -17,7 +17,7 @@ export function icons() {
                 },
             },
         }))
-        pipe(gulp.dest(config.paths.build.images));
+        pipe(gulp.dest(config.paths.build.images)); // Outputting nothing???
 }
 
 export function normal() {
@@ -26,7 +26,7 @@ export function normal() {
         '!' + config.paths.source.images + '/icons/**/*',
     ])
         .pipe(cached('images:default'))
-        // .pipe(imagemin()) // Somehow broken
+        .pipe(imagemin())
         // .pipe(kraken({ // PRO account needed
         //     key: '',
         //     secret: '',

@@ -10,9 +10,11 @@
 
 Static Site Generator
 ===
-Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within seconds. The most important files and build tasks are already there and filled with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
+Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
 
-The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
+The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
+
+**Disclaimer:** This project is not made as a well maintained open source project, so that it can be used anytime and anywhere without issues. It's more for my own learning and experimentation with new technologies. Therefor I'm looking primarily for feedback.
 
 Features
 ---
@@ -21,7 +23,7 @@ Features
 * [SCSS](http://sass-lang.com/) as CSS preprocessor
 * [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) as naming syntax for CSS classes
 * JavaScript package managament with [JSPM](http://jspm.io/)
-    + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/)
+    + Includes precompiling and ES6 translation via [Babel](https://babeljs.io/
 * Extensive build workflow with Gulp
     + JavaScript linting, precompilation and minimization with [JSPM](http://jspm.io/)
     + Jade precompilation and HTML minimization
@@ -29,9 +31,8 @@ Features
     + Image optimizing
         - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload
-    + Compiling of seperate bundled scripts and styles files for seperate pages
+    + Possibility to compile seperate bundled scripts and styles files for seperate pages
     + Bundling SVG icons to a single SVG stack
-* Built with the current best practices and newest standards
 
 I want to use [AngularJS](https://angularjs.org/), [React](https://facebook.github.io/react/), [Ember](http://emberjs.com/) or [Meteor](https://www.meteor.com/)
 ---
