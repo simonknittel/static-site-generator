@@ -1,7 +1,6 @@
 block variables
 
 doctype html
-//- html(html="en", class="#{htmlClass}", manifest="#{root}cache.appcache").no-js
 html(lang="en", class="#{htmlClass}").no-js
     head
         meta(charset="utf-8")
@@ -39,15 +38,11 @@ html(lang="en", class="#{htmlClass}").no-js
         noscript.no-js__notification
             p May you have to <strong>activate</strong> JavaScript to use this site.
 
-        //- aside.new-version
-        //-     h1 New version
-        //-     p This page got updated. <a class="new-version__cta" href="#">Do you want to reload this page?</a>
-
         block content
 
         //- Other Stylesheets
         block otherStyles
-            //- link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+            link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet", type="text/css")
 
         //- Concatenated stylesheet
         block styles
@@ -64,4 +59,4 @@ html(lang="en", class="#{htmlClass}").no-js
             script(type="text/javascript", src="#{root}assets/js/scripts.js?RANDOMIZE-ME", async, defer)
 
         //- Optimized Google Analytics
-        script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')
+        //- script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')

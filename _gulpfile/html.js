@@ -3,7 +3,7 @@ import config from './config';
 
 import gulp from 'gulp';
 import jade from 'gulp-jade';
-import minifyHTML from 'gulp-minify-html';
+import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import replace from 'gulp-replace';
 
@@ -28,7 +28,17 @@ export function prod() {
     ])
         .pipe(jade())
         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
-        .pipe(minifyHTML({}))
+        .pipe(htmlmin({
+            removeComments: true,
+            collapseWhitespace: true,
+            collapseInlineTagWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeTagWhitespace: true,
+            removeAttributeQuotes: true,
+            removeRedundantAttributes: true,
+            removeEmptyAttributes: true,
+            removeOptionalTags: true,
+        }))
         .pipe(rename(path => path.extname = '.html'))
         .pipe(gulp.dest(config.paths.build.base));
 }

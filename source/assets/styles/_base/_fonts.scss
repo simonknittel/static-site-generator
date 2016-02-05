@@ -1,9 +1,9 @@
 @mixin font($font) {
     @if $font == 'one' {
-        font-family: Arial, sans-serif;;
+        font-family: 'Open Sans', sans-serif;
         font-weight: 400;
     } @else if $font == 'two' {
-        font-family: Arial, sans-serif;;
-        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
     }
 }

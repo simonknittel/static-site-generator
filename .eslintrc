@@ -76,7 +76,7 @@
         "spaced-comment": [2, "always"],
         "eol-last": 2,
         "indent": 2,
-        "linebreak-style": [2, "unix"],
+        # "linebreak-style": [2, "unix"],
         "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
         "new-cap": 2,
         "no-array-constructor": 2,

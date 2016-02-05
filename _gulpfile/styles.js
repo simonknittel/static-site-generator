@@ -43,7 +43,9 @@ export function prod() {
         }))
         .on('error', err => console.error('ERROR TASK: prod-styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
         .pipe(autoprefixer())
-        .pipe(moreCSS())
+        .pipe(moreCSS({
+            radical: false,
+        }))
         .pipe(gulp.dest(config.paths.build.styles));
 }
 
