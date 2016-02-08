@@ -1,5 +1,9 @@
 block variables
 
+mixin icon(name)
+    svg(viewbox="0 0 100 100").icon
+        use(xlink:href="/assets/img/icons.svg#" + name)
+
 doctype html
 html(lang="en", class="#{htmlClass}").no-js
     head
