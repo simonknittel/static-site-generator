@@ -40,21 +40,15 @@ html(lang="en", class="#{htmlClass}").no-js
 
         block content
 
-        //- Other Stylesheets
-        block otherStyles
-            link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet", type="text/css")
-
-        //- Concatenated stylesheet
+        //- Stylesheets
         block styles
+            link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet", type="text/css")
             link(rel="stylesheet", type="text/css", href="#{root}assets/css/styles.css?RANDOMIZE-ME")
 
         //- Initial data
         script
 
-        //- Other scripts
-        block otherScripts
-
-        //- Concatenated scripts
+        //- Scripts
         block scripts
             script(type="text/javascript", src="#{root}assets/js/scripts.js?RANDOMIZE-ME", async, defer)
 
