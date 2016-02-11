@@ -53,9 +53,7 @@
     "normalize.css": "^3.0.3"
   },
   "jspm": {
-    "dependencies": {
-      "greensock": "github:greensock/GreenSock-JS@^1.18.2"
-    },
+    "dependencies": {},
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
