@@ -12,7 +12,6 @@ script: npm test
 cache:
     directories:
         - jspm_packages
-        - node_modules
 
 # Travis CI stuff to make 'make' happen
 env:
