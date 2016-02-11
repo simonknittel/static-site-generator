@@ -34,9 +34,6 @@
     </IfModule>
 </FilesMatch>
 
-# Cache Manifest
-AddType text/cache-manifest .appcache
-
 # Remove .html from URL
 <IfModule mod_rewrite.c>
     Options -MultiViews
