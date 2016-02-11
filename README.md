@@ -10,6 +10,8 @@
 
 Static Site Generator
 ===
+[![Build Status](https://travis-ci.org/simonknittel/static-site-generator.svg?branch=travis-ci-test)](https://travis-ci.org/simonknittel/static-site-generator)
+
 Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
 
 The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
