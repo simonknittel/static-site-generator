@@ -10,12 +10,11 @@
     "url": "https://github.com/simonknittel/static-site-generator/issues"
   },
   "scripts": {
-    "pretest": "jspm install",
     "test": "karma start karma.conf.js"
   },
   "engines": {
-      "node": ">=5.0.0 <6.0.0",
-      "npm": ">=3.0.0 <4.0.0"
+    "node": ">=5.0.0 <6.0.0",
+    "npm": ">=3.0.0 <4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
