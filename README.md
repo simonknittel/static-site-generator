@@ -10,7 +10,7 @@
 
 Static Site Generator
 ===
-[![Build Status](https://travis-ci.org/simonknittel/static-site-generator.svg?branch=travis-ci-test)](https://travis-ci.org/simonknittel/static-site-generator)
+[![Build Status](https://travis-ci.org/simonknittel/static-site-generator.svg?branch=master)](https://travis-ci.org/simonknittel/static-site-generator)
 
 Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
 

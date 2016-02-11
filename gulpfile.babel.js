@@ -9,6 +9,7 @@ import sftp from 'gulp-sftp';
 import cached from 'gulp-cached';
 
 import modRewrite from 'connect-modrewrite';
+import compression from 'compression';
 
 
 // Clean
@@ -113,6 +114,7 @@ gulp.task('watch', gulp.series('default', () => {
                     // '^([^\.]+)$ $1.html [NC,L]', // Original from the .htaccess
                     '^.([^\\.]+)$ /$1.html [L]',
                 ]),
+                compression(),
             ],
         },
     });
