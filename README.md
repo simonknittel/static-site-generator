@@ -60,8 +60,6 @@ Manual start
 ### Install dependencies
 1. Enable your repository in Travis CI
 1. Enable `Build only if .travis.yml is present`
-1. Create a personal access token for Travis CI on GitHub
-    - Enable `repo`
 1. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
 1. Run `npm install`
 1. Run `jspm install`
