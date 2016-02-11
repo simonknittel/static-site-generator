@@ -47,7 +47,7 @@
     "phantomjs-prebuilt": "^2.1.4"
   },
   "dependencies": {
-    "normalize.css": "^3.0.3",
+    "normalize.css": "^3.0.3"
   },
   "jspm": {
     "dependencies": {},

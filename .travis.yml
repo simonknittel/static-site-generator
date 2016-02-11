@@ -10,6 +10,7 @@ before_script:
 script: npm test
 cache:
     directories:
+        - node_modules
         - jspm_packages
 
 # Travis CI stuff to make 'make' happen
