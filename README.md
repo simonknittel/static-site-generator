@@ -58,12 +58,16 @@ Manual start
 ---
 
 ### Install dependencies
+1. Enable your repository in Travis CI
+1. Enable `Build only if .travis.yml is present`
+1. Create a personal access token for Travis CI on GitHub
+    - Enable `repo`
+1. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to your personal access token
 1. Run `npm install`
 1. Run `jspm install`
 1. Run `gulp watch`
 
 ### Add AngularJS
-
 1. Run `jspm install angular angular-ui-router`
 1. Copy the [init/_angular-app](./init/_angular-app) directory to [source/assets/scripts](./source/assets/scripts)
 1. Add the following to the `<html>` tag in the [head.hbs](./source/_partials/head.hbs#L4)
