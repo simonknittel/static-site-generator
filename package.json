@@ -10,6 +10,7 @@
     "url": "https://github.com/simonknittel/static-site-generator/issues"
   },
   "scripts": {
+    "pretest": "jspm install",
     "test": "karma start karma.conf.js"
   },
   "devDependencies": {
