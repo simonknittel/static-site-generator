@@ -6,6 +6,7 @@ import jade from 'gulp-jade';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import replace from 'gulp-replace';
+import puglint from 'gulp-pug-lint';
 
 
 export function dev() {
@@ -41,4 +42,9 @@ export function prod() {
         }))
         .pipe(rename(path => path.extname = '.html'))
         .pipe(gulp.dest(config.paths.build.base));
+}
+
+export function lint() {
+    return gulp.src(config.paths.source.base + '/**/*.jade')
+        .pipe(puglint());
 }

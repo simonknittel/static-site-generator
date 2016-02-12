@@ -35,16 +35,17 @@ gulp.task('styles:prod', styles.prod);
 gulp.task('styles:dev', styles.dev);
 
 
-// Linting
-gulp.task('lint:scripts', gulp.series('fix:scripts', scripts.lint));
-gulp.task('lint:styles', styles.lint);
-gulp.task('lint', gulp.parallel('lint:scripts', 'lint:styles'));
-
-
 // HTML
 import * as html from './_gulpfile/html';
 gulp.task('html:prod', html.prod);
 gulp.task('html:dev', html.dev);
+
+
+// Linting
+gulp.task('lint:scripts', gulp.series('fix:scripts', scripts.lint));
+gulp.task('lint:styles', styles.lint);
+gulp.task('lint:html', html.lint);
+gulp.task('lint', gulp.parallel('lint:scripts', 'lint:styles', 'lint:html'));
 
 
 // Images
