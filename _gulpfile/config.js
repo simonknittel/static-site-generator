@@ -22,6 +22,6 @@ config.paths.build.images = config.paths.build.base + '/assets/img';
 
 config.live = {};
 
-config.live.url = 'test'; // For automated sitemap generation
+config.live.url = ''; // For automated sitemap generation
 
 export default config;

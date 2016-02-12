@@ -63,6 +63,7 @@ Manual start
 1. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
 1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L5)
 1. Uncomment Raven.js on [base.jade](./source/_partials/base.jade#L57)
+1. Set the live URL in [config.js](./_gulpfile/config.js#L25) for automated sitemap generation
 1. Run `npm install`
 1. Run `jspm install`
 1. Run `gulp watch`
