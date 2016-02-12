@@ -55,3 +55,6 @@ ServerSignature Off
 <IfModule mod_autoindex.c>
     Options -Indexes
 </IfModule>
+
+#
+ErrorDocument 404 /
