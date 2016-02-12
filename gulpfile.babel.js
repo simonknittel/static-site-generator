@@ -33,6 +33,7 @@ gulp.task('scripts:dev', gulp.series('fix:scripts', scripts.dev));
 import * as styles from './_gulpfile/styles';
 gulp.task('styles:prod', styles.prod);
 gulp.task('styles:dev', styles.dev);
+gulp.task('styles:critical', styles.criticalCSS);
 
 
 // HTML
@@ -64,10 +65,10 @@ gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries'));
 
 
 // Default
-gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', 'styles:dev', gulp.series('html:dev', 'html:sitemap'), 'copy')));
+gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', gulp.series(gulp.parallel('styles:dev', 'html:dev'), gulp.parallel('styles:critical', 'html:sitemap')), 'copy')));
 
 // Production
-gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:prod', 'styles:prod', gulp.series('html:prod', 'html:sitemap'), 'copy')));
+gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:prod', gulp.series(gulp.parallel('styles:prod', 'html:prod'), gulp.parallel('styles:critical', 'html:sitemap')), 'copy')));
 
 
 // Deploy
@@ -93,7 +94,7 @@ gulp.task('watch', gulp.series('default', () => {
 
     gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'), 'html:sitemap', browserSync.reload));
 
-    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'), 'html:sitemap', browserSync.reload));
+    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'), gulp.parallel('styles:critical', 'html:sitemap'), browserSync.reload));
 
     gulp.watch([
         config.paths.source.base + '/**/*.jade',
@@ -103,6 +104,7 @@ gulp.task('watch', gulp.series('default', () => {
         config.paths.source.base + '/robots.txt',
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
+        config.paths.source.base + '/sitemap.xml',
     ], gulp.series('copy:base', browserSync.reload));
 
     gulp.watch(config.paths.source.base + '/assets/libraries/**/*', gulp.series('copy:libraries', browserSync.reload));

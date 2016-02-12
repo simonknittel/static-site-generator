@@ -10,6 +10,7 @@ export function base() {
         config.paths.source.base + '/robots.txt',
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
+        config.paths.source.base + '/sitemap.xml',
     ])
         .pipe(cached('copy:base'))
         .pipe(gulp.dest(config.paths.build.base));

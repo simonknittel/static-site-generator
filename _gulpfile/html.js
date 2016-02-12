@@ -7,7 +7,7 @@ import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import replace from 'gulp-replace';
 import puglint from 'gulp-pug-lint';
-import gulpSitemap from 'gulp-sitemap';
+// import gulpSitemap from 'gulp-sitemap';
 
 
 export function dev() {
@@ -52,9 +52,9 @@ export function lint() {
 
 export function sitemap() {
     return gulp.src(config.paths.build.base + '/**/*.html')
-        .pipe(gulpSitemap({
-            siteUrl: config.live.url,
-            changefreq: 'monthly',
-        }))
+        // .pipe(gulpSitemap({
+        //     siteUrl: config.live.url,
+        //     changefreq: 'monthly',
+        // }))
         .pipe(gulp.dest(config.paths.build.base));
 }

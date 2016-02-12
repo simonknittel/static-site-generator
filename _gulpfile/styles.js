@@ -8,6 +8,7 @@ import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import scssLint from 'gulp-scss-lint';
 import moreCSS from 'gulp-more-css';
+import critical from 'critical';
 
 
 export function dev() {
@@ -52,4 +53,18 @@ export function prod() {
 export function lint() {
     return gulp.src(config.paths.source.styles + '/**/*.scss')
         .pipe(scssLint());
+}
+
+export function criticalCSS(callback) {
+    critical.generate({
+        inline: true,
+        base: config.paths.build.base,
+        src: '/index.html',
+        dest: config.paths.build.base + '/index.html',
+        minify: true,
+        width: 1280,
+        height: 800,
+    }, () => {
+        callback();
+    });
 }
