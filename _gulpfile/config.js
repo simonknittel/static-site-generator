@@ -20,4 +20,8 @@ config.paths.build.styles = config.paths.build.base + '/assets/css';
 config.paths.build.scripts = config.paths.build.base + '/assets/js';
 config.paths.build.images = config.paths.build.base + '/assets/img';
 
+config.live = {};
+
+config.live.url = 'test'; // For automated sitemap generation
+
 export default config;

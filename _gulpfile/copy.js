@@ -8,7 +8,6 @@ import cached from 'gulp-cached';
 export function base() {
     return gulp.src([
         config.paths.source.base + '/robots.txt',
-        config.paths.source.base + '/sitemap.xml',
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
     ])

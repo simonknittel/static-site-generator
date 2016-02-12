@@ -39,6 +39,7 @@ gulp.task('styles:dev', styles.dev);
 import * as html from './_gulpfile/html';
 gulp.task('html:prod', html.prod);
 gulp.task('html:dev', html.dev);
+gulp.task('html:sitemap', html.sitemap);
 
 
 // Linting
@@ -63,10 +64,10 @@ gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries'));
 
 
 // Default
-gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', 'styles:dev', 'html:dev', 'copy')));
+gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', 'styles:dev', gulp.series('html:dev', 'html:sitemap'), 'copy')));
 
 // Production
-gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:prod', 'styles:prod', 'html:prod', 'copy')));
+gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:prod', 'styles:prod', gulp.series('html:prod', 'html:sitemap'), 'copy')));
 
 
 // Deploy
@@ -90,17 +91,16 @@ gulp.task('deploy', gulp.series('production', () => {
 gulp.task('watch', gulp.series('default', () => {
     gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', browserSync.reload));
 
-    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'), browserSync.reload));
+    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'), 'html:sitemap', browserSync.reload));
 
-    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'), browserSync.reload));
+    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'), 'html:sitemap', browserSync.reload));
 
     gulp.watch([
         config.paths.source.base + '/**/*.jade',
-    ], gulp.series('html:dev', browserSync.reload));
+    ], gulp.series('html:dev', 'html:sitemap', browserSync.reload));
 
     gulp.watch([
         config.paths.source.base + '/robots.txt',
-        config.paths.source.base + '/sitemap.xml',
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
     ], gulp.series('copy:base', browserSync.reload));
