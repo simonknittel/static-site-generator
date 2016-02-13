@@ -66,8 +66,7 @@ Manual start
 1. Set the live URL in [config.js](./_gulpfile/config.js#L25) for automated sitemap generation
 1. Set the live URL in [robots.txt](./source/robots.txt#L1)
 1. Run `npm install`
-1. Run `jspm install`
-1. Run `gulp watch`
+1. Run `npm start`
 
 ### Add AngularJS
 1. Run `jspm install angular angular-ui-router`
