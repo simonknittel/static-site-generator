@@ -6,8 +6,6 @@ before_install:
     - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 install:
     - npm install
-before_script:
-    - jspm install
 script: npm test
 cache:
     directories:

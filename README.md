@@ -58,15 +58,39 @@ Manual start
 ---
 
 ### Install dependencies
-1. Enable your repository in Travis CI
-1. Enable `Build only if .travis.yml is present`
-1. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
-1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L5)
-1. Uncomment Raven.js on [base.jade](./source/_partials/base.jade#L57)
 1. Set the live URL in [config.js](./_gulpfile/config.js#L25) for automated sitemap generation
 1. Set the live URL in [robots.txt](./source/robots.txt#L1)
 1. Run `npm install`
 1. Run `npm start`
+
+### Enable Travis CI
+1. Enable your repository in Travis CI
+1. Enable `Build only if .travis.yml is present`
+1. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
+
+### Enable Codeship
+1. Add the following to `Setup Commands`:
+
+```shell
+nvm install 5.0
+
+npm install -g jspm
+jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+
+npm install
+```
+
+2. Add the following to `Configure Test Pipelines`:
+
+```shell
+npm test
+```
+
+3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
+
+### Enable JavaScript error reporting with Sentry/Raven.js
+1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L5)
+1. Uncomment Raven.js on [base.jade](./source/_partials/base.jade#L57)
 
 ### Add AngularJS
 1. Run `jspm install angular angular-ui-router`
