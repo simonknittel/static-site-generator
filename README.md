@@ -10,8 +10,6 @@
 
 Static Site Generator
 ===
-[![Build Status](https://travis-ci.org/simonknittel/static-site-generator.svg?branch=master)](https://travis-ci.org/simonknittel/static-site-generator)
-
 Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) page within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get production ready code.
 
 The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
@@ -56,14 +54,18 @@ Set up a new project
 
 ### Install dependencies
 1. Set the live URL in [config.js](./_gulpfile/config.js#L25) for automated sitemap generation
-1. Set the live URL in [robots.txt](./source/robots.txt#L1)
-1. Run `npm install`
-1. Run `npm start`
+2. Set the live URL in [robots.txt](./source/robots.txt#L1)
+3. Run `npm install`
+4. Run `npm start`
 
 ### Enable Travis CI
 1. Enable your repository in Travis CI
-1. Enable `Build only if .travis.yml is present`
-1. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
+2. Enable `Build only if .travis.yml is present`
+3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
+4. Add a badge to your README.md with:
+```markdown
+[![Build Status](https://travis-ci.org/USERNAME/REPOSITORY?branch=master)](https://travis-ci.org/USERNAME/REPOSITORY)
+```
 
 ### Enable Codeship
 1. Add the following to `Setup Commands`:
@@ -84,6 +86,11 @@ npm test
 ```
 
 3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and set it to base64(`username:password`)
+
+4. Add a badge to your README.md with:
+```markdown
+[![Build Status](https://codeship.com/projects/UUID/status?branch=master)](https://codeship.com/projects/ID)
+```
 
 ### Enable Sentry/Raven.js
 1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L5)
