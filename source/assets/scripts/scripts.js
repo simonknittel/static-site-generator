@@ -3,3 +3,7 @@ document.querySelector('html').classList.remove('no-js');
 
 // Enable Sentry/Raven.js
 // Raven.config('PUBLIC DSN').install();
+
+export function testDummy() {
+    return 'It works!';
+}
