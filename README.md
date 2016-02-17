@@ -95,7 +95,7 @@ npm test
 5. Add Continuous Deployment with https://codeship.com/documentation/continuous-deployment/deployment-with-ftp-sftp-scp/#continuous-deployment-with-ftp
 
 ### Enable Sentry/Raven.js
-1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L5)
+1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L2)
 1. Uncomment Raven.js on [base.jade](./source/_partials/base.jade#L57)
 
 ### Add AngularJS
