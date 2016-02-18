@@ -71,8 +71,6 @@ Set up a new project
 1. Add the following to `Setup Commands`:
 
 ```shell
-nvm install 5.0
-
 npm install -g jspm
 jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 
@@ -92,7 +90,15 @@ npm test
 [![Build Status](https://codeship.com/projects/UUID/status?branch=master)](https://codeship.com/projects/ID)
 ```
 
-5. Add Continuous Deployment with https://codeship.com/documentation/continuous-deployment/deployment-with-ftp-sftp-scp/#continuous-deployment-with-ftp
+5. Add Continuous Deployment with
+
+```shell
+npm install -g gulp
+gulp production
+lftp -c "open -u $FTP_USER,$FTP_PASSWORD simonknittel.de; set ssl:verify-certificate no; mirror -R --delete ${HOME}/clone/build/ /path/on/the/server"
+```
+
+6. Add two environmental variables called `FTP_USER` and `FTP_PASSWORD`
 
 ### Enable Sentry/Raven.js
 1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L2)
