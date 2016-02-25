@@ -12,7 +12,7 @@ import critical from 'critical';
 
 
 export function dev() {
-    return gulp.src(config.paths.source.styles + '/*.scss')
+    return gulp.src(config.paths.source.styles + '/**/*.scss')
         .pipe(sourcemaps.init())
             .pipe(sass({
                 includePaths: [
@@ -31,7 +31,7 @@ export function dev() {
 }
 
 export function prod() {
-    return gulp.src(config.paths.source.styles + '/*.scss')
+    return gulp.src(config.paths.source.styles + '/**/*.scss')
         .pipe(sass({
             includePaths: [
                 './node_modules',
