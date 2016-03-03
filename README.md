@@ -2,7 +2,7 @@
     1. [Features](#features)
     1. [I want to use AngularJS, React, Ember or Meteor](#i-want-to-use-angularjs-react-ember-or-meteor)
     1. [Planned features](#planned-features)
-    1. [Documentation](#Documentation)
+    1. [Documentation](#documentation)
 
 Static Site Generator
 ===
