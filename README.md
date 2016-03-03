@@ -10,7 +10,7 @@ Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_st
 
 The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Jade template engine](http://jade-lang.com/) if you don't want to use them.
 
-**Disclaimer:** This project is not made as a well maintained open source project, so that it can be used anytime and anywhere without issues. It's more for my own learning and experimentation with new technologies. Therefor I'm looking primarily for feedback.
+**Disclaimer:** This project is not made as a well maintained open source project, so that it can be used anytime and anywhere without issues. It's more for my own learning and experimentation with new technologies. Therefore I'm looking primarily for feedback.
 
 Features
 ---
