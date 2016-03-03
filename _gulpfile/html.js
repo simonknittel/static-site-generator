@@ -3,11 +3,7 @@ import config from './config';
 
 import gulp from 'gulp';
 import jade from 'gulp-jade';
-import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
-import replace from 'gulp-replace';
-import puglint from 'gulp-pug-lint';
-// import gulpSitemap from 'gulp-sitemap';
 
 
 export function dev() {
@@ -18,12 +14,14 @@ export function dev() {
         .pipe(jade({
             pretty: true,
         }))
-        .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
         .pipe(rename(path => path.extname = '.html'))
         .pipe(gulp.dest(config.paths.build.base));
 }
 
 export function prod() {
+    let htmlmin = require('gulp-htmlmin');
+    let replace = require('gulp-replace');
+
     return gulp.src([
         config.paths.source.base + '/**/*.jade',
         '!' + config.paths.source.base + '/_partials/**/*',
@@ -46,11 +44,15 @@ export function prod() {
 }
 
 export function lint() {
+    let puglint = require('gulp-puglint');
+
     return gulp.src(config.paths.source.base + '/**/*.jade')
         .pipe(puglint());
 }
 
 export function sitemap() {
+    // let gulpSitemap = require('gulp-sitemap');
+
     return gulp.src([
         config.paths.build.base + '/**/*.html'
     ])

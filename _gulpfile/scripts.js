@@ -2,8 +2,6 @@
 import config from './config';
 
 import gulp from 'gulp';
-import eslint from 'gulp-eslint';
-import gulpIf from 'gulp-if';
 import jspm from 'gulp-jspm';
 import sourcemaps from 'gulp-sourcemaps';
 import rename from 'gulp-rename';
@@ -46,6 +44,9 @@ export function prod() {
 
 // https://github.com/adametry/gulp-eslint/blob/master/example/fix.js
 export function fix() {
+    let eslint = require('gulp-eslint');
+    let gulpIf = require('gulp-gulp-if');
+
     return gulp.src(config.paths.source.scripts + '/**/*.js')
         .pipe(eslint({
             fix: true, // Fix lint errors
@@ -54,6 +55,8 @@ export function fix() {
 }
 
 export function lint() {
+    let eslint = require('gulp-eslint');
+
     return gulp.src(config.paths.source.scripts + '/**/*.js')
         .pipe(eslint())
         .pipe(eslint.format());

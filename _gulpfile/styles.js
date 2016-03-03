@@ -6,9 +6,8 @@ import autoprefixer from 'gulp-autoprefixer';
 import notify from 'gulp-notify';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
-import scssLint from 'gulp-scss-lint';
-import moreCSS from 'gulp-more-css';
-import critical from 'critical';
+import browserSync from 'browser-sync';
+import filter from 'gulp-filter';
 
 
 export function dev() {
@@ -27,10 +26,14 @@ export function dev() {
             .on('error', err => console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
             .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(config.paths.build.styles));
+        .pipe(gulp.dest(config.paths.build.styles))
+        .pipe(filter('**/*.css'))
+        .pipe(browserSync.stream());
 }
 
 export function prod() {
+    let moreCSS = require('gulp-more-css');
+
     return gulp.src(config.paths.source.styles + '/**/*.scss')
         .pipe(sass({
             includePaths: [ // Enable import from libraries installed with npm
@@ -51,11 +54,15 @@ export function prod() {
 }
 
 export function lint() {
+    let scssLint = require('gulp-scss-lint');
+
     return gulp.src(config.paths.source.styles + '/**/*.scss')
         .pipe(scssLint());
 }
 
 export function criticalCSS(callback) {
+    let critical = require('critical');
+
     critical.generate({
         inline: true,
         base: config.paths.build.base,

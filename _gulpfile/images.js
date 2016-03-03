@@ -2,13 +2,11 @@
 import config from './config';
 
 import gulp from 'gulp';
-import cached from 'gulp-cached';
-import imagemin from 'gulp-imagemin';
-// import kraken from 'gulp-kraken'; // Needs API access
-import svgSprite from 'gulp-svg-sprite';
 
 
 export function icons() {
+    let svgSprite = require('svgSprite');
+
     return gulp.src(config.paths.source.images + '/icons/**/*.svg')
         .pipe(svgSprite({
             mode: {
@@ -22,6 +20,10 @@ export function icons() {
 }
 
 export function normal() {
+    let imagemin = require('gulp-imagemin');
+    let cached = require('gulp-cached');
+    let kraken = require('gulp-kraken'); // Needs API access
+
     return gulp.src([
         config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
         '!' + config.paths.source.images + '/icons/**/*',

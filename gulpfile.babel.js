@@ -1,19 +1,13 @@
 // Dependencies
 import config from './_gulpfile/config';
 
-import browserSync from 'browser-sync';
-import del from 'del';
 import gulp from 'gulp';
-import notify from 'gulp-notify';
-import sftp from 'gulp-sftp';
-import cached from 'gulp-cached';
-
-import modRewrite from 'connect-modrewrite';
-import compression from 'compression';
 
 
 // Clean
 gulp.task('clean', callback => {
+    let del = require('del');
+
     del(config.paths.build.base).then(() => callback());
 });
 
@@ -73,6 +67,10 @@ gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:pr
 
 // Deploy
 gulp.task('deploy', gulp.series('production', () => {
+    let notify = require('gulp-notify');
+    let sftp = require('gulp-sftp');
+    let cached = require('gulp-cached');
+
     return gulp.src(config.paths.build.base + '/**/*')
         .pipe(cached('deploy')) // Pass through only files changed after the last run
         .pipe(sftp({
@@ -90,11 +88,15 @@ gulp.task('deploy', gulp.series('production', () => {
 
 // Watch
 gulp.task('watch', gulp.series('default', () => {
+    let browserSync = require('browser-sync');
+    let modRewrite = require('connect-modrewrite');
+    let compression = require('compression');
+
     gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', browserSync.reload));
 
-    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series(gulp.parallel('scripts:dev', 'html:dev'), 'html:sitemap', browserSync.reload));
+    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series('scripts:dev', browserSync.reload));
 
-    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series(gulp.parallel('styles:dev', 'html:dev'), gulp.parallel('styles:critical', 'html:sitemap'), browserSync.reload));
+    gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series('styles:dev'));
 
     gulp.watch([
         config.paths.source.base + '/**/*.jade',
