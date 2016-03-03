@@ -69,10 +69,8 @@ gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:pr
 gulp.task('deploy', gulp.series('production', () => {
     let notify = require('gulp-notify');
     let sftp = require('gulp-sftp');
-    let cached = require('gulp-cached');
 
     return gulp.src(config.paths.build.base + '/**/*')
-        .pipe(cached('deploy')) // Pass through only files changed after the last run
         .pipe(sftp({
             host: 'ssh.strato.de',
             remotePath: '/',
