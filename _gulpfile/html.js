@@ -30,7 +30,7 @@ export function prod() {
     ])
         .pipe(jade())
         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
-        .pipe(htmlmin({
+        .pipe(htmlmin({ // Minify the html code
             removeComments: true,
             collapseWhitespace: true,
             collapseInlineTagWhitespace: true,
@@ -51,7 +51,12 @@ export function lint() {
 }
 
 export function sitemap() {
-    return gulp.src(config.paths.build.base + '/**/*.html')
+    return gulp.src([
+        config.paths.build.base + '/**/*.html'
+    ])
+        // .pipe(rename({
+        //     extname: '',
+        // }))
         // .pipe(gulpSitemap({
         //     siteUrl: config.live.url,
         //     changefreq: 'monthly',

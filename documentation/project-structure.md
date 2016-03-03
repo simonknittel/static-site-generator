@@ -1,8 +1,3 @@
-Start into an existing project
----
-1. Run `npm install` to install all dependencies.
-1. Run `npm start` to build the site. It will automatically open a browser tab which will reload every time you change a source file.
-
 General directory structure
 ---
 All source files are located in [source](./source). Continue reading to see how the workflow is working. Once the project is built, you can find the generated site in `build`. In [_gulpfile](./_gulpfile) you will find parts of the [gulpfile.babel.js](./gulpfile.babel.js).

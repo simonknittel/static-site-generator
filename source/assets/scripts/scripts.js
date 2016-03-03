@@ -1,5 +1,3 @@
-// Enable Sentry/Raven.js
-// Raven.config('PUBLIC DSN').install();
+// Raven.config('PUBLIC DSN').install(); // Enable Sentry/Raven.js
 
-// Remove no-js class
-document.querySelector('html').classList.remove('no-js');
+document.querySelector('html').classList.remove('no-js'); // Remove .no-js class from the html tag

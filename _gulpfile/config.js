@@ -1,9 +1,9 @@
 let config = {};
 
-config.s3 = {
-    dev: false,
-    prod: false,
-};
+// config.s3 = {
+//     dev: false,
+//     prod: false,
+// };
 
 config.paths = {
     source: {},

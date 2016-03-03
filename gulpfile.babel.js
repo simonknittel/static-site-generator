@@ -74,7 +74,7 @@ gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:pr
 // Deploy
 gulp.task('deploy', gulp.series('production', () => {
     return gulp.src(config.paths.build.base + '/**/*')
-        .pipe(cached('deploy'))
+        .pipe(cached('deploy')) // Pass through only files changed after the last run
         .pipe(sftp({
             host: 'ssh.strato.de',
             remotePath: '/',
@@ -115,9 +115,9 @@ gulp.task('watch', gulp.series('default', () => {
             middleware: [
                 modRewrite([
                     // '^([^\.]+)$ $1.html [NC,L]', // Original from the .htaccess
-                    '^.([^\\.]+)$ /$1.html [L]',
+                    '^.([^\\.]+)$ /$1.html [L]', // Remove .html from URL
                 ]),
-                compression(),
+                compression(), // Enable gzip compression
             ],
         },
     });

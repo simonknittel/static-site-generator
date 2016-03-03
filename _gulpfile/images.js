@@ -26,7 +26,7 @@ export function normal() {
         config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
         '!' + config.paths.source.images + '/icons/**/*',
     ])
-        .pipe(cached('images:default'))
+        .pipe(cached('images:default')) // Pass through only files changed after the last run
         .pipe(imagemin())
         // .pipe(kraken({ // PRO account needed
         //     key: '',

@@ -34,6 +34,7 @@
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
+    "gulp-jspm": "^0.5.7",
     "gulp-kraken": "^0.1.0",
     "gulp-more-css": "^1.0.0",
     "gulp-notify": "^2.2.0",
