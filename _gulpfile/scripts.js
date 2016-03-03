@@ -45,7 +45,7 @@ export function prod() {
 // https://github.com/adametry/gulp-eslint/blob/master/example/fix.js
 export function fix() {
     let eslint = require('gulp-eslint');
-    let gulpIf = require('gulp-gulp-if');
+    let gulpIf = require('gulp-if');
 
     return gulp.src(config.paths.source.scripts + '/**/*.js')
         .pipe(eslint({

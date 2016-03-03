@@ -5,7 +5,7 @@ import gulp from 'gulp';
 
 
 export function icons() {
-    let svgSprite = require('svgSprite');
+    let svgSprite = require('gulp-svg-sprite');
 
     return gulp.src(config.paths.source.images + '/icons/**/*.svg')
         .pipe(svgSprite({
