@@ -48,13 +48,13 @@
     Header unset X-Powered-By
 </IfModule>
 
-#
+# Hide information about your Apache installation
 ServerSignature Off
 
-#
+# Do now display the files of a subdirectory without an index file
 <IfModule mod_autoindex.c>
     Options -Indexes
 </IfModule>
 
-#
+# Redirect all 404 sites to the root
 ErrorDocument 404 /
