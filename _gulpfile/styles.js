@@ -27,7 +27,7 @@ export function dev() {
             .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.paths.build.styles))
-        .pipe(filter('**/*.css'))
+        .pipe(filter('**/*.css')) // Filter the sourcemaps so that BrowserSync will properly inject the CSS without reloading the pafe
         .pipe(browserSync.stream());
 }
 
