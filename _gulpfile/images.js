@@ -2,13 +2,15 @@
 import config from './config';
 
 import gulp from 'gulp';
+import svgSprite from 'gulp-svg-sprite';
+import imagemin from 'gulp-imagemin';
+import cached from 'gulp-cached';
+import kraken from 'gulp-kraken'; // Needs API access
 
 
 export function icons() {
-    let svgSprite = require('gulp-svg-sprite');
-
     return gulp.src(config.paths.source.images + '/icons/**/*.svg')
-        .pipe(svgSprite({
+        .pipe(svgSprite({ // Bundles all icons into one SVG stack
             mode: {
                 stack: {
                     dest: '',
@@ -20,13 +22,9 @@ export function icons() {
 }
 
 export function normal() {
-    let imagemin = require('gulp-imagemin');
-    let cached = require('gulp-cached');
-    let kraken = require('gulp-kraken'); // Needs API access
-
     return gulp.src([
         config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
-        '!' + config.paths.source.images + '/icons/**/*',
+        '!' + config.paths.source.images + '/icons/**/*', // Icons are handled by the task above
     ])
         .pipe(cached('images:default')) // Pass through only files changed after the last run
         .pipe(imagemin())
