@@ -32,6 +32,7 @@ export function dev() {
 }
 
 export function prod() {
+    // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
     let moreCSS = require('gulp-more-css');
 
     return gulp.src(config.paths.source.styles + '/**/*.scss')
@@ -54,6 +55,7 @@ export function prod() {
 }
 
 export function lint() {
+    // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
     let scssLint = require('gulp-scss-lint');
 
     return gulp.src(config.paths.source.styles + '/**/*.scss')
@@ -61,16 +63,17 @@ export function lint() {
 }
 
 export function criticalCSS(callback) {
+    // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
     let critical = require('critical');
 
     critical.generate({
-        inline: true,
+        inline: true, // Will be inserted into the <head>
         base: config.paths.build.base,
         src: '/index.html',
         dest: config.paths.build.base + '/index.html',
         minify: true,
-        width: 1280,
-        height: 800,
+        width: 1280, // Viewbox
+        height: 800, // Viewbox
     }, () => {
         callback();
     });
