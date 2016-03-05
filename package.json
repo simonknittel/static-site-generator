@@ -45,7 +45,7 @@
     "gulp-sass": "^2.2.0",
     "gulp-scss-lint": "^0.3.9",
     "gulp-sftp": "^0.1.5",
-    "gulp-sitemap": "^3.0.0",
+    "gulp-sitemap": "^3.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "^1.2.19",
     "jasmine": "^2.4.1",
