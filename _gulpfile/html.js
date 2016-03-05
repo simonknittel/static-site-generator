@@ -19,6 +19,7 @@ export function dev() {
 }
 
 export function prod() {
+    // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
     let htmlmin = require('gulp-htmlmin');
     let replace = require('gulp-replace');
 
@@ -44,6 +45,7 @@ export function prod() {
 }
 
 export function lint() {
+    // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
     let puglint = require('gulp-puglint');
 
     return gulp.src(config.paths.source.base + '/**/*.jade')
@@ -51,13 +53,14 @@ export function lint() {
 }
 
 export function sitemap() {
+    // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
     // let gulpSitemap = require('gulp-sitemap');
 
-    return gulp.src([
+    return gulp.src([ // You can define files here which should be included or excluded in the sitemap.xml
         config.paths.build.base + '/**/*.html'
     ])
         // .pipe(rename({
-        //     extname: '',
+        //     extname: '', // Remove the file extension
         // }))
         // .pipe(gulpSitemap({
         //     siteUrl: config.live.url,
