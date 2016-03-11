@@ -1,1 +1,4 @@
 Sitemap: http://domain.tld/sitemap.xml
+
+User-agent: *
+Disallow:

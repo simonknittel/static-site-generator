@@ -114,8 +114,7 @@ gulp.task('watch', gulp.series('default', () => {
             baseDir: config.paths.build.base,
             middleware: [
                 modRewrite([
-                    // '^([^\.]+)$ $1.html [NC,L]', // Original from the .htaccess
-                    '^.([^\\.]+)$ /$1.html [L]', // Remove .html from URL
+                    '^.([^\\.]+)$ /$1.html [L]', // Remove .html from URL (as in the .htaccess)
                 ]),
                 compression(), // Enable gzip compression
             ],

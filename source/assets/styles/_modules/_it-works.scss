@@ -2,7 +2,7 @@
     position: absolute;
     left: 50%;
     top: 25%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, 0, 0);
     -webkit-filter: blur(0); // Removes blurry text on Google Chrome
 }
 
