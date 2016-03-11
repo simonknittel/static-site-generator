@@ -47,7 +47,7 @@ export function prod() {
 
 export function lint() {
     // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
-    let puglint = require('gulp-puglint');
+    let puglint = require('gulp-pug-lint');
 
     return gulp.src(config.paths.source.base + '/**/*.jade')
         .pipe(puglint());
