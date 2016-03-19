@@ -59,7 +59,7 @@ gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries'));
 
 
 // Default
-gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', gulp.series(gulp.parallel('styles:dev', 'html:dev'), gulp.parallel('styles:critical', 'html:sitemap')), 'copy')));
+gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', gulp.series(gulp.parallel('styles:dev', 'html:dev'), 'html:sitemap'), 'copy')));
 
 // Production
 gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:prod', gulp.series(gulp.parallel('styles:prod', 'html:prod'), gulp.parallel('styles:critical', 'html:sitemap')), 'copy')));
