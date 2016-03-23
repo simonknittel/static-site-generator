@@ -46,7 +46,7 @@ npm test
 5. Add Continuous Deployment with
 
 ```shell
-npm install -g gulp
+npm install -g gulpjs/gulp-cli#4.0
 gulp production
 lftp -c "open -u $FTP_USER,$FTP_PASSWORD simonknittel.de; set ssl:verify-certificate no; mirror -R --delete ${HOME}/clone/build/ /path/on/the/server"
 ```
