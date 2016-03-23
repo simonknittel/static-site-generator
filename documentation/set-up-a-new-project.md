@@ -53,6 +53,13 @@ lftp -c "open -u $FTP_USER,$FTP_PASSWORD simonknittel.de; set ssl:verify-certifi
 
 6. Add two environmental variables called `FTP_USER` and `FTP_PASSWORD`
 
+Alternatively, use the Gulp deployment task:
+
+```shell
+npm install -g gulpjs/gulp-cli#4.0
+gulp deploy
+```
+
 ### Enable Sentry/Raven.js
 1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L2)
 1. Uncomment Raven.js on [base.jade](./source/_partials/base.jade#L57)
