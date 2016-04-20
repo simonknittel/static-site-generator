@@ -2,17 +2,17 @@
 import config from './config';
 
 import gulp from 'gulp';
-import jade from 'gulp-jade';
+import pug from 'gulp-pug';
 import rename from 'gulp-rename';
 import gulpSitemap from 'gulp-sitemap';
 
 
 export function dev() {
     return gulp.src([
-        config.paths.source.base + '/**/*.jade',
+        config.paths.source.base + '/**/*.pug',
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
-        .pipe(jade({
+        .pipe(pug({
             pretty: true,
         }))
         .pipe(rename(path => path.extname = '.html'))
@@ -25,10 +25,10 @@ export function prod() {
     let replace = require('gulp-replace');
 
     return gulp.src([
-        config.paths.source.base + '/**/*.jade',
+        config.paths.source.base + '/**/*.pug',
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
-        .pipe(jade())
+        .pipe(pug())
         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
         .pipe(htmlmin({ // Minify the html code
             removeComments: true,
@@ -49,7 +49,7 @@ export function lint() {
     // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
     let puglint = require('gulp-pug-lint');
 
-    return gulp.src(config.paths.source.base + '/**/*.jade')
+    return gulp.src(config.paths.source.base + '/**/*.pug')
         .pipe(puglint());
 }
 
