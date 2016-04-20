@@ -46,12 +46,19 @@ npm test
 5. Add Continuous Deployment with
 
 ```shell
-npm install -g gulp
+npm install -g gulpjs/gulp-cli#4.0
 gulp production
 lftp -c "open -u $FTP_USER,$FTP_PASSWORD simonknittel.de; set ssl:verify-certificate no; mirror -R --delete ${HOME}/clone/build/ /path/on/the/server"
 ```
 
 6. Add two environmental variables called `FTP_USER` and `FTP_PASSWORD`
+
+Alternatively, use the Gulp deployment task:
+
+```shell
+npm install -g gulpjs/gulp-cli#4.0
+gulp deploy
+```
 
 ### Enable Sentry/Raven.js
 1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L2)
