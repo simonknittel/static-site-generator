@@ -104,7 +104,6 @@ gulp.task('watch', gulp.series('default', () => {
         config.paths.source.base + '/robots.txt',
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
-        config.paths.source.base + '/sitemap.xml',
     ], gulp.series('copy:base', browserSync.reload));
 
     gulp.watch(config.paths.source.base + '/assets/libraries/**/*', gulp.series('copy:libraries', browserSync.reload));

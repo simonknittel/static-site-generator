@@ -4,7 +4,7 @@ import config from './config';
 import gulp from 'gulp';
 import jade from 'gulp-jade';
 import rename from 'gulp-rename';
-// import gulpSitemap from 'gulp-sitemap';
+import gulpSitemap from 'gulp-sitemap';
 
 
 export function dev() {
@@ -57,12 +57,17 @@ export function sitemap() {
     return gulp.src([ // You can define files here which should be included or excluded in the sitemap.xml
         config.paths.build.base + '/**/*.html',
     ])
-        // .pipe(rename({
-        //     extname: '', // Remove the file extension
-        // }))
-        // .pipe(gulpSitemap({
-        //     siteUrl: config.live.url, // Make sure to set your domain in the config.js
-        //     changefreq: 'monthly',
-        // }))
+        .pipe(gulpSitemap({
+            siteUrl: config.live.url, // Make sure to set your domain in the config.js
+            changefreq: 'monthly',
+            mappings: [
+                {
+                    pages: ['**/*.html'],
+                    getLoc: function(siteUrl, loc) {
+                        return loc.substr(0, loc.lastIndexOf('.')) || loc; // Removes the file extension
+                    },
+                },
+            ],
+        }))
         .pipe(gulp.dest(config.paths.build.base));
 }
