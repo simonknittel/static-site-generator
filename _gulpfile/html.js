@@ -21,8 +21,8 @@ export function dev() {
 
 export function prod() {
     // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
-    let htmlmin = require('gulp-htmlmin');
-    let replace = require('gulp-replace');
+    const htmlmin = require('gulp-htmlmin');
+    const replace = require('gulp-replace');
 
     return gulp.src([
         config.paths.source.base + '/**/*.pug',
@@ -47,7 +47,7 @@ export function prod() {
 
 export function lint() {
     // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
-    let puglint = require('gulp-pug-lint');
+    const puglint = require('gulp-pug-lint');
 
     return gulp.src(config.paths.source.base + '/**/*.pug')
         .pipe(puglint());

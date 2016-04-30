@@ -45,8 +45,8 @@ export function prod() {
 // https://github.com/adametry/gulp-eslint/blob/master/example/fix.js
 export function fix() {
     // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
-    let eslint = require('gulp-eslint');
-    let gulpIf = require('gulp-if');
+    const eslint = require('gulp-eslint');
+    const gulpIf = require('gulp-if');
 
     return gulp.src(config.paths.source.scripts + '/**/*.js')
         .pipe(eslint({
@@ -57,7 +57,7 @@ export function fix() {
 
 export function lint() {
     // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
-    let eslint = require('gulp-eslint');
+    const eslint = require('gulp-eslint');
 
     return gulp.src(config.paths.source.scripts + '/**/*.js')
         .pipe(eslint())

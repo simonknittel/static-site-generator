@@ -14,6 +14,20 @@ let config = {
     live: {
         url: '', // For automated sitemap generation
     },
+    deployment: {
+        live: {
+            host: 'ssh.strato.de',
+            remotePath: '',
+            user: 'simonknittel.de',
+            pass: '',
+        },
+        test: {
+            host: 'ssh.strato.de',
+            remotePath: '',
+            user: 'simonknittel.de',
+            pass: '',
+        },
+    },
 };
 
 config.paths.source.styles = config.paths.source.base + '/assets/styles';
