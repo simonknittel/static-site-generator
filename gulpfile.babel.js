@@ -70,7 +70,15 @@ gulp.task('deploy', gulp.series('production', () => {
     let notify = require('gulp-notify');
     let sftp = require('gulp-sftp');
 
-    const sftpSettings = process.argv.slice(3)[0] === '--target=production' ? config.deployment.live : config.deployment.test;
+    let sftpSettings = config.deployment.develop;
+    switch (process.argv.slice(3)[0]) {
+        case '--target=production':
+            sftpSettings = config.deployment.live;
+            break;
+        case '--target=test':
+            sftpSettings = config.deployment.test;
+            break;
+    }
 
     return gulp.src(config.paths.build.base + '/**/*')
         .pipe(sftp(sftpSettings))

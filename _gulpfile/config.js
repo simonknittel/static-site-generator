@@ -16,15 +16,21 @@ let config = {
     },
     deployment: {
         live: {
-            host: 'ssh.strato.de',
+            host: 'rasalhague.uberspace.de',
             remotePath: '',
-            user: 'simonknittel.de',
+            user: 'sknittel',
             pass: '',
         },
         test: {
-            host: 'ssh.strato.de',
+            host: 'rasalhague.uberspace.de',
             remotePath: '',
-            user: 'simonknittel.de',
+            user: 'sknittel',
+            pass: '',
+        },
+        develop: {
+            host: 'rasalhague.uberspace.de',
+            remotePath: '',
+            user: 'sknittel',
             pass: '',
         },
     },
