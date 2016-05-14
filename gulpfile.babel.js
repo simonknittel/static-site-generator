@@ -104,7 +104,7 @@ gulp.task('watch', gulp.series('default', () => {
     gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series('styles:dev'));
 
     gulp.watch([
-        config.paths.source.base + '/**/*.jade',
+        config.paths.source.base + '/**/*.pug',
     ], gulp.series('html:dev', 'html:sitemap', browserSync.reload));
 
     gulp.watch([
