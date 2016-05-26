@@ -24,6 +24,7 @@ Set up a new project
 1. Add the following to `Setup Commands`:
 
 ```shell
+nvm install 6.2.0
 npm install -g jspm
 jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 
