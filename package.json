@@ -39,6 +39,7 @@
     "gulp-kraken": "0.1.0",
     "gulp-more-css": "1.0.0",
     "gulp-notify": "2.2.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-pug": "2.0.0",
     "gulp-pug-lint": "0.1.6",
     "gulp-rename": "1.2.2",

@@ -7,13 +7,23 @@ import rename from 'gulp-rename';
 import gulpSitemap from 'gulp-sitemap';
 import data from 'gulp-data';
 import path from 'path';
-
+import plumber from 'gulp-plumber';
+import notify from 'gulp-notify';
+import notifier from 'node-notifier';
 
 export function dev() {
     return gulp.src([
         config.paths.source.base + '/**/*.pug',
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
+        .pipe(plumber(error => {
+            notifier.notify({
+                title: 'html:dev - failed',
+                message: 'View console for more details.',
+                sound: true,
+            });
+            console.error(error);
+        }))
         .pipe(data(file => {
             const source = '../' + config.paths.source.data + '/' + path.basename(file.path, '.pug') + '.json';
             delete require.cache[require.resolve(source)];

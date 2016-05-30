@@ -19,7 +19,7 @@ export function dev() {
                 ],
             }))
             .on('error', notify.onError({
-                title: 'styles - failed',
+                title: 'styles:dev - failed',
                 message: 'View console for more details.',
                 sound: true,
             }))
@@ -41,12 +41,6 @@ export function prod() {
                 './node_modules',
             ],
         }))
-        .on('error', notify.onError({
-            title: 'prod-styles - failed',
-            message: 'View console for more details.',
-            sound: true,
-        }))
-        .on('error', err => console.error('ERROR TASK: prod-styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
         .pipe(autoprefixer())
         .pipe(moreCSS({
             radical: false,
