@@ -12,7 +12,7 @@ let config = {
         },
     },
     live: {
-        url: '', // For automated sitemap generation
+        url: 'http://localhost', // For automated sitemap generation
     },
     deployment: {
         live: {
@@ -39,6 +39,7 @@ let config = {
 config.paths.source.styles = config.paths.source.base + '/assets/styles';
 config.paths.source.scripts = config.paths.source.base + '/assets/scripts';
 config.paths.source.images = config.paths.source.base + '/assets/images';
+config.paths.source.data = config.paths.source.base + '/_data';
 
 config.paths.build.styles = config.paths.build.base + '/assets/css';
 config.paths.build.scripts = config.paths.build.base + '/assets/js';

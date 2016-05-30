@@ -5,6 +5,8 @@ import gulp from 'gulp';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
 import gulpSitemap from 'gulp-sitemap';
+import data from 'gulp-data';
+import path from 'path';
 
 
 export function dev() {
@@ -12,6 +14,11 @@ export function dev() {
         config.paths.source.base + '/**/*.pug',
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
+        .pipe(data(file => {
+            const source = '../' + config.paths.source.data + '/' + path.basename(file.path, '.pug') + '.json';
+            delete require.cache[require.resolve(source)];
+            return require(source);
+        }))
         .pipe(pug({
             pretty: true,
         }))
@@ -28,6 +35,11 @@ export function prod() {
         config.paths.source.base + '/**/*.pug',
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
+        .pipe(data(file => {
+            const source = '../' + config.paths.source.data + '/' + path.basename(file.path, '.pug') + '.json';
+            delete require.cache[require.resolve(source)];
+            return require(source);
+        }))
         .pipe(pug())
         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
         .pipe(htmlmin({ // Minify the html code

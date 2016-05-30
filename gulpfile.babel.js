@@ -111,6 +111,7 @@ gulp.task('watch', gulp.series('default', () => {
 
     gulp.watch([
         config.paths.source.base + '/**/*.pug',
+        config.paths.source.data + '/**/*.json',
     ], gulp.series('html:dev', 'html:sitemap', done => {
         browserSync.reload();
         done();

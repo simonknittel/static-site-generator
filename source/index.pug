@@ -1,9 +1,9 @@
 extends ./_partials/base.pug
 
 block variables
-    - var title = 'SET-PROJECT-NAME';
-    - var description = 'SET-DESCRIPTION';
-    - var keywords = 'SET-KEYWORDS';
+    - var title = meta.title;
+    - var description = meta.description;
+    - var keywords = meta.keywords;
     - var htmlClass = 'page--index';
 
 block content
