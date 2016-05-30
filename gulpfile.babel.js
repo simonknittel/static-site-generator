@@ -72,7 +72,7 @@ gulp.task('deploy', gulp.series('production', () => {
 
     let sftpSettings = config.deployment.develop;
     switch (process.argv.slice(3)[0]) {
-        case '--target=production':
+        case '--target=live':
             sftpSettings = config.deployment.live;
             break;
         case '--target=test':
@@ -97,23 +97,38 @@ gulp.task('watch', gulp.series('default', () => {
     let modRewrite = require('connect-modrewrite');
     let compression = require('compression');
 
-    gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', browserSync.reload));
+    gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', done => { // https://github.com/BrowserSync/browser-sync/issues/1065#issuecomment-215516517
+        browserSync.reload();
+        done();
+    }));
 
-    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series('scripts:dev', browserSync.reload));
+    gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series('scripts:dev', done => {
+        browserSync.reload();
+        done();
+    }));
 
     gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series('styles:dev'));
 
     gulp.watch([
         config.paths.source.base + '/**/*.pug',
-    ], gulp.series('html:dev', 'html:sitemap', browserSync.reload));
+    ], gulp.series('html:dev', 'html:sitemap', done => {
+        browserSync.reload();
+        done();
+    }));
 
     gulp.watch([
         config.paths.source.base + '/robots.txt',
         config.paths.source.base + '/.htaccess',
         config.paths.source.base + '/humans.txt',
-    ], gulp.series('copy:base', browserSync.reload));
+    ], gulp.series('copy:base', done => {
+        browserSync.reload();
+        done();
+    }));
 
-    gulp.watch(config.paths.source.base + '/assets/libraries/**/*', gulp.series('copy:libraries', browserSync.reload));
+    gulp.watch(config.paths.source.base + '/assets/libraries/**/*', gulp.series('copy:libraries', done => {
+        browserSync.reload();
+        done();
+    }));
 
     browserSync({
         server: {

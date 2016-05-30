@@ -21,6 +21,7 @@
 <IfModule mod_rewrite.c>
     Options -MultiViews
     RewriteEngine On
+    RewriteBase /
 
     # Remove .html from URL
     RewriteCond %{REQUEST_FILENAME} !-f

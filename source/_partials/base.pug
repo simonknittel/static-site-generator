@@ -21,7 +21,7 @@ html(lang="en", class=htmlClass).no-js
         title #{title}
         meta(name="description", content=description)
         meta(name="keywords", content=keywords)
-        meta(name="author", content!="Simon Knittel <hallo@simonknittel.de>")
+        meta(name="author", content="Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)")
 
         //- Favicon
         //- link(rel="shortcut icon", href=root+"assets/img/favicon.ico", type="image/x-icon")
@@ -46,14 +46,14 @@ html(lang="en", class=htmlClass).no-js
 
     body
         noscript.no-js__notification
-            p Maybe you have to <strong>activate</strong> JavaScript to use this site.
+            p You have to <strong>activate</strong> JavaScript to use all functions of this site.
 
         block content
 
         //- Stylesheets
         block styles
             link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet", type="text/css")
-            link(rel="stylesheet", type="text/css", href=root+"assets/css/styles.css?RANDOMIZE-ME")
+            link(rel="stylesheet", type="text/css", href=root + "assets/css/styles.css?RANDOMIZE-ME")
 
         //- Initial data and scripts
         script
@@ -61,7 +61,7 @@ html(lang="en", class=htmlClass).no-js
         //- Scripts
         block scripts
             //- script(type="text/javascript", src="https://cdn.ravenjs.com/2.1.0/raven.min.js", async, defer)
-            script(type="text/javascript", src=root+"assets/js/scripts.js?RANDOMIZE-ME", async, defer)
+            script(type="text/javascript", src=root + "assets/js/scripts.js?RANDOMIZE-ME", async, defer)
 
         //- Optimized Google Analytics
         //- script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')
