@@ -4,7 +4,7 @@
         1. [Continuous deployment](#continuous-deployment)
 
 # Continuous integration and deployment
-Here are some examples on how to add a continuous integration service to your project.
+Here are some examples on how to add a continuous integration and deployment service to your project.
 
 ## Travis CI
 1. Enable your repository in Travis CI

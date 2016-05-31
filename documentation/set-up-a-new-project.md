@@ -1,7 +1,7 @@
 1. [Set up a new project](#set-up-a-new-project)
     1. [Install dependencies](#install-dependencies)
     2. [Enable Sentry/Raven.js](#enable-sentryravenjs)
-2. [Next](#next)
+2. [Continuous integration and deployment](#continuous-integration-and-deployment)
 
 # Set up a new project
 
@@ -17,5 +17,5 @@
 1. Create a new project on Sentry and add your public DSN to [scripts.js](./source/assets/scripts/scripts.js#L2)
 1. Uncomment Raven.js on [base.jade](./source/_partials/base.jade#L57)
 
-# Next
-If you are interested in Continuous Integration and Deployment checkout [continuous-integration.md](./continuous-integration.md)
+## Continuous integration and deployment
+If you are interested in continuous integration and deployment checkout [continuous-integration.md](./continuous-integration.md)
