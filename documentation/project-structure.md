@@ -2,10 +2,10 @@
 2. [HTML](#html)
     1. [Directory structure](#directory-structure)
 3. [Stylesheets](#stylesheets)
-    1. [Directory structure](#Directory structure-1)
+    1. [Directory structure](#directory-structure-1)
     2. [Coding standards/style and linting](#coding-standardsstyle-and-linting)
 4. [JavaScript](#javascript)
-    1. [Directory structure](#Directory structure-2)
+    1. [Directory structure](#directory-structure-2)
     2. [Coding standards/style and linting](#coding-standardsstyle-and-linting-1)
 5. [Images](#images)
 
