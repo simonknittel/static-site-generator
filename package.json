@@ -12,7 +12,8 @@
   "scripts": {
     "test": "karma start karma.conf.js",
     "postinstall": "jspm install",
-    "start": "gulp watch"
+    "start": "gulp watch",
+    "production": "gulp production"
   },
   "engines": {
     "node": ">=6.0.0 <7.0.0",
@@ -51,7 +52,7 @@
     "gulp-sourcemaps": "2.0.0-alpha",
     "gulp-svg-sprite": "1.2.19",
     "jasmine": "2.4.1",
-    "jspm": "0.16.34",
+    "jspm": "0.16.36",
     "jstransformer-marked": "1.0.1",
     "karma": "0.13.22",
     "karma-jasmine": "0.3.8",
@@ -66,9 +67,9 @@
   "jspm": {
     "dependencies": {},
     "devDependencies": {
-      "babel": "npm:babel-core@5.8.24",
-      "babel-runtime": "npm:babel-runtime@5.8.24",
-      "core-js": "npm:core-js@1.1.4"
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
     }
   }
 }

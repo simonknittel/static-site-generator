@@ -8,10 +8,10 @@ block variables
 //- Mixin for svg stacks
 mixin icon(name)
     svg(viewbox="0 0 100 100").icon
-        use(xlink:href="/assets/img/icons.svg#" + name)
+        use(xlink:href="/assets/img/icons.svg#"+name)
 
 doctype html
-html(lang="en", class=htmlClass).no-js
+html(lang="en", class=htmlClass)
     head
         meta(charset="utf-8")
         meta(name="robots", content=root+"robots.txt")
@@ -53,7 +53,7 @@ html(lang="en", class=htmlClass).no-js
         //- Stylesheets
         block styles
             link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet", type="text/css")
-            link(rel="stylesheet", type="text/css", href=root + "assets/css/styles.css?RANDOMIZE-ME")
+            link(rel="stylesheet", type="text/css", href=root+"assets/css/styles.css?RANDOMIZE-ME")
 
         //- Initial data and scripts
         script
@@ -61,7 +61,7 @@ html(lang="en", class=htmlClass).no-js
         //- Scripts
         block scripts
             //- script(type="text/javascript", src="https://cdn.ravenjs.com/2.1.0/raven.min.js", async, defer)
-            script(type="text/javascript", src=root + "assets/js/scripts.js?RANDOMIZE-ME", async, defer)
+            script(type="text/javascript", src=root+"assets/js/scripts.js?RANDOMIZE-ME", async, defer)
 
         //- Optimized Google Analytics
         //- script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')

@@ -12,7 +12,7 @@ let config = {
         },
     },
     live: {
-        url: 'http://localhost', // For automated sitemap generation
+        url: 'https://example.com', // For automated sitemap generation
     },
     deployment: {
         live: {
