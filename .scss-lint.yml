@@ -47,7 +47,7 @@ linters:
         ignore_single_line_blocks: true
 
     EmptyRule:
-        enabled: true
+        enabled: false # Should be removed by CSS minifiers
 
     FinalNewline:
         enabled: true
@@ -96,7 +96,7 @@ linters:
 
     NestingDepth:
         enabled: true
-        max_depth: 2
+        max_depth: 3
 
     PlaceholderInExtend:
         enabled: tue
@@ -104,7 +104,12 @@ linters:
     PropertySortOrder:
         enabled: true
         order:
+            - content
+            - cursor
             - display
+            - list-style
+            - flex-wrap
+            - flex-direction
             - visibility
             - opacity
             -
@@ -118,12 +123,45 @@ linters:
             - transform
             -
             - width
+            - min-width
             - max-width
             - height
+            - min-height
             - max-height
             -
             - margin
+            - margin-left
+            - margin-right
+            - margin-top
+            - margin-bottom
             - padding
+            - padding-left
+            - padding-right
+            - padding-top
+            - padding-bottom
+            -
+            - outline
+            - border
+            - border-style
+            - border-width
+            - border-color
+            - border-radius
+            - background
+            - background-color
+            - background-image
+            - background-position
+            - background-size
+            - background-repeat
+            -
+            - white-space
+            - text-transform
+            - font-size
+            - font-weight
+            - line-height
+            - color
+            -
+            - transition
+            - animation
         separate_groups: true
 
     PropterySpelling:
