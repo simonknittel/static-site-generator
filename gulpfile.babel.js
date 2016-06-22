@@ -132,6 +132,11 @@ gulp.task('watch', gulp.series('default', () => {
     }));
 
     browserSync({
+        ghostMode: {
+            clicks: false,
+            scroll: false,
+            forms: false,
+        },
         server: {
             baseDir: config.paths.build.base,
             middleware: [
