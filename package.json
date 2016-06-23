@@ -13,7 +13,8 @@
     "test": "karma start karma.conf.js",
     "postinstall": "jspm install",
     "start": "gulp watch",
-    "production": "gulp production"
+    "production": "gulp production",
+    "nuke": "rm -rf node_modules jspm_packages build"
   },
   "engines": {
     "node": ">=6.0.0 <7.0.0",
