@@ -8,8 +8,8 @@ import gulpSitemap from 'gulp-sitemap';
 import data from 'gulp-data';
 import path from 'path';
 import plumber from 'gulp-plumber';
-import notify from 'gulp-notify';
 import notifier from 'node-notifier';
+
 
 export function dev() {
     return gulp.src([

@@ -5,6 +5,8 @@ import gulp from 'gulp';
 import jspm from 'gulp-jspm';
 import sourcemaps from 'gulp-sourcemaps';
 import rename from 'gulp-rename';
+import plumber from 'gulp-plumber';
+import notifier from 'node-notifier';
 
 
 function isFixed(file) {
@@ -17,6 +19,14 @@ export function dev() {
         config.paths.source.scripts + '/**/*.js',
         '!' + config.paths.source.scripts + '/_modules/**/*',
     ])
+        .pipe(plumber(error => {
+            notifier.notify({
+                title: 'scripts:dev - failed',
+                message: 'View console for more details.',
+                sound: true,
+            });
+            console.error(error);
+        }))
         .pipe(sourcemaps.init())
             .pipe(jspm({
                 selfExecutingBundle: true,
