@@ -7,16 +7,16 @@ $color--three: #eee;
 // Checkout _fonts.scss
 
 // Breakpoints (http://mydevice.io/devices/)
-$bp--four: 80rem; // 1280px at 16px font-size
-$bp--three: 60rem; // 960px at 16px font-size
-$bp--two: 40rem; // 640px at 16px font-size
-$bp--one: 20rem; // 320px at 16px font-size
+$bp--four: 80rem; // 1280px at base font-size of 16px
+$bp--three: 60rem; // 960px at base font-size of 16px
+$bp--two: 40rem; // 640px at base font-size of 16px
+$bp--one: 20rem; // 320px at base font-size of 16px
 
 // Special breakpoints
-$bp--desktop: 80rem; // 1280px at 16px font size (desktop)
-$bp--pro: 64rem; // 1024px at 16px font size (huge tablets like the Surface Pro 3 or iPad Pro covered)
-$bp--ipad: 48rem; // 768px at 16px font size (iPad)
-$bp--tablets: 32rem; // 512px at 16px font-size (all common smartphones covered)
-$bp--smartphones: 20rem; // 320px at 16px font-size (minimal supported width)
+$bp--desktop: 80rem; // 1280px at base font-size of 16px (desktop)
+$bp--pro: 64rem; // 1024px at base font-size of 16px (huge tablets like the Surface Pro 3 or iPad Pro covered)
+$bp--ipad: 48rem; // 768px at base font-size of 16px (iPad)
+$bp--tablets: 32rem; // 512px at base font-size of 16px (all common smartphones covered)
+$bp--smartphones: 20rem; // 320px at base font-size of 16px (minimal supported width)
 
 // Other
