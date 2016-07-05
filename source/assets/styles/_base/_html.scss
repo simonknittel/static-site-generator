@@ -3,8 +3,6 @@
 }
 
 html {
-    @extend %background-color--three;
-    @extend %text-color--two;
     @include font(one);
 
     overflow-y: scroll;

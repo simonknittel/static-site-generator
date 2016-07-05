@@ -1,115 +1,4 @@
 //
-// Hide
-//
-
-.hide {
-    display: none;
-}
-
-.hide--medium {
-    @media only screen and (min-width: $bp--two) {
-        display: none;
-    }
-}
-
-.hide--large {
-    @media only screen and (min-width: $bp--three) {
-        display: none;
-    }
-}
-
-.centered {
-    position: relative;
-
-    width: 100%;
-    max-width: $bp--three;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-//
-// Text
-//
-
-.nobr {
-    white-space: nowrap;
-}
-
-
-//
-// Text alignment
-//
-
-%text-center {
-    text-align: center;
-}
-
-%text-center--medium {
-    @media only screen and (min-width: $bp--two) {
-        text-align: center;
-    }
-}
-
-%text-center--large {
-    @media only screen and (min-width: $bp--three) {
-        text-align: center;
-    }
-}
-
-%text-right {
-    text-align: right;
-}
-
-%text-right--medium {
-    @media only screen and (min-width: $bp--two) {
-        text-align: right;
-    }
-}
-
-%text-right--large {
-    @media only screen and (min-width: $bp--three) {
-        text-align: right;
-    }
-}
-
-
-//
-// Text colors
-//
-
-%text-color--one {
-    color: $color--one;
-}
-
-%text-color--two {
-    color: $color--two;
-}
-
-%text-color--three {
-    color: $color--three;
-}
-
-
-//
-// Background colors
-//
-
-%background-color--one {
-    background-color: $color--one;
-}
-
-%background-color--two {
-    background-color: $color--two;
-}
-
-%background-color--three {
-    background-color: $color--three;
-}
-
-
-//
 // Clearfix
 // Source: http://blog.teamtreehouse.com/a-better-clearfix-with-sass
 //
@@ -126,3 +15,13 @@
 //
 // Other
 //
+
+%centered {
+    position: relative;
+
+    width: 100%;
+    max-width: $bp--three;
+
+    margin-left: auto;
+    margin-right: auto;
+}
