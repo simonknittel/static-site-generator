@@ -1,12 +1,14 @@
 // Libraries
 @import 'normalize.css/normalize';
 
+
 // Base
 @import '_base/variables';
 @import '_base/mixins';
 @import '_base/fonts';
 @import '_base/global-classes';
 @import '_base/html';
+
 
 // Atoms
 @import '_atoms/buttons';
@@ -20,9 +22,6 @@
 @import '_atoms/icon';
 @import '_atoms/small';
 
+
 // Modules
 @import '_modules/it-works';
-
-
-// Pages
-@import '_pages/page--index';

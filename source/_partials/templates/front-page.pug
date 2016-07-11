@@ -1,0 +1,25 @@
+extends ../base.pug
+
+block variables
+    - var title = meta.title;
+    - var description = meta.description;
+    - var keywords = meta.keywords;
+    - var htmlClass = 'front-page';
+
+append styles
+    link(rel="stylesheet", type="text/css", href=root+"assets/css/styles--front.css?RANDOMIZE-ME")
+
+append scripts
+    script(type="text/javascript", src=root+"assets/js/scripts--front.js?RANDOMIZE-ME", async, defer)
+
+block content
+    //- Content
+
+    include ../modules/header.pug
+
+    main(role="main")
+        include ../modules/it-works.pug
+
+    include ../modules/footer.pug
+
+    //- Content end
