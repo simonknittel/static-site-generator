@@ -25,7 +25,7 @@ export function dev() {
             console.error(error);
         }))
         .pipe(data(file => {
-            const source = '../' + config.paths.source.data + '/' + path.basename(file.path, '.pug') + '.json';
+            const source = '../' + config.paths.source.data + file.path.replace(process.cwd() + '/' + config.paths.source.base, '').replace('.pug', '.json');
             delete require.cache[require.resolve(source)];
             return require(source);
         }))
@@ -46,7 +46,7 @@ export function prod() {
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
         .pipe(data(file => {
-            const source = '../' + config.paths.source.data + '/' + path.basename(file.path, '.pug') + '.json';
+            const source = '../' + config.paths.source.data + file.path.replace(process.cwd() + '/' + config.paths.source.base, '').replace('.pug', '.json');
             delete require.cache[require.resolve(source)];
             return require(source);
         }))
