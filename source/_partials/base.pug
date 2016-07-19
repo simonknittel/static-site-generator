@@ -1,4 +1,4 @@
-block variables
+    block variables
 
 //- Make sure to set the root variables on pages in a subdirectory
 - if (typeof(root) === 'undefined') {
@@ -60,8 +60,8 @@ html(lang="en", class=htmlClass)
 
         //- Scripts
         block scripts
-            //- script(type="text/javascript", src="https://cdn.ravenjs.com/2.1.0/raven.min.js", async, defer)
-            script(type="text/javascript", src=root+"assets/js/scripts.js?RANDOMIZE-ME", async, defer)
+            //- script(type="text/javascript", src="https://cdn.ravenjs.com/2.1.0/raven.min.js", defer)
+            script(type="text/javascript", src=root+"assets/js/scripts.js?RANDOMIZE-ME", defer)
 
         //- Optimized Google Analytics
         //- script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')
