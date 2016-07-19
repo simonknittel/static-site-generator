@@ -1,10 +1,17 @@
+# System files
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor files
 .sublime-gulp.cache
 .sublime-gulp-tmp.js
-node_modules/
-build/
-npm-debug.log
-jspm_packages/
 sublime-gulp.log
 *.sublime-workspace
-Thumbs.db
+*.sublime-project
+
+# Other
+node_modules/
+jspm_packages/
+build/
+npm-debug.log*

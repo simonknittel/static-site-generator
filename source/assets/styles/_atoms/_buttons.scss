@@ -4,8 +4,7 @@ input[type="reset"],
 .button {
     display: inline-block;
 
-    &.hover,
-    &:hover {}
+    &.hover, &:hover {}
 
-    &:disabled {}
+    &.disabled, &:disabled {}
 }
