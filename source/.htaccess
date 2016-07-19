@@ -16,6 +16,7 @@
 
     #
     Header unset X-Powered-By
+    RequestHeader unset Proxy
 </IfModule>
 
 <IfModule mod_rewrite.c>
