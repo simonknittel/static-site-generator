@@ -16,21 +16,21 @@ let config = {
     },
     deployment: {
         live: {
-            host: 'rasalhague.uberspace.de',
+            host: '',
             remotePath: '',
-            user: 'sknittel',
+            user: '',
             pass: '',
         },
         test: {
-            host: 'rasalhague.uberspace.de',
+            host: '',
             remotePath: '',
-            user: 'sknittel',
+            user: '',
             pass: '',
         },
         develop: {
-            host: 'rasalhague.uberspace.de',
+            host: '',
             remotePath: '',
-            user: 'sknittel',
+            user: '',
             pass: '',
         },
     },

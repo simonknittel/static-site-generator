@@ -9,7 +9,7 @@
 ## Install dependencies
 1. Set the live URL in the [config.js](../_gulpfile/config.js#L15) for automated sitemap generation
 2. Set the live URL in the [robots.txt](../source/robots.txt#L1)
-3. Set the live URL in the [.htacces](../source/.htaccess#L40) for an 404 error redirect
+3. Set the live URL in the [.htaccess](../source/.htaccess#L42) for an 404 error redirect
 4. Add deployment targets to the [config.js](../_gulpfile/config.js#L17)
 5. Run `npm install`
 6. Run `npm start`
