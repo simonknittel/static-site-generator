@@ -3,6 +3,7 @@
     2. [Enable Sentry/Raven.js](#enable-sentryravenjs)
 2. [Continuous integration and deployment](#continuous-integration-and-deployment)
 
+
 # Set up a new project
 
 ## Install dependencies
