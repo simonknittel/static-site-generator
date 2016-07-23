@@ -1,6 +1,6 @@
 section.it-works
-    h1.it-works__heading Static Site Generator
+    h1.it-works__heading #{itWorks.heading}
     h2.it-works__success
-        | It works!
-        +icon('tick')
-    p.it-works__feedback Please report any feedback or issues to: <a href="https://github.com/simonknittel/static-site-generator/issues" target="_blank">GitHub</a>
+        | #{itWorks.success.message}
+        +icon(itWorks.success.icon)
+    p.it-works__feedback !{itWorks.copy}
