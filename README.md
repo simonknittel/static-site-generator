@@ -9,6 +9,11 @@
 
 # Static Site Generator
 
+[![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator.svg?maxAge=2592000)]()
+[![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4.svg?maxAge=2592000)]()
+[![David](https://img.shields.io/david/simonknittel/static-site-generator.svg?maxAge=2592000)]()
+[![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)]()
+
 Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) site within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com/) and you will get a production ready site.
 
 The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Pug (formerly Jade) template engine](http://jade-lang.com) if you don't want to use them.
