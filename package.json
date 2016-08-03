@@ -60,7 +60,7 @@
     "karma-jasmine": "1.0.2",
     "karma-jspm": "2.2.0",
     "karma-phantomjs-launcher": "1.0.1",
-    "phantomjs-prebuilt": "2.1.9",
+    "phantomjs-prebuilt": "2.1.10",
     "pug": "2.0.0-beta3"
   },
   "dependencies": {
