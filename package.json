@@ -37,7 +37,7 @@
     "gulp-filter": "4.0.0",
     "gulp-htmlmin": "2.0.0",
     "gulp-if": "2.0.1",
-    "gulp-imagemin": "3.0.2",
+    "gulp-imagemin": "3.0.3",
     "gulp-jspm": "0.5.13",
     "gulp-kraken": "0.2.0",
     "gulp-more-css": "1.0.0",
