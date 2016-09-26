@@ -35,7 +35,7 @@
     "gulp-data": "^1.2.1",
     "gulp-eslint": "3.0.1",
     "gulp-filter": "4.0.0",
-    "gulp-htmlmin": "2.0.0",
+    "gulp-htmlmin": "3.0.0",
     "gulp-if": "2.0.1",
     "gulp-imagemin": "3.0.3",
     "gulp-jspm": "0.5.13",
