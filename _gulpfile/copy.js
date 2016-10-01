@@ -15,8 +15,16 @@ export function base() {
         .pipe(gulp.dest(config.paths.build.base));
 }
 
+
 export function libraries() {
     return gulp.src(config.paths.source.base + '/assets/libraries/**/*')
         .pipe(cached('copy:libraries')) // Pass through only files changed after the last run
         .pipe(gulp.dest(config.paths.build.base + '/assets/libs'));
+}
+
+
+export function fonts() {
+    return gulp.src(config.paths.source.fonts + '/**/*')
+        .pipe(cached('copy:fonts')) // Pass through only files changed after the last run
+        .pipe(gulp.dest(config.paths.build.fonts + '/assets/fonts'));
 }

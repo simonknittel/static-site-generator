@@ -4,12 +4,9 @@
         "keywords": "SET-DESCRIPTION",
         "description": "SET-KEYWORDS"
     },
-    "itWorks": {
+    "doesItWork": {
         "heading": "Static Site Generator",
-        "success": {
-            "message": "It works!",
-            "icon": "tick"
-        },
+        "icon": "tick",
         "copy": "Please report any feedback or issues to: <a href=\"https://github.com/simonknittel/static-site-generator/issues\" target=\"_blank\" rel=\"noopener\">GitHub</a>"
     }
 }

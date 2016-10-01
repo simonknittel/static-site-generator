@@ -55,7 +55,8 @@ gulp.task('images', gulp.parallel('images:default', 'images:icons'));
 import * as copy from './_gulpfile/copy';
 gulp.task('copy:base', copy.base);
 gulp.task('copy:libraries', copy.libraries);
-gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries'));
+gulp.task('copy:fonts', copy.fonts);
+gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries', 'copy:fonts'));
 
 
 // Default
@@ -127,6 +128,11 @@ gulp.task('watch', gulp.series('default', () => {
     }));
 
     gulp.watch(config.paths.source.base + '/assets/libraries/**/*', gulp.series('copy:libraries', done => {
+        browserSync.reload();
+        done();
+    }));
+
+    gulp.watch(config.paths.source.fonts + '/**/*', gulp.series('copy:fonts', done => {
         browserSync.reload();
         done();
     }));

@@ -1,4 +1,4 @@
-.it-works {
+.does-it-work {
     position: absolute;
     left: 50%;
     top: 25%;
@@ -7,9 +7,9 @@
 }
 
 
-.it-works__heading,
-.it-works__success,
-.it-works__feedback {
+.does-it-work__heading,
+.does-it-work__message,
+.does-it-work__feedback {
     width: 100%;
     max-width: 25rem;
 
@@ -21,22 +21,23 @@
 }
 
 
-.it-works__heading {
+.does-it-work__heading {
     @include font(one);
 
     font-size: 1.25rem;
 }
 
 
-.it-works__success {
+.does-it-work__message {
     @include font(one);
+
+    display: none;
 
     position: relative;
 
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    background-color: #197400;
     color: #fff;
 
     font-size: 1.25rem;
@@ -54,7 +55,21 @@
 }
 
 
-.it-works__feedback {
+.does-it-work__message--success {
+    display: block;
+
+    background-color: #197400;
+}
+
+
+.does-it-work__message--failure {
+    display: block;
+
+    background-color: #f00;
+}
+
+
+.does-it-work__feedback {
     @include font(one);
 
     color: #777;
