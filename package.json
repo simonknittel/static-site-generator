@@ -43,7 +43,7 @@
     "gulp-more-css": "1.0.0",
     "gulp-notify": "2.2.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-pug": "3.0.4",
+    "gulp-pug": "3.1.0",
     "gulp-pug-lint": "0.1.6",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.4",
