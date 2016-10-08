@@ -131,5 +131,7 @@ gulp.task('watch', gulp.series('default', () => {
                 compression(), // Enable gzip compression
             ],
         },
+        https: true,
+        online: false,
     });
 }));
