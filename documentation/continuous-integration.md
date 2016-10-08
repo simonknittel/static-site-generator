@@ -17,7 +17,7 @@ Here are some examples on how to add a continuous integration and deployment ser
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 6.2.0
+nvm install 6.7.0
 npm install -g jspm
 jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 
@@ -39,5 +39,5 @@ On Codeship you can add continuous deployment pipelines to specific branches of 
 
 ```shell
 npm install -g gulpjs/gulp-cli#4.0
-gulp deploy --target=live
+gulp deploy --target=production
 ```

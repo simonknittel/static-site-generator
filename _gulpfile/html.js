@@ -80,7 +80,7 @@ export function sitemap() {
         config.paths.build.base + '/**/*.html',
     ])
         .pipe(gulpSitemap({
-            siteUrl: config.live.url, // Make sure to set your domain in the config.js
+            siteUrl: config.production.url, // Make sure to set your domain in the config.js
             changefreq: 'monthly',
             mappings: [
                 {

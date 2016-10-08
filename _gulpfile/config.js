@@ -11,23 +11,23 @@ let config = {
             base: 'build',
         },
     },
-    live: {
+    production: {
         url: 'https://example.com', // For automated sitemap generation
     },
     deployment: {
-        live: {
+        production: {
             host: '',
             remotePath: '',
             user: '',
             pass: '',
         },
-        test: {
+        staging: {
             host: '',
             remotePath: '',
             user: '',
             pass: '',
         },
-        develop: {
+        integration: {
             host: '',
             remotePath: '',
             user: '',

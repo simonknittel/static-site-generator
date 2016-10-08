@@ -67,29 +67,8 @@ gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:pr
 
 
 // Deploy
-gulp.task('deploy', gulp.series('production', () => {
-    let notify = require('gulp-notify');
-    let sftp = require('gulp-sftp');
-
-    let sftpSettings = config.deployment.develop;
-    switch (process.argv.slice(3)[0]) {
-        case '--target=live':
-            sftpSettings = config.deployment.live;
-            break;
-        case '--target=test':
-            sftpSettings = config.deployment.test;
-            break;
-    }
-
-    return gulp.src(config.paths.build.base + '/**/*')
-        .pipe(sftp(sftpSettings))
-        .pipe(notify({
-            title: 'deploy finished',
-            message: ' ',
-            sound: true,
-            onLast: true,
-        }));
-}));
+import deploy from './_gulpfile/deploy';
+gulp.task('deploy', gulp.series('production', deploy));
 
 
 // Watch
