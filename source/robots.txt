@@ -1,4 +1,4 @@
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://localhost:3000/sitemap.xml
 
 User-agent: *
 Disallow:

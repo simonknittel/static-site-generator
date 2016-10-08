@@ -39,4 +39,4 @@ ServerSignature Off
 </IfModule>
 
 # Redirect all 404 sites to the root
-ErrorDocument 404 https://example.com
+ErrorDocument 404 https://localhost:3000

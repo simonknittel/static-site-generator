@@ -7,7 +7,6 @@ import notify from 'gulp-notify';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
-import filter from 'gulp-filter';
 
 
 export function dev() {
@@ -27,8 +26,7 @@ export function dev() {
             .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.paths.build.styles))
-        .pipe(filter('**/*.css')) // Filter the sourcemaps so that BrowserSync will properly inject the CSS without reloading the page
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream({match: '**/*.css'}));
 }
 
 export function prod() {
