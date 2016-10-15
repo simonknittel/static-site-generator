@@ -20,3 +20,5 @@ $bp--tablets: 32rem; // 512px at base font-size of 16px (all common smartphones 
 $bp--smartphones: 20rem; // 320px at base font-size of 16px (minimal supported width)
 
 // Other
+$assets: '../';
+$images: $assets + 'img/';
