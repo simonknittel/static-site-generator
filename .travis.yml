@@ -16,13 +16,3 @@ cache:
 os:
   - linux
   - osx
-
-# # Travis CI specific stuff to make 'make' happen
-# env:
-#     - CXX=g++-4.8
-# addons:
-#   apt:
-#     sources:
-#         - ubuntu-toolchain-r-test
-#     packages:
-#         - g++-4.8
