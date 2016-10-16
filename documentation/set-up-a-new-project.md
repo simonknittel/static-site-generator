@@ -17,7 +17,7 @@
 2. Set the production URL in the [robots.txt](../source/robots.txt#L1)
 3. Set the production URL in the [.htaccess](../source/.htaccess#L42) for an 404 error redirect
 4. Add deployment targets to the [config.js](../_gulpfile/config.js#L17)
-5. Run `yarn install && jspm install` to install all dependencies.
+5. Run `yarn && jspm install` to install all dependencies.
 6. Run `npm start` to build the site.
 
 ## Enable Sentry/Raven.js

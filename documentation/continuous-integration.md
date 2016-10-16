@@ -17,13 +17,13 @@ Here are some examples on how to add a continuous integration and deployment ser
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 6.8.0
+nvm install 6.8.1
 npm install -g yarn jspm
 
 jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 yarn config set ignore-optional false
 
-yarn install
+yarn
 jspm install
 ```
 

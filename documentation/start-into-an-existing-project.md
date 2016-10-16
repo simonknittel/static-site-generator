@@ -10,6 +10,6 @@
 4. Run `yarn config set ignore-optional false`
 
 ## Install dependencies
-1. Run `yarn install && jspm install` to install all dependencies.
+1. Run `yarn && jspm install` to install all dependencies.
 1. Run `npm start` to build the site.
     * It will automatically open a browser tab which will reload every time you change a source file.
