@@ -1,9 +1,9 @@
 /**
- * Returns either true (default) or false
+ * Adds the .does-it-work--yes to .does-it-work
  * @method doesItWork
- * @param {boolean} returnFalse True if it should return false
- * @return {string} Returns true or false
  */
-export default function doesItWork(returnFalse) {
-    return returnFalse ? false : true;
+export default function doesItWork() {
+    const module = document.querySelector('.does-it-work');
+    module.classList.add('does-it-work--yes');
+    module.querySelector('.does-it-work__message span').innerHTML = 'It works!';
 }

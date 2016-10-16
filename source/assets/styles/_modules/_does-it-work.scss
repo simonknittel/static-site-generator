@@ -7,6 +7,13 @@
 }
 
 
+.does-it-work--yes {
+    .does-it-work__message {
+        background-color: #197400;
+    }
+}
+
+
 .does-it-work__heading,
 .does-it-work__message,
 .does-it-work__feedback {
@@ -31,15 +38,14 @@
 .does-it-work__message {
     @include font(one);
 
-    display: none;
-
     position: relative;
 
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    color: #fff;
+    background-color: #f00;
 
+    color: #fff;
     font-size: 1.25rem;
 
     .icon {
@@ -52,20 +58,6 @@
 
         fill: #fff;
     }
-}
-
-
-.does-it-work__message--success {
-    display: block;
-
-    background-color: #197400;
-}
-
-
-.does-it-work__message--failure {
-    display: block;
-
-    background-color: #f00;
 }
 
 
