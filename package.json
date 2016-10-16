@@ -18,8 +18,8 @@
     "nuke": "rm -rf node_modules jspm_packages build"
   },
   "engines": {
-    "node": ">=6.0.0 <7.0.0",
-    "npm": ">=3.8.6 <4.0.0"
+    "node": ">=6.6.0 <7.0.0",
+    "npm": ">=3.10.3 <4.0.0"
   },
   "devDependencies": {
     "babel-core": "6.17.0",
@@ -63,10 +63,10 @@
     "pug": "2.0.0-beta6"
   },
   "dependencies": {
-    "imagemin-gifsicle": "^5.1.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
-    "imagemin-svgo": "^5.2.0",
+    "imagemin-gifsicle": "5.1.0",
+    "imagemin-jpegtran": "5.0.2",
+    "imagemin-optipng": "5.2.1",
+    "imagemin-svgo": "5.2.0",
     "normalize.css": "5.0.0"
   },
   "jspm": {
