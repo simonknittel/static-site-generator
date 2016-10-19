@@ -9,15 +9,15 @@
 ## External dependencies
 1. Make sure to have the [Node Version Manager](https://github.com/creationix/nvm) installed
 2. Run `nvm install && nvm use` to install and use the Node version defined in [.nvmrc](../.nvmrc)
-3. Run `npm install -g yarn jspm`
-4. Run `yarn config set ignore-optional false`
+3. Run `npm install -g yarn`
+4. (Optional) Run `npm install -g jspm`
 
 ## Install dependencies and set the production URL
 1. Set the production URL in the [config.js](../_gulpfile/config.js#L15) for automated sitemap generation
 2. Set the production URL in the [robots.txt](../source/robots.txt#L1)
 3. Set the production URL in the [.htaccess](../source/.htaccess#L42) for an 404 error redirect
 4. Add deployment targets to the [config.js](../_gulpfile/config.js#L17)
-5. Run `yarn && jspm install` to install all dependencies.
+5. Run `yarn` to install all dependencies.
 6. Run `npm start` to build the site.
 
 ## Enable Sentry/Raven.js

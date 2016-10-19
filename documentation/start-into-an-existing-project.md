@@ -6,10 +6,10 @@
 ## External dependencies
 1. Make sure to have the [Node Version Manager](https://github.com/creationix/nvm) installed
 2. Run `nvm install && nvm use` to install and use the Node version defined in [.nvmrc](../.nvmrc)
-3. Run `npm install -g yarn jspm`
-4. Run `yarn config set ignore-optional false`
+3. Run `npm install -g yarn`
+4. (Optional) Run `npm install -g jspm`
 
 ## Install dependencies
-1. Run `yarn && jspm install` to install all dependencies.
+1. Run `yarn` to install all dependencies.
 1. Run `npm start` to build the site.
     * It will automatically open a browser tab which will reload every time you change a source file.

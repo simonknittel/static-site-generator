@@ -18,13 +18,11 @@ Here are some examples on how to add a continuous integration and deployment ser
 
 ```shell
 nvm install 6.8.1
-npm install -g yarn jspm
+npm install -g jspm
 
 jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
-yarn config set ignore-optional false
 
 yarn
-jspm install
 ```
 
 2. Add the following to `Configure Test Pipelines`:
