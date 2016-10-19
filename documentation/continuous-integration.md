@@ -18,7 +18,7 @@ Here are some examples on how to add a continuous integration and deployment ser
 
 ```shell
 nvm install 6.8.1
-npm install -g jspm
+npm install -g yarn jspm
 
 jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 
