@@ -1,7 +1,10 @@
+**This recipe is currently not maintained and therefore may not work.**
+
 1. [Add AngularJS](#add-angularjs)
 
 
 # Add AngularJS
+
 1. Run `jspm install angular angular-ui-router`
 1. Copy the [_angular-app](./_angular-app) directory to [source/assets/scripts](./source/assets/scripts)
 1. Add the following to the `<html>` tag in the [head.hbs](./source/_partials/base.pug#L14)
