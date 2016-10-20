@@ -36,7 +36,7 @@ The goal of this generator is to have a base with everything already prepared to
     + Injection of data into the Pug templates
     + SCSS linting, precompilation and minimization
     + Image optimizing
-        - optional [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
+        - (Optional) [Kraken.io](https://kraken.io/) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload for several targets (be carefull with your credentials!)
     + Bundling SVG icons to a single SVG stack
 
