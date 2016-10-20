@@ -9,8 +9,9 @@
 
 # Static Site Generator
 
-[![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator.svg?maxAge=2592000)](https://travis-ci.org/simonknittel/static-site-generator)
-[![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4.svg?maxAge=2592000)](https://app.codeship.com/projects/134192)
+[![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.org/simonknittel/static-site-generator)
+[![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
+[![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator)
 [![David](https://img.shields.io/david/simonknittel/static-site-generator.svg?maxAge=2592000)]()
 [![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)]()
 
