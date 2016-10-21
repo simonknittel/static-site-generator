@@ -8,7 +8,6 @@
 
 
 # Static Site Generator
-
 [![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.org/simonknittel/static-site-generator)
 [![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
@@ -23,7 +22,6 @@ The goal of this generator is to have a base with everything already prepared to
 
 
 ## Features
-
 * Fast layouting with precompiling [Pug (formerly Jade) templates](https://github.com/pugjs/pug) with Gulp
 * Project structure based on the [atomic design concept](http://patternlab.io) (you don't have to follow this pattern)
 * [SCSS](http://sass-lang.com/) as CSS preprocessor
@@ -50,10 +48,8 @@ You can easily add AngularJS to this generator. Read [here](#add-angularjs) to s
 
 
 ## Planned features and issues
-
 Checkout the [issues page](https://github.com/simonknittel/static-site-generator/labels/enhancement)
 
 
 ## Full documentation
-
-For the full documentation checkout the [documentation](./documentation) directory
+For the full documentation checkout the [documentation](./INDEX.md)

@@ -56,4 +56,4 @@ Checkout the [issues page](https://github.com/simonknittel/static-site-generator
 
 ## Full documentation
 
-For the full documentation checkout the [documentation](./documentation) directory
+For the full documentation checkout the [documentation](./documentation/INDEX.md)
