@@ -9,6 +9,8 @@
 
 # Static Site Generator
 
+[![Join the chat at https://gitter.im/simonknittel/static-site-generator](https://badges.gitter.im/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.org/simonknittel/static-site-generator)
 [![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
