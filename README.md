@@ -13,6 +13,7 @@
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
 [![David](https://img.shields.io/david/simonknittel/static-site-generator.svg?maxAge=2592000)]()
 [![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)]()
+[![Gitter](https://img.shields.io/gitter/room/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator)
 
 Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) site within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com) and you will get a production ready site.
 
