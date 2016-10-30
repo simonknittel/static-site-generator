@@ -1,0 +1,19 @@
+environment:
+  matrix:
+    - nodejs_version: '7.0.0'
+    - nodejs_version: '6.8.1'
+    - nodejs_version: '6.8.0'
+    - nodejs_version: '6.7.0'
+platform:
+    - x86
+    - x64
+init:
+    - git config --global core.autocrlf true
+    - ps: Install-Product node $env:nodejs_version $env:platform
+    - npm install -g yarn jspm
+    - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit
+install:
+    - yarn # Will also run 'jspm install' afterwards (checkout the package.json > scripts > postinst
+build: off
+test_script:
+  - npm test # Defined in the package.json (scripts > test)
