@@ -51,3 +51,8 @@ gulp deploy --target=production
 1. Add your project under https://circleci.com/add-projects
 2. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` under the project settings and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
 3. (Optional) Add a status badge to your README.md (https://circleci.com/docs/status-badges/)
+
+
+## AppVeyor
+1. Check `Skip branches without appveyor.yml` under `Settings > General`
+2. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` under the environment project settings and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
