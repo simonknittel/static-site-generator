@@ -1,0 +1,17 @@
+{
+    title: 'static-site-generator'
+    settings: {
+        core:
+            disabledPackages: [
+                "atom-handlebars"
+                "atom-typescript"
+                "autoprefixer"
+                "language-apache"
+                "language-lua"
+                "linter-jade"
+                "linter-php"
+                "linter-stylelint"
+                "pm2-controls"
+            ]
+    }
+}
