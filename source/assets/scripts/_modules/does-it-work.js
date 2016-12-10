@@ -1,9 +1,9 @@
 /**
- * Returns either true (default) or false
+ * Returns either true (default) or a custom boolean
  * @method doesItWork
- * @param {boolean} returnFalse True if it should return false
+ * @param {boolean} manual Custom boolean to return
  * @return {string} Returns true or false
  */
-export default function doesItWork(returnFalse) {
-    return returnFalse ? false : true;
+export default function doesItWork(manual) {
+    return manual || true;
 }

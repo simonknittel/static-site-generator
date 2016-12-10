@@ -40,9 +40,7 @@ export function prod() {
             ],
         }))
         .pipe(autoprefixer())
-        .pipe(moreCSS({
-            radical: false,
-        }))
+        .pipe(moreCSS({radical: false}))
         .pipe(gulp.dest(config.paths.build.styles));
 }
 

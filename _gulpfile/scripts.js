@@ -28,9 +28,7 @@ export function dev() {
             console.error(error);
         }))
         .pipe(sourcemaps.init())
-            .pipe(jspm({
-                selfExecutingBundle: true,
-            }))
+            .pipe(jspm({selfExecutingBundle: true}))
             .pipe(rename(path => {
                 path.basename = path.basename.replace('.bundle', '');
             }))
@@ -43,9 +41,7 @@ export function prod() {
         config.paths.source.scripts + '/**/*.js',
         '!' + config.paths.source.scripts + '/_modules/**/*',
     ])
-        .pipe(jspm({
-            selfExecutingBundle: true,
-        }))
+        .pipe(jspm({selfExecutingBundle: true}))
         .pipe(rename(path => {
             path.basename = path.basename.replace('.bundle', '');
         }))
@@ -59,9 +55,7 @@ export function fix() {
     const gulpIf = require('gulp-if');
 
     return gulp.src(config.paths.source.scripts + '/**/*.js')
-        .pipe(eslint({
-            fix: true, // Fix lint errors
-        }))
+        .pipe(eslint({fix: true}))
         .pipe(gulpIf(isFixed, gulp.dest(config.paths.source.scripts)));
 }
 

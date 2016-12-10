@@ -6,6 +6,6 @@ describe('Checks the sample module', () => {
     });
 
     it('should return false', () => {
-        expect(doesItWork(true)).toEqual(false);
+        expect(doesItWork(false)).toEqual(false);
     });
 });

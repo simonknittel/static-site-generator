@@ -8,7 +8,7 @@ export default function deploy() {
     let notify = require('gulp-notify');
     let sftp = require('gulp-sftp');
 
-    let sftpSettings = config.deployment.integration;
+    let sftpSettings = null;
     switch (process.argv.slice(3)[0]) {
         case '--target=production':
             sftpSettings = config.deployment.production;
@@ -16,6 +16,8 @@ export default function deploy() {
         case '--target=staging':
             sftpSettings = config.deployment.staging;
             break;
+        default:
+            sftpSettings = config.deployment.integration;
     }
 
     return gulp.src(config.paths.build.base + '/**/*')

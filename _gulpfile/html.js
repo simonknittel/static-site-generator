@@ -29,9 +29,7 @@ export function dev() {
             delete require.cache[require.resolve(source)];
             return require(source);
         }))
-        .pipe(pug({
-            pretty: true,
-        }))
+        .pipe(pug({pretty: true}))
         .pipe(rename(path => path.extname = '.html'))
         .pipe(gulp.dest(config.paths.build.base));
 }
@@ -85,7 +83,7 @@ export function sitemap() {
             mappings: [
                 {
                     pages: ['**/*.html'],
-                    getLoc: function(siteUrl, loc) {
+                    getLoc: function (siteUrl, loc) {
                         return loc.substr(0, loc.lastIndexOf('.')) || loc; // Removes the file extension
                     },
                 },
