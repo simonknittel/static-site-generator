@@ -26,5 +26,5 @@ export function libraries() {
 export function fonts() {
     return gulp.src(config.paths.source.fonts + '/**/*')
         .pipe(cached('copy:fonts')) // Pass through only files changed after the last run
-        .pipe(gulp.dest(config.paths.build.fonts + '/assets/fonts'));
+        .pipe(gulp.dest(config.paths.build.fonts));
 }
