@@ -46,7 +46,7 @@
     "gulp-pug-lint": "0.1.6",
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.4",
-    "gulp-sass": "2.3.2",
+    "gulp-sass": "3.0.0",
     "gulp-scss-lint": "0.4.0",
     "gulp-sftp": "0.1.5",
     "gulp-sitemap": "4.2.0",
