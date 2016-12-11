@@ -40,6 +40,9 @@ The goal of this generator is to have a base with everything already prepared to
         - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload for several targets (be carefull with your credentials!)
     + Bundling SVG icons to a single SVG stack
+* Planned Node.js compability
+    + Last three minor versions
+    + Last LTS version
 
 
 <!--
