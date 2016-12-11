@@ -25,7 +25,8 @@ export function dev() {
             console.error(error);
         }))
         .pipe(data(file => {
-            const source = '../' + config.paths.source.data + file.path.replace(process.cwd() + (process.platform === 'win32' ? '\\' : '/') + config.paths.source.base, '').replace('.pug', '.json');
+            const slash = process.platform === 'win32' ? '\\' : '/';
+            const source = '../' + config.paths.source.data + '/' + file.path.replace(process.cwd() + slash + config.paths.source.base.replace('/', slash) + slash, '').replace('.pug', '.json');
             delete require.cache[require.resolve(source)];
             return require(source);
         }))
@@ -44,7 +45,8 @@ export function prod() {
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
         .pipe(data(file => {
-            const source = '../' + config.paths.source.data + file.path.replace(process.cwd() + (process.platform === 'win32' ? '\\' : '/') + config.paths.source.base, '').replace('.pug', '.json');
+            const slash = process.platform === 'win32' ? '\\' : '/';
+            const source = '../' + config.paths.source.data + '/' + file.path.replace(process.cwd() + slash + config.paths.source.base.replace('/', slash) + slash, '').replace('.pug', '.json');
             delete require.cache[require.resolve(source)];
             return require(source);
         }))
