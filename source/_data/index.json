@@ -1,8 +1,8 @@
 {
     "meta": {
         "title": "SET-PROJECT-NAME",
-        "keywords": "SET-DESCRIPTION",
-        "description": "SET-KEYWORDS"
+        "keywords": "SET-KEYWORDS",
+        "description": "SET-DESCRIPTION"
     },
     "doesItWork": {
         "heading": "Static Site Generator",
