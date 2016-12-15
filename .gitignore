@@ -1,14 +1,22 @@
 # System files
-.DS_Store
+
+# Windows
 Thumbs.db
 desktop.ini
 
+# macOS
+.DS_Store
+
+
 # IDE/Editor files
+
+# Sublime Text
 .sublime-gulp.cache
 .sublime-gulp-tmp.js
 sublime-gulp.log
 *.sublime-workspace
 *.sublime-project
+
 
 # Other
 node_modules/
@@ -16,3 +24,4 @@ jspm_packages/
 build/
 npm-debug.log*
 yarn-error.log
+.gulp/

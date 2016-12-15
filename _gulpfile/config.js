@@ -1,8 +1,6 @@
 let config = {
-    // s3: {
-    //     dev: false,
-    //     prod: false,
-    // },
+    // tinyPNG: 'API key',
+    tinyPNG: 's87mDcdA0pG-RMJ6K93RBY-F-ZA8IMLw',
     paths: {
         source: {
             base: 'source',

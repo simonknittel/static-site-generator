@@ -46,9 +46,12 @@ gulp.task('lint', gulp.parallel('lint:scripts', 'lint:styles', 'lint:html'));
 
 // Images
 import * as images from './_gulpfile/images';
-gulp.task('images:default', images.normal);
+gulp.task('images:normal:dev', images.normalDev);
+gulp.task('images:normal:prod', images.normalProd);
 gulp.task('images:icons', images.icons);
-gulp.task('images', gulp.parallel('images:default', 'images:icons'));
+
+gulp.task('images:dev', gulp.parallel('images:normal:dev', 'images:icons'));
+gulp.task('images:prod', gulp.parallel('images:normal:prod', 'images:icons'));
 
 
 // Copy
@@ -60,10 +63,10 @@ gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries', 'copy:fonts'));
 
 
 // Default
-gulp.task('default', gulp.series('clean', gulp.parallel('images', 'scripts:dev', gulp.series(gulp.parallel('styles:dev', 'html:dev'), 'html:sitemap'), 'copy')));
+gulp.task('default', gulp.series('clean', gulp.parallel('images:dev', 'scripts:dev', gulp.series(gulp.parallel('styles:dev', 'html:dev'), 'html:sitemap'), 'copy')));
 
 // Production
-gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:prod', gulp.series(gulp.parallel('styles:prod', 'html:prod'), gulp.parallel('styles:critical', 'html:sitemap')), 'copy')));
+gulp.task('production', gulp.series('clean', gulp.parallel('images:prod', 'scripts:prod', gulp.series(gulp.parallel('styles:prod', 'html:prod'), gulp.parallel('styles:critical', 'html:sitemap')), 'copy')));
 
 
 // Deploy
