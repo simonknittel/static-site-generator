@@ -9,6 +9,15 @@ import data from 'gulp-data';
 // import path from 'path';
 import plumber from 'gulp-plumber';
 import notifier from 'node-notifier';
+import CSON from 'cson';
+
+
+function returnDataObject(file) {
+    const slash = process.platform === 'win32' ? '\\' : '/';
+    const source = config.paths.source.data + '/' + file.path.replace(process.cwd() + slash + config.paths.source.base.replace('/', slash) + slash, '').replace('.pug', '.cson');
+
+    return CSON.parseCSONFile(source);
+}
 
 
 export function dev() {
@@ -24,12 +33,7 @@ export function dev() {
             });
             console.error(error);
         }))
-        .pipe(data(file => {
-            const slash = process.platform === 'win32' ? '\\' : '/';
-            const source = '../' + config.paths.source.data + '/' + file.path.replace(process.cwd() + slash + config.paths.source.base.replace('/', slash) + slash, '').replace('.pug', '.json');
-            delete require.cache[require.resolve(source)];
-            return require(source);
-        }))
+        .pipe(data(returnDataObject))
         .pipe(pug({pretty: true}))
         .pipe(rename(path => path.extname = '.html'))
         .pipe(gulp.dest(config.paths.build.base));
@@ -44,12 +48,7 @@ export function prod() {
         config.paths.source.base + '/**/*.pug',
         '!' + config.paths.source.base + '/_partials/**/*',
     ])
-        .pipe(data(file => {
-            const slash = process.platform === 'win32' ? '\\' : '/';
-            const source = '../' + config.paths.source.data + '/' + file.path.replace(process.cwd() + slash + config.paths.source.base.replace('/', slash) + slash, '').replace('.pug', '.json');
-            delete require.cache[require.resolve(source)];
-            return require(source);
-        }))
+        .pipe(data(returnDataObject))
         .pipe(pug())
         .pipe(replace('RANDOMIZE-ME', new Date().getTime()))
         .pipe(htmlmin({ // Minify the html code
