@@ -41,7 +41,7 @@
     "gulp-jspm": "0.5.13",
     "gulp-kraken": "0.2.0",
     "gulp-more-css": "1.0.0",
-    "gulp-notify": "2.2.0",
+    "gulp-notify": "3.0.0",
     "gulp-plumber": "1.1.0",
     "gulp-pug": "3.2.0",
     "gulp-pug-lint": "0.1.6",
