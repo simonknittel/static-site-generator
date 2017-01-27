@@ -8,6 +8,8 @@
 
 
 # Static Site Generator
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonknittel/static-site-generator.svg)](https://greenkeeper.io/)
 [![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.org/simonknittel/static-site-generator)
 [![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
