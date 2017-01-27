@@ -41,7 +41,7 @@ The goal of this generator is to have a base with everything already prepared to
     + SFTP-Upload for several targets (be carefull with your credentials!)
     + Bundling SVG icons to a single SVG stack
 * Planned Node.js compability
-    + Last three minor versions
+    + Last three minor/patch versions
     + Last LTS version
 
 
