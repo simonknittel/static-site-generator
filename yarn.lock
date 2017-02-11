@@ -3955,7 +3955,32 @@ jspm-registry@^0.4.0:
     rsvp "^3.0.18"
     semver "^4.3.3"
 
-jspm@0.16.51, jspm@^0.16.34:
+jspm@0.16.52:
+  version "0.16.52"
+  resolved "https://registry.yarnpkg.com/jspm/-/jspm-0.16.52.tgz#6b1847e08f131ac9bd267cc58974979ae7675d2e"
+  dependencies:
+    chalk "^1.1.1"
+    core-js "^1.2.6"
+    glob "^6.0.1"
+    graceful-fs "^4.1.2"
+    jspm-github "^0.13.17"
+    jspm-npm "^0.26.12"
+    jspm-registry "^0.4.0"
+    liftoff "^2.2.0"
+    minimatch "^3.0.0"
+    mkdirp "~0.5.1"
+    ncp "^2.0.0"
+    proper-lockfile "^1.1.2"
+    request "^2.67.0"
+    rimraf "^2.4.4"
+    rsvp "^3.1.0"
+    semver "^5.1.0"
+    systemjs "0.19.46"
+    systemjs-builder "0.15.35"
+    traceur "0.0.105"
+    uglify-js "^2.6.1"
+
+jspm@^0.16.34:
   version "0.16.51"
   resolved "https://registry.yarnpkg.com/jspm/-/jspm-0.16.51.tgz#0566fe781f8478c33003b44aefeda829d25047ba"
   dependencies:
@@ -6516,6 +6541,12 @@ systemjs-builder@0.15.35, systemjs-builder@^0.15.0:
 systemjs@0.19.45, systemjs@^0.19.43:
   version "0.19.45"
   resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.19.45.tgz#897010fb172f0016601b93b86e7f17568c52d495"
+  dependencies:
+    when "^3.7.5"
+
+systemjs@0.19.46:
+  version "0.19.46"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.19.46.tgz#c04574b3335f052a0e3c7a00ee4188c6e4c1e38e"
   dependencies:
     when "^3.7.5"
 
