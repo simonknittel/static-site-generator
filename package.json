@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "karma start karma.conf.js && gulp",
-    "postinstall": "node node_modules/phantomjs-prebuilt/install.js && jspm install",
+    "postinstall": "node node_modules/phantomjs-prebuilt/install.js && npm rebuild node-sass && jspm install",
     "start": "gulp watch",
     "default": "gulp",
     "production": "gulp production",
