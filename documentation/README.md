@@ -12,6 +12,7 @@
 [![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
 [![AppVeyor](https://img.shields.io/appveyor/ci/simonknittel/static-site-generator/master.svg)](https://ci.appveyor.com/project/simonknittel/static-site-generator)
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonknittel/static-site-generator.svg)](https://greenkeeper.io/)
 [![David](https://img.shields.io/david/simonknittel/static-site-generator.svg?maxAge=2592000)]()
 [![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)]()
 [![Gitter](https://img.shields.io/gitter/room/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator)
@@ -40,7 +41,7 @@ The goal of this generator is to have a base with everything already prepared to
         - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload for several targets (be carefull with your credentials!)
     + Bundling SVG icons to a single SVG stack
-* Planned Node.js compability
+* Targeted Node.js compability
     + Last three minor/patch versions
     + Last LTS version
 
