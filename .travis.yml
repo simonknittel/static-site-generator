@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-    - "7.4.0"
-    - "7.3.0"
-    - "7.2.1"
-    - "6.9.4"
+    - "7.7.2"
+    - "7.7.1"
+    - "7.7.0"
+    - "6.10.0"
 before_install:
     - npm install -g yarn jspm
     - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit

@@ -1,9 +1,9 @@
 environment:
   matrix:
-    - nodejs_version: '7.4.0'
-    - nodejs_version: '7.3.0'
-    - nodejs_version: '7.2.1'
-    - nodejs_version: '6.9.4'
+    - nodejs_version: '7.7.2'
+    - nodejs_version: '7.7.1'
+    - nodejs_version: '7.7.0'
+    - nodejs_version: '6.10.0'
 platform:
     - x86
     - x64
