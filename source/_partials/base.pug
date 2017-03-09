@@ -29,7 +29,7 @@ html(lang="en", class=htmlClass)
         //- Apple Icon https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
         //- link(rel="apple-touch-icon-precomposed", href=root+"assets/img/apple-touch-icon-precomposed.png")
 
-        //- Win8 Tile https://msdn.microsoft.com/en-us/library/ie/dn255024%28v=vs.85%29.aspx
+        //- Win8/10 Tile https://msdn.microsoft.com/en-us/library/ie/dn255024%28v=vs.85%29.aspx
         //- meta(name="msapplication-TileColor" content="#222")
         //- meta(name="msapplication-square70x70Logo" content=root+"assets/img/win8-square-70x70.png")
         //- meta(name="msapplication-square150x150Logo" content=root+"assets/img/win8-square-150x150.png")
@@ -45,8 +45,8 @@ html(lang="en", class=htmlClass)
         //- meta(name="theme-color", content="#999")
 
     body
-        noscript.no-js__notification
-            p You have to <strong>activate</strong> JavaScript to use all functions of this site.
+        //- noscript.no-js__notification
+        //-     p You have to <strong>activate</strong> JavaScript to use all functions of this site.
 
         block content
 
@@ -55,8 +55,8 @@ html(lang="en", class=htmlClass)
             link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet", type="text/css")
             link(rel="stylesheet", type="text/css", href=root+"assets/css/styles.css?RANDOMIZE-ME")
 
-        //- Initial data and scripts
-        script
+        //- Add initial data for sripts here
+        //- script
 
         //- Scripts
         block scripts
