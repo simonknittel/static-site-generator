@@ -58,7 +58,6 @@
     "imagemin-jpegtran": "5.0.2",
     "imagemin-optipng": "5.2.1",
     "imagemin-svgo": "5.2.0",
-    "jasmine": "2.5.3",
     "jest": "19.0.2",
     "jspm": "0.16.52",
     "jstransformer-marked": "1.0.2",
