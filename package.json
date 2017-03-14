@@ -10,7 +10,8 @@
     "url": "https://github.com/simonknittel/static-site-generator/issues"
   },
   "scripts": {
-    "test": "jest source/assets/scripts && gulp",
+    "test": "jest source/assets/scripts | gulp && babel-node valimate",
+    "test-serie": "jest source/assets/scripts && gulp && babel-node valimate",
     "postinstall": "npm rebuild node-sass && jspm install",
     "start": "gulp watch",
     "default": "gulp",
@@ -22,6 +23,7 @@
     "npm": ">=3.10.10 <4.1.2"
   },
   "devDependencies": {
+    "babel-cli": "6.24.0",
     "babel-core": "6.23.1",
     "babel-jest": "19.0.0",
     "babel-preset-es2015": "6.22.0",
@@ -61,7 +63,8 @@
     "jest": "19.0.2",
     "jspm": "0.16.52",
     "jstransformer-marked": "1.0.2",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "valimate": "^2.3.0"
   },
   "dependencies": {
     "normalize.css": "5.0.0"

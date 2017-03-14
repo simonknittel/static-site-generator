@@ -1,0 +1,36 @@
+// Dependencies
+import config from './_gulpfile/config';
+
+import valimate from 'valimate';
+import modRewrite from 'connect-modrewrite';
+import compression from 'compression';
+import browserSync from 'browser-sync';
+
+
+browserSync({
+    ghostMode: {
+        clicks: false,
+        scroll: false,
+        forms: false,
+    },
+    server: {
+        baseDir: config.paths.build.base,
+        middleware: [
+            modRewrite([
+                '^.([^\\.]+)$ /$1.html [L]', // Remove .html from URL (as in the .htaccess)
+            ]),
+            compression(), // Enable gzip compression
+        ],
+    },
+    https: false,
+    online: false,
+    open: false,
+});
+
+
+valimate.validate({
+    urls: [
+        'http://localhost:3000',
+    ],
+})
+    .then(isInvalid => process.exit(~~isInvalid)); // protip: ~ = bitwise NOT - can use this twice to doubly invert the bits to coerce a bool to 1 or 0
