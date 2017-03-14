@@ -116,6 +116,7 @@ gulp.task('watch', gulp.series('default', () => {
         done();
     }));
 
+    // Mirror this part to valimate.js
     browserSync({
         ghostMode: {
             clicks: false,

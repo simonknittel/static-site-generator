@@ -7,6 +7,7 @@ import compression from 'compression';
 import browserSync from 'browser-sync';
 
 
+// Same code as in gulpfile.babel.js
 browserSync({
     ghostMode: {
         clicks: false,
