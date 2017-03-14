@@ -64,7 +64,7 @@
     "jspm": "0.16.52",
     "jstransformer-marked": "1.0.2",
     "pug": "2.0.0-beta11",
-    "valimate": "^2.3.0"
+    "valimate": "2.3.0"
   },
   "dependencies": {
     "normalize.css": "5.0.0"
