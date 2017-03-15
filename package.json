@@ -1,6 +1,6 @@
 {
-  "name": "SET-PROJECT-NAME",
-  "description": "SET-DESCRIPTION",
+  "name": "static-site-generator",
+  "description": "Start a new static or RESTful page within seconds.",
   "author": "Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)",
   "repository": {
     "type": "git",
@@ -10,12 +10,17 @@
     "url": "https://github.com/simonknittel/static-site-generator/issues"
   },
   "scripts": {
-    "test": "jest source/assets/scripts | gulp && babel-node valimate",
-    "test-serie": "jest source/assets/scripts && gulp && babel-node valimate",
+    "test": "npm run test:js; gulp && npm run test:html && npm run test:visual",
+    "test:js": "jest source/assets/scripts",
+    "test:html": "babel-node valimate",
+    "test:visual": "backstop test",
+
     "postinstall": "npm rebuild node-sass && jspm install",
+
     "start": "gulp watch",
     "default": "gulp",
     "production": "gulp production",
+
     "nuke": "rm -rf node_modules jspm_packages build"
   },
   "engines": {
@@ -27,6 +32,7 @@
     "babel-core": "6.23.1",
     "babel-jest": "19.0.0",
     "babel-preset-es2015": "6.22.0",
+    "backstopjs": "2.6.11",
     "browser-sync": "2.18.8",
     "compression": "1.6.2",
     "connect-modrewrite": "0.10.1",
