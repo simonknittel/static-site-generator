@@ -23,9 +23,9 @@ browserSync({
             compression(), // Enable gzip compression
         ],
     },
-    https: false,
+    https: false, // Turned off since valimate can't handle self signed certificates
     online: false,
-    open: false,
+    open: false, // Turned off so no browser will open (not needed since this is a headless test)
 });
 
 

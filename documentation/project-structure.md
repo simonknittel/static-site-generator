@@ -19,7 +19,7 @@ All source files are located in [source](./source). Continue reading to see how 
 
 
 ## HTML
-The HTML is written in [Pug (formerly Jade)](http://jade-lang.com) which is getting compiled to browser understandable HTML. It can be filled with data provied via JSON files in [_data](./source/_data). The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the source files are getting recompiled when changed.
+The HTML is written in [Pug (formerly Jade)](https://pugjs.org) which is getting compiled to browser understandable HTML. It can be filled with data provied via JSON files in [_data](./source/_data). The compiling is done with a [Gulp](http://gulpjs.com/) task. This task can also watch for changes so that the source files are getting recompiled when changed.
 
 ### Directory structure
 The source files are directly placed under the [source](./source) directory like the [index.pug](./source/index.pug). You can also nest them in sub directories which will be reflected in the URL (**Note**: You can access the built HTML files without the suffix .html because of the [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) in the [.htaccess](./source/.htaccess#L27)). Because of Pug you can seperate your code in seperate files and include them. For these files I created the sub directory [_partials](./source/_partials). Files in this directory like the [base.pug](./source/_partials/base.pug) will not get compiled to HTML, they should only be included in other files like the [index.pug](./source/index.pug#L1).
