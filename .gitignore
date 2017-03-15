@@ -16,6 +16,6 @@ jspm_packages/
 build/
 npm-debug.log*
 yarn-error.log
-backstop_data/bitmap_test/
+backstop_data/bitmaps_test/
 backstop_data/ci_report/
 backstop_data/html_report/
