@@ -67,7 +67,7 @@
     "imagemin-optipng": "5.2.1",
     "imagemin-svgo": "5.2.0",
     "jest": "19.0.2",
-    "jspm": "0.16.52",
+    "jspm": "0.16.53",
     "jstransformer-marked": "1.0.2",
     "pug": "2.0.0-beta11",
     "valimate": "2.3.0"
