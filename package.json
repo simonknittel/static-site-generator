@@ -37,7 +37,7 @@
     "compression": "1.6.2",
     "connect-modrewrite": "0.10.1",
     "critical": "0.8.4",
-    "cson": "4.0.0",
+    "cson": "4.1.0",
     "del": "2.2.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "3.1.1",
