@@ -69,7 +69,7 @@
     "jest": "19.0.2",
     "jspm": "0.16.52",
     "jstransformer-marked": "1.0.2",
-    "pug": "2.0.0-beta11",
+    "pug": "2.0.0-rc.1",
     "valimate": "2.3.0"
   },
   "dependencies": {
