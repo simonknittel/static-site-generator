@@ -3,4 +3,6 @@ init/
 node_modules/
 jspm_packages/
 assets/libraries/
-**/config.js
+config.js
+jest.config.js
+valimate.js

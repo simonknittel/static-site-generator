@@ -18,7 +18,7 @@
 
 Start a new static or [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) site within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com) and you will get a production ready site.
 
-The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Pug (formerly Jade) template engine](http://jade-lang.com) if you don't want to use them.
+The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Pug (formerly Jade) template engine](https://pugjs.org) if you don't want to use them.
 
 **Disclaimer:** This project is not intended a well maintained open source project, so that it can be used anytime and anywhere without issues. It's more for my own learning and experimentation with new technologies. Therefore I'm looking primarily for feedback.
 
@@ -40,7 +40,7 @@ The goal of this generator is to have a base with everything already prepared to
         - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
     + SFTP-Upload for several targets (be carefull with your credentials!)
     + Bundling SVG icons to a single SVG stack
-* Planned Node.js compability
+* Targeted Node.js compability
     + Last three minor/patch versions
     + Last three LTS versions
 
@@ -58,3 +58,14 @@ Checkout the [issues page](https://github.com/simonknittel/static-site-generator
 
 ## Full documentation
 For the full documentation checkout the [documentation](./documentation/INDEX.md)
+
+
+## License
+
+Copyright 2017 Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
