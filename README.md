@@ -38,7 +38,7 @@ The goal of this generator is to have a base with everything already prepared to
     + SCSS linting, precompilation and minimization
     + Image optimizing
         - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
-    + SFTP-Upload for several targets (be carefull with your credentials!)
+    + SFTP-Upload for several targets (be careful with your credentials!)
     + Bundling SVG icons to a single SVG stack
 * Targeted Node.js compability
     + Last three minor/patch versions

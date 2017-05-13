@@ -4,7 +4,6 @@ import config from './config';
 import gulp from 'gulp';
 import jspm from 'gulp-jspm';
 import sourcemaps from 'gulp-sourcemaps';
-import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import notifier from 'node-notifier';
 
@@ -29,9 +28,6 @@ export function dev() {
         }))
         .pipe(sourcemaps.init())
             .pipe(jspm({selfExecutingBundle: true}))
-            .pipe(rename(path => {
-                path.basename = path.basename.replace('.bundle', '');
-            }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.paths.build.scripts));
 }
@@ -42,9 +38,6 @@ export function prod() {
         '!' + config.paths.source.scripts + '/_modules/**/*',
     ])
         .pipe(jspm({selfExecutingBundle: true}))
-        .pipe(rename(path => {
-            path.basename = path.basename.replace('.bundle', '');
-        }))
         .pipe(gulp.dest(config.paths.build.scripts));
 }
 
