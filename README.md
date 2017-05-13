@@ -42,7 +42,7 @@ The goal of this generator is to have a base with everything already prepared to
     + Bundling SVG icons to a single SVG stack
 * Planned Node.js compability
     + Last three minor/patch versions
-    + Last LTS version
+    + Last three LTS versions
 
 
 <!--

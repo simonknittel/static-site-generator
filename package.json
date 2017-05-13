@@ -18,8 +18,8 @@
     "nuke": "rm -rf node_modules jspm_packages build"
   },
   "engines": {
-    "node": ">=6.9.4 <=7.4.0",
-    "npm": ">=3.10.10 <4.0.5"
+    "node": ">=6.10.1 <=7.10.0",
+    "npm": ">=3.10.10 <4.2.0"
   },
   "devDependencies": {
     "babel-core": "6.22.1",
