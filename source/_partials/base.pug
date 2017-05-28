@@ -53,15 +53,15 @@ html(lang="en", class=htmlClass)
         //- Stylesheets
         block styles
             //- Libraries
-            link(href="//fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet", type="text/css")
+            link(href="//fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet")
 
             //- Custom
-            link(rel="stylesheet", type="text/css", href=root+"assets/css/styles.css?RANDOMIZE-ME")
+            link(href=root+"assets/css/styles.css?RANDOMIZE-ME", rel="stylesheet")
 
         //- Scripts
         block scripts
             //- Libraries
-            //- script(src="//cdn.ravenjs.com/2.1.0/raven.min.js")
+            //- script(src="//cdn.ravenjs.com/3.15.0/raven.min.js")
             //- script.
             //-     // Raven.config('PUBLIC DSN').install(); // Enable Sentry/Raven.js
 
