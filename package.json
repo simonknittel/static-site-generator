@@ -22,8 +22,8 @@
     "nuke": "rm -rf node_modules jspm_packages build"
   },
   "engines": {
-    "node": ">=6.10.1 <=7.10.0",
-    "npm": ">=3.10.10 <4.2.0"
+    "node": ">=6.10.1 <=8.0.0",
+    "npm": ">=3.10.10 <=5.0.0"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
@@ -44,7 +44,7 @@
     "gulp-eslint": "3.0.1",
     "gulp-htmlmin": "3.0.0",
     "gulp-if": "2.0.2",
-    "gulp-imagemin": "3.2.0",
+    "gulp-imagemin": "3.3.0",
     "gulp-jspm": "0.5.13",
     "gulp-kraken": "0.2.0",
     "gulp-more-css": "1.0.0",
@@ -59,7 +59,7 @@
     "gulp-sftp": "0.1.5",
     "gulp-sitemap": "4.2.0",
     "gulp-sourcemaps": "2.6.0",
-    "gulp-svg-sprite": "1.3.6",
+    "gulp-svg-sprite": "1.3.7",
     "imagemin-gifsicle": "5.1.0",
     "imagemin-jpegtran": "5.0.2",
     "imagemin-optipng": "5.2.1",
@@ -67,7 +67,7 @@
     "jest": "20.0.4",
     "jspm": "0.16.53",
     "jstransformer-marked": "1.0.2",
-    "pug": "2.0.0-rc.1",
+    "pug": "2.0.0-rc.2",
     "valimate": "2.3.0"
   },
   "dependencies": {
