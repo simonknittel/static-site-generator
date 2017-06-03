@@ -2,7 +2,8 @@
     1. [Install dependencies](#install-dependencies)
     2. [Enable Sentry/Raven.js](#enable-sentryravenjs)
     3. [Continuous integration and deployment](#continuous-integration-and-deployment)
-    4. [Enable greenkeeper](#enable-greenkeeper)
+    <!-- 4. [Enable greenkeeper](#enable-greenkeeper) -->
+    5. [Enable performance metrics](#enable-performance metrics)
 
 
 # Set up a new project
@@ -40,3 +41,19 @@ If you are interested in continuous integration and deployment checkout [continu
 1. Make sure to have Greenkeeper globally installed (`npm install -g greenkeeper && greenkeeper login`)
 2. Enable Greenkeeper for your repository by running `greenkeeper enable`
 -->
+
+
+## Enable performance metrics
+1. Pull the Docker image of StatsD/Graphite by running `docker pull hopsoft/graphite-statsd`
+2. Spin up your StatsD/Graphite server/Docker container by running `docker run -d --name graphite --restart=always -p 80:80 -p 2003-2004:2003-2004 -p 2023-2024:2023-2024 -p 8125:8125/udp -p 8126:8126 hopsoft/graphite-statsd`
+3. Run the following code on your continious integration service after the result of the commit was deployed to your test server
+4. Compose your Graphs on your Graphite and add them to the your Graphite dashboard
+
+### Add
+```shell
+npm install -g -p phantomas phantomjs-prebuilt@2.1.14
+phantomas <url of the test server> -R statsd:<url of the StatsD server/Docker container>:<port of the StatsD server/Docker container>:staticSiteGenerator.front
+```
+
+### ToDo
+Tag the reports with `git describe --tags`

@@ -12,7 +12,8 @@
     1. [Install dependencies](./set-up-a-new-project.md#install-dependencies)
     2. [Enable Sentry/Raven.js](./set-up-a-new-project.md#enable-sentryravenjs)
     3. [Continuous integration and deployment](./set-up-a-new-project.md#continuous-integration-and-deployment)
-    4. [Enable greenkeeper](./set-up-a-new-project.md#enable-greenkeeper)
+    <!-- 4. [Enable greenkeeper](./set-up-a-new-project.md#enable-greenkeeper) -->
+    5. [Enable performance metrics](./set-up-a-new-project.md#enable-performance-metrics)
 3. [Start into an existing project](./start-into-an-existing-project.md)
     1. [External dependencies](./start-into-an-existing-project.md#externel-dependencies)
     2. [Install dependencies](./start-into-an-existing-project.md#install-dependencies)
