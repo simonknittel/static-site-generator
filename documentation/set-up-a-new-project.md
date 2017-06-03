@@ -3,7 +3,7 @@
     2. [Enable Sentry/Raven.js](#enable-sentryravenjs)
     3. [Continuous integration and deployment](#continuous-integration-and-deployment)
     <!-- 4. [Enable greenkeeper](#enable-greenkeeper) -->
-    5. [Enable performance metrics](#enable-performance metrics)
+    5. [Enable performance metrics](#enable-performance-metrics)
 
 
 # Set up a new project
@@ -56,4 +56,5 @@ phantomas <url of the test server> -R statsd:<url of the StatsD server/Docker co
 ```
 
 ### ToDo
-Tag the reports with `git describe --tags`
+* Convert to non time based graph
+* Tag the events with `git describe --tags`
