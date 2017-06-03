@@ -11,7 +11,7 @@
     "url": "https://github.com/simonknittel/static-site-generator/issues"
   },
   "scripts": {
-    "test": "npm run test:js && gulp && npm run test:html && npm run test:visual",
+    "test": "npm run test:js && npm run production && npm run test:html && npm run test:visual",
     "test:js": "jest",
     "test:html": "babel-node valimate",
     "test:visual": "backstop test",
