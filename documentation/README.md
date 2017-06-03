@@ -49,7 +49,7 @@ The goal of this generator is to have a base with everything already prepared to
 ## I want to use [AngularJS](https://angularjs.org), [React](https://facebook.github.io/react), [Ember](http://emberjs.com) or [Meteor](https://www.meteor.com)
 
 You can easily add AngularJS to this generator. Read [here](#add-angularjs) to see how to add AngularJS to this generator. Ember is highly recommend to be used with [Ember CLI](http://www.ember-cli.com). The generator is currently not tested and optimized for the use with Meteor or React.
- -->
+-->
 
 
 ## Planned features and issues

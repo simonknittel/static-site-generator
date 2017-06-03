@@ -13,6 +13,7 @@
 2. Make sure to have your `NODE_ENV` variable set to `development`
 3. Run `nvm install && nvm use` to install and use the Node version defined in [.nvmrc](../.nvmrc)
 4. Run `npm install -g yarn`
+5. (Optional) Run `npm install -g -p jspm backstopjs`
 
 
 ## Install dependencies and set the production URL
@@ -34,6 +35,8 @@
 If you are interested in continuous integration and deployment checkout [continuous-integration.md](./continuous-integration.md)
 
 
+<!--
 ## Enable Greenkeeper (https://greenkeeper.io/)
 1. Make sure to have Greenkeeper globally installed (`npm install -g greenkeeper && greenkeeper login`)
 2. Enable Greenkeeper for your repository by running `greenkeeper enable`
+-->
