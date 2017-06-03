@@ -4,15 +4,18 @@
     top: 25%;
     transform: translate3d(-50%, 0, 0);
     -webkit-filter: blur(0); // Removes blurry text on Google Chrome
+
+    width: 100%;
+    max-width: 26rem;
+
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 
 
 .does-it-work__heading,
 .does-it-work__message,
 .does-it-work__feedback {
-    width: 100%;
-    max-width: 25rem;
-
     margin-left: auto;
     margin-right: auto;
 
@@ -24,7 +27,12 @@
 .does-it-work__heading {
     @include font(one);
 
+    text-align: center;
     font-size: 1.25rem;
+
+    @media (min-width: 26rem) {
+        text-align: left;
+    }
 }
 
 
@@ -74,7 +82,12 @@
 
     color: #777;
 
+    text-align: center;
     font-size: .8rem;
+
+    @media (min-width: 26rem) {
+        text-align: left;
+    }
 
     a {
         color: #444;
