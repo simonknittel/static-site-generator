@@ -1,6 +1,6 @@
 1. [Start into an existing project](#start-into-an-existing-project)
-    2. [External dependencies](#externel-dependencies)
-    3. [Install dependencies](#install-dependencies)
+  1. [External dependencies](#externel-dependencies)
+  2. [Install dependencies](#install-dependencies)
 
 
 # Start into an existing project
@@ -16,5 +16,5 @@
 
 ## Install dependencies
 1. Run `yarn` to install all dependencies.
-1. Run `npm start` to build the site.
-    * It will automatically open a browser tab which will reload every time you change a source file.
+2. Run `npm start` to build the site.
+  * It will automatically open a browser tab which will reload every time you change a source file.

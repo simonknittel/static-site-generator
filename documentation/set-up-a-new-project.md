@@ -1,8 +1,8 @@
 1. [Set up a new project](#set-up-a-new-project)
-    1. [Install dependencies](#install-dependencies)
-    2. [Enable Sentry/Raven.js](#enable-sentryravenjs)
-    3. [Continuous integration and deployment](#continuous-integration-and-deployment)
-    4. [Enable greenkeeper](#enable-greenkeeper)
+  1. [Install dependencies](#install-dependencies)
+  2. [Enable Sentry/Raven.js](#enable-sentryravenjs)
+  3. [Continuous integration and deployment](#continuous-integration-and-deployment)
+  4. [Enable greenkeeper](#enable-greenkeeper)
 
 
 # Set up a new project
@@ -23,11 +23,11 @@
 4. Add deployment targets to the [config.js](../_gulpfile/config.js#L17)
 5. Run `yarn` to install all dependencies.
 6. Run `npm start` to build the site.
-    * It will automatically open a browser tab which will reload every time you change a source file.
+  * It will automatically open a browser tab which will reload every time you change a source file.
 
 
 ## Enable Sentry/Raven.js
-1. Create a new project on Sentry and add your public DSN to [scripts.js](../source/assets/scripts/scripts.js#L1)
+1. Create a new project on Sentry and add your public DSN to [base.pug](../source/_partials/base.pug#L65)
 2. Uncomment Raven.js on [base.pug](../source/_partials/base.pug#L63)
 
 

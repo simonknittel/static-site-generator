@@ -19,7 +19,7 @@ ng-app="app"
 <base href="/">
 ```
 
-1. Add the following to the [scripts.js](../../../source/assets/scripts/scripts.js)
+1. Add the following to the [global.bundle.js](../../../source/assets/scripts/global.bundle.js)
 
 ```javascript
 import './_angular-app/app.module';

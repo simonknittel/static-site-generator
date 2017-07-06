@@ -2,71 +2,74 @@ block variables
 
 //- Make sure to set the root variables on pages in a subdirectory
 - if (typeof(root) === 'undefined') {
-    - var root = './'
+  - var root = './'
 - }
 
 //- Mixin for svg stacks
 mixin icon(name)
-    svg(viewbox="0 0 100 100").icon
-        use(xlink:href="/assets/img/icons.svg#"+name)
+  svg(viewbox="0 0 100 100").icon
+    use(xlink:href="/assets/img/icons.svg#"+name)
 
 doctype html
 html(lang="en", class=htmlClass)
-    head
-        meta(charset="utf-8")
-        meta(name="robots", content=root+"robots.txt")
-        //- meta(http-equiv="X-UA-Compatible", content="IE-edge, chrome=1") //- See .htaccess
-        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1")
+  head
+    meta(charset="utf-8")
+    meta(name="robots", content=root+"robots.txt")
+    //- meta(http-equiv="X-UA-Compatible", content="IE-edge, chrome=1") //- See .htaccess
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1")
 
-        title #{title}
-        meta(name="description", content=description)
-        meta(name="keywords", content=keywords)
-        meta(name="author", content="Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)")
+    title #{title}
+    meta(name="description", content=description)
+    meta(name="keywords", content=keywords)
+    meta(name="author", content="Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)")
 
-        //- Favicon
-        //- link(rel="shortcut icon", href=root+"assets/img/favicon.ico", type="image/x-icon")
+    //- Favicon
+    //- link(rel="shortcut icon", href=root+"assets/img/favicon.ico", type="image/x-icon")
 
-        //- Apple Icon https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
-        //- link(rel="apple-touch-icon-precomposed", href=root+"assets/img/apple-touch-icon-precomposed.png")
+    //- Apple Icon https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+    //- link(rel="apple-touch-icon-precomposed", href=root+"assets/img/apple-touch-icon-precomposed.png")
 
-        //- Win8/10 Tile https://msdn.microsoft.com/en-us/library/ie/dn255024%28v=vs.85%29.aspx
-        //- meta(name="msapplication-TileColor" content="#222")
-        //- meta(name="msapplication-square70x70Logo" content=root+"assets/img/win8-square-70x70.png")
-        //- meta(name="msapplication-square150x150Logo" content=root+"assets/img/win8-square-150x150.png")
-        //- meta(name="msapplication-wide310x150Logo" content=root+"assets/img/win8-wide-310x150.png")
-        //- meta(name="msapplication-square310x310Logo" content=root+"assets/img/win8-square-310x310.png")
-        //- meta(name="msapplication-notification" content="")
+    //- Win8/10 Tile https://msdn.microsoft.com/en-us/library/ie/dn255024%28v=vs.85%29.aspx
+    //- meta(name="msapplication-TileColor" content="#222")
+    //- meta(name="msapplication-square70x70Logo" content=root+"assets/img/win8-square-70x70.png")
+    //- meta(name="msapplication-square150x150Logo" content=root+"assets/img/win8-square-150x150.png")
+    //- meta(name="msapplication-wide310x150Logo" content=root+"assets/img/win8-wide-310x150.png")
+    //- meta(name="msapplication-square310x310Logo" content=root+"assets/img/win8-square-310x310.png")
+    //- meta(name="msapplication-notification" content="")
 
-        //- Fullscreen on iOS and Android when pinned to the homescreen
-        meta(name="apple-mobile-web-app-capable", content="yes")
-        meta(name="mobile-web-app-capable", content="yes")
+    //- Fullscreen on iOS and Android when pinned to the homescreen
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="mobile-web-app-capable", content="yes")
 
-        //- Adress bar colour
-        //- meta(name="theme-color", content="#999")
+    //- Adress bar colour
+    //- meta(name="theme-color", content="#999")
 
-    body
-        //- noscript.no-js__notification
-        //-     p You have to <strong>activate</strong> JavaScript to use all functions of this site.
+  body
+    //- noscript.no-js__notification
+    //-     p You have to <strong>activate</strong> JavaScript to use all functions of this site.
 
-        block content
+    block content
 
-        //- Stylesheets
-        block styles
-            //- Libraries
-            link(href="//fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet")
+    //- Stylesheets
+    block styles
+      //- Libraries
 
-            //- Custom
-            link(href=root+"assets/css/styles.css?RANDOMIZE-ME", rel="stylesheet")
+      //- Custom
+      link(href=root+"assets/css/global.bundle.css?RANDOMIZE-ME", rel="stylesheet")
 
-        //- Scripts
-        block scripts
-            //- Libraries
-            //- script(src="//cdn.ravenjs.com/3.15.0/raven.min.js")
-            //- script.
-            //-     // Raven.config('PUBLIC DSN').install(); // Enable Sentry/Raven.js
+    //- Scripts
+    block scripts
+      //- Libraries
+      //- script(src="//cdn.ravenjs.com/3.15.0/raven.min.js", integrity="sha384-emluOS7+UrA6MIOAWxw8L52iFpZNh7+i1kKBfkofwZJn/s66JpKS9gR1ZMOwiayX", crossorigin="anonymous")
+      //- script.
+      //-     Raven.config('https://cfe78df50248413881dea59989e9cb3b@sentry.io/167907', {
+      //-         environment: 'development',
+      //-         // tags: { git_commit: '' },
+      //-         // release: '',
+      //-     }).install(); // Enable Sentry/Raven.js
 
-            //- Custom
-            script(src=root+"assets/js/global.bundle.js?RANDOMIZE-ME")
+      //- Custom
+      script(src=root+"assets/js/global.bundle.js?RANDOMIZE-ME", async)
 
-        //- Optimized Google Analytics
-        //- script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')
+    //- Optimized Google Analytics
+    //- script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')

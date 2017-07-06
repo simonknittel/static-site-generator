@@ -1,21 +1,21 @@
 language: node_js
 node_js:
-    - "8.0.0"
-    - "7.10.0"
-    - "7.9.0"
-    - "6.10.3"
-    - "6.10.2"
-    - "6.10.1"
+  - "8.1.3"
+  - "8.1.2"
+  - "8.1.1"
+  - "6.11.0"
+  - "6.10.3"
+  - "6.10.2"
 before_install:
-    - npm install -g yarn jspm
-    - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit
+  - npm install -g yarn jspm
+  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit
 install:
-    - yarn # Will also run 'jspm install' afterwards (checkout the package.json > scripts > postinstall)
+  - yarn # Will also run 'jspm install' afterwards (checkout the package.json > scripts > postinstall)
 script: npm test # Defined in the package.json (scripts > test)
 cache:
-    directories:
-        - node_modules
-        - jspm_packages
+  directories:
+    - node_modules
+    - jspm_packages
 os:
   - osx
   - linux

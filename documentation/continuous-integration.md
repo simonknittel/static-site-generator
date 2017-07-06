@@ -1,7 +1,6 @@
 1. [Continuous integration and deployment](#continuous-integration-and-deployment)
-    1. [Travis CI](#travis-ci)
-    2. [Codeship](#codeship)
-        1. [Continuous deployment](#continuous-deployment)
+    1. [Codeship](#codeship)
+    2. [Travis CI](#travis-ci)
     3. [CircleCI](#circleci)
 
 
@@ -9,19 +8,12 @@
 Here are some examples on how to add a continuous integration and deployment service to your project.
 
 
-## Travis CI
-1. Enable your repository in Travis CI
-2. Activate the setting: `Build only if .travis.yml is present`
-3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
-4. (Optional) Add a status badge to your README.md (https://docs.travis-ci.com/user/status-images/)
-
-
 ## Codeship
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 8.0.0
-npm install -g yarn jspm
+nvm install 7.10.0
+npm install -g -p yarn jspm
 
 jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 
@@ -31,20 +23,40 @@ yarn
 2. Add the following to `Configure Test Pipelines`:
 
 ```shell
+RAVEN_ENVIRONMENT="$CI_BRANCH" # git rev-parse --abbrev-ref HEAD
+RAVEN_COMMIT="$(git describe --tags)"
+RAVEN_RELEASE="$RAVEN_COMMIT" # Will be the tag itself when merge to master/production branch
+
+sed -i "s/environment: 'development'/environment: '$RAVEN_ENVIRONMENT'/g" ./source/_partials/base.pug
+sed -i "s/\/\/ tags: { git_commit: '' },/tags: { git_commit: '$RAVEN_COMMIT' },/g" ./source/_partials/base.pug
+
+if [ "$RAVEN_ENVIRONMENT" = "master" ]; then sed -i "s/\/\/ release: '',/release: '$RAVEN_RELEASE'/g" ./source/_partials/base.pug; fi
+
 npm test
 ```
 
 3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
 
-4. (Optional) Add a status badge to your README.md (https://codeship.com/documentation/faq/codeship-badge/)
-
-### Continuous deployment
-On Codeship you can add continuous deployment pipelines to specific branches of your repository. I have added a gulp deployment task with three possible targets which you can define in the [config.js](../_gulpfile/config.js). Example:
+4. Add `Deployment Pipelines` for your branches:
 
 ```shell
-npm install -g gulpjs/gulp-cli#4.0
-gulp deploy --target=production
+ssh username@host "mkdir -p new_integration"
+rsync -r build/ username@host:new_integration
+ssh username@host "cd html/white-label-shop && { mv integration old_integration; mv new_integration integration; rm -rf old_integration; }"
 ```
+
+5. (Optional) Add a status badge to your README.md (https://codeship.com/documentation/faq/codeship-badge/)
+
+
+## Bitbucket Pipelines
+_wip_
+
+
+## Travis CI
+1. Enable your repository in Travis CI
+2. Activate the setting: `Build only if .travis.yml is present`
+3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
+4. (Optional) Add a status badge to your README.md (https://docs.travis-ci.com/user/status-images/)
 
 
 ## CircleCI

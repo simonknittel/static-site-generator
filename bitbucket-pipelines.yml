@@ -1,0 +1,9 @@
+image: node:8.1.3
+pipelines:
+  default:
+    - step:
+        script:
+          - npm install -g -p yarn jspm
+          - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit
+          - yarn
+          - npm test

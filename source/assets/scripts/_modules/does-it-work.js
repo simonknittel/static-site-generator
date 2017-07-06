@@ -4,5 +4,5 @@
  * @return {string} Returns true
  */
 export default function doesItWork() {
-    return true;
+  return true
 }

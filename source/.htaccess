@@ -1,57 +1,57 @@
 # Deflate Compression
 <IfModule mod_deflate.c>
-    <FilesMatch "\.(js|jpg|jpeg|gif|png|css|html|xml|json|txt|ico)$">
-        ExpiresActive on
-        ExpiresDefault "access plus 1 month"
-        SetOutputFilter DEFLATE
-    </FilesMatch>
+  <FilesMatch "\.(js|jpg|jpeg|gif|png|css|html|xml|json|txt|ico)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 1 month"
+    SetOutputFilter DEFLATE
+  </FilesMatch>
 </IfModule>
 
 <IfModule mod_headers.c>
-    # X-UA-Compatible
-    <FilesMatch "\.(htm|html|php)$">
-        BrowserMatch MSIE ie
-        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
-    </FilesMatch>
+  # X-UA-Compatible
+  <FilesMatch "\.(htm|html|php)$">
+    BrowserMatch MSIE ie
+    Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+  </FilesMatch>
 
-    #
-    Header unset X-Powered-By
-    RequestHeader unset Proxy
+  #
+  Header unset X-Powered-By
+  RequestHeader unset Proxy
 </IfModule>
 
 <IfModule mod_rewrite.c>
-    Options -MultiViews
+  Options -MultiViews
 
-    RewriteEngine On
-    RewriteBase /
+  RewriteEngine On
+  RewriteBase /
 
-    # Desired
-    # http://example.com -> https://example.com
-    # http://www.example.com -> https://example.com
-    # https://www.example.com -> https://example.com
-    # https://example.com/index -> https://example.com
-    # https://example.com/index.html -> https://example.com
-    # https://example.com/directory/ -> https://example.com/directory
-    #
-    # http://www.example.com/index.html -> https://example.com
+  # Desired
+  # http://example.com -> https://example.com
+  # http://www.example.com -> https://example.com
+  # https://www.example.com -> https://example.com
+  # https://example.com/index -> https://example.com
+  # https://example.com/index.html -> https://example.com
+  # https://example.com/directory/ -> https://example.com/directory
+  #
+  # http://www.example.com/index.html -> https://example.com
 
 
-    # Redirect http:// to https://
-    RewriteCond %{HTTPS} off
-    RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301,L]
+  # Redirect http:// to https://
+  RewriteCond %{HTTPS} off
+  RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301,L]
 
-    # Redirect the subdomain www. to the top-level domain
-    # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    # RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+  # Redirect the subdomain www. to the top-level domain
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
-    # Allow URLs without the file extension .html
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+  # Allow URLs without the file extension .html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-    # Redirect when the index file is in URL apparent to URL without it
+  # Redirect when the index file is in URL apparent to URL without it
 
-    # Remove trailing slashes
+  # Remove trailing slashes
 </IfModule>
 
 # Hide information about your Apache installation
@@ -59,7 +59,7 @@ ServerSignature Off
 
 # Do not display the files of a subdirectory when no index file is apparent
 <IfModule mod_autoindex.c>
-    Options -Indexes
+  Options -Indexes
 </IfModule>
 
 # Redirect error codes

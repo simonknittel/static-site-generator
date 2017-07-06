@@ -1,14 +1,14 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 html {
-    @include font(one);
+  @include font(one);
 
-    overflow-y: scroll;
+  overflow-y: scroll;
 
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 

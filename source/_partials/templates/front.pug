@@ -1,25 +1,25 @@
 extends ../base.pug
 
 block variables
-    - var title = meta.title;
-    - var description = meta.description;
-    - var keywords = meta.keywords;
-    - var htmlClass = 'template--front';
+  - var title = meta.title;
+  - var description = meta.description;
+  - var keywords = meta.keywords;
+  - var htmlClass = 'template--front';
 
 append styles
-    link(rel="stylesheet", type="text/css", href=root+"assets/css/styles--front.css?RANDOMIZE-ME")
+  link(rel="stylesheet", type="text/css", href=root+"assets/css/front.bundle.css?RANDOMIZE-ME")
 
 append scripts
-    script(src=root+"assets/js/front.bundle.js?RANDOMIZE-ME")
+  script(src=root+"assets/js/front.bundle.js?RANDOMIZE-ME")
 
 block content
-    //- Content
+  //- Content
 
-    include ../modules/header.pug
+  include ../modules/header.pug
 
-    main.main
-        include ../modules/does-it-work.pug
+  main.main
+    include ../modules/does-it-work.pug
 
-    include ../modules/footer.pug
+  include ../modules/footer.pug
 
-    //- Content end
+  //- Content end
