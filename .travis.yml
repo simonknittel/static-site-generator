@@ -7,15 +7,13 @@ node_js:
   - "6.10.3"
   - "6.10.2"
 before_install:
-  - npm install -g yarn jspm
-  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit
+  - npm install -g yarn
 install:
-  - yarn # Will also run 'jspm install' afterwards (checkout the package.json > scripts > postinstall)
+  - yarn
 script: npm test # Defined in the package.json (scripts > test)
 cache:
   directories:
     - node_modules
-    - jspm_packages
 os:
   - osx
   - linux

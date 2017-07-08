@@ -13,9 +13,7 @@ Here are some examples on how to add a continuous integration and deployment ser
 
 ```shell
 nvm install 7.10.0
-npm install -g -p yarn jspm
-
-jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+npm install -g -p yarn
 
 yarn
 ```
@@ -35,9 +33,7 @@ if [ "$RAVEN_ENVIRONMENT" = "master" ]; then sed -i "s/\/\/ release: '',/release
 npm test
 ```
 
-3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
-
-4. Add `Deployment Pipelines` for your branches:
+3. Add `Deployment Pipelines` for your branches:
 
 ```shell
 ssh username@host "mkdir -p new_integration"
@@ -45,7 +41,7 @@ rsync -r build/ username@host:new_integration
 ssh username@host "cd html/white-label-shop && { mv integration old_integration; mv new_integration integration; rm -rf old_integration; }"
 ```
 
-5. (Optional) Add a status badge to your README.md (https://codeship.com/documentation/faq/codeship-badge/)
+4. (Optional) Add a status badge to your README.md (https://codeship.com/documentation/faq/codeship-badge/)
 
 
 ## Bitbucket Pipelines
@@ -55,16 +51,13 @@ _wip_
 ## Travis CI
 1. Enable your repository in Travis CI
 2. Activate the setting: `Build only if .travis.yml is present`
-3. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
-4. (Optional) Add a status badge to your README.md (https://docs.travis-ci.com/user/status-images/)
+3. (Optional) Add a status badge to your README.md (https://docs.travis-ci.com/user/status-images/)
 
 
 ## CircleCI
 1. Add your project under https://circleci.com/add-projects
-2. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` under the project settings and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub
-3. (Optional) Add a status badge to your README.md (https://circleci.com/docs/status-badges/)
+2. (Optional) Add a status badge to your README.md (https://circleci.com/docs/status-badges/)
 
 
 ## AppVeyor
 1. Check `Skip branches without appveyor.yml` under `Settings > General`
-2. Add an environmental variable called `JSPM_GITHUB_AUTH_TOKEN` under the environment project settings and fill it with a [personal access token](https://github.com/settings/tokens) from GitHub

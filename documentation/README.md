@@ -18,23 +18,21 @@
 
 Start a new static or [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) site within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com) and you will get a production ready site.
 
-The goal of this generator is to have a base with everything already prepared to start very fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Pug (formerly Jade) template engine](https://pugjs.org) if you don't want to use them.
+The goal of this generator is to have a base with everything already prepared to start fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Pug (formerly Jade) template engine](https://pugjs.org) if you don't want to use them.
 
 **Disclaimer:** This project is not intended a well maintained open source project, so that it can be used anytime and anywhere without issues. It's more for my own learning and experimentation with new technologies. Therefore I'm looking primarily for feedback.
 
 
 ## Features
-* Fast layouting with precompiling [Pug (formerly Jade) templates](https://github.com/pugjs/pug) with Gulp
+* Fast layouting with precompiling [Pug templates](https://github.com/pugjs/pug) with Gulp
 * Project structure based on the [atomic design concept](http://patternlab.io) (you don't have to follow this pattern)
 * [SCSS](http://sass-lang.com) as CSS preprocessor
 * [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax) as default naming syntax for CSS classes (of course you can choose your own)
-* JavaScript package managament with [JSPM](http://jspm.io)
-  + Includes precompiling and ES6 translation via [Babel](https://babeljs.io)
 * Extensive build workflow with Gulp 4
-  + JavaScript precompilation and minimization with [JSPM](http://jspm.io)
+  + JavaScript transpilation and bundling with [webpack](https://webpack.js.org) and [Babel](https://babeljs.io)
   + JavaScript linting with [ESLint](http://eslint.org)
   + Pug precompilation and HTML minimization
-  + Injection of data into the Pug templates
+  + Injection of data with CSON into the Pug templates
   + SCSS linting, precompilation and minimization
   + Image optimizing
     - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))

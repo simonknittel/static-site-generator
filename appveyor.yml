@@ -12,10 +12,9 @@ platform:
 init:
     - git config --global core.autocrlf true
     - ps: Install-Product node $env:nodejs_version $env:platform
-    - npm install -g yarn jspm
-    - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit
+    - npm install -g yarn
 install:
-    - yarn # Will also run 'jspm install' afterwards (checkout the package.json > scripts > postinst
+    - yarn
 build: off
 test_script:
   - npm test # Defined in the package.json (scripts > test)

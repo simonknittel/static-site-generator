@@ -12,7 +12,6 @@ sublime-gulp.log
 
 # Other
 node_modules/
-jspm_packages/
 build/
 npm-debug.log*
 yarn-error.log

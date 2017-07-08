@@ -3,10 +3,9 @@ machine:
     version: 8.1.3
 dependencies:
   pre:
-    - npm install -g yarn jspm
-    - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN # Set to avoid the GitHub API limit
+    - npm install -g yarn
   override:
-    - yarn # Will also run 'jspm install' afterwards (checkout the package.json > scripts > postinstall)
+    - yarn
 test:
   override:
     - npm test

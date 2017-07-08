@@ -11,7 +11,7 @@
 2. Make sure to have your `NODE_ENV` variable set to `development`
 3. Run `nvm install && nvm use` to install and use the Node.js version defined in [.nvmrc](../.nvmrc)
 4. Run `npm install -g -p yarn`
-5. (Optional) Run `npm install -g -p jspm backstopjs`
+5. (Optional) Run `yarn global add -p gulp-cli backstopjs`
 
 
 ## Install dependencies

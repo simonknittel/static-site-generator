@@ -2,10 +2,11 @@
 import config from './config'
 
 import gulp from 'gulp'
-import jspm from 'gulp-jspm'
-import sourcemaps from 'gulp-sourcemaps'
-import plumber from 'gulp-plumber'
 import notifier from 'node-notifier'
+import webpack from 'webpack'
+
+import devConfig from '../webpack.config'
+import prodConfig from '../webpack.prod'
 
 
 function isFixed(file) {
@@ -13,32 +14,47 @@ function isFixed(file) {
   return file.eslint != null && file.eslint.fixed
 }
 
-export function dev() {
-  return gulp.src([
-    config.paths.source.scripts + '/**/*.js',
-    '!' + config.paths.source.scripts + '/_modules/**/*',
-  ])
-    .pipe(plumber(error => {
+function webpackBase(config, done) {
+  const compiler = webpack(config)
+
+  compiler.run((err, stats) => {
+    if (err) {
+      console.error(err)
+
       notifier.notify({
         title: 'scripts:dev - failed',
         message: 'View console for more details.',
         sound: true,
       })
-      console.error(error)
+
+      done()
+    }
+
+    const statsFormatted = stats.toString()
+
+    if (stats.hasErrors()) {
+      console.error(statsFormatted.errors)
+    }
+
+    if (stats.hasWarnings()) {
+      console.warn(statsFormatted.warnings)
+    }
+
+    console.log(stats.toString({
+      chunks: false,
+      colors: true,
     }))
-    .pipe(sourcemaps.init())
-      .pipe(jspm({selfExecutingBundle: true}))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.paths.build.scripts))
+
+    done()
+  })
 }
 
-export function prod() {
-  return gulp.src([
-    config.paths.source.scripts + '/**/*.js',
-    '!' + config.paths.source.scripts + '/_modules/**/*',
-  ])
-    .pipe(jspm({selfExecutingBundle: true}))
-    .pipe(gulp.dest(config.paths.build.scripts))
+export function dev(done) {
+  webpackBase(devConfig, done)
+}
+
+export function prod(done) {
+  webpackBase(prodConfig, done)
 }
 
 // https://github.com/adametry/gulp-eslint/blob/master/example/fix.js
