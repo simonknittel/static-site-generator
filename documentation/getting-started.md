@@ -20,10 +20,13 @@
 1. Set the production URL in the [config.js](../_gulpfile/config.js#L15) for automated sitemap generation
 2. Set the production URL in the [robots.txt](../source/robots.txt#L1)
 3. Set the production URL in the [.htaccess](../source/.htaccess#L42) for an 404 error redirect
-4. Add deployment targets to the [config.js](../_gulpfile/config.js#L17)
-5. Run `yarn` to install all dependencies.
-6. Run `npm start` to build the site.
+4. Run `yarn` to install all dependencies.
+5. Run `npm start` to build the site.
   * It will automatically open a browser tab which will reload every time you change a source file.
+
+
+# Update your [CODEOWNERS](./.github/CODEOWNERS) file
+See [About CODEOWNERS](https://help.github.com/articles/about-codeowners) for more information.
 
 
 ## Enable Sentry/Raven.js
