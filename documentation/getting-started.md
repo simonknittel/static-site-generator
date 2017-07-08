@@ -21,17 +21,17 @@
 2. Set the production URL in the [robots.txt](../source/robots.txt#L1)
 3. Set the production URL in the [.htaccess](../source/.htaccess#L42) for an 404 error redirect
 4. Run `yarn` to install all dependencies.
-5. Run `npm start` to build the site.
+5. Run `npm start` to build your site.
   * It will automatically open a browser tab which will reload every time you change a source file.
 
 
-# Update your [CODEOWNERS](./.github/CODEOWNERS) file
+# Update your [CODEOWNERS](../.github/CODEOWNERS) file
 See [About CODEOWNERS](https://help.github.com/articles/about-codeowners) for more information.
 
 
 ## Enable Sentry/Raven.js
 1. Create a new project on Sentry and add your public DSN to [base.pug](../source/_partials/base.pug#L65)
-2. Uncomment Raven.js on [base.pug](../source/_partials/base.pug#L63)
+2. Uncomment Raven.js in [base.pug](../source/_partials/base.pug#L63)
 
 
 ## Continuous integration and deployment
