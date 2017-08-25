@@ -1,10 +1,34 @@
 const path = require('path')
 
 
+const babelOptions = {
+  cacheDirectory: true,
+  presets: [
+    [
+      'env',
+      {
+        targets: {
+          browsers: [
+            'last 3 Chrome versions',
+            'last 3 ChromeAndroid versions',
+            'last 3 Samsung versions',
+            'last 3 Firefox versions',
+            'last 2 Edge versions',
+            'last 2 Safari versions',
+            'last 2 iOS versions',
+          ],
+        },
+        modules: false,
+      },
+    ],
+  ],
+}
+
+
 module.exports = {
   entry: {
-    global: './source/assets/scripts/global.bundle.js',
-    front: './source/assets/scripts/front.bundle.js',
+    global: './source/assets/scripts/global.bundle.ts',
+    front: './source/assets/scripts/front.bundle.ts',
   },
   output: {
     filename: '[name].bundle.js',
@@ -12,37 +36,29 @@ module.exports = {
     publicPath: '/assets/js/',
   },
   resolve: {
-    extensions: [ '.js' ],
+    extensions: [ '.ts', '.tsx', '.js' ],
   },
   module: {
     rules: [
+      {
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: babelOptions,
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-            presets: [
-              [
-                'env',
-                {
-                  targets: {
-                    browsers: [
-                      'last 2 Chrome versions',
-                      'last 2 ChromeAndroid versions',
-                      'last 2 Samsung versions',
-                      'last 2 Firefox versions',
-                      'last 2 Edge versions',
-                      'last 2 Safari versions',
-                      'last 2 iOS versions',
-                    ],
-                  },
-                  modules: false,
-                },
-              ],
-            ],
-          },
+          options: babelOptions,
         },
       },
     ],

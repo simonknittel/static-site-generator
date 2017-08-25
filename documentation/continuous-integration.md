@@ -12,7 +12,7 @@ Here are some examples on how to add a continuous integration and deployment ser
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 7.10.0
+nvm install 8.1.3
 npm install -g -p yarn
 
 yarn
@@ -53,10 +53,14 @@ _wip_
 2. Activate the setting: `Build only if .travis.yml is present`
 3. (Optional) Add a status badge to your README.md (https://docs.travis-ci.com/user/status-images/)
 
+_wip_
+
 
 ## CircleCI
 1. Add your project under https://circleci.com/add-projects
 2. (Optional) Add a status badge to your README.md (https://circleci.com/docs/status-badges/)
+
+_wip_
 
 
 ## AppVeyor

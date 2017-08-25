@@ -13,14 +13,14 @@ gulp.task('clean', callback => {
 
 
 // Fixing
-import * as scripts from './_gulpfile/scripts'
-gulp.task('fix:scripts', scripts.fix)
+import { fix as fixScripts, prod as prodScripts, dev as devScripts } from './_gulpfile/scripts'
+gulp.task('fix:scripts', fixScripts)
 gulp.task('fix', gulp.parallel('fix:scripts'))
 
 
 // Scripts
-gulp.task('scripts:prod', gulp.series('fix:scripts', scripts.prod))
-gulp.task('scripts:dev', gulp.series('fix:scripts', scripts.dev))
+gulp.task('scripts:prod', gulp.series('fix:scripts', prodScripts))
+gulp.task('scripts:dev', gulp.series('fix:scripts', devScripts))
 
 
 // Styles

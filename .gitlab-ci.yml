@@ -1,0 +1,18 @@
+image: node:8.1.3
+
+before_script:
+  - npm install -g -p yarn
+
+stages:
+  - install
+  - test
+
+job1:
+  stage: install
+  script:
+    - yarn
+
+job2:
+  stage: test
+  script:
+    - npm test

@@ -9,6 +9,18 @@ import sourcemaps from 'gulp-sourcemaps'
 import browserSync from 'browser-sync'
 
 
+const autoprefixerOptions = {
+  browsers: [
+    'last 3 Chrome versions',
+    'last 3 ChromeAndroid versions',
+    'last 3 Samsung versions',
+    'last 3 Firefox versions',
+    'last 2 Edge versions',
+    'last 2 Safari versions',
+    'last 2 iOS versions',
+  ],
+}
+
 export function dev() {
   return gulp.src(config.paths.source.styles + '/**/*.scss')
     .pipe(sourcemaps.init())
@@ -23,7 +35,7 @@ export function dev() {
         sound: true,
       }))
       .on('error', err => console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
-      .pipe(autoprefixer())
+      .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.paths.build.styles))
     .pipe(browserSync.stream({match: '**/*.css'}))
@@ -39,7 +51,7 @@ export function prod() {
         './node_modules',
       ],
     }))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(moreCSS({radical: false}))
     .pipe(gulp.dest(config.paths.build.styles))
 }

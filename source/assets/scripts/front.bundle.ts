@@ -1,6 +1,6 @@
 import doesItWork from './_modules/does-it-work'
 
-const doesItWorkMessage = document.querySelector('.does-it-work__message')
+const doesItWorkMessage: HTMLElement = <HTMLElement> document.querySelector('.does-it-work__message')
 if (doesItWorkMessage) {
   if (doesItWork()) {
     doesItWorkMessage.classList.add('does-it-work__message--success')

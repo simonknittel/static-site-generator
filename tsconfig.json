@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "lib": [
+      "ES6",
+      "DOM"
+    ],
+    "module": "ES6",
+    "target": "ES6"
+  },
+  "compileOnSave": false,
+  "include": [
+    "source/assets/scripts/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "source/assets/scripts/**/*.test.js"
+  ]
+}
