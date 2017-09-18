@@ -54,7 +54,7 @@ Checkout the [issues page](https://github.com/simonknittel/static-site-generator
 
 
 ## Full documentation
-If you are interesed how some things works or what is possible read the [full documentation](./documentation/INDEX.md)
+If you are interesed how some things works or what is possible read the [full documentation](./docs/INDEX.md)
 
 
 ## License
