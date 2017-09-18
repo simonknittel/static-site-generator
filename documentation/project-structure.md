@@ -9,6 +9,7 @@
     1. [Directory structure](#directory-structure-2)
     2. [Coding standards/style and linting](#coding-standardsstyle-and-linting-1)
   5. [Images](#images)
+  6. [Linting](#linting)
 
 
 # Project structure
@@ -32,7 +33,7 @@ The styles are written in [SCSS](http://sass-lang.com) which is getting compiled
 You will find the source files under [source/assets/styles](./source/assets/styles). The directory is seperated in three main directories. In [_atoms](./source/assets/styles/_atoms) you will place all basic styling of the HTML tags like `<table>` or `<ul>`. In [_base](./source/assets/styles/_base) you will place all variables, mixins, global classes and so on. In [_modules](./source/assets/styles/_modules) you will place your modules of your site like the header or a footer. The files are getting compiled to `build/assets/css`. Files and directories beginning with an underscore are only getting included in other files.
 
 ### Coding standards/style and linting
-I included [SCSS-Lint](https://github.com/brigade/scss-lint) as linter for the styles source files. You will find the rules in [.scss-lint.yml](./.scss-lint.yml). You should configure your editor/IDE to lint your code on the fly (i.e Sublime Text 3: [Sublime​Linter-contrib-scss-lint](https://packagecontrol.io/packages/Sublime​Linter-contrib-scss-lint)). You can also lint the files with the Gulp task [lint:styles](./gulpfile.babel.js#L42). You can run it with `gulp lint:styles`.
+I included [SCSS-Lint](https://github.com/brigade/scss-lint) as linter for the styles source files. You will find the rules in [.scss-lint.yml](./.scss-lint.yml). You should configure your editor/IDE to lint your code on the fly.
 
 
 ## JavaScript
@@ -42,8 +43,12 @@ The JavaScript is written in [ES6/ECMAScript 2015](http://www.ecma-international
 You will find the source files under [source/assets/scripts](./source/assets/scripts).
 
 ### Coding standards/style and linting
-I included [ESLint](http://eslint.org) as linter for the JavaScript source files. You will find the rules in [.eslintrc](./.eslintrc). You should configure your editor/IDE to lint your code on the fly (i.e Sublime Text 3: [SublimeLinter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint)). You can also lint the files with the Gulp task [lint:scripts](./gulpfile.babel.js#L41). You can run it with `gulp lint:scripts`. This task will also fix some errors automatically.
+I included [ESLint](http://eslint.org) as linter for the JavaScript source files. You will find the rules in [.eslintrc](./.eslintrc). You should configure your editor/IDE to lint your code on the fly.
 
 
 ## Images
-_to be filled_
+_wip_
+
+
+## Linting
+The linters don't run when using `npm start` or `npm run default`. It will run when using `npm test`. We recommend that you use feature branches and a CI which runs this tasks when you push to it. This decision was made to improve the duration of the watch tasks. You should configure your editor/IDE to lint your code on the fly (there are plugins for every popular editor/IDE).
