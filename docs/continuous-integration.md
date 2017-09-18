@@ -12,8 +12,8 @@ Here are some examples on how to add a continuous integration and deployment ser
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 8.1.3
-npm install -g -p yarn
+nvm install 8.5.0
+npm install -g -p yarn@1.0.2
 
 yarn
 ```

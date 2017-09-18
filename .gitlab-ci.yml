@@ -1,7 +1,7 @@
-image: node:8.1.3
+image: node:8.5.0
 
 before_script:
-  - npm install -g -p yarn
+  - npm install -g -p yarn@1.0.2
 
 stages:
   - install
