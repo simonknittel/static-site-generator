@@ -6,7 +6,6 @@ import pug from 'gulp-pug'
 import rename from 'gulp-rename'
 import gulpSitemap from 'gulp-sitemap'
 import data from 'gulp-data'
-// import path from 'path'
 import plumber from 'gulp-plumber'
 import notifier from 'node-notifier'
 import CSON from 'cson'
@@ -83,10 +82,9 @@ export function sitemap() {
       changefreq: 'monthly',
       mappings: [
         {
-          pages: ['**/*.html'],
-          getLoc: function (siteUrl, loc) {
-            return loc.substr(0, loc.lastIndexOf('.')) || loc // Removes the file extension
-          },
+          pages: [ '**/*.html' ],
+          // Removes the file extension
+          getLoc: (siteUrl, loc) => loc.substr(0, loc.lastIndexOf('.')) || loc
         },
       ],
     }))

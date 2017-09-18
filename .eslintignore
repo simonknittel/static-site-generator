@@ -1,7 +1,6 @@
+_gulpfile/
 build/
-init/
 node_modules/
 assets/libraries/
-config.js
-jest.config.js
+gulpfile.babel.js
 valimate.js

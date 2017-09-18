@@ -25,9 +25,8 @@ export function dev() {
   return gulp.src(config.paths.source.styles + '/**/*.scss')
     .pipe(sourcemaps.init())
       .pipe(sass({
-        includePaths: [ // Enable import from libraries installed with npm
-          './node_modules',
-        ],
+        // Enable import from libraries installed with npm
+        includePaths: [ './node_modules' ],
       }))
       .on('error', notify.onError({
         title: 'styles:dev - failed',
@@ -38,7 +37,7 @@ export function dev() {
       .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.paths.build.styles))
-    .pipe(browserSync.stream({match: '**/*.css'}))
+    .pipe(browserSync.stream({ match: '**/*.css' }))
 }
 
 export function prod() {

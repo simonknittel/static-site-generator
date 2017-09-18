@@ -1,4 +1,7 @@
+import '@types/jest'
+
 import doesItWork from './does-it-work'
+
 
 describe('The sample module', () => {
   test('should return true', () => {

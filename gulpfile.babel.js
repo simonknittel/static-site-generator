@@ -6,56 +6,51 @@ import gulp from 'gulp'
 
 // Clean
 gulp.task('clean', callback => {
-  let del = require('del')
-
-  del(config.paths.build.base).then(() => callback())
+  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
+  require('del')(config.paths.build.base).then(() => callback())
 })
 
 
-// Fixing
-import { fix as fixScripts, prod as prodScripts, dev as devScripts } from './_gulpfile/scripts'
-gulp.task('fix:scripts', fixScripts)
-gulp.task('fix', gulp.parallel('fix:scripts'))
-
-
 // Scripts
-gulp.task('scripts:prod', gulp.series('fix:scripts', prodScripts))
-gulp.task('scripts:dev', gulp.series('fix:scripts', devScripts))
+import { prod as scriptsProd, dev as scriptsDev } from './_gulpfile/scripts'
+gulp.task('scripts:prod', scriptsProd)
+gulp.task('scripts:dev', scriptsDev)
 
 
 // Styles
-import * as styles from './_gulpfile/styles'
-gulp.task('styles:prod', styles.prod)
-gulp.task('styles:dev', styles.dev)
-gulp.task('styles:critical', styles.criticalCSS)
+import { prod as stylesProd, dev as stylesDev, criticalCSS as stylesCritical } from './_gulpfile/styles'
+gulp.task('styles:prod', stylesProd)
+gulp.task('styles:dev', stylesDev)
+gulp.task('styles:critical', stylesCritical)
 
 
 // HTML
-import * as html from './_gulpfile/html'
-gulp.task('html:prod', html.prod)
-gulp.task('html:dev', html.dev)
-gulp.task('html:sitemap', html.sitemap)
+import { prod as htmlProd, dev as htmlDev, sitemap as htmlSitemap } from './_gulpfile/html'
+gulp.task('html:prod', htmlProd)
+gulp.task('html:dev', htmlDev)
+gulp.task('html:sitemap', htmlSitemap)
 
 
 // Linting
-gulp.task('lint:scripts', gulp.series('fix:scripts', scripts.lint))
-gulp.task('lint:styles', styles.lint)
-gulp.task('lint:html', html.lint)
+import { lint as lintStyles } from './_gulpfile/styles'
+import { lint as lintHTML } from './_gulpfile/html'
+gulp.task('lint:styles', lintStyles)
+gulp.task('lint:html', lintHTML)
 gulp.task('lint', gulp.parallel('lint:scripts', 'lint:styles', 'lint:html'))
 
 
 // Images
-import * as images from './_gulpfile/images'
-gulp.task('images:default', images.normal)
-gulp.task('images:icons', images.icons)
+import { normal as imagesNormal, icons as imagesIcons } from './_gulpfile/images'
+gulp.task('images:default', imagesNormal)
+gulp.task('images:icons', imagesIcons)
 gulp.task('images', gulp.parallel('images:default', 'images:icons'))
 
 
 // Copy
-import * as copy from './_gulpfile/copy'
-gulp.task('copy:base', copy.base)
-gulp.task('copy:libraries', copy.libraries)
-gulp.task('copy:fonts', copy.fonts)
+import { base as copyBase, libraries as copyLibraries, fonts as copyFonts} from './_gulpfile/copy'
+gulp.task('copy:base', copyBase)
+gulp.task('copy:libraries', copyLibraries)
+gulp.task('copy:fonts', copyFonts)
 gulp.task('copy', gulp.parallel('copy:base', 'copy:libraries', 'copy:fonts'))
 
 
@@ -68,9 +63,9 @@ gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:pr
 
 // Watch
 gulp.task('watch', gulp.series('default', () => {
-  let browserSync = require('browser-sync')
-  let modRewrite = require('connect-modrewrite')
-  let compression = require('compression')
+  const browserSync = require('browser-sync')
+  const modRewrite = require('connect-modrewrite')
+  const compression = require('compression')
 
   gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', done => { // https://github.com/BrowserSync/browser-sync/issues/1065#issuecomment-215516517
     browserSync.reload()
