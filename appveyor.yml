@@ -12,7 +12,7 @@ platform:
 init:
     - git config --global core.autocrlf true
     - ps: Install-Product node $env:nodejs_version $env:platform
-    - npm install -g yarn@1.0.2
+    - npm install -g -p yarn@1.0.2
 install:
     - yarn
 build: off
