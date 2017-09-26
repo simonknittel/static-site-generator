@@ -1,5 +1,3 @@
-import '@types/jest'
-
 import doesItWork from './does-it-work'
 
 

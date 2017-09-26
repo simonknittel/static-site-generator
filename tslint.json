@@ -1,7 +1,7 @@
 {
   "rules": {
-    "curly": true,
     "no-reference": true,
-    "no-unnecessary-type-assertion": true
+    "no-unnecessary-type-assertion": true,
+    "indent": [true, "spaces", 2]
   }
 }

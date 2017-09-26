@@ -36,7 +36,7 @@ import { lint as lintStyles } from './_gulpfile/styles'
 import { lint as lintHTML } from './_gulpfile/html'
 gulp.task('lint:styles', lintStyles)
 gulp.task('lint:html', lintHTML)
-gulp.task('lint', gulp.parallel('lint:scripts', 'lint:styles', 'lint:html'))
+gulp.task('lint', gulp.parallel('lint:styles', 'lint:html'))
 
 
 // Images
