@@ -4,11 +4,11 @@ let config = {
   //     prod: false,
   // },
   paths: {
-    source: {
-      base: 'source',
+    src: {
+      base: 'src',
     },
-    build: {
-      base: 'build',
+    dist: {
+      base: 'dist',
     },
   },
   production: {
@@ -16,15 +16,15 @@ let config = {
   },
 }
 
-config.paths.source.styles = config.paths.source.base + '/assets/styles'
-config.paths.source.scripts = config.paths.source.base + '/assets/scripts'
-config.paths.source.images = config.paths.source.base + '/assets/images'
-config.paths.source.fonts = config.paths.source.base + '/assets/fonts'
-config.paths.source.data = config.paths.source.base + '/_data'
+config.paths.src.styles = config.paths.src.base + '/assets/styles'
+config.paths.src.scripts = config.paths.src.base + '/assets/scripts'
+config.paths.src.images = config.paths.src.base + '/assets/images'
+config.paths.src.fonts = config.paths.src.base + '/assets/fonts'
+config.paths.src.data = config.paths.src.base + '/_data'
 
-config.paths.build.styles = config.paths.build.base + '/assets/css'
-config.paths.build.scripts = config.paths.build.base + '/assets/js'
-config.paths.build.images = config.paths.build.base + '/assets/img'
-config.paths.build.fonts = config.paths.build.base + '/assets/fonts'
+config.paths.dist.styles = config.paths.dist.base + '/assets/css'
+config.paths.dist.scripts = config.paths.dist.base + '/assets/js'
+config.paths.dist.images = config.paths.dist.base + '/assets/img'
+config.paths.dist.fonts = config.paths.dist.base + '/assets/fonts'
 
 export default config

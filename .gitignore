@@ -12,7 +12,7 @@ sublime-gulp.log
 
 # Other
 node_modules/
-build/
+dist/
 npm-debug.log*
 yarn-error.log
 backstop_data/bitmaps_test/

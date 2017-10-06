@@ -1,11 +1,18 @@
 1. [Continuous integration and deployment](#continuous-integration-and-deployment)
-    1. [Codeship](#codeship)
-    2. [Travis CI](#travis-ci)
-    3. [CircleCI](#circleci)
+    1. [GitLab CI](#gitlab-ci)
+    2. [Codeship](#codeship)
+    3. [Bitbucket Pipelines](#bitbucket-pipelines)
+    4. [Travis CI](#travis-ci)
+    5. [CircleCI](#circleci)
+    6. [AppVeyor](#appveyor)
 
 
 # Continuous integration and deployment
 Here are some examples on how to add a continuous integration and deployment service to your project.
+
+
+## GitLab CI
+_wip_
 
 
 ## Codeship
@@ -25,10 +32,10 @@ RAVEN_ENVIRONMENT="$CI_BRANCH" # git rev-parse --abbrev-ref HEAD
 RAVEN_COMMIT="$(git describe --tags)"
 RAVEN_RELEASE="$RAVEN_COMMIT" # Will be the tag itself when merge to master/production branch
 
-sed -i "s/environment: 'development'/environment: '$RAVEN_ENVIRONMENT'/g" ./source/_partials/base.pug
-sed -i "s/\/\/ tags: { git_commit: '' },/tags: { git_commit: '$RAVEN_COMMIT' },/g" ./source/_partials/base.pug
+sed -i "s/environment: 'development'/environment: '$RAVEN_ENVIRONMENT'/g" ./src/_partials/base.pug
+sed -i "s/\/\/ tags: { git_commit: '' },/tags: { git_commit: '$RAVEN_COMMIT' },/g" ./src/_partials/base.pug
 
-if [ "$RAVEN_ENVIRONMENT" = "master" ]; then sed -i "s/\/\/ release: '',/release: '$RAVEN_RELEASE'/g" ./source/_partials/base.pug; fi
+if [ "$RAVEN_ENVIRONMENT" = "master" ]; then sed -i "s/\/\/ release: '',/release: '$RAVEN_RELEASE'/g" ./src/_partials/base.pug; fi
 
 npm test
 ```
@@ -37,11 +44,13 @@ npm test
 
 ```shell
 ssh username@host "mkdir -p new_integration"
-rsync -r build/ username@host:new_integration
+rsync -r dist/ username@host:new_integration
 ssh username@host "cd html/white-label-shop && { mv integration old_integration; mv new_integration integration; rm -rf old_integration; }"
 ```
 
 4. (Optional) Add a status badge to your README.md (https://codeship.com/documentation/faq/codeship-badge/)
+
+_wip_
 
 
 ## Bitbucket Pipelines
@@ -65,3 +74,5 @@ _wip_
 
 ## AppVeyor
 1. Check `Skip branches without appveyor.yml` under `Settings > General`
+
+_wip_

@@ -4,12 +4,12 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    global: './source/assets/scripts/global.bundle.ts',
-    front: './source/assets/scripts/front.bundle.ts',
+    global: './src/assets/scripts/global.bundle.ts',
+    front: './src/assets/scripts/front.bundle.ts',
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'build/assets/js'),
+    path: path.resolve(__dirname, 'dist/assets/js'),
     publicPath: '/assets/js/',
   },
   resolve: {

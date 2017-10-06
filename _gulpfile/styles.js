@@ -22,7 +22,7 @@ const autoprefixerOptions = {
 }
 
 export function dev() {
-  return gulp.src(config.paths.source.styles + '/**/*.scss')
+  return gulp.src(config.paths.src.styles + '/**/*.scss')
     .pipe(sourcemaps.init())
       .pipe(sass({
         // Enable import from libraries installed with npm
@@ -36,7 +36,7 @@ export function dev() {
       .on('error', err => console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
       .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.paths.build.styles))
+    .pipe(gulp.dest(config.paths.dist.styles))
     .pipe(browserSync.stream({ match: '**/*.css' }))
 }
 
@@ -44,7 +44,7 @@ export function prod() {
   // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
   const moreCSS = require('gulp-more-css')
 
-  return gulp.src(config.paths.source.styles + '/**/*.scss')
+  return gulp.src(config.paths.src.styles + '/**/*.scss')
     .pipe(sass({
       includePaths: [ // Enable import from libraries installed with npm
         './node_modules',
@@ -52,14 +52,14 @@ export function prod() {
     }))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(moreCSS({radical: false}))
-    .pipe(gulp.dest(config.paths.build.styles))
+    .pipe(gulp.dest(config.paths.dist.styles))
 }
 
 export function lint() {
   // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
   const scssLint = require('gulp-scss-lint')
 
-  return gulp.src(config.paths.source.styles + '/**/*.scss')
+  return gulp.src(config.paths.src.styles + '/**/*.scss')
     .pipe(scssLint())
 }
 
@@ -69,9 +69,9 @@ export function criticalCSS(callback) {
 
   critical.generate({
     inline: true, // Will be inserted into the <head>
-    base: config.paths.build.base,
+    base: config.paths.dist.base,
     src: '/index.html',
-    dest: config.paths.build.base + '/index.html',
+    dest: config.paths.dist.base + '/index.html',
     minify: true,
     width: 1920, // Viewbox
     height: 1080, // Viewbox

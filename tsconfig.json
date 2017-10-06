@@ -10,10 +10,10 @@
   },
   "compileOnSave": false,
   "include": [
-    "source/assets/scripts/**/*"
+    "src/assets/scripts/**/*"
   ],
   "exclude": [
     "node_modules",
-    "source/assets/scripts/**/*.test.ts"
+    "src/assets/scripts/**/*.test.ts"
   ]
 }

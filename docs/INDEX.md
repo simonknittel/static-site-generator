@@ -2,7 +2,6 @@
 
 
 ## Introduction
-
 1. [Introduction](./README.md)
     1. [Features](./README.md#features)
     1. [I want to use AngularJS, React, Ember or Meteor](./README.md#i-want-to-use-angularjs-react-ember-or-meteor)
@@ -19,10 +18,12 @@
     1. [External dependencies](./start-into-an-existing-project.md#externel-dependencies)
     2. [Install dependencies](./start-into-an-existing-project.md#install-dependencies)
 4. [Continuous integration and deployment](./continuous-integration.md)
-    1. [Travis CI](./continuous-integration.md#travis-ci)
+    1. [GitLab CI](./continuous-integration.md#gitlab-ci)
     2. [Codeship](./continuous-integration.md#codeship)
-        1. [Continuous deployment](./continuous-integration.md#continuous-deployment)
-    3. [CircleCI](./continuous-integration.md#circleci)
+    3. [Bitbucket Pipelines](./continuous-integration.md#bitbucket-pipelines)
+    4. [Travis CI](./continuous-integration.md#travis-ci)
+    5. [CircleCI](./continuous-integration.md#circleci)
+    6. [AppVeyor](./continuous-integration.md#appveyor)
 5. [Project structure](./project-structure.md)
     1. [General directory structure](./project-structure.md#general-directory-structure)
     2. [HTML](./project-structure.md#html)

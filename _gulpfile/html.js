@@ -13,7 +13,7 @@ import CSON from 'cson'
 
 function returnDataObject(file) {
   const slash = process.platform === 'win32' ? '\\' : '/'
-  const source = config.paths.source.data + '/' + file.path.replace(process.cwd() + slash + config.paths.source.base.replace('/', slash) + slash, '').replace('.pug', '.cson')
+  const source = config.paths.src.data + '/' + file.path.replace(process.cwd() + slash + config.paths.src.base.replace('/', slash) + slash, '').replace('.pug', '.cson')
 
   return CSON.parseCSONFile(source)
 }
@@ -21,8 +21,8 @@ function returnDataObject(file) {
 
 export function dev() {
   return gulp.src([
-    config.paths.source.base + '/**/*.pug',
-    '!' + config.paths.source.base + '/_partials/**/*',
+    config.paths.src.base + '/**/*.pug',
+    '!' + config.paths.src.base + '/_partials/**/*',
   ])
     .pipe(plumber(error => {
       notifier.notify({
@@ -35,7 +35,7 @@ export function dev() {
     .pipe(data(returnDataObject))
     .pipe(pug({pretty: true}))
     .pipe(rename(path => path.extname = '.html'))
-    .pipe(gulp.dest(config.paths.build.base))
+    .pipe(gulp.dest(config.paths.dist.base))
 }
 
 export function prod() {
@@ -44,8 +44,8 @@ export function prod() {
   const replace = require('gulp-replace')
 
   return gulp.src([
-    config.paths.source.base + '/**/*.pug',
-    '!' + config.paths.source.base + '/_partials/**/*',
+    config.paths.src.base + '/**/*.pug',
+    '!' + config.paths.src.base + '/_partials/**/*',
   ])
     .pipe(data(returnDataObject))
     .pipe(pug())
@@ -62,20 +62,20 @@ export function prod() {
       removeOptionalTags: true,
     }))
     .pipe(rename(path => path.extname = '.html'))
-    .pipe(gulp.dest(config.paths.build.base))
+    .pipe(gulp.dest(config.paths.dist.base))
 }
 
 export function lint() {
   // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
   const puglint = require('gulp-pug-lint')
 
-  return gulp.src(config.paths.source.base + '/**/*.pug')
+  return gulp.src(config.paths.src.base + '/**/*.pug')
     .pipe(puglint())
 }
 
 export function sitemap() {
   return gulp.src([ // You can define files here which should be included or excluded in the sitemap.xml
-    config.paths.build.base + '/**/*.html',
+    config.paths.dist.base + '/**/*.html',
   ])
     .pipe(gulpSitemap({
       siteUrl: config.production.url, // Make sure to set your domain in the config.js
@@ -88,5 +88,5 @@ export function sitemap() {
         },
       ],
     }))
-    .pipe(gulp.dest(config.paths.build.base))
+    .pipe(gulp.dest(config.paths.dist.base))
 }

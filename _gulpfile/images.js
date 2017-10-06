@@ -9,7 +9,7 @@ import cached from 'gulp-cached'
 
 
 export function icons() {
-  return gulp.src(config.paths.source.images + '/icons/**/*.svg')
+  return gulp.src(config.paths.src.images + '/icons/**/*.svg')
     .pipe(svgSprite({ // Bundles all icons into one SVG stack
       mode: {
         stack: {
@@ -18,13 +18,13 @@ export function icons() {
         },
       },
     }))
-    .pipe(gulp.dest(config.paths.build.images))
+    .pipe(gulp.dest(config.paths.dist.images))
 }
 
 export function normal() {
   return gulp.src([
-    config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
-    '!' + config.paths.source.images + '/icons/**/*', // Icons are handled by the task above
+    config.paths.src.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
+    '!' + config.paths.src.images + '/icons/**/*', // Icons are handled by the task above
   ])
     .pipe(cached('images:default')) // Pass through only files changed after the last run
     .pipe(imagemin())
@@ -34,5 +34,5 @@ export function normal() {
     //     lossy: true,
     //     webp: true,
     // }))
-    .pipe(gulp.dest(config.paths.build.images))
+    .pipe(gulp.dest(config.paths.dist.images))
 }

@@ -7,7 +7,7 @@ import gulp from 'gulp'
 // Clean
 gulp.task('clean', callback => {
   // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
-  require('del')(config.paths.build.base).then(() => callback())
+  require('del')(config.paths.dist.base).then(() => callback())
 })
 
 
@@ -67,41 +67,41 @@ gulp.task('watch', gulp.series('default', () => {
   const modRewrite = require('connect-modrewrite')
   const compression = require('compression')
 
-  gulp.watch(config.paths.source.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', done => { // https://github.com/BrowserSync/browser-sync/issues/1065#issuecomment-215516517
+  gulp.watch(config.paths.src.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', done => { // https://github.com/BrowserSync/browser-sync/issues/1065#issuecomment-215516517
     browserSync.reload()
     done()
   }))
 
-  gulp.watch(config.paths.source.scripts + '/**/*.js', gulp.series('scripts:dev', done => {
+  gulp.watch(config.paths.src.scripts + '/**/*.js', gulp.series('scripts:dev', done => {
     browserSync.reload()
     done()
   }))
 
-  gulp.watch(config.paths.source.styles + '/**/*.scss', gulp.series('styles:dev'))
+  gulp.watch(config.paths.src.styles + '/**/*.scss', gulp.series('styles:dev'))
 
   gulp.watch([
-    config.paths.source.base + '/**/*.pug',
-    config.paths.source.data + '/**/*.cson',
+    config.paths.src.base + '/**/*.pug',
+    config.paths.src.data + '/**/*.cson',
   ], gulp.series('html:dev', 'html:sitemap', done => {
     browserSync.reload()
     done()
   }))
 
   gulp.watch([
-    config.paths.source.base + '/robots.txt',
-    config.paths.source.base + '/.htaccess',
-    config.paths.source.base + '/humans.txt',
+    config.paths.src.base + '/robots.txt',
+    config.paths.src.base + '/.htaccess',
+    config.paths.src.base + '/humans.txt',
   ], gulp.series('copy:base', done => {
     browserSync.reload()
     done()
   }))
 
-  gulp.watch(config.paths.source.base + '/assets/libraries/**/*', gulp.series('copy:libraries', done => {
+  gulp.watch(config.paths.src.base + '/assets/libraries/**/*', gulp.series('copy:libraries', done => {
     browserSync.reload()
     done()
   }))
 
-  gulp.watch(config.paths.source.fonts + '/**/*', gulp.series('copy:fonts', done => {
+  gulp.watch(config.paths.src.fonts + '/**/*', gulp.series('copy:fonts', done => {
     browserSync.reload()
     done()
   }))
@@ -114,7 +114,7 @@ gulp.task('watch', gulp.series('default', () => {
       forms: false,
     },
     server: {
-      baseDir: config.paths.build.base,
+      baseDir: config.paths.dist.base,
       middleware: [
         modRewrite([
           '^.([^\\.]+)$ /$1.html [L]', // Remove .html from URL (as in the .htaccess)

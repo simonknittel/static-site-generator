@@ -1,5 +1,5 @@
 _gulpfile/
-build/
+dist/
 node_modules/
 assets/libraries/
 gulpfile.babel.js

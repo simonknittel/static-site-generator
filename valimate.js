@@ -15,7 +15,7 @@ browserSync({
     forms: false,
   },
   server: {
-    baseDir: config.paths.build.base,
+    baseDir: config.paths.dist.base,
     middleware: [
       modRewrite([
         '^.([^\\.]+)$ /$1.html [L]', // Remove .html from URL (as in the .htaccess)

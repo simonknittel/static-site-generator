@@ -15,7 +15,7 @@
   "scenarios": [
     {
       "label": "Home",
-      "url": "./build/index.html"
+      "url": "./dist/index.html"
     }
   ],
   "paths": {

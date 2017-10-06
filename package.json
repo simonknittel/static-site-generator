@@ -14,7 +14,7 @@
     "_test": "npm run test:js && npm run production && npm run test:html && npm run test:visual",
     "test": "npm run test:js && npm run production",
     "test:js:tslint": "tslint -p tsconfig.json -c tslint.json",
-    "test:js:eslint": "eslint \"source/**/*.ts\"",
+    "test:js:eslint": "eslint \"src/**/*.ts\"",
     "test:js:lint": "npm run test:js:tslint && npm run test:js:eslint",
     "test:js:jest": "jest",
     "test:js": "npm run test:js:lint && npm run test:js:jest",
