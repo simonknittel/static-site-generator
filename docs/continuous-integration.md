@@ -19,8 +19,8 @@ _wip_
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 8.5.0
-npm install -g -p yarn@1.0.2
+nvm install 8
+npm install -g -p yarn@1
 
 yarn
 ```
