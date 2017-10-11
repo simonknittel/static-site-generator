@@ -21,26 +21,26 @@ Start a new static or [RESTful](https://en.wikipedia.org/wiki/Representational_s
 
 The goal of this generator is to have a base with everything already prepared to start fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Pug template engine](https://pugjs.org) if you don't want to use them.
 
-**Disclaimer:** This project is not intended as a well maintained open source project, so that it can be used anytime and anywhere without issues. It's more for my own learning and experimentation with new technologies. Still I'm looking for your feedback and opinions.
+**Disclaimer:** This project is not intended as a well maintained and stable open source project. It's for my own learning and experimentation with new technologies. Therefore I can't ensure that it can be used anytime and anywhere without issues. Still I'm looking for your feedback and opinions.
 
 
 ## ✨ Features
-* Fast layouting through precompiling [Pug templates](https://github.com/pugjs/pug) with Gulp
-* Project structure based on the [atomic design concept](http://atomicdesign.bradfrost.com) (you don't have to follow this pattern)
+* Fast layouting with pre-compiling Pug templates
+* Project structure based on the [atomic design concept](http://atomicdesign.bradfrost.com) (you can easily change it if you don't want to use it)
 * [SASS](http://sass-lang.com) as CSS preprocessor
-* [BEM](http://getbem.com) as default naming syntax for CSS classes (of course you can choose your own)
-* Extensive build workflow with Gulp 4
-  + JavaScript transpilation and bundling with [webpack](https://webpack.js.org) and [Babel](https://babeljs.io)
+* [BEM](http://getbem.com) as default naming syntax for CSS classes (you don't have to follow this)
+* Automated build pipeline with Gulp 4
+  + JavaScript transpilation and bundling with [Babel](https://babeljs.io) and [webpack](https://webpack.js.org)
   + JavaScript linting with [ESLint](http://eslint.org)
   + Pug precompilation and HTML minimization
   + Injection of data with CSON into the Pug templates
-  + SASS linting, precompilation and minimization
+  + SASS linting, pre-compilation and minimization
   + Image optimizing
     - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
-  + Bundling SVG icons to a single SVG stack
+  + Bundling of SVG icons into a SVG stack
 * Targeted Node.js&reg; compability
-  + Latest release from the _Current_ branch
-  + Latest release from the _LTS_ branch
+  + Latest release from the [https://github.com/nodejs/Release#release-schedule1](_Current_ branch)
+  + Latest release from the [https://github.com/nodejs/Release#release-schedule1](_LTS_ branch)
 
 
 <!--
@@ -60,7 +60,7 @@ If you are interesed how some things works or what is possible read the [full do
 
 ## ©️ License
 
-Copyright 2017 Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)
+Copyright 2017 Simon Knittel (<https://simonknittel.de>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
