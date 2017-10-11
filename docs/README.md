@@ -1,5 +1,5 @@
-
 **It's recommend to read the whole documentation!**
+
 1. [Introduction](#static-site-generator)
   1. [Features](#features)
   2. [I want to use AngularJS, React, Ember or Meteor](#i-want-to-use-angularjs-react-ember-or-meteor)
@@ -7,7 +7,7 @@
   4. [Full documentation](#full-documentation)
 
 
-# Static Site Generator
+# ⚙️ Static Site Generator
 [![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.org/simonknittel/static-site-generator)
 [![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
@@ -23,17 +23,17 @@ The goal of this generator is to have a base with everything already prepared to
 **Disclaimer:** This project is not intended as a well maintained open source project, so that it can be used anytime and anywhere without issues. It's more for my own learning and experimentation with new technologies. Still I'm looking for your feedback and opinions.
 
 
-## Features
+## ✨ Features
 * Fast layouting through precompiling [Pug templates](https://github.com/pugjs/pug) with Gulp
 * Project structure based on the [atomic design concept](http://atomicdesign.bradfrost.com) (you don't have to follow this pattern)
-* [SCSS](http://sass-lang.com) as CSS preprocessor
+* [SASS](http://sass-lang.com) as CSS preprocessor
 * [BEM](http://getbem.com) as default naming syntax for CSS classes (of course you can choose your own)
 * Extensive build workflow with Gulp 4
   + JavaScript transpilation and bundling with [webpack](https://webpack.js.org) and [Babel](https://babeljs.io)
   + JavaScript linting with [ESLint](http://eslint.org)
   + Pug precompilation and HTML minimization
   + Injection of data with CSON into the Pug templates
-  + SCSS linting, precompilation and minimization
+  + SASS linting, precompilation and minimization
   + Image optimizing
     - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
   + Bundling SVG icons to a single SVG stack
@@ -49,15 +49,15 @@ You can easily add AngularJS to this generator. Read [here](#add-angularjs) to s
 -->
 
 
-## Planned features and issues
-Checkout the [issues page](https://github.com/simonknittel/static-site-generator/labels/enhancement)
+## 🚧 Planned features and issues
+Checkout the [issues page](https://github.com/simonknittel/static-site-generator/issues)
 
 
-## Full documentation
+## 📚 Full documentation
 If you are interesed how some things works or what is possible read the [full documentation](./INDEX.md)
 
 
-## License
+## ©️ License
 
 Copyright 2017 Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)
 
