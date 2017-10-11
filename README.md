@@ -5,6 +5,7 @@
     <!-- 2. [I want to use AngularJS, React, Ember or Meteor](#-i-want-to-use-angularjs-react-ember-or-meteor) -->
     2. [Planned features and issues](#-planned-features-and-issues)
     3. [Full documentation](#-full-documentation)
+    4. [License](#-license)
 
 
 # ⚙️ Static Site Generator
