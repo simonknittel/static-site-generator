@@ -1,10 +1,10 @@
 **It's recommend to read the whole documentation!**
 
-1. [Introduction](#static-site-generator)
-  1. [Features](#features)
-  2. [I want to use AngularJS, React, Ember or Meteor](#i-want-to-use-angularjs-react-ember-or-meteor)
-  3. [Planned features and issues](#planned-features-and-issues)
-  4. [Full documentation](#full-documentation)
+1. [Introduction](#-static-site-generator)
+    1. [Features](#-features)
+    <!-- 2. [I want to use AngularJS, React, Ember or Meteor](#-i-want-to-use-angularjs-react-ember-or-meteor) -->
+    2. [Planned features and issues](#-planned-features-and-issues)
+    3. [Full documentation](#-full-documentation)
 
 
 # ⚙️ Static Site Generator
