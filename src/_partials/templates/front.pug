@@ -6,11 +6,12 @@ block variables
   - var keywords = meta.keywords;
   - var htmlClass = 'template--front';
 
+append scripts
+  script(src=root+"assets/js/front.bundle.js?RANDOMIZE-ME", defer)
+
 append styles
   link(rel="stylesheet", type="text/css", href=root+"assets/css/front.bundle.css?RANDOMIZE-ME")
 
-append scripts
-  script(src=root+"assets/js/front.bundle.js?RANDOMIZE-ME")
 
 block content
   //- Content

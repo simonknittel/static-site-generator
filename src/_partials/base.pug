@@ -18,6 +18,30 @@ html(lang="en", class=htmlClass)
     //- meta(http-equiv="X-UA-Compatible", content="IE-edge, chrome=1") //- See .htaccess
     meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1")
 
+    //- Scripts
+    block scripts
+      //- Libraries
+      //- script(src="//cdn.ravenjs.com/3.15.0/raven.min.js", integrity="sha384-emluOS7+UrA6MIOAWxw8L52iFpZNh7+i1kKBfkofwZJn/s66JpKS9gR1ZMOwiayX", crossorigin="anonymous")
+      //- script.
+      //-     Raven.config('https://cfe78df50248413881dea59989e9cb3b@sentry.io/167907', {
+      //-         environment: 'development',
+      //-         // tags: { git_commit: '' },
+      //-         // release: '',
+      //-     }).install(); // Enable Sentry/Raven.js
+
+      //- Custom
+      script(src=root+"assets/js/global.bundle.js?RANDOMIZE-ME", defer)
+
+    //- Optimized Google Analytics
+    //- script() (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')
+
+    //- Stylesheets
+    block styles
+      //- Libraries
+
+      //- Custom
+      link(href=root+"assets/css/global.bundle.css?RANDOMIZE-ME", rel="stylesheet")
+
     title #{title}
     meta(name="description", content=description)
     meta(name="keywords", content=keywords)
@@ -29,7 +53,7 @@ html(lang="en", class=htmlClass)
     //- Apple Icon https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
     //- link(rel="apple-touch-icon-precomposed", href=root+"assets/img/apple-touch-icon-precomposed.png")
 
-    //- Win8/10 Tile https://msdn.microsoft.com/en-us/library/ie/dn255024%28v=vs.85%29.aspx
+    //- Win10 Tile https://msdn.microsoft.com/en-us/library/ie/dn255024%28v=vs.85%29.aspx
     //- meta(name="msapplication-TileColor" content="#222")
     //- meta(name="msapplication-square70x70Logo" content=root+"assets/img/win8-square-70x70.png")
     //- meta(name="msapplication-square150x150Logo" content=root+"assets/img/win8-square-150x150.png")
@@ -49,27 +73,3 @@ html(lang="en", class=htmlClass)
     //-     p You have to <strong>activate</strong> JavaScript to use all functions of this site.
 
     block content
-
-    //- Stylesheets
-    block styles
-      //- Libraries
-
-      //- Custom
-      link(href=root+"assets/css/global.bundle.css?RANDOMIZE-ME", rel="stylesheet")
-
-    //- Scripts
-    block scripts
-      //- Libraries
-      //- script(src="//cdn.ravenjs.com/3.15.0/raven.min.js", integrity="sha384-emluOS7+UrA6MIOAWxw8L52iFpZNh7+i1kKBfkofwZJn/s66JpKS9gR1ZMOwiayX", crossorigin="anonymous")
-      //- script.
-      //-     Raven.config('https://cfe78df50248413881dea59989e9cb3b@sentry.io/167907', {
-      //-         environment: 'development',
-      //-         // tags: { git_commit: '' },
-      //-         // release: '',
-      //-     }).install(); // Enable Sentry/Raven.js
-
-      //- Custom
-      script(src=root+"assets/js/global.bundle.js?RANDOMIZE-ME", async)
-
-    //- Optimized Google Analytics
-    //- script (function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','CODE HERE');ga('send','pageview')
