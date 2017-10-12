@@ -39,8 +39,8 @@ The goal of this generator is to have a base with everything already prepared to
     - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
   + Bundling of SVG icons into a SVG stack
 * Targeted Node.js&reg; compability
-  + Latest release from the [https://github.com/nodejs/Release#release-schedule1](_Current_ branch)
-  + Latest release from the [https://github.com/nodejs/Release#release-schedule1](_LTS_ branch)
+  + Latest release from the [_Current_ branch](https://github.com/nodejs/Release#release-schedule1)
+  + Latest release from the [_LTS_ branch](https://github.com/nodejs/Release#release-schedule1)
 
 
 <!--
