@@ -1,11 +1,9 @@
 language: node_js
 node_js:
+  - "9"
   - "8"
-  - "6"
-before_install:
-  - npm install -g -p yarn@1
 install:
-  - yarn
+  - npm install
 script: npm test # Defined in the package.json (scripts > test)
 cache:
   directories:

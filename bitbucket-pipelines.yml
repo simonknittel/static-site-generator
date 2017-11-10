@@ -1,8 +1,7 @@
-image: node:8
+image: node:9
 pipelines:
   default:
     - step:
         script:
-          - npm install -g -p yarn@1
-          - yarn
+          - npm install
           - npm test

@@ -1,16 +1,15 @@
 environment:
   matrix:
+    - nodejs_version: '9'
     - nodejs_version: '8'
-    - nodejs_version: '6'
 platform:
     - x86
     - x64
 init:
     - git config --global core.autocrlf true
     - ps: Install-Product node $env:nodejs_version $env:platform
-    - npm install -g -p yarn@1
 install:
-    - yarn
+    - npm install
 build: off
 test_script:
   - npm test # Defined in the package.json (scripts > test)

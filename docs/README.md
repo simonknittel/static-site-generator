@@ -17,9 +17,9 @@
 [![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)](https://david-dm.org/simonknittel/static-site-generator?type=dev)
 [![Gitter](https://img.shields.io/gitter/room/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator)
 
-Start a new static or [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) site within seconds. The most important files and build tasks are already there and built with best practices. You only have to run the build task via [Gulp](http://gulpjs.com) and you will get a production-ready site.
+Static site generator to create blazingliy fast production-ready sites. All necessary files and build tasks are already in place and fitted with good practices. You only need to install the dependencies and your are ready to go, perfect for [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) sites.
 
-The goal of this generator is to have a base with everything already prepared to start fast with a new project without being restricted by any limits like a closed source task runner. With that you are able to add new features or remove already implemented features like the [Pug template engine](https://pugjs.org) if you don't want to use them.
+The goal of this generator is to have a application template with everything already prepared to start fast with a new project without being restricted by any limits like a template system of a specific CMS. You can easily add, remove or replace features like the [Pug template engine](https://pugjs.org) if you don't want to use them.
 
 **Disclaimer:** This project is not intended as a well maintained and stable open source project. It's for my own learning and experimentation with new technologies. Therefore I can't ensure that it can be used anytime and anywhere without issues. Still I'm looking for your feedback and opinions.
 
@@ -29,7 +29,7 @@ The goal of this generator is to have a base with everything already prepared to
 * Project structure based on the [atomic design concept](http://atomicdesign.bradfrost.com) (you can easily change it if you don't want to use it)
 * [SASS](http://sass-lang.com) as CSS preprocessor
 * [BEM](http://getbem.com) as default naming syntax for CSS classes (you don't have to follow this)
-* Automated build pipeline with Gulp 4
+* Automated build pipeline with [Gulp 4](http://gulpjs.com)
   + JavaScript transpilation and bundling with [Babel](https://babeljs.io) and [webpack](https://webpack.js.org)
   + JavaScript linting with [ESLint](http://eslint.org)
   + Pug precompilation and HTML minimization
@@ -41,13 +41,6 @@ The goal of this generator is to have a base with everything already prepared to
 * Targeted Node.js&reg; compability
   + Latest release from the [_Current_ branch](https://github.com/nodejs/Release#release-schedule1)
   + Latest release from the [_LTS_ branch](https://github.com/nodejs/Release#release-schedule1)
-
-
-<!--
-## I want to use [AngularJS](https://angularjs.org), [React](https://facebook.github.io/react), [Ember](http://emberjs.com) or [Meteor](https://www.meteor.com)
-
-You can easily add AngularJS to this generator. Read [here](#add-angularjs) to see how to add AngularJS to this generator. Ember is highly recommend to be used with [Ember CLI](http://www.ember-cli.com). The generator is currently not tested and optimized for the use with Meteor or React.
--->
 
 
 ## 🚧 Planned features and issues

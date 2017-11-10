@@ -1,11 +1,9 @@
 machine:
   node:
-    version: 8
+    version: 9
 dependencies:
-  pre:
-    - npm install -g -p yarn@1
   override:
-    - yarn
+    - npm install
 test:
   override:
     - npm test

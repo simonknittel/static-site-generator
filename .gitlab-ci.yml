@@ -1,10 +1,52 @@
-image: node:8
+image: node:9
 
-before_script:
-  - npm install -g -p yarn@1
+stages:
+  - install
+  - raven
+  - test
+  - deploy
 
-install_and_test:
-  stage: install_and_test
+install:
+  stage: install
   script:
-    - yarn
+    - npm install
+
+# The configuration for Sentry/Raven.js makes only sense when you are using the branching and release worklfow defined here: ./docs/branching-and-release-workflow.md
+raven:
+  stage: raven
+  script:
+    - RAVEN_ENVIRONMENT="$CI_COMMIT_REF_NAME" # git rev-parse --abbrev-ref HEAD
+    - RAVEN_COMMIT="$(git describe --tags)"
+    - RAVEN_RELEASE="$RAVEN_COMMIT" # Will be the tag itself when merge to master/production branch
+    - sed -i "s/environment: 'development'/environment: '$RAVEN_ENVIRONMENT'/g" ./src/_partials/base.pug
+    - sed -i "s/\/\/ tags: { git_commit: '' },/tags: { git_commit: '$RAVEN_COMMIT' },/g" ./src/_partials/base.pug
+    - if [ "$RAVEN_ENVIRONMENT" = "master" ]; then sed -i "s/\/\/ release: '',/release: '$RAVEN_RELEASE'/g" ./src/_partials/base.pug; fi
+
+test:
+  stage: test
+  script:
     - npm test
+  artifacts:
+    paths:
+      - dist/
+
+deploy_production:
+  stage: deploy
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
+  script:
+    - ssh -p22 knittel@tempel.uberspace.de "mkdir -p ~/new_production.gitlab-ci.static-site-generator.simonknittel.de"
+    - rsync -rav -e ssh code/build/* knittel@tempel.uberspace.de:~/new_production.gitlab-ci.static-site-generator.simonknittel.de
+    - ssh -p22 knittel@tempel.uberspace.de "mv ~/production.gitlab-ci.static-site-generator.simonknittel.de ~/old_production.gitlab-ci.static-site-generator.simonknittel.de"
+    - ssh -p22 knittel@tempel.uberspace.de "mv ~/new_production.gitlab-ci.static-site-generator.simonknittel.de ~/production.gitlab-ci.static-site-generator.simonknittel.de"
+    - ssh -p22 knittel@tempel.uberspace.de "rm -rf ~/old_production.gitlab-ci.static-site-generator.simonknittel.de"
+  environment:
+    name: production
+    url: https://production.gitlab-ci.static-site-generator.simonknittel.de
+  only:
+    - master

@@ -12,24 +12,32 @@ Here are some examples on how to add a continuous integration and deployment ser
 
 
 ## GitLab CI
-_wip_
+1. _wip_
+2. (Optional) Add a status badge to your README.md
+```
+[![pipeline status](https://gitlab.com/simonknittel/static-site-generator-mirror/badges/master/pipeline.svg)](https://gitlab.com/simonknittel/static-site-generator-mirror/commits/master)
+```
+
+### Mirror
+I use [this](https://gitlab.com/simonknittel/static-site-generator-mirror) mirror of the repository over on GitLab to test the GitLab CI configuration.
 
 
 ## Codeship
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 8
-npm install -g -p yarn@1
+nvm install 9
 
-yarn
+npm install
 ```
 
 2. Add the following to `Configure Test Pipelines`:
 
+_The configuration for Sentry/Raven.js makes only sense when you are using the branching and release worklfow defined [here](./branching-and-release-workflow.md)_
+
 ```shell
-RAVEN_ENVIRONMENT="$CI_BRANCH" # git rev-parse --abbrev-ref HEAD
-RAVEN_COMMIT="$(git describe --tags)"
+RAVEN_ENVIRONMENT="$CI_BRANCH" # Name of current branch
+RAVEN_COMMIT="$(git describe --tags)" # Something like v1.0.0 or v1.0.0-1
 RAVEN_RELEASE="$RAVEN_COMMIT" # Will be the tag itself when merge to master/production branch
 
 sed -i "s/environment: 'development'/environment: '$RAVEN_ENVIRONMENT'/g" ./src/_partials/base.pug
@@ -43,14 +51,14 @@ npm test
 3. Add `Deployment Pipelines` for your branches:
 
 ```shell
-ssh username@host "mkdir -p new_integration"
-rsync -r dist/ username@host:new_integration
-ssh username@host "cd html/white-label-shop && { mv integration old_integration; mv new_integration integration; rm -rf old_integration; }"
+ssh username@host "mkdir -p ~/new_production.codeship.static-site-generator.simonknittel.de"
+rsync -r dist/ username@host:~/new_production.codeship.static-site-generator.simonknittel.de
+ssh username@host "mv ~/production.codeship.static-site-generator.simonknittel.de ~/old_production.codeship.static-site-generator.simonknittel.de"
+ssh username@host "mv ~/new_production.codeship.static-site-generator.simonknittel.de ~/production.codeship.static-site-generator.simonknittel.de"
+ssh username@host "rm -rf ~/old_production.codeship.static-site-generator.simonknittel.de"
 ```
 
-4. (Optional) Add a status badge to your README.md (https://codeship.com/documentation/faq/codeship-badge/)
-
-_wip_
+4. (Optional) Add a status badge to your README.md (see https://codeship.com/documentation/faq/codeship-badge/)
 
 
 ## Bitbucket Pipelines
@@ -60,14 +68,14 @@ _wip_
 ## Travis CI
 1. Enable your repository in Travis CI
 2. Activate the setting: `Build only if .travis.yml is present`
-3. (Optional) Add a status badge to your README.md (https://docs.travis-ci.com/user/status-images/)
+3. (Optional) Add a status badge to your README.md (see https://docs.travis-ci.com/user/status-images/)
 
 _wip_
 
 
 ## CircleCI
 1. Add your project under https://circleci.com/add-projects
-2. (Optional) Add a status badge to your README.md (https://circleci.com/docs/status-badges/)
+2. (Optional) Add a status badge to your README.md (see https://circleci.com/docs/status-badges/)
 
 _wip_
 
