@@ -14,16 +14,15 @@
 1. Make sure to have the [Node Version Manager](https://github.com/creationix/nvm) installed
 2. Make sure to have your `NODE_ENV` variable set to `development`
 3. Run `nvm install && nvm use` to install and use the Node version defined in [.nvmrc](../.nvmrc)
-4. Run `npm install -g yarn@1`
 5. Add a pre-commit hook with `npm test`
-6. (Optional) Run `yarn global add -p gulp-cli backstopjs`
+6. (Optional) Run `npm install -g -p gulp-cli backstopjs`
 
 
 ## Install dependencies and set the production URL
 1. Set the production URL in the [config.js](../_gulpfile/config.js#L15) for automated sitemap generation
 2. Set the production URL in the [robots.txt](../src/robots.txt#L1)
 3. Set the production URL in the [.htaccess](../src/.htaccess#L42) for an 404 error redirect
-4. Run `yarn` to install the dependencies.
+4. Run `npm install` to install the dependencies.
 5. Run `npm start` to build the site.
   * This command will automatically open a new browser tab which will reload every time you change a source file.
 

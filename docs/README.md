@@ -1,10 +1,10 @@
 **It's recommend to read the whole documentation!**
 
 1. [Introduction](#-static-site-generator)
-    1. [Features](#-features)
-    2. [Planned features and issues](#-planned-features-and-issues)
-    3. [Full documentation](#-full-documentation)
-    4. [License](#-license)
+  1. [Features](#-features)
+  2. [Planned features and issues](#-planned-features-and-issues)
+  3. [Full documentation](#-full-documentation)
+  4. [License](#-license)
 
 
 # ⚙️ Static Site Generator
@@ -51,7 +51,6 @@ If you are interesed how some things works or what is possible read the [full do
 
 
 ## ©️ License
-
 Copyright 2017 Simon Knittel (<https://simonknittel.de>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

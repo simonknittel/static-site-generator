@@ -10,12 +10,11 @@
 1. Make sure to have the [Node Version Manager](https://github.com/creationix/nvm) installed.
 2. Make sure to have the environmental variable `NODE_ENV` set to `development`.
 3. Run `nvm install && nvm use` to install and use the Node.js version defined in [.nvmrc](../.nvmrc).
-4. Run `npm install -g -p yarn@1`.
 5. Add a pre-commit hook filled with `npm test`.
-6. (Optional) Run `yarn global add -p gulp-cli backstopjs`.
+6. (Optional) Run `npm install -g -p gulp-cli backstopjs`.
 
 
 ## Install dependencies
-1. Run `yarn` to install the dependencies.
+1. Run `npm install` to install the dependencies.
 2. Run `npm start` to build the site.
   * This command will automatically open a new browser tab which will reload every time you change a source file.

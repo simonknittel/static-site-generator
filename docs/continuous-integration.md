@@ -27,7 +27,6 @@ I use [this](https://gitlab.com/simonknittel/static-site-generator-mirror) mirro
 
 ```shell
 nvm install 9
-
 npm install
 ```
 
@@ -58,7 +57,7 @@ ssh username@host "mv ~/new_production.codeship.static-site-generator.simonknitt
 ssh username@host "rm -rf ~/old_production.codeship.static-site-generator.simonknittel.de || true"
 ```
 
-4. (Optional) Add a status badge to your README.md (see https://codeship.com/documentation/faq/codeship-badge/)
+4. (Optional) Add a status badge to your README.md (see <https://codeship.com/documentation/faq/codeship-badge/>)
 
 
 ## Bitbucket Pipelines
@@ -68,14 +67,14 @@ _wip_
 ## Travis CI
 1. Enable your repository in Travis CI
 2. Activate the setting: `Build only if .travis.yml is present`
-3. (Optional) Add a status badge to your README.md (see https://docs.travis-ci.com/user/status-images/)
+3. (Optional) Add a status badge to your README.md (see <https://docs.travis-ci.com/user/status-images/>)
 
 _wip_
 
 
 ## CircleCI
-1. Add your project under https://circleci.com/add-projects
-2. (Optional) Add a status badge to your README.md (see https://circleci.com/docs/status-badges/)
+1. Add your project under <https://circleci.com/add-projects>
+2. (Optional) Add a status badge to your README.md (see <https://circleci.com/docs/status-badges/>)
 
 _wip_
 
