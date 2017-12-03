@@ -1,21 +1,22 @@
 // Dependencies
 import config from './config'
 
+import data from 'gulp-data'
+import fs from 'fs'
 import gulp from 'gulp'
+import gulpSitemap from 'gulp-sitemap'
+import notifier from 'node-notifier'
+import plumber from 'gulp-plumber'
 import pug from 'gulp-pug'
 import rename from 'gulp-rename'
-import gulpSitemap from 'gulp-sitemap'
-import data from 'gulp-data'
-import plumber from 'gulp-plumber'
-import notifier from 'node-notifier'
-import CSON from 'cson'
+import yaml from 'js-yaml'
 
 
 function returnDataObject(file) {
   const slash = process.platform === 'win32' ? '\\' : '/'
-  const source = config.paths.src.data + '/' + file.path.replace(process.cwd() + slash + config.paths.src.base.replace('/', slash) + slash, '').replace('.pug', '.cson')
+  const source = config.paths.src.data + '/' + file.path.replace(process.cwd() + slash + config.paths.src.base.replace('/', slash) + slash, '').replace('.pug', '.yml')
 
-  return CSON.parseCSONFile(source)
+  return yaml.safeLoad(fs.readFileSync(source, 'utf8'))
 }
 
 
