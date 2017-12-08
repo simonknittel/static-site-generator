@@ -55,6 +55,7 @@ rsync -r dist/ username@host:~/new_codeship.static-site-generator.simonknittel.d
 ssh username@host "mv ~/codeship.static-site-generator.simonknittel.de ~/old_codeship.static-site-generator.simonknittel.de || true"
 ssh username@host "mv ~/new_codeship.static-site-generator.simonknittel.de ~/codeship.static-site-generator.simonknittel.de"
 ssh username@host "rm -rf ~/old_codeship.static-site-generator.simonknittel.de || true"
+ssh username@host "cd ~/codeship.static-site-generator.simonknittel.de/ && find -type d -exec chmod 755 {} \; && find -type f -exec chmod 644 {} \;"
 ```
 
 4. (Optional) Add a status badge to your README.md (see <https://codeship.com/documentation/faq/codeship-badge/>)

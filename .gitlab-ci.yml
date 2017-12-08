@@ -45,6 +45,7 @@ deploy_production:
     - ssh -p22 knittel@tempel.uberspace.de "mv /var/www/virtual/knittel/gitlab-ci.static-site-generator.simonknittel.de /var/www/virtual/knittel/old_gitlab-ci.static-site-generator.simonknittel.de || true"
     - ssh -p22 knittel@tempel.uberspace.de "mv /var/www/virtual/knittel/new_gitlab-ci.static-site-generator.simonknittel.de /var/www/virtual/knittel/gitlab-ci.static-site-generator.simonknittel.de"
     - ssh -p22 knittel@tempel.uberspace.de "rm -rf /var/www/virtual/knittel/old_gitlab-ci.static-site-generator.simonknittel.de || true"
+    - ssh -p22 knittel@tempel.uberspace.de "cd /var/www/virtual/knittel/gitlab-ci.static-site-generator.simonknittel.de && find -type d -exec chmod 755 {} \; && find -type f -exec chmod 644 {} \;"
   environment:
     name: production
     url: https://gitlab-ci.static-site-generator.simonknittel.de
