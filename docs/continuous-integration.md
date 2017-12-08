@@ -50,11 +50,11 @@ npm test
 3. Add `Deployment Pipelines` for your branches:
 
 ```shell
-ssh username@host "mkdir -p ~/new_production.codeship.static-site-generator.simonknittel.de"
-rsync -r dist/ username@host:~/new_production.codeship.static-site-generator.simonknittel.de
-ssh username@host "mv ~/production.codeship.static-site-generator.simonknittel.de ~/old_production.codeship.static-site-generator.simonknittel.de || true"
-ssh username@host "mv ~/new_production.codeship.static-site-generator.simonknittel.de ~/production.codeship.static-site-generator.simonknittel.de"
-ssh username@host "rm -rf ~/old_production.codeship.static-site-generator.simonknittel.de || true"
+ssh username@host "mkdir -p ~/new_codeship.static-site-generator.simonknittel.de"
+rsync -r dist/ username@host:~/new_codeship.static-site-generator.simonknittel.de
+ssh username@host "mv ~/codeship.static-site-generator.simonknittel.de ~/old_codeship.static-site-generator.simonknittel.de || true"
+ssh username@host "mv ~/new_codeship.static-site-generator.simonknittel.de ~/codeship.static-site-generator.simonknittel.de"
+ssh username@host "rm -rf ~/old_codeship.static-site-generator.simonknittel.de || true"
 ```
 
 4. (Optional) Add a status badge to your README.md (see <https://codeship.com/documentation/faq/codeship-badge/>)

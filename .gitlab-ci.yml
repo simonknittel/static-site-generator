@@ -40,13 +40,13 @@ deploy_production:
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
   script:
-    - ssh -p22 knittel@tempel.uberspace.de "mkdir -p /var/www/virtual/knittel/new_production.gitlab-ci.static-site-generator.simonknittel.de"
-    - rsync -rav -e ssh code/build/* knittel@tempel.uberspace.de:/var/www/virtual/knittel/new_production.gitlab-ci.static-site-generator.simonknittel.de
-    - ssh -p22 knittel@tempel.uberspace.de "mv /var/www/virtual/knittel/production.gitlab-ci.static-site-generator.simonknittel.de /var/www/virtual/knittel/old_production.gitlab-ci.static-site-generator.simonknittel.de || true"
-    - ssh -p22 knittel@tempel.uberspace.de "mv /var/www/virtual/knittel/new_production.gitlab-ci.static-site-generator.simonknittel.de /var/www/virtual/knittel/production.gitlab-ci.static-site-generator.simonknittel.de"
-    - ssh -p22 knittel@tempel.uberspace.de "rm -rf /var/www/virtual/knittel/old_production.gitlab-ci.static-site-generator.simonknittel.de || true"
+    - ssh -p22 knittel@tempel.uberspace.de "mkdir -p /var/www/virtual/knittel/new_gitlab-ci.static-site-generator.simonknittel.de"
+    - rsync -rav -e ssh code/build/* knittel@tempel.uberspace.de:/var/www/virtual/knittel/new_gitlab-ci.static-site-generator.simonknittel.de
+    - ssh -p22 knittel@tempel.uberspace.de "mv /var/www/virtual/knittel/gitlab-ci.static-site-generator.simonknittel.de /var/www/virtual/knittel/old_gitlab-ci.static-site-generator.simonknittel.de || true"
+    - ssh -p22 knittel@tempel.uberspace.de "mv /var/www/virtual/knittel/new_gitlab-ci.static-site-generator.simonknittel.de /var/www/virtual/knittel/gitlab-ci.static-site-generator.simonknittel.de"
+    - ssh -p22 knittel@tempel.uberspace.de "rm -rf /var/www/virtual/knittel/old_gitlab-ci.static-site-generator.simonknittel.de || true"
   environment:
     name: production
-    url: https://production.gitlab-ci.static-site-generator.simonknittel.de
+    url: https://gitlab-ci.static-site-generator.simonknittel.de
   only:
     - master
