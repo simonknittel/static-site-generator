@@ -1,6 +1,6 @@
 {
   "name": "static-site-generator",
-  "description": "Static site generator to create blazingliy fast production-ready sites.",
+  "description": "Static site generator / project skeleton for creating production-ready sites.",
   "keywords": [
     "static-site-generator",
     "pug",
@@ -11,7 +11,9 @@
     "babel",
     "sass",
     "generator",
-    "template"
+    "template",
+    "project-scaffolding",
+    "project-skeleton"
   ],
   "author": "Simon Knittel <hallo@simonknittel.de> (https://simonknittel.de)",
   "license": "MIT",
@@ -43,7 +45,7 @@
     "npm": ">=5.5.1"
   },
   "devDependencies": {
-    "@types/jest": "20.0.8",
+    "@types/jest": "21.1.8",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
@@ -53,14 +55,13 @@
     "connect-modrewrite": "0.10.2",
     "critical": "1.1.0",
     "del": "3.0.0",
-    "eslint": "4.12.1",
+    "eslint": "4.13.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "4.0.0",
     "gulp-cached": "1.1.1",
     "gulp-data": "1.2.1",
     "gulp-htmlmin": "3.0.0",
     "gulp-imagemin": "4.0.0",
-    "gulp-kraken": "0.2.0",
     "gulp-more-css": "1.0.0",
     "gulp-notify": "3.0.0",
     "gulp-plumber": "1.1.0",
@@ -87,7 +88,7 @@
     "typescript": "2.6.2",
     "typescript-eslint-parser": "9.0.1",
     "valimate": "2.3.0",
-    "webpack": "3.9.1"
+    "webpack": "3.10.0"
   },
   "dependencies": {
     "js-yaml": "^3.10.0",

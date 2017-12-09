@@ -32,8 +32,8 @@ See [About CODEOWNERS](https://help.github.com/articles/about-codeowners) for mo
 
 
 ## Enable Sentry/Raven.js
-1. Create a new project on Sentry and add your public DSN to [base.pug](../src/_partials/base.pug#L65)
-2. Uncomment Raven.js in [base.pug](../src/_partials/base.pug#L63)
+1. Create a new project on Sentry and add your public DSN to [base.pug](../src/_templates/base.pug#L65)
+2. Uncomment Raven.js in [base.pug](../src/_templates/base.pug#L63)
 
 
 ## Continuous integration and deployment

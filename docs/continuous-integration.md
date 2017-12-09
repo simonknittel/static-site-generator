@@ -39,10 +39,10 @@ RAVEN_ENVIRONMENT="$CI_BRANCH" # Name of current branch
 RAVEN_COMMIT="$(git describe --tags)" # Something like v1.0.0 or v1.0.0-1
 RAVEN_RELEASE="$RAVEN_COMMIT" # Will be the tag itself when merge to master/production branch
 
-sed -i "s/environment: 'development'/environment: '$RAVEN_ENVIRONMENT'/g" ./src/_partials/base.pug
-sed -i "s/\/\/ tags: { git_commit: '' },/tags: { git_commit: '$RAVEN_COMMIT' },/g" ./src/_partials/base.pug
+sed -i "s/environment: 'development'/environment: '$RAVEN_ENVIRONMENT'/g" ./src/_templates/base.pug
+sed -i "s/\/\/ tags: { git_commit: '' },/tags: { git_commit: '$RAVEN_COMMIT' },/g" ./src/_templates/base.pug
 
-if [ "$RAVEN_ENVIRONMENT" = "master" ]; then sed -i "s/\/\/ release: '',/release: '$RAVEN_RELEASE'/g" ./src/_partials/base.pug; fi
+if [ "$RAVEN_ENVIRONMENT" = "master" ]; then sed -i "s/\/\/ release: '',/release: '$RAVEN_RELEASE'/g" ./src/_templates/base.pug; fi
 
 npm test
 ```

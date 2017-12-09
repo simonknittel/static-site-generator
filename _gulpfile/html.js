@@ -14,7 +14,7 @@ import yaml from 'js-yaml'
 
 function returnDataObject(file) {
   const slash = process.platform === 'win32' ? '\\' : '/'
-  const source = config.paths.src.data + '/' + file.path.replace(process.cwd() + slash + config.paths.src.base.replace('/', slash) + slash, '').replace('.pug', '.yml')
+  const source = config.paths.src.base + '/' + file.path.replace(process.cwd() + slash + config.paths.src.base.replace('/', slash) + slash, '').replace('.pug', '.yml')
 
   return yaml.safeLoad(fs.readFileSync(source, 'utf8'))
 }
@@ -23,7 +23,7 @@ function returnDataObject(file) {
 export function dev() {
   return gulp.src([
     config.paths.src.base + '/**/*.pug',
-    '!' + config.paths.src.base + '/_partials/**/*',
+    '!' + config.paths.src.base + '/_templates/**/*',
   ])
     .pipe(plumber(error => {
       notifier.notify({
@@ -46,7 +46,7 @@ export function prod() {
 
   return gulp.src([
     config.paths.src.base + '/**/*.pug',
-    '!' + config.paths.src.base + '/_partials/**/*',
+    '!' + config.paths.src.base + '/_templates/**/*',
   ])
     .pipe(data(returnDataObject))
     .pipe(pug())

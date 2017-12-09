@@ -1,7 +1,7 @@
 meta:
   title: Static Site Generator
-  keywords:
-  description:
+  description: Static site generator / project skeleton for creating production-ready sites.
+  keywords: static-site-generator, pug, gulp, linting, restful, continuous-integration, babel, sass, generator, template, project-scaffolding, project-skeleton
 doesItWork:
   heading: Static Site Generator
   icon: tick

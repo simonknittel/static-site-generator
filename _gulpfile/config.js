@@ -1,8 +1,4 @@
 let config = {
-  // s3: {
-  //     dev: false,
-  //     prod: false,
-  // },
   paths: {
     src: {
       base: 'src',
@@ -20,7 +16,6 @@ config.paths.src.styles = config.paths.src.base + '/assets/styles'
 config.paths.src.scripts = config.paths.src.base + '/assets/scripts'
 config.paths.src.images = config.paths.src.base + '/assets/images'
 config.paths.src.fonts = config.paths.src.base + '/assets/fonts'
-config.paths.src.data = config.paths.src.base + '/_data'
 
 config.paths.dist.styles = config.paths.dist.base + '/assets/css'
 config.paths.dist.scripts = config.paths.dist.base + '/assets/js'

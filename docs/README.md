@@ -16,7 +16,7 @@
 [![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)](https://david-dm.org/simonknittel/static-site-generator?type=dev)
 [![Gitter](https://img.shields.io/gitter/room/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator)
 
-Static site generator to create blazingliy fast production-ready sites. All necessary files and build tasks are already in place and fitted with good practices. You only need to install the dependencies and your are ready to go, perfect for [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) sites.
+Static site generator / project skeleton for creating production-ready sites. All necessary files and build tasks are already in place and fitted with good practices. You only need to install the dependencies and your are ready to go, perfect for [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) sites.
 
 The goal of this generator is to have a application template with everything already prepared to start fast with a new project without being restricted by any limits like a template system of a specific CMS. You can easily add, remove or replace features like the [Pug template engine](https://pugjs.org) if you don't want to use them.
 

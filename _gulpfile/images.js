@@ -5,7 +5,6 @@ import gulp from 'gulp'
 import svgSprite from 'gulp-svg-sprite'
 import imagemin from 'gulp-imagemin'
 import cached from 'gulp-cached'
-// import kraken from 'gulp-kraken' // Needs API access
 
 
 export function icons() {
@@ -28,11 +27,5 @@ export function normal() {
   ])
     .pipe(cached('images:default')) // Pass through only files changed after the last run
     .pipe(imagemin())
-    // .pipe(kraken({ // PRO account needed
-    //     key: '',
-    //     secret: '',
-    //     lossy: true,
-    //     webp: true,
-    // }))
     .pipe(gulp.dest(config.paths.dist.images))
 }
