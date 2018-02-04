@@ -1,10 +1,11 @@
 import doesItWork from './_modules/does-it-work'
 
 
-const doesItWorkMessage: HTMLElement = <HTMLElement> document.querySelector('.does-it-work__message')
+const doesItWorkMessage: Element = document.querySelector('.does-it-work__message')
 if (doesItWorkMessage) {
   const result = doesItWork()
 
-  doesItWorkMessage.classList.add('does-it-work__message--' + (result ? 'success' : 'failure'))
+  const bemVariant = result ? 'success' : 'failure'
+  doesItWorkMessage.classList.add(`does-it-work__message--${bemVariant}`)
   document.querySelector('.does-it-work__message span').innerHTML = result ? 'It works!' : 'Something failed!'
 }

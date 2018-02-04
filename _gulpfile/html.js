@@ -1,18 +1,8 @@
-// Dependencies
-import config from './config'
-
-import data from 'gulp-data'
-import fs from 'fs'
-import gulp from 'gulp'
-import gulpSitemap from 'gulp-sitemap'
-import notifier from 'node-notifier'
-import plumber from 'gulp-plumber'
-import pug from 'gulp-pug'
-import rename from 'gulp-rename'
-import yaml from 'js-yaml'
-
-
 function returnDataObject(file) {
+  const config = require('./config').default
+  const fs = require('fs')
+  const yaml = require('js-yaml')
+
   const slash = process.platform === 'win32' ? '\\' : '/'
   const source = config.paths.src.base + '/' + file.path.replace(process.cwd() + slash + config.paths.src.base.replace('/', slash) + slash, '').replace('.pug', '.yml')
 
@@ -21,6 +11,14 @@ function returnDataObject(file) {
 
 
 export function dev() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const data = require('gulp-data')
+  const notifier = require('node-notifier')
+  const plumber = require('gulp-plumber')
+  const pug = require('gulp-pug')
+  const rename = require('gulp-rename')
+
   return gulp.src([
     config.paths.src.base + '/**/*.pug',
     '!' + config.paths.src.base + '/_templates/**/*',
@@ -40,8 +38,14 @@ export function dev() {
 }
 
 export function prod() {
-  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const data = require('gulp-data')
   const htmlmin = require('gulp-htmlmin')
+  const notifier = require('node-notifier')
+  const plumber = require('gulp-plumber')
+  const pug = require('gulp-pug')
+  const rename = require('gulp-rename')
   const replace = require('gulp-replace')
 
   return gulp.src([
@@ -67,7 +71,8 @@ export function prod() {
 }
 
 export function lint() {
-  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
+  const config = require('./config').default
+  const gulp = require('gulp')
   const puglint = require('gulp-pug-lint')
 
   return gulp.src(config.paths.src.base + '/**/*.pug')
@@ -75,6 +80,10 @@ export function lint() {
 }
 
 export function sitemap() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const gulpSitemap = require('gulp-sitemap')
+
   return gulp.src([ // You can define files here which should be included or excluded in the sitemap.xml
     config.paths.dist.base + '/**/*.html',
   ])

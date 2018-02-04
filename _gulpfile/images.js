@@ -1,13 +1,8 @@
-// Dependencies
-import config from './config'
-
-import gulp from 'gulp'
-import svgSprite from 'gulp-svg-sprite'
-import imagemin from 'gulp-imagemin'
-import cached from 'gulp-cached'
-
-
 export function icons() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const svgSprite = require('gulp-svg-sprite')
+
   return gulp.src(config.paths.src.images + '/icons/**/*.svg')
     .pipe(svgSprite({ // Bundles all icons into one SVG stack
       mode: {
@@ -21,6 +16,11 @@ export function icons() {
 }
 
 export function normal() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const cached = require('gulp-cached')
+  const imagemin = require('gulp-imagemin')
+
   return gulp.src([
     config.paths.src.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}',
     '!' + config.paths.src.images + '/icons/**/*', // Icons are handled by the task above

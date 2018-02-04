@@ -1,14 +1,3 @@
-// Dependencies
-import config from './config'
-
-import gulp from 'gulp'
-import autoprefixer from 'gulp-autoprefixer'
-import notify from 'gulp-notify'
-import sass from 'gulp-sass'
-import sourcemaps from 'gulp-sourcemaps'
-import browserSync from 'browser-sync'
-
-
 const autoprefixerOptions = {
   browsers: [
     'last 3 Chrome versions',
@@ -22,6 +11,14 @@ const autoprefixerOptions = {
 }
 
 export function dev() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const autoprefixer = require('gulp-autoprefixer')
+  const browserSync = require('browser-sync')
+  const notify = require('gulp-notify')
+  const sass = require('gulp-sass')
+  const sourcemaps = require('gulp-sourcemaps')
+
   return gulp.src(config.paths.src.styles + '/**/*.scss')
     .pipe(sourcemaps.init())
       .pipe(sass({
@@ -41,8 +38,11 @@ export function dev() {
 }
 
 export function prod() {
-  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const autoprefixer = require('gulp-autoprefixer')
   const moreCSS = require('gulp-more-css')
+  const sass = require('gulp-sass')
 
   return gulp.src(config.paths.src.styles + '/**/*.scss')
     .pipe(sass({
@@ -56,7 +56,8 @@ export function prod() {
 }
 
 export function lint() {
-  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
+  const config = require('./config').default
+  const gulp = require('gulp')
   const scssLint = require('gulp-scss-lint')
 
   return gulp.src(config.paths.src.styles + '/**/*.scss')
@@ -64,7 +65,7 @@ export function lint() {
 }
 
 export function criticalCSS(callback) {
-  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
+  const config = require('./config').default
   const critical = require('critical')
 
   critical.generate({

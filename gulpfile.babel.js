@@ -1,12 +1,9 @@
-// Dependencies
-import config from './_gulpfile/config'
-
 import gulp from 'gulp'
 
 
 // Clean
 gulp.task('clean', callback => {
-  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
+  const config = require('./_gulpfile/config').default
   require('del')(config.paths.dist.base).then(() => callback())
 })
 
@@ -63,6 +60,7 @@ gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:pr
 
 // Watch
 gulp.task('watch', gulp.series('default', () => {
+  const config = require('./_gulpfile/config').default
   const browserSync = require('browser-sync')
   const modRewrite = require('connect-modrewrite')
   const compression = require('compression')
@@ -72,7 +70,7 @@ gulp.task('watch', gulp.series('default', () => {
     done()
   }))
 
-  gulp.watch(config.paths.src.scripts + '/**/*.js', gulp.series('scripts:dev', done => {
+  gulp.watch(config.paths.src.scripts + '/**/*.ts', gulp.series('scripts:dev', done => {
     browserSync.reload()
     done()
   }))

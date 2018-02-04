@@ -1,14 +1,6 @@
-// Dependencies
-import config from './config'
-
-import gulp from 'gulp'
-import notifier from 'node-notifier'
-import webpack from 'webpack'
-
-import devConfig from '../webpack.config'
-
-
 function webpackBase(config, done) {
+  const notifier = require('node-notifier')
+  const webpack = require('webpack')
   const compiler = webpack(config)
 
   compiler.run((err, stats) => {
@@ -38,6 +30,7 @@ function webpackBase(config, done) {
 }
 
 export function dev(done) {
+  const devConfig = require('../webpack.config')
   webpackBase(devConfig, done)
 }
 

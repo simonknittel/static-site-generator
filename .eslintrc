@@ -197,6 +197,14 @@
     "space-unary-ops": 2,
     "spaced-comment": [2, "always"],
     "unicode-bom": [2, "never"],
-    "wrap-regex": 0
+    "wrap-regex": 0,
+    "require-await": 2,
+    "require-yield": 2,
+    "prefer-template": 2,
+    "prefer-const": 2,
+    "prefer-arrow-callback": 2,
+    "no-var": 2,
+    "no-useless-constructor": 2,
+    "no-const-assign": 2
   }
 }

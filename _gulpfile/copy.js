@@ -1,11 +1,8 @@
-// Dependencies
-import config from './config'
-
-import gulp from 'gulp'
-import cached from 'gulp-cached'
-
-
 export function base() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const cached = require('gulp-cached')
+
   return gulp.src([
     config.paths.src.base + '/robots.txt',
     config.paths.src.base + '/.htaccess',
@@ -17,6 +14,10 @@ export function base() {
 
 
 export function libraries() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const cached = require('gulp-cached')
+
   return gulp.src(config.paths.src.base + '/assets/libraries/**/*')
     .pipe(cached('copy:libraries')) // Pass through only files changed after the last run
     .pipe(gulp.dest(config.paths.dist.base + '/assets/libs'))
@@ -24,6 +25,10 @@ export function libraries() {
 
 
 export function fonts() {
+  const config = require('./config').default
+  const gulp = require('gulp')
+  const cached = require('gulp-cached')
+
   return gulp.src(config.paths.src.fonts + '/**/*')
     .pipe(cached('copy:fonts')) // Pass through only files changed after the last run
     .pipe(gulp.dest(config.paths.dist.fonts))

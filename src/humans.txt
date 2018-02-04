@@ -1,4 +1,4 @@
 # http://humanstxt.org
 
-# Static Site Generator
-  Simon Knittel (https://simonknittel.de)
+## Static Site Generator
+- Simon Knittel (https://simonknittel.de)
