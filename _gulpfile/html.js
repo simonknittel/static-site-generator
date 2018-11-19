@@ -73,7 +73,7 @@ export function prod() {
 export function lint() {
   const config = require('./config').default
   const gulp = require('gulp')
-  const puglint = require('gulp-pug-lint')
+  const puglint = require('gulp-pug-linter')
 
   return gulp.src(config.paths.src.base + '/**/*.pug')
     .pipe(puglint())
