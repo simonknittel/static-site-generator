@@ -3,6 +3,7 @@ const webpack = require('webpack')
 
 
 module.exports = {
+  mode: 'development',
   entry: {
     global: './src/assets/scripts/global.bundle.ts',
     front: './src/assets/scripts/front.bundle.ts',

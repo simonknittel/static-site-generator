@@ -2,6 +2,7 @@ const path = require('path')
 
 
 module.exports = {
+  mode: 'production',
   entry: {
     global: './src/assets/scripts/global.bundle.ts',
     front: './src/assets/scripts/front.bundle.ts',

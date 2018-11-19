@@ -35,7 +35,6 @@ The goal of this generator is to have a application template with everything alr
   + Injection of data with CSON into the Pug templates
   + SASS linting, pre-compilation and minimization
   + Image optimizing
-    - (Optional) [Kraken.io](https://kraken.io) minimization (requires [PRO account](https://kraken.io/pro))
   + Bundling of SVG icons into a SVG stack
 * Targeted Node.js&reg; compability
   + Latest release from the [_Current_ branch](https://github.com/nodejs/Release#release-schedule1)
@@ -46,12 +45,12 @@ The goal of this generator is to have a application template with everything alr
 Checkout the [issues page](https://github.com/simonknittel/static-site-generator/issues)
 
 
-## 📚 Full documentation
+## 📚 Getting started and full documentation
 If you are interesed how some things works or what is possible read the [full documentation](./docs/INDEX.md)
 
 
 ## ©️ License
-Copyright 2017 Simon Knittel (<https://simonknittel.de>)
+Copyright 2018 Simon Knittel (<https://simonknittel.de>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

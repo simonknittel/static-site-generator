@@ -10,8 +10,8 @@
 1. Make sure to have the [Node Version Manager](https://github.com/creationix/nvm) installed.
 2. Make sure to have the environmental variable `NODE_ENV` set to `development`.
 3. Run `nvm install && nvm use` to install and use the Node.js version defined in [.nvmrc](../.nvmrc).
-5. Add a pre-commit hook filled with `npm test`.
-6. (Optional) Run `npm install -g -p gulp-cli backstopjs`.
+5. (Optional) Add a pre-commit hook which runs `npm test`.
+6. (Optional) Run `npm install -g -p gulp-cli`.
 
 
 ## Install dependencies

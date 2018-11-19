@@ -26,7 +26,7 @@ I use [this](https://gitlab.com/simonknittel/static-site-generator-mirror) mirro
 1. Add the following to the `Setup Commands`:
 
 ```shell
-nvm install 9
+nvm install 11
 npm install
 ```
 
