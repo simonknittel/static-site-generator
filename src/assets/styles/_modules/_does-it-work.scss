@@ -1,99 +1,99 @@
 .does-it-work {
-    position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translate3d(-50%, 0, 0);
-    -webkit-filter: blur(0); // Removes blurry text on Google Chrome
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate3d(-50%, 0, 0);
+  // -webkit-filter: blur(0); // Removes blurry text on Google Chrome
 
-    width: 100%;
-    max-width: 26rem;
+  width: 100%;
+  max-width: 26rem;
 
-    padding-left: .5rem;
-    padding-right: .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 
 .does-it-work__heading,
 .does-it-work__message,
 .does-it-work__feedback {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 
-    padding-left: 2rem;
-    padding-right: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 
 .does-it-work__heading {
-    @include font(one);
+  @include font(one);
 
-    text-align: center;
-    font-size: 1.25rem;
+  text-align: center;
+  font-size: 1.25rem;
 
-    @media (min-width: 26rem) {
-        text-align: left;
-    }
+  @media (min-width: 26rem) {
+    text-align: left;
+  }
 }
 
 
 .does-it-work__message {
-    @include font(one);
+  @include font(one);
 
-    display: none;
+  display: none;
 
-    position: relative;
+  position: relative;
 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-    color: #fff;
+  font-size: 1.25rem;
 
-    font-size: 1.25rem;
+  color: #fff;
 
-    .icon {
-        position: absolute;
-        right: 2rem;
-        top: 50%;
-        transform: translate3d(0, -50%, 0);
+  .icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
 
-        width: 1.5rem;
+    width: 1.5rem;
 
-        fill: #fff;
-    }
+    fill: #fff;
+  }
 }
 
 
 .does-it-work__message--success {
-    display: block;
+  display: block;
 
-    background-color: #197400;
+  background-color: #197400;
 }
 
 
 .does-it-work__message--failure {
-    display: block;
+  display: block;
 
-    background-color: #f00;
+  background-color: #f00;
 }
 
 
 .does-it-work__feedback {
-    color: #777;
+  text-align: center;
+  font-size: .8rem;
 
-    text-align: center;
-    font-size: .8rem;
+  color: #777;
 
-    @media (min-width: 26rem) {
-        text-align: left;
+  @media (min-width: 26rem) {
+    text-align: left;
+  }
+
+  a {
+    color: #444;
+    text-decoration: none;
+
+    &.hover,
+    &:hover {
+      text-decoration: underline;
     }
-
-    a {
-        color: #444;
-        text-decoration: none;
-
-        &.hover,
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+  }
 }

@@ -58,10 +58,10 @@ export function prod() {
 export function lint() {
   const config = require('./config').default
   const gulp = require('gulp')
-  const scssLint = require('gulp-scss-lint')
+  const stylelint = require('gulp-stylelint')
 
   return gulp.src(config.paths.src.styles + '/**/*.scss')
-    .pipe(scssLint())
+    .pipe(stylelint())
 }
 
 export function criticalCSS(callback) {

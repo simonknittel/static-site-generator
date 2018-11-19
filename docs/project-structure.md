@@ -33,7 +33,7 @@ The styles are written in [SCSS](http://sass-lang.com) which is getting compiled
 You will find the source files under [src/assets/styles](./src/assets/styles). The directory is seperated in three main directories. In [_atoms](./src/assets/styles/_atoms) you will place all basic styling of the HTML tags like `<table>` or `<ul>`. In [_base](./src/assets/styles/_base) you will place all variables, mixins, global classes and so on. In [_modules](./src/assets/styles/_modules) you will place your modules of your site like the header or a footer. The files are getting compiled to `dist/assets/css`. Files and directories beginning with an underscore are only getting included in other files.
 
 ### Coding standards/style and linting
-I included [SCSS-Lint](https://github.com/brigade/scss-lint) as linter for the styles source files. You will find the rules in [.scss-lint.yml](./.scss-lint.yml). You should configure your editor/IDE to lint your code on the fly.
+I included [stylelint](https://stylelint.io/) as linter for the styles source files. You will find the rules in [.stylelintrc](./.stylelintrc). You should configure your editor/IDE to lint your code on the fly.
 
 
 ## JavaScript
