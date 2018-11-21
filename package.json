@@ -25,14 +25,13 @@
     "url": "https://github.com/simonknittel/static-site-generator/issues"
   },
   "scripts": {
-    "_test": "npm run test:js && npm run production && npm run test:html",
-    "test": "npm run test:js & npm run production",
+    "test": "npm run test:js && npm run production && npm run test:html",
     "test:js:tslint": "tslint -p tsconfig.json -c tslint.json",
     "test:js:eslint": "eslint \"src/**/*.ts\"",
     "test:js:lint": "npm run test:js:tslint & npm run test:js:eslint",
     "test:js:jest": "jest",
     "test:js": "npm run test:js:lint & npm run test:js:jest",
-    "test:html": "babel-node valimate",
+    "test:html": "html-validator --file=dist/index.html --verbose",
     "postinstall": "npm rebuild node-sass",
     "start": "gulp watch",
     "default": "gulp",
@@ -95,7 +94,6 @@
     "tslint": "^5.11.0",
     "typescript": "^2.9.2",
     "typescript-eslint-parser": "^21.0.1",
-    "valimate": "^2.3.0",
     "webpack": "^4.26.0"
   },
   "jest": {
