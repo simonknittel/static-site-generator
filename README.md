@@ -3,7 +3,7 @@
 1. [Introduction](#-static-site-generator)
   1. [Features](#-features)
   2. [Planned features and issues](#-planned-features-and-issues)
-  3. [Full documentation](#-full-documentation)
+  3. [Full documentation](#-getting-started-and-full-documentation)
   4. [License](#-license)
 
 

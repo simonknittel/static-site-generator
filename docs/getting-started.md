@@ -27,7 +27,7 @@
   * This command will automatically open a new browser tab which will reload every time you change a source file.
 
 
-# Update your [CODEOWNERS](../.github/CODEOWNERS) file
+## Update your [CODEOWNERS](../.github/CODEOWNERS) file
 See [About CODEOWNERS](https://help.github.com/articles/about-codeowners) for more information.
 
 
