@@ -3,10 +3,10 @@
 
 ## Introduction
 1. [Introduction](./README.md)
-  1. [Features](./README.md#-features)
-  2. [Planned features and issues](./README.md#-planned-features-and-issues)
-  3. [Full documentation](./README.md#-getting-started-and-full-documentation)
-  4. [License](./README.md#-license)
+    1. [Features](./README.md#-features)
+    2. [Planned features and issues](./README.md#-planned-features-and-issues)
+    3. [Full documentation](./README.md#-getting-started-and-full-documentation)
+    4. [License](./README.md#-license)
 2. [Getting started](./getting-started.md)
     1. [External dependencies](./getting-started.md#external-dependencies)
     2. [Install dependencies and set the production URL](./getting-started.md#install-dependencies-and-set-the-production-url)

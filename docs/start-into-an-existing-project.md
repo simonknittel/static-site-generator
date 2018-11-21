@@ -1,6 +1,6 @@
 1. [Start into an existing project](#start-into-an-existing-project)
-  1. [External dependencies](#externel-dependencies)
-  2. [Install dependencies](#install-dependencies)
+    1. [External dependencies](#externel-dependencies)
+    2. [Install dependencies](#install-dependencies)
 
 
 # Start into an existing project

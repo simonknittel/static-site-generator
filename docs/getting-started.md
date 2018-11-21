@@ -1,10 +1,10 @@
 1. [Set up a new project](#set-up-a-new-project)
-  1. [External dependencies](#external-dependencies)
-  2. [Install dependencies and set the production URL](#install-dependencies-and-set-the-production-url)
-  3. [Update your CODEOWNERS file](#update-your-codeowners-file)
-  4. [Enable Sentry/Raven.js](#enable-sentryravenjs)
-  5. [Continuous integration and deployment](#continuous-integration-and-deployment)
-  <!-- 6. [Enable greenkeeper](#enable-greenkeeper) -->
+    1. [External dependencies](#external-dependencies)
+    2. [Install dependencies and set the production URL](#install-dependencies-and-set-the-production-url)
+    3. [Update your CODEOWNERS file](#update-your-codeowners-file)
+    4. [Enable Sentry/Raven.js](#enable-sentryravenjs)
+    5. [Continuous integration and deployment](#continuous-integration-and-deployment)
+    <!-- 6. [Enable greenkeeper](#enable-greenkeeper) -->
 
 
 # Set up a new project
