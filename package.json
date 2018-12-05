@@ -95,7 +95,7 @@
     "tslint": "5.11.0",
     "typescript": "3.2.1",
     "typescript-eslint-parser": "21.0.2",
-    "webpack": "4.27.0"
+    "webpack": "4.27.1"
   },
   "jest": {
     "transform": {
