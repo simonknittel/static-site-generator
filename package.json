@@ -70,7 +70,7 @@
     "gulp-replace": "1.0.0",
     "gulp-sass": "4.0.2",
     "gulp-sitemap": "6.2.0",
-    "gulp-sourcemaps": "2.6.4",
+    "gulp-sourcemaps": "2.6.5",
     "gulp-stylelint": "8.0.0",
     "gulp-svg-sprite": "1.5.0",
     "html-validator-cli": "5.0.0",
