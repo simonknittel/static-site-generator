@@ -92,7 +92,7 @@
     "stylelint-selector-no-empty": "1.0.7",
     "ts-jest": "24.0.0",
     "ts-loader": "5.3.3",
-    "tslint": "5.13.0",
+    "tslint": "5.13.1",
     "typescript": "3.3.3333",
     "typescript-eslint-parser": "21.0.2",
     "webpack": "4.29.5"
