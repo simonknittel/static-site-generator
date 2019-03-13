@@ -8,6 +8,7 @@
 
 
 # ⚙️ Static Site Generator
+[![Donate on patreon](https://badgen.net/badge/donate%20on/patreon/orange)](https://patreon.com/simonknittel)
 [![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.org/simonknittel/static-site-generator)
 [![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
@@ -47,6 +48,15 @@ Checkout the [issues page](https://github.com/simonknittel/static-site-generator
 
 ## 📚 Getting started and full documentation
 If you are interesed how some things works or what is possible read the [full documentation](./docs/INDEX.md)
+
+
+## 🎁 Support
+
+_"Donations are not required but always appreciated."_
+
+Like this quote implies, I won't stop make things open source, if there are no donations. But they would always be appreciated by me ❤
+
+[![Become a patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://patreon.com/simonknittel)
 
 
 ## ©️ License
