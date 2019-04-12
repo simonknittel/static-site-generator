@@ -79,7 +79,7 @@
     "imagemin-optipng": "6.0.0",
     "imagemin-svgo": "7.0.0",
     "jest": "24.7.1",
-    "js-yaml": "3.13.0",
+    "js-yaml": "3.13.1",
     "jstransformer-marked": "1.0.3",
     "node-notifier": "5.4.0",
     "normalize.css": "8.0.1",
