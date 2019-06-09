@@ -84,7 +84,7 @@
     "node-notifier": "5.4.0",
     "normalize.css": "8.0.1",
     "pug": "2.0.3",
-    "stylelint": "10.0.1",
+    "stylelint": "10.1.0",
     "stylelint-group-selectors": "1.0.7",
     "stylelint-high-performance-animation": "1.2.1",
     "stylelint-order": "3.0.0",
