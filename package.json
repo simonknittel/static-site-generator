@@ -69,7 +69,7 @@
     "gulp-rename": "1.4.0",
     "gulp-replace": "1.0.0",
     "gulp-sass": "4.0.2",
-    "gulp-sitemap": "7.2.0",
+    "gulp-sitemap": "7.3.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-stylelint": "9.0.0",
     "gulp-svg-sprite": "1.5.0",
