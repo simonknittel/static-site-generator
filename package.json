@@ -90,7 +90,7 @@
     "stylelint-order": "3.1.0",
     "stylelint-scss": "3.10.1",
     "stylelint-selector-no-empty": "1.0.7",
-    "ts-jest": "24.0.2",
+    "ts-jest": "24.1.0",
     "ts-loader": "6.1.0",
     "tslint": "5.20.0",
     "typescript": "3.6.3",
