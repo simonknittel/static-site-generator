@@ -87,7 +87,7 @@
     "stylelint": "10.1.0",
     "stylelint-group-selectors": "1.0.7",
     "stylelint-high-performance-animation": "1.2.1",
-    "stylelint-order": "3.1.0",
+    "stylelint-order": "3.1.1",
     "stylelint-scss": "3.11.1",
     "stylelint-selector-no-empty": "1.0.7",
     "ts-jest": "24.1.0",
