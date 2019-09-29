@@ -91,7 +91,7 @@
     "stylelint-scss": "3.11.1",
     "stylelint-selector-no-empty": "1.0.7",
     "ts-jest": "24.1.0",
-    "ts-loader": "6.1.2",
+    "ts-loader": "6.2.0",
     "tslint": "5.20.0",
     "typescript": "3.6.3",
     "typescript-eslint-parser": "21.0.2",
