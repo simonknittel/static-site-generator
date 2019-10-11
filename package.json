@@ -73,7 +73,7 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-stylelint": "9.0.0",
     "gulp-svg-sprite": "1.5.0",
-    "html-validator-cli": "6.0.3",
+    "html-validator-cli": "7.0.0",
     "imagemin-gifsicle": "6.0.1",
     "imagemin-jpegtran": "6.0.0",
     "imagemin-optipng": "7.1.0",
