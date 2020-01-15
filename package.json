@@ -71,7 +71,7 @@
     "gulp-sass": "4.0.2",
     "gulp-sitemap": "7.6.0",
     "gulp-sourcemaps": "2.6.5",
-    "gulp-stylelint": "10.0.0",
+    "gulp-stylelint": "11.0.0",
     "gulp-svg-sprite": "1.5.0",
     "html-validator-cli": "7.0.0",
     "imagemin-gifsicle": "6.0.1",
