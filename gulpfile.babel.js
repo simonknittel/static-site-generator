@@ -79,7 +79,7 @@ gulp.task('watch', gulp.series('default', () => {
 
   gulp.watch([
     config.paths.src.base + '/**/*.pug',
-    config.paths.src.data + '/**/*.cson',
+    config.paths.src.base + '/**/*.yml',
   ], gulp.series('html:dev', 'html:sitemap', done => {
     browserSync.reload()
     done()
