@@ -81,7 +81,7 @@
     "jest": "24.9.0",
     "js-yaml": "3.13.1",
     "jstransformer-marked": "1.0.3",
-    "node-notifier": "6.0.0",
+    "node-notifier": "7.0.0",
     "normalize.css": "8.0.1",
     "pug": "2.0.4",
     "stylelint": "13.3.2",
