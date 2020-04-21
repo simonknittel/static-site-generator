@@ -1,4 +1,4 @@
-export function icons() {
+exports.icons = function icons() {
   const config = require('./config').default
   const gulp = require('gulp')
   const svgSprite = require('gulp-svg-sprite')
@@ -15,7 +15,7 @@ export function icons() {
     .pipe(gulp.dest(config.paths.dist.images))
 }
 
-export function normal() {
+exports.normal = function normal() {
   const config = require('./config').default
   const gulp = require('gulp')
   const cached = require('gulp-cached')

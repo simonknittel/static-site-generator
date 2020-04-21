@@ -1,4 +1,4 @@
-export function base() {
+exports.base = function base() {
   const config = require('./config').default
   const gulp = require('gulp')
   const cached = require('gulp-cached')
@@ -13,7 +13,7 @@ export function base() {
 }
 
 
-export function libraries() {
+exports.libraries = function libraries() {
   const config = require('./config').default
   const gulp = require('gulp')
   const cached = require('gulp-cached')
@@ -24,7 +24,7 @@ export function libraries() {
 }
 
 
-export function fonts() {
+exports.fonts = function fonts() {
   const config = require('./config').default
   const gulp = require('gulp')
   const cached = require('gulp-cached')

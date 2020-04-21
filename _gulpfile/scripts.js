@@ -29,12 +29,12 @@ function webpackBase(config, done) {
   })
 }
 
-export function dev(done) {
+exports.dev = function dev(done) {
   const devConfig = require('../webpack.config')
   webpackBase(devConfig, done)
 }
 
-export function prod(done) {
+exports.prod = function prod(done) {
   // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
   const config = require('../webpack.prod')
 

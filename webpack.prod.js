@@ -4,8 +4,8 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   entry: {
-    global: './src/assets/scripts/global.bundle.ts',
-    front: './src/assets/scripts/front.bundle.ts',
+    global: './src/assets/scripts/global.bundle.js',
+    front: './src/assets/scripts/front.bundle.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -13,17 +13,20 @@ module.exports = {
     publicPath: '/assets/js/',
   },
   resolve: {
-    extensions: [ '.ts', '.tsx', '.js' ],
+    extensions: [ '.js' ],
   },
   module: {
     rules: [
       {
-        test: /\.ts(x?)$/,
-        exclude: /node_modules/,
+        test: /\.js$/,
+        exclude: /node_module/,
         use: {
-          loader: 'ts-loader',
-        },
-      },
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
     ],
   },
   node: false,

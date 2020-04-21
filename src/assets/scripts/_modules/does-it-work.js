@@ -3,6 +3,6 @@
  * @method doesItWork
  * @return {boolean} Returns true
  */
-export default function doesItWork(): boolean {
+export default function doesItWork() {
   return true
 }

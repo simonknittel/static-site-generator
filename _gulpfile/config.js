@@ -1,4 +1,4 @@
-let config = {
+const config = {
   paths: {
     src: {
       base: 'src',
@@ -22,4 +22,4 @@ config.paths.dist.scripts = config.paths.dist.base + '/assets/js'
 config.paths.dist.images = config.paths.dist.base + '/assets/img'
 config.paths.dist.fonts = config.paths.dist.base + '/assets/fonts'
 
-export default config
+exports.default = config

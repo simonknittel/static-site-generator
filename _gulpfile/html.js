@@ -10,7 +10,7 @@ function returnDataObject(file) {
 }
 
 
-export function dev() {
+exports.dev = function dev() {
   const config = require('./config').default
   const gulp = require('gulp')
   const data = require('gulp-data')
@@ -37,13 +37,12 @@ export function dev() {
     .pipe(gulp.dest(config.paths.dist.base))
 }
 
-export function prod() {
+
+exports.prod = function prod() {
   const config = require('./config').default
   const gulp = require('gulp')
   const data = require('gulp-data')
   const htmlmin = require('gulp-htmlmin')
-  const notifier = require('node-notifier')
-  const plumber = require('gulp-plumber')
   const pug = require('gulp-pug')
   const rename = require('gulp-rename')
   const replace = require('gulp-replace')
@@ -70,7 +69,8 @@ export function prod() {
     .pipe(gulp.dest(config.paths.dist.base))
 }
 
-export function lint() {
+
+exports.lint = function lint() {
   const config = require('./config').default
   const gulp = require('gulp')
   const puglint = require('gulp-pug-linter')
@@ -79,7 +79,8 @@ export function lint() {
     .pipe(puglint())
 }
 
-export function sitemap() {
+
+exports.sitemap = function sitemap() {
   const config = require('./config').default
   const gulp = require('gulp')
   const gulpSitemap = require('gulp-sitemap')

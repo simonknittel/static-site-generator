@@ -1,7 +1,7 @@
 import doesItWork from './_modules/does-it-work'
 
 
-const doesItWorkMessage: Element = document.querySelector('.does-it-work__message')
+const doesItWorkMessage = document.querySelector('.does-it-work__message')
 if (doesItWorkMessage) {
   const result = doesItWork()
 

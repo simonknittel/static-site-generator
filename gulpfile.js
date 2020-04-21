@@ -1,4 +1,4 @@
-import gulp from 'gulp'
+const gulp = require('gulp')
 
 
 // Clean
@@ -9,42 +9,42 @@ gulp.task('clean', callback => {
 
 
 // Scripts
-import { prod as scriptsProd, dev as scriptsDev } from './_gulpfile/scripts'
+const {prod: scriptsProd, dev: scriptsDev } = require('./_gulpfile/scripts')
 gulp.task('scripts:prod', scriptsProd)
 gulp.task('scripts:dev', scriptsDev)
 
 
 // Styles
-import { prod as stylesProd, dev as stylesDev, criticalCSS as stylesCritical } from './_gulpfile/styles'
+const {prod: stylesProd, dev: stylesDev, criticalCSS: stylesCritical } = require('./_gulpfile/styles')
 gulp.task('styles:prod', stylesProd)
 gulp.task('styles:dev', stylesDev)
 gulp.task('styles:critical', stylesCritical)
 
 
 // HTML
-import { prod as htmlProd, dev as htmlDev, sitemap as htmlSitemap } from './_gulpfile/html'
+const {prod: htmlProd, dev: htmlDev, sitemap: htmlSitemap } = require('./_gulpfile/html')
 gulp.task('html:prod', htmlProd)
 gulp.task('html:dev', htmlDev)
 gulp.task('html:sitemap', htmlSitemap)
 
 
 // Linting
-import { lint as lintStyles } from './_gulpfile/styles'
-import { lint as lintHTML } from './_gulpfile/html'
+const {lint: lintStyles } = require('./_gulpfile/styles')
+const {lint: lintHTML } = require('./_gulpfile/html')
 gulp.task('lint:styles', lintStyles)
 gulp.task('lint:html', lintHTML)
 gulp.task('lint', gulp.parallel('lint:styles', 'lint:html'))
 
 
 // Images
-import { normal as imagesNormal, icons as imagesIcons } from './_gulpfile/images'
+const {normal: imagesNormal, icons: imagesIcons } = require('./_gulpfile/images')
 gulp.task('images:default', imagesNormal)
 gulp.task('images:icons', imagesIcons)
 gulp.task('images', gulp.parallel('images:default', 'images:icons'))
 
 
 // Copy
-import { base as copyBase, libraries as copyLibraries, fonts as copyFonts} from './_gulpfile/copy'
+const {base: copyBase, libraries: copyLibraries, fonts: copyFonts} = require('./_gulpfile/copy')
 gulp.task('copy:base', copyBase)
 gulp.task('copy:libraries', copyLibraries)
 gulp.task('copy:fonts', copyFonts)

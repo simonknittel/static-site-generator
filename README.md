@@ -19,7 +19,7 @@
 
 Static site generator / project skeleton for creating production-ready sites. All necessary files and build tasks are already in place and fitted with good practices. You only need to install the dependencies and your are ready to go, perfect for [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) sites.
 
-The goal of this generator is to have a application template with everything already prepared to start fast with a new project without being restricted by any limits like a template system of a specific CMS. You can easily add, remove or replace features like the [Pug template engine](https://pugjs.org) if you don't want to use them.
+The goal of this generator is to have a project skeleton with everything already prepared to quickly start with a new project without being restricted by any limits like a template system of a specific CMS. You can easily add, remove or replace features like the [Pug template engine](https://pugjs.org) if you don't want to use them.
 
 **Disclaimer:** This project is not intended as a well maintained and stable open source project. It's for my own learning and experimentation with new technologies. Therefore I can't ensure that it can be used anytime and anywhere without issues. Still I'm looking for your feedback and opinions.
 
@@ -37,7 +37,7 @@ The goal of this generator is to have a application template with everything alr
   + SASS linting, pre-compilation and minimization
   + Image optimizing
   + Bundling of SVG icons into a SVG stack
-* Targeted Node.js&reg; compability
+* Node.js&reg; compability
   + Latest release from the [_Current_ branch](https://github.com/nodejs/Release#release-schedule1)
   + Latest release from the [_LTS_ branch](https://github.com/nodejs/Release#release-schedule1)
 

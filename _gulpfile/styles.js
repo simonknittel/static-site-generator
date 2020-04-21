@@ -1,16 +1,4 @@
-const autoprefixerOptions = {
-  browsers: [
-    'last 3 Chrome versions',
-    'last 3 ChromeAndroid versions',
-    'last 3 Samsung versions',
-    'last 3 Firefox versions',
-    'last 2 Edge versions',
-    'last 2 Safari versions',
-    'last 2 iOS versions',
-  ],
-}
-
-export function dev() {
+exports.dev = function dev() {
   const config = require('./config').default
   const gulp = require('gulp')
   const autoprefixer = require('gulp-autoprefixer')
@@ -31,31 +19,30 @@ export function dev() {
         sound: true,
       }))
       .on('error', err => console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
-      .pipe(autoprefixer(autoprefixerOptions))
+      .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.paths.dist.styles))
     .pipe(browserSync.stream({ match: '**/*.css' }))
 }
 
-export function prod() {
+exports.prod = function prod() {
   const config = require('./config').default
   const gulp = require('gulp')
   const autoprefixer = require('gulp-autoprefixer')
-  const moreCSS = require('gulp-more-css')
+  const cleanCSS = require('gulp-clean-css')
   const sass = require('gulp-sass')
 
   return gulp.src(config.paths.src.styles + '/**/*.scss')
     .pipe(sass({
-      includePaths: [ // Enable import from libraries installed with npm
-        './node_modules',
-      ],
+      // Enable import from libraries installed with npm
+      includePaths: [ './node_modules' ],
     }))
-    .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(moreCSS({radical: false}))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS())
     .pipe(gulp.dest(config.paths.dist.styles))
 }
 
-export function lint() {
+exports.lint = function lint() {
   const config = require('./config').default
   const gulp = require('gulp')
   const stylelint = require('gulp-stylelint')
@@ -64,7 +51,7 @@ export function lint() {
     .pipe(stylelint())
 }
 
-export function criticalCSS(callback) {
+exports.criticalCSS = function criticalCSS(callback) {
   const config = require('./config').default
   const critical = require('critical')
 
