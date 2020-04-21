@@ -85,7 +85,7 @@
     "stylelint-order": "4.0.0",
     "stylelint-scss": "3.17.1",
     "stylelint-selector-no-empty": "1.0.7",
-    "webpack": "4.42.1"
+    "webpack": "4.43.0"
   },
   "dependencies": {},
   "browserslist": [
