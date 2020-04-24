@@ -81,7 +81,7 @@
     "pug": "2.0.4",
     "stylelint": "13.3.3",
     "stylelint-group-selectors": "1.0.7",
-    "stylelint-high-performance-animation": "1.5.0",
+    "stylelint-high-performance-animation": "1.5.1",
     "stylelint-order": "4.0.0",
     "stylelint-scss": "3.17.1",
     "stylelint-selector-no-empty": "1.0.7",
