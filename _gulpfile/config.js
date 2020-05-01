@@ -1,11 +1,7 @@
 const config = {
   paths: {
-    src: {
-      base: 'src',
-    },
-    dist: {
-      base: 'dist',
-    },
+    src: { base: 'src' },
+    dist: { base: 'dist' },
   },
   production: {
     url: 'https://localhost:3000', // For automated sitemap generation
