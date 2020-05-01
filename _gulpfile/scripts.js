@@ -35,8 +35,6 @@ exports.dev = function dev(done) {
 }
 
 exports.prod = function prod(done) {
-  // Modules loaded here, because they are only needed for this task and it will only run once (performance improvement)
   const config = require('../webpack.prod')
-
   webpackBase(config, done)
 }

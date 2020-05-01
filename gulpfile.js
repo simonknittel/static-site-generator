@@ -62,49 +62,56 @@ gulp.task('production', gulp.series('clean', gulp.parallel('images', 'scripts:pr
 gulp.task('watch', gulp.series('default', () => {
   const config = require('./_gulpfile/config').default
   const browserSync = require('browser-sync')
-  const modRewrite = require('connect-modrewrite')
-  const compression = require('compression')
 
-  gulp.watch(config.paths.src.images + '/**/*.{jpg,jpeg,ico,png,gif,svg}', gulp.series('images', done => { // https://github.com/BrowserSync/browser-sync/issues/1065#issuecomment-215516517
+  gulp.watch(`${config.paths.src.images }/**/*.{jpg,jpeg,ico,png,gif,svg}`, gulp.series('images', done => { // https://github.com/BrowserSync/browser-sync/issues/1065#issuecomment-215516517
     browserSync.reload()
     done()
   }))
 
-  gulp.watch(config.paths.src.scripts + '/**/*.ts', gulp.series('scripts:dev', done => {
-    browserSync.reload()
-    done()
-  }))
+  const webpack = require('webpack')
+  const webpackConfig = require('./webpack.config')
+  const compiler = webpack(webpackConfig)
+  compiler.watch({}, (err, stats) => {
+    if (err) {
+      console.error(err)
+      return
+    }
 
-  gulp.watch(config.paths.src.styles + '/**/*.scss', gulp.series('styles:dev'))
+    console.log(stats.toString({ colors: true }))
+    browserSync.reload()
+  })
+
+  gulp.watch(`${config.paths.src.styles }/**/*.scss`, gulp.series('styles:dev'))
 
   gulp.watch([
-    config.paths.src.base + '/**/*.pug',
-    config.paths.src.base + '/**/*.yml',
+    `${config.paths.src.base }/**/*.pug`,
+    `${config.paths.src.base }/**/*.yml`,
   ], gulp.series('html:dev', 'html:sitemap', done => {
     browserSync.reload()
     done()
   }))
 
   gulp.watch([
-    config.paths.src.base + '/robots.txt',
-    config.paths.src.base + '/.htaccess',
-    config.paths.src.base + '/humans.txt',
+    `${config.paths.src.base }/robots.txt`,
+    `${config.paths.src.base }/.htaccess`,
+    `${config.paths.src.base }/humans.txt`,
   ], gulp.series('copy:base', done => {
     browserSync.reload()
     done()
   }))
 
-  gulp.watch(config.paths.src.base + '/assets/libraries/**/*', gulp.series('copy:libraries', done => {
+  gulp.watch(`${config.paths.src.base }/assets/libraries/**/*`, gulp.series('copy:libraries', done => {
     browserSync.reload()
     done()
   }))
 
-  gulp.watch(config.paths.src.fonts + '/**/*', gulp.series('copy:fonts', done => {
+  gulp.watch(`${config.paths.src.fonts }/**/*`, gulp.series('copy:fonts', done => {
     browserSync.reload()
     done()
   }))
 
-  // Mirror this part to valimate.js
+  const modRewrite = require('connect-modrewrite')
+  const compression = require('compression')
   browserSync({
     ghostMode: {
       clicks: false,
