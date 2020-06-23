@@ -73,7 +73,7 @@
     "imagemin-jpegtran": "7.0.0",
     "imagemin-optipng": "8.0.0",
     "imagemin-svgo": "8.0.0",
-    "jest": "26.0.1",
+    "jest": "26.1.0",
     "js-yaml": "3.14.0",
     "jstransformer-marked": "1.0.3",
     "node-notifier": "7.0.1",
