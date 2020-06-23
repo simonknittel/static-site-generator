@@ -70,7 +70,7 @@
     "gulp-svg-sprite": "1.5.0",
     "html-validator-cli": "7.0.0",
     "imagemin-gifsicle": "7.0.0",
-    "imagemin-jpegtran": "6.0.0",
+    "imagemin-jpegtran": "7.0.0",
     "imagemin-optipng": "7.1.0",
     "imagemin-svgo": "7.1.0",
     "jest": "26.0.1",
