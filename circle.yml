@@ -1,9 +1,25 @@
-machine:
-  node:
-    version: 12
-dependencies:
-  override:
-    - npm install
-test:
-  override:
-    - npm test
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12
+      - environment:
+        NODE_ENV: production
+    steps:
+      - checkout
+      - run: npm install --ci
+  test:
+    docker:
+      - image: circleci/node:12
+      - environment:
+        NODE_ENV: production
+    steps:
+      - run:
+        command: npm test
+  
+  workflows:
+    version: 2
+      build-test:
+        jobs:
+          - build
+          - test
