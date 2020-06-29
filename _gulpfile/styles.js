@@ -54,8 +54,8 @@ exports.criticalCSS = function criticalCSS(callback) {
   critical.generate({
     inline: true, // Will be inserted into the <head>
     base: config.paths.dist.base,
-    src: '/index.html',
-    dest: config.paths.dist.base + '/index.html',
+    src: 'index.html',
+    target: { html: 'index.html' },
     minify: true,
     width: 1920, // Viewbox
     height: 1080, // Viewbox
