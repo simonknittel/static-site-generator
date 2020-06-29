@@ -1,7 +1,6 @@
 exports.dev = function dev() {
   const config = require('./config').default
   const gulp = require('gulp')
-  const autoprefixer = require('gulp-autoprefixer')
   const browserSync = require('browser-sync')
   const notify = require('gulp-notify')
   const sass = require('gulp-sass')
@@ -19,7 +18,6 @@ exports.dev = function dev() {
         sound: true,
       }))
       .on('error', err => console.error('ERROR TASK: styles MESSAGE: ' + err.message + ' FILENAME: ' + err.fileName + ' LINENUMBER: ' + err.lineNumber))
-      .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.paths.dist.styles))
     .pipe(browserSync.stream({ match: '**/*.css' }))
@@ -28,17 +26,15 @@ exports.dev = function dev() {
 exports.prod = function prod() {
   const config = require('./config').default
   const gulp = require('gulp')
-  const autoprefixer = require('gulp-autoprefixer')
-  const cleanCSS = require('gulp-clean-css')
   const sass = require('gulp-sass')
+  const postcss = require('gulp-postcss')
 
   return gulp.src(config.paths.src.styles + '/**/*.scss')
     .pipe(sass({
       // Enable import from libraries installed with npm
       includePaths: [ './node_modules' ],
     }))
-    .pipe(autoprefixer())
-    .pipe(cleanCSS())
+    .pipe(postcss())
     .pipe(gulp.dest(config.paths.dist.styles))
 }
 
