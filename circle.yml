@@ -7,13 +7,13 @@ jobs:
   build_test:
     executor:
       name: node/default
-      tag: '12'
+      tag: 'lts'
     steps:
       - checkout
       - node/install-packages
       - run: npm test
 
 workflows:
-  build-test:
+  build_test:
     jobs:
       - build_test
