@@ -20,7 +20,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo "${GITHUBACTIONS_READ_PACKAGES}"
     - run: echo "//npm.pkg.github.com/:_authToken=${GITHUBACTIONS_READ_PACKAGES}" >> .npmrc
     - run: npm ci
     - run: npm test
