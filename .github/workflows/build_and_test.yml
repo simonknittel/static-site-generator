@@ -20,5 +20,6 @@ jobs:
       env:
         GITHUBACTIONS_READ_PACKAGES: ${{ secrets.GITHUBACTIONS_READ_PACKAGES }}
     - run: echo "//npm.pkg.github.com/:_authToken=${GITHUBACTIONS_READ_PACKAGES}" >> .npmrc
+    - run: cat .npmrc
     - run: npm ci
     - run: npm test
