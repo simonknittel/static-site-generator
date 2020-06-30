@@ -5,10 +5,12 @@ environment:
 platform:
     - x86
     - x64
+clone_depth: 1
 init:
     - git config --global core.autocrlf true
     - ps: Install-Product node $env:nodejs_version $env:platform
 install:
+    - echo "//npm.pkg.github.com/:_authToken=${APPVEYOR_READ_PACKAGES}" > ~/.npmrc
     - npm ci
 build: off
 test_script:
