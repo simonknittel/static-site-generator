@@ -1,4 +1,4 @@
-**It's recommend to read the whole documentation!**
+**It's recommended to read the whole documentation!**
 
 1. [Introduction](#-static-site-generator)
     1. [Features](#-features)
