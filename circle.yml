@@ -1,24 +1,19 @@
-version: 2
+version: 2.1
+
+orbs:
+  node: circleci/node@3.0.0
+
 jobs:
-  build:
-    docker:
-      - image: circleci/node:12
-      - environment:
-        NODE_ENV: production
+  build_test:
+    executor:
+      name: node/default
+      tag: '12'
     steps:
       - checkout
-      - run: npm ci
-  test:
-    docker:
-      - image: circleci/node:12
-      - environment:
-        NODE_ENV: production
-    steps:
+      - node/install-packages
       - run: npm test
 
 workflows:
-  version: 2
   build-test:
     jobs:
-      - build
-      - test
+      - build_test
