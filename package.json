@@ -30,7 +30,6 @@
     "test:js:jest": "jest",
     "test:js": "npm run test:js:lint & npm run test:js:jest",
     "test:html": "html-validator --file=dist/index.html --verbose",
-    "postinstall": "npm rebuild node-sass",
     "start": "gulp watch",
     "default": "gulp",
     "production": "gulp production",
