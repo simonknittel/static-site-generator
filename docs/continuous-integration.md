@@ -30,7 +30,7 @@ I use [this](https://gitlab.com/simonknittel/static-site-generator-mirror) mirro
 1. Add the following to the `Setup Commands`:
 
 ```shell
-echo "//npm.pkg.github.com/:_authToken=${CODESHIP_READ_PACKAGES}" > ~/.npmrc
+echo "//npm.pkg.github.com/:_authToken=${CODESHIP_READ_PACKAGES}" >> .npmrc
 nvm install 12
 npm ci
 ```

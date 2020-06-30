@@ -9,7 +9,7 @@ stages:
 
 preinstall:
   stage: preinstall
-  script: echo "//npm.pkg.github.com/:_authToken=${GITLABCI_READ_PACKAGES}" > .npmrc
+  script: echo "//npm.pkg.github.com/:_authToken=${GITLABCI_READ_PACKAGES}" >> .npmrc
 
 install:
   stage: install

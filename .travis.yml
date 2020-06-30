@@ -5,7 +5,7 @@ node_js:
   - "12"
 
 before_install:
-  - echo "//npm.pkg.github.com/:_authToken=${TRAVISCICOM_READ_PACKAGES}" > ~/.npmrc
+  - echo "//npm.pkg.github.com/:_authToken=${TRAVISCICOM_READ_PACKAGES}" >> .npmrc
 
 install:
   - npm ci
