@@ -1,6 +1,4 @@
 _gulpfile/
 dist/
 node_modules/
-assets/libraries/
-gulpfile.babel.js
-valimate.js
+gulpfile.js
