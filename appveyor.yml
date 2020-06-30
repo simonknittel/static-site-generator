@@ -11,7 +11,6 @@ init:
     - ps: Install-Product node $env:nodejs_version $env:platform
 install:
     - ps: Add-Content .npmrc "//npm.pkg.github.com/:_authToken=$($env:APPVEYOR_READ_PACKAGES)"
-    - cmd: cat .npmrc
     - cmd: npm ci
 build: off
 test_script:
