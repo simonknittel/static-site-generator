@@ -10,6 +10,9 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x, 14.x]
+    
+    env:
+      GITHUBACTIONS_READ_PACKAGES: ${{ secrets.GITHUBACTIONS_READ_PACKAGES }}
 
     steps:
     - uses: actions/checkout@v2
@@ -17,8 +20,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env:
-        GITHUBACTIONS_READ_PACKAGES: ${{ secrets.GITHUBACTIONS_READ_PACKAGES }}
-    - run: echo "//npm.pkg.github.com/:_authToken=$GITHUBACTIONS_READ_PACKAGES" >> .npmrc
+    - run: echo "${GITHUBACTIONS_READ_PACKAGES}"
+    - run: echo "//npm.pkg.github.com/:_authToken=${GITHUBACTIONS_READ_PACKAGES}" >> .npmrc
     - run: npm ci
     - run: npm test
