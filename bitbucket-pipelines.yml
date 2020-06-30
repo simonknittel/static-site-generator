@@ -3,5 +3,5 @@ pipelines:
   default:
     - step:
         script:
-          - npm install
+          - npm ci
           - npm test

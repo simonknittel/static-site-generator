@@ -9,7 +9,7 @@ init:
     - git config --global core.autocrlf true
     - ps: Install-Product node $env:nodejs_version $env:platform
 install:
-    - npm install
+    - npm ci
 build: off
 test_script:
   - npm test # Defined in the package.json (scripts > test)

@@ -8,8 +8,9 @@
 
 
 # ⚙️ Static Site Generator
+
 [![Donate on patreon](https://badgen.net/badge/donate%20on/patreon/orange)](https://patreon.com/simonknittel)
-[![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.org/simonknittel/static-site-generator)
+[![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.com/simonknittel/static-site-generator)
 [![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
 [![AppVeyor](https://img.shields.io/appveyor/ci/simonknittel/static-site-generator/master.svg)](https://ci.appveyor.com/project/simonknittel/static-site-generator)
@@ -25,6 +26,7 @@ The goal of this generator is to have a project skeleton with everything already
 
 
 ## ✨ Features
+
 * Fast layouting with pre-compiling Pug templates
 * Project structure based on the [atomic design concept](http://atomicdesign.bradfrost.com) (you can easily change it if you don't want to use it)
 * [SASS](http://sass-lang.com) as CSS preprocessor
@@ -43,10 +45,12 @@ The goal of this generator is to have a project skeleton with everything already
 
 
 ## 🚧 Planned features and issues
+
 Checkout the [issues page](https://github.com/simonknittel/static-site-generator/issues)
 
 
 ## 📚 Getting started and full documentation
+
 If you are interesed how some things works or what is possible read the [full documentation](./docs/INDEX.md)
 
 
@@ -60,6 +64,7 @@ Like this quote implies, I won't stop make things open source, if there are no d
 
 
 ## ©️ License
+
 Copyright 2020 Simon Knittel (<https://simonknittel.de>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

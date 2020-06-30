@@ -7,7 +7,7 @@ jobs:
         NODE_ENV: production
     steps:
       - checkout
-      - run: npm install --ci
+      - run: npm ci
   test:
     docker:
       - image: circleci/node:12
@@ -15,7 +15,7 @@ jobs:
         NODE_ENV: production
     steps:
       - run: npm test
-  
+
 workflows:
   version: 2
   build-test:

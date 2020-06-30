@@ -9,7 +9,7 @@ stages:
 install:
   stage: install
   script:
-    - npm install
+    - npm ci
 
 # The configuration for Sentry/Raven.js makes only sense when you are using the branching and release worklfow defined here: ./docs/branching-and-release-workflow.md
 raven:

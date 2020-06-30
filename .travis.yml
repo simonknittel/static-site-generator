@@ -1,13 +1,21 @@
 language: node_js
+
 node_js:
   - "14"
   - "12"
+
+before_install:
+  - echo "//npm.pkg.github.com/:_authToken=${TRAVISCICOM_READ_PACKAGES}" > ~/.npmrc
+
 install:
-  - npm install
+  - npm ci
+
 script: npm test # Defined in the package.json (scripts > test)
+
 cache:
   directories:
     - node_modules
+
 os:
   - osx
   - linux
