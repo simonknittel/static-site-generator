@@ -9,11 +9,11 @@ module.exports = {
         path: path.join(config.paths.dist.styles),
       },
       queries: {
-        '(min-width: 20rem)': '320',
-        '(min-width: 40rem)': '640',
-        '(min-width: 60rem)': '960',
-        '(min-width: 80rem)': '1280',
+        '(min-width: 40rem)': '40',
+        '(min-width: 60rem)': '60',
+        '(min-width: 80rem)': '80',
       },
+      extractAll: false,
     },
     '@hail2u/css-mqpacker': {
       sort: true,

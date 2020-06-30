@@ -10,7 +10,10 @@ append scripts
   script(src=root+"assets/js/front.bundle.js?RANDOMIZE-ME", defer)
 
 append styles
-  link(rel="stylesheet", type="text/css", href=root+"assets/css/front.bundle.css?RANDOMIZE-ME")
+  link(href=root+"assets/css/front.bundle.css?RANDOMIZE-ME", rel="stylesheet")
+  link(href=root+"assets/css/front.bundle-40.css?RANDOMIZE-ME", media="(min-width: 40rem)", rel="stylesheet")
+  link(href=root+"assets/css/front.bundle-60.css?RANDOMIZE-ME", media="(min-width: 60rem)", rel="stylesheet")
+  link(href=root+"assets/css/front.bundle-80.css?RANDOMIZE-ME", media="(min-width: 80rem)", rel="stylesheet")
 
 
 block content
