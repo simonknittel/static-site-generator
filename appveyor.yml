@@ -10,7 +10,7 @@ init:
     - git config --global core.autocrlf true
     - ps: Install-Product node $env:nodejs_version $env:platform
 install:
-    - ps: Add-Content .npmrc "//npm.pkg.github.com/:_authToken=$(Env:APPVEYOR_READ_PACKAGES)"
+    - ps: Add-Content .npmrc "//npm.pkg.github.com/:_authToken=$($env:APPVEYOR_READ_PACKAGES)"
     - cmd: cat .npmrc
     - cmd: npm ci
 build: off
