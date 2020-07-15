@@ -43,7 +43,7 @@
     "@babel/core": "7.10.4",
     "@babel/preset-env": "7.10.4",
     "@hail2u/css-mqpacker": "8.0.1",
-    "autoprefixer": "9.8.4",
+    "autoprefixer": "9.8.5",
     "babel-loader": "8.1.0",
     "browser-sync": "2.26.7",
     "compression": "1.7.4",
