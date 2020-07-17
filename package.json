@@ -45,7 +45,7 @@
     "@hail2u/css-mqpacker": "8.0.1",
     "autoprefixer": "9.8.5",
     "babel-loader": "8.1.0",
-    "browser-sync": "2.26.9",
+    "browser-sync": "2.26.10",
     "compression": "1.7.4",
     "connect-modrewrite": "0.10.2",
     "critical": "2.0.1",
