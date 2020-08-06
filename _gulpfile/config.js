@@ -9,12 +9,10 @@ const config = {
 }
 
 config.paths.src.styles = config.paths.src.base + '/assets/styles'
-config.paths.src.scripts = config.paths.src.base + '/assets/scripts'
 config.paths.src.images = config.paths.src.base + '/assets/images'
 config.paths.src.copyToDist = config.paths.src.base + '/copyToDist'
 
 config.paths.dist.styles = config.paths.dist.base + '/assets/css'
-config.paths.dist.scripts = config.paths.dist.base + '/assets/js'
 config.paths.dist.images = config.paths.dist.base + '/assets/img'
 config.paths.dist.copyToDist = config.paths.dist.base
 
