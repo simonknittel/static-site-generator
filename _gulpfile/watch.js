@@ -33,21 +33,7 @@ exports.watch = function watch() {
     done()
   }))
 
-  gulp.watch([
-    `${config.paths.src.base }/robots.txt`,
-    `${config.paths.src.base }/.htaccess`,
-    `${config.paths.src.base }/humans.txt`,
-  ], gulp.series('copy:base', done => {
-    browserSync.reload()
-    done()
-  }))
-
-  gulp.watch(`${config.paths.src.base }/assets/libraries/**/*`, gulp.series('copy:libraries', done => {
-    browserSync.reload()
-    done()
-  }))
-
-  gulp.watch(`${config.paths.src.fonts }/**/*`, gulp.series('copy:fonts', done => {
+  gulp.watch(`${config.paths.src.copyToDist }/**/*`, gulp.series('copyToDist', done => {
     browserSync.reload()
     done()
   }))
