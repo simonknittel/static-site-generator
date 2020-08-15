@@ -77,7 +77,7 @@
     "jest": "26.3.0",
     "js-yaml": "3.14.0",
     "jstransformer-marked": "1.0.3",
-    "node-notifier": "7.0.2",
+    "node-notifier": "8.0.0",
     "postcss-extract-media-query": "2.0.0",
     "pug": "3.0.0",
     "stylelint": "13.6.1",
