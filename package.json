@@ -80,7 +80,7 @@
     "node-notifier": "8.0.0",
     "postcss-extract-media-query": "2.0.0",
     "pug": "3.0.0",
-    "stylelint": "13.7.1",
+    "stylelint": "13.7.2",
     "stylelint-group-selectors": "1.0.7",
     "stylelint-high-performance-animation": "1.5.1",
     "stylelint-order": "4.1.0",
