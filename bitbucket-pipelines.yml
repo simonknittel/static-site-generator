@@ -3,6 +3,5 @@ pipelines:
   default:
     - step:
         script:
-          - echo "//npm.pkg.github.com/:_authToken=${BITBUCKET_READ_PACKAGES}" >> .npmrc
           - npm ci
           - npm test

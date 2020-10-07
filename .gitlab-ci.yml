@@ -7,10 +7,6 @@ stages:
   - test
   - deploy
 
-preinstall:
-  stage: preinstall
-  script: echo "//npm.pkg.github.com/:_authToken=${GITLABCI_READ_PACKAGES}" >> .npmrc
-
 install:
   stage: install
   script:

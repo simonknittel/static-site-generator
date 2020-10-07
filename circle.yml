@@ -10,7 +10,6 @@ jobs:
       tag: 'lts'
     steps:
       - checkout
-      - run: echo "//npm.pkg.github.com/:_authToken=${CIRCLECI_READ_PACKAGES}" >> .npmrc
       - node/install-packages
       - run: npm test
 
