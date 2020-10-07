@@ -1,17 +1,16 @@
 **It's recommended to read the whole documentation!**
 
-1. [Introduction](#-static-site-generator)
-    1. [Features](#-features)
-    2. [Planned features and issues](#-planned-features-and-issues)
-    3. [Full documentation](#-getting-started-and-full-documentation)
-    4. [License](#-license)
+* [✨ Features](#-features)
+* [🚧 Planned features and issues](#-planned-features-and-issues)
+* [📚 Getting started and full documentation](#-getting-started-and-full-documentation)
+* [©️ License](#️-license)
 
 
 # ⚙️ Static Site Generator
 [![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.com/simonknittel/static-site-generator)
-[![Codeship](https://img.shields.io/codeship/b608b370-b5e9-0133-659d-724fe1788ad4/master.svg)](https://app.codeship.com/projects/134192)
+[![Codeship](https://img.shields.io/codeship/bdb96e90-eaed-0138-54e7-36eec419dabc/master.svg)](https://app.codeship.com/projects/bdb96e90-eaed-0138-54e7-36eec419dabc)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
-[![AppVeyor](https://img.shields.io/appveyor/ci/simonknittel/static-site-generator/master.svg)](https://ci.appveyor.com/project/simonknittel/static-site-generator)
+<!-- [![AppVeyor](https://img.shields.io/appveyor/ci/simonknittel/static-site-generator/master.svg)](https://ci.appveyor.com/project/simonknittel/static-site-generator) -->
 [![David](https://img.shields.io/david/simonknittel/static-site-generator.svg?maxAge=2592000)](https://david-dm.org/simonknittel/static-site-generator)
 [![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)](https://david-dm.org/simonknittel/static-site-generator?type=dev)
 [![Gitter](https://img.shields.io/gitter/room/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator)
