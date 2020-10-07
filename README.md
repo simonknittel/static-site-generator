@@ -14,7 +14,7 @@
 [![Codeship](https://img.shields.io/codeship/bdb96e90-eaed-0138-54e7-36eec419dabc/master.svg)](https://app.codeship.com/projects/bdb96e90-eaed-0138-54e7-36eec419dabc)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
 [![David](https://img.shields.io/david/simonknittel/static-site-generator.svg)](https://david-dm.org/simonknittel/static-site-generator)
-[![David](https://img.shields.io/david/dev/simonknittel/static-site-generator))](https://david-dm.org/simonknittel/static-site-generator?type=dev)
+[![David](https://img.shields.io/david/dev/simonknittel/static-site-generator)](https://david-dm.org/simonknittel/static-site-generator?type=dev)
 [![Gitter](https://img.shields.io/gitter/room/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator)
 
 Static site generator / project skeleton for creating production-ready sites. All necessary files and build tasks are already in place and fitted with good practices. You only need to install the dependencies and your are ready to go, perfect for [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) sites.
