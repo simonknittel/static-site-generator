@@ -10,7 +10,6 @@
 [![Travis branch](https://img.shields.io/travis/simonknittel/static-site-generator/master.svg)](https://travis-ci.com/simonknittel/static-site-generator)
 [![Codeship](https://img.shields.io/codeship/bdb96e90-eaed-0138-54e7-36eec419dabc/master.svg)](https://app.codeship.com/projects/bdb96e90-eaed-0138-54e7-36eec419dabc)
 [![CircleCI](https://img.shields.io/circleci/project/simonknittel/static-site-generator/master.svg)](https://circleci.com/gh/simonknittel/static-site-generator/tree/master)
-<!-- [![AppVeyor](https://img.shields.io/appveyor/ci/simonknittel/static-site-generator/master.svg)](https://ci.appveyor.com/project/simonknittel/static-site-generator) -->
 [![David](https://img.shields.io/david/simonknittel/static-site-generator.svg?maxAge=2592000)](https://david-dm.org/simonknittel/static-site-generator)
 [![David](https://img.shields.io/david/dev/simonknittel/static-site-generator.svg?maxAge=2592000)](https://david-dm.org/simonknittel/static-site-generator?type=dev)
 [![Gitter](https://img.shields.io/gitter/room/simonknittel/static-site-generator.svg)](https://gitter.im/simonknittel/static-site-generator)
