@@ -44,7 +44,7 @@
     "@babel/preset-env": "7.12.1",
     "@hail2u/css-mqpacker": "8.0.1",
     "autoprefixer": "9.8.6",
-    "babel-loader": "8.1.0",
+    "babel-loader": "8.2.0",
     "browser-sync": "2.26.13",
     "compression": "1.7.4",
     "connect-modrewrite": "0.10.2",
