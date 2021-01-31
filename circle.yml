@@ -9,6 +9,7 @@ jobs:
       name: node/default
       tag: 'lts'
     steps:
+      - run: echo "//npm.pkg.github.com/:_authToken=${GITHUB_REGISTRY_READ_PACKAGES}" >> .npmrc
       - checkout
       - node/install-packages
       - run: npm test
