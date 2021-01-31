@@ -6,7 +6,7 @@ function returnDataObject(file) {
   const slash = process.platform === 'win32' ? '\\' : '/'
   const source = config.paths.src.base + '/' + file.path.replace(process.cwd() + slash + config.paths.src.base.replace('/', slash) + slash, '').replace('.pug', '.yml')
 
-  return yaml.safeLoad(fs.readFileSync(source, 'utf8'))
+  return yaml.load(fs.readFileSync(source, 'utf8'))
 }
 
 
