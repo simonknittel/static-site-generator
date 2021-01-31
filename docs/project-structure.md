@@ -1,15 +1,14 @@
-1. [Project structure](#project-structure)
-    1. [General directory structure](#general-directory-structure)
-    2. [HTML](#html)
-        1. [Directory structure](#directory-structure)
-    3. [Stylesheets](#stylesheets)
-        1. [Directory structure](#directory-structure-1)
-        2. [Coding standards/style and linting](#coding-standardsstyle-and-linting)
-    4. [JavaScript](#javascript)
-        1. [Directory structure](#directory-structure-2)
-        2. [Coding standards/style and linting](#coding-standardsstyle-and-linting-1)
-    5. [Images](#images)
-    6. [Linting](#linting)
+* [General directory structure](#general-directory-structure)
+* [HTML](#html)
+  * [Directory structure](#directory-structure)
+* [Stylesheets](#stylesheets)
+  * [Directory structure](#directory-structure-1)
+  * [Coding standards/style and linting](#coding-standardsstyle-and-linting)
+* [JavaScript](#javascript)
+  * [Directory structure](#directory-structure-2)
+  * [Coding standards/style and linting](#coding-standardsstyle-and-linting-1)
+* [Images](#images)
+* [Linting](#linting)
 
 
 # Project structure
@@ -37,7 +36,7 @@ I included [stylelint](https://stylelint.io/) as linter for the styles source fi
 
 
 ## JavaScript
-The JavaScript is written in [ES6/ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/index.html) which is getting compiled to browser understandable [ES5](http://www.ecma-international.org/ecma-262/5.1). The compiling is done with a [Gulp](http://gulpjs.com) task. This task can also watch for changes so that the JavaScript is getting recompiled when changed. The JavaScript will also getting concatenated. You will get a `global.bundle.js` which should contain all JavaScript which will be used on every page. This file will get included on every page (look at [base.pug](./src/_templates/base.pug#L61)). You can also create seperate JavaScripts files like the [front.bundle.js](./src/assets/scripts/front.bundle.js) which contains JavScript only used on this page. You can individually include them on the corresponding pages (look at [front-page.pug](./src/_templates/pages/front.pug#L11)).
+The JavaScript is written in [ES6/ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/index.html) which is getting compiled to browser understandable [ES5](http://www.ecma-international.org/ecma-262/5.1). The compiling is done with a [Gulp](http://gulpjs.com) task. This task can also watch for changes so that the JavaScript is getting recompiled when changed. The JavaScript will also getting concatenated. You will get a `global.js` which should contain all JavaScript which will be used on every page. This file will get included on every page (look at [base.pug](./src/_templates/base.pug#L61)). You can also create seperate JavaScripts files like the [front.js](./src/assets/scripts/front.js) which contains JavScript only used on this page. You can individually include them on the corresponding pages (look at [front-page.pug](./src/_templates/pages/front.pug#L11)).
 
 ### Directory structure
 You will find the source files under [src/assets/scripts](./src/assets/scripts).

@@ -40,6 +40,10 @@
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
+    "@babel/eslint-parser": "7.12.1",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@babel/plugin-transform-modules-commonjs": "7.12.1",
     "@babel/preset-env": "7.12.11",
     "@hail2u/css-mqpacker": "8.0.1",
     "autoprefixer": "10.2.4",
@@ -86,7 +90,7 @@
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.18.0",
     "stylelint-selector-no-empty": "1.0.7",
-    "webpack": "4.46.0"
+    "webpack": "5.19.0"
   },
   "dependencies": {
     "normalize.css": "8.0.1"

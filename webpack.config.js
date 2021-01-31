@@ -1,38 +1,51 @@
+const babelConfig = require('./babel.config.json')
 const path = require('path')
-const webpack = require('webpack')
-
 
 module.exports = {
   mode: 'development',
+
   entry: {
-    global: './src/assets/scripts/global.bundle.js',
-    front: './src/assets/scripts/front.bundle.js',
+    global: './src/assets/scripts/global.js',
+    front: './src/assets/scripts/front.js',
   },
+
   output: {
-    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist/assets/js'),
     publicPath: '/assets/js/',
   },
+
   resolve: {
     extensions: [ '.js' ],
   },
+
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_module/,
+
+        // See https://stackoverflow.com/questions/57361439/how-to-exclude-core-js-using-usebuiltins-usage/59647913#59647913
+        // and https://github.com/babel/babel-loader#exclude-libraries-that-should-not-be-transpiled
+        exclude: [
+          /\bcore-js\b/,
+          /\bwebpack\/buildin\b/
+        ],
+
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            cacheDirectory: true,
+            ...babelConfig
           }
         }
       }
     ],
   },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-  ],
-  devtool: 'source-map',
+
+  optimization: {
+    moduleIds: 'named'
+  },
+
+  devtool: 'eval-source-map',
+
   node: false,
 }

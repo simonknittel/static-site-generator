@@ -1,13 +1,13 @@
 {
+  "extends": "eslint:recommended",
   "env": {
     "browser": true,
-    "es2020": true,
-    "jest": true
+    "es2020": true
   },
+  "parser": "@babel/eslint-parser", // Required for webpack's dynamic import()
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": "eslint:recommended",
   "rules": {
     "no-console": 1,
     "no-extra-parens": 1,
@@ -162,6 +162,14 @@
     "prefer-const": 2,
     "prefer-arrow-callback": 2,
     "no-var": 2,
-    "no-useless-constructor": 2,
-  }
+    "no-useless-constructor": 2
+  },
+  "overrides": [
+    {
+      "files": ["src/assets/scripts/**/*.test.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
