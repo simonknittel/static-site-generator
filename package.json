@@ -32,8 +32,7 @@
     "test:html": "html-validator --file=dist/index.html --verbose",
     "start": "gulp watch",
     "default": "gulp",
-    "production": "gulp production",
-    "nuke": "rm -rf node_modules dist"
+    "production": "gulp production"
   },
   "engines": {
     "node": ">=12 <13",
@@ -43,7 +42,7 @@
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
     "@hail2u/css-mqpacker": "8.0.1",
-    "autoprefixer": "9.8.6",
+    "autoprefixer": "10.2.4",
     "babel-loader": "8.2.2",
     "browser-sync": "2.26.14",
     "compression": "1.7.4",
@@ -78,6 +77,7 @@
     "js-yaml": "3.14.1",
     "jstransformer-marked": "1.0.3",
     "node-notifier": "9.0.0",
+    "postcss": "8.2.4",
     "postcss-extract-media-query": "2.0.0",
     "pug": "3.0.0",
     "stylelint": "13.9.0",
@@ -90,13 +90,5 @@
   },
   "dependencies": {
     "normalize.css": "8.0.1"
-  },
-  "browserslist": [
-    "last 2 Chrome versions",
-    "last 2 ChromeAndroid versions",
-    "last 2 Samsung versions",
-    "last 2 Firefox versions",
-    "last 2 Safari versions",
-    "last 2 iOS versions"
-  ]
+  }
 }
