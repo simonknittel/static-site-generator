@@ -81,7 +81,7 @@
     "js-yaml": "4.0.0",
     "jstransformer-marked": "1.0.3",
     "node-notifier": "9.0.0",
-    "postcss": "8.2.4",
+    "postcss": "8.2.5",
     "postcss-extract-media-query": "2.0.0",
     "pug": "3.0.0",
     "stylelint": "13.9.0",
