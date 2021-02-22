@@ -35,7 +35,7 @@
     "production": "gulp production"
   },
   "engines": {
-    "node": ">=12 <13",
+    "node": ">=12 <15",
     "npm": ">=6.12.0"
   },
   "devDependencies": {
