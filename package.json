@@ -84,7 +84,7 @@
     "postcss": "8.2.7",
     "postcss-extract-media-query": "2.0.0",
     "pug": "3.0.2",
-    "stylelint": "13.11.0",
+    "stylelint": "13.12.0",
     "stylelint-group-selectors": "1.0.8",
     "stylelint-high-performance-animation": "1.5.2",
     "stylelint-order": "4.1.0",
