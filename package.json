@@ -80,7 +80,7 @@
     "jest": "26.6.3",
     "js-yaml": "4.0.0",
     "jstransformer-marked": "1.0.3",
-    "node-notifier": "9.0.0",
+    "node-notifier": "9.0.1",
     "postcss": "8.2.8",
     "postcss-extract-media-query": "2.0.0",
     "pug": "3.0.2",
