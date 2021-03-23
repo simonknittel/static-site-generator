@@ -89,7 +89,7 @@
     "stylelint-high-performance-animation": "1.5.2",
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0",
-    "stylelint-selector-no-empty": "1.0.7",
+    "stylelint-selector-no-empty": "1.0.8",
     "webpack": "5.27.2"
   },
   "dependencies": {
