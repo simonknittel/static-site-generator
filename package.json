@@ -90,7 +90,7 @@
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0",
     "stylelint-selector-no-empty": "1.0.8",
-    "webpack": "5.30.0"
+    "webpack": "5.31.2"
   },
   "dependencies": {
     "normalize.css": "8.0.1"
