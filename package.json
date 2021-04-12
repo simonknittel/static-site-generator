@@ -52,7 +52,7 @@
     "compression": "1.7.4",
     "connect-modrewrite": "0.10.2",
     "critical": "3.0.0",
-    "cssnano": "4.1.10",
+    "cssnano": "5.0.0",
     "del": "6.0.0",
     "eslint": "7.23.0",
     "gulp": "4.0.2",
